@@ -1,0 +1,148 @@
+:root {
+  --red-accent: #ff3344;
+  --red-dark: #8b0000;
+  --bg-dark: #0f1117;
+  --panel-bg: #161b22;
+  --border-color: #30363d;
+  --text-muted: #8b949e;
+  --text-bright: #f0f6fc;
+}
+
+body {
+  background-color: var(--bg-dark);
+}
+
+.reveal {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-bright);
+}
+
+/* Headings */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-transform: none;
+}
+
+.reveal h1 span.accent,
+.reveal h2 span.accent,
+.reveal h3 span.accent {
+  color: var(--red-accent);
+}
+
+/* Badges / Tags */
+.badge-red {
+  display: inline-block;
+  background: rgba(255, 51, 68, 0.15);
+  color: var(--red-accent);
+  border: 1px solid var(--red-accent);
+  padding: 4px 14px;
+  font-size: 0.45em;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Cards & Layout Grid */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  align-items: stretch;
+}
+
+.card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card.highlight {
+  border-left: 4px solid var(--red-accent);
+}
+
+.card h4 {
+  font-size: 0.9em;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--red-accent);
+}
+
+.card p, .card ul {
+  font-size: 0.65em;
+  color: #c9d1d9;
+  line-height: 1.5;
+}
+
+.placeholder-box {
+  border: 2px dashed var(--border-color);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  padding: 30px;
+  margin: 15px 0;
+  font-size: 0.7em;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.placeholder-box code {
+  color: var(--red-accent);
+}
+
+/* Terminal simulation */
+.terminal-window {
+  background: #0d1117;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: left;
+  margin: 15px 0;
+}
+
+.terminal-header {
+  background: #161b22;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.terminal-body {
+  padding: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.55em;
+  line-height: 1.6;
+  color: #58a6ff;
+}
+
+/* Speaker notes reminder */
+.notes-indicator {
+  font-size: 0.45em;
+  color: var(--text-muted);
+  margin-top: 30px;
+  font-style: italic;
+}

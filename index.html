@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Red Team 1 — Recon & OSINT</title>
+
+    <!-- Reveal.js CSS (via CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reset.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.min.css" id="theme" />
+
+    <!-- Code syntax highlighting theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/monokai.min.css" />
+
+    <!-- Custom Red Team Styling -->
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- ========================================== -->
+        <!-- SLIDE 1: CAPA -->
+        <!-- ========================================== -->
+        <section data-background-color="#0b0d13">
+          <span class="badge-red">Red Team 1 • Seminário Técnico</span>
+          <h1>Recon &amp; <span class="accent">OSINT</span></h1>
+          <p style="color: var(--text-muted); font-size: 0.8em; margin-bottom: 2em;">
+            [Subtítulo da Apresentação — ex: Mapeamento de Superfície de Ataque e Inteligência de Ameaças]
+          </p>
+
+          <div class="card" style="max-width: 650px; margin: 0 auto; text-align: center;">
+            <p style="margin: 0; font-size: 0.6em; color: var(--text-muted);">
+              <strong>Equipe:</strong> [Nome 1] • [Nome 2] • [Nome 3] • [Nome 4]<br />
+              <strong>Data:</strong> [DD/MM/AAAA] | <strong>Contexto:</strong> [Nome da Disciplina / Evento]
+            </p>
+          </div>
+
+          <aside class="notes">
+            [NOTAS DO ORADOR - SLIDE 1]
+            - Cumprimentar o público e os avaliadores.
+            - Apresentar a equipe Red Team 1.
+            - Apresentar o tema e a motivação inicial.
+          </aside>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SLIDE 2: AGENDA -->
+        <!-- ========================================== -->
+        <section>
+          <span class="badge-red">Visão Geral</span>
+          <h2>Agenda da <span class="accent">Apresentação</span></h2>
+
+          <div class="grid-2" style="margin-top: 25px;">
+            <div class="card">
+              <h4>01. Fundamentos &amp; Metodologia</h4>
+              <ul>
+                <li>[Conceitos: Recon vs OSINT]</li>
+                <li>[Ciclo de Inteligência &amp; Kill Chain]</li>
+              </ul>
+              <h4 style="margin-top: 15px;">02. OSINT Passivo</h4>
+              <ul>
+                <li>[Fontes Abertas &amp; Dorks]</li>
+                <li>[Infraestrutura, Pessoas &amp; Metadados]</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h4>03. Reconhecimento Ativo</h4>
+              <ul>
+                <li>[Port Scanning &amp; Footprinting]</li>
+                <li>[Descoberta de Ativos Web &amp; APIs]</li>
+              </ul>
+              <h4 style="margin-top: 15px;">04. Prática, Ferramentas &amp; Defesa</h4>
+              <ul>
+                <li>[Ecosistema de Ferramentas / PoC]</li>
+                <li>[Mitigações (Blue Team) &amp; Ética / Q&amp;A]</li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="notes">
+            [NOTAS DO ORADOR - SLIDE 2]
+            - Passar rapidamente pelos tópicos que serão abordados.
+            - Alinhar expectativas de tempo e momento para perguntas ao final.
+          </aside>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- BLOCO 1: INTRODUÇÃO & CONTEXTO -->
+        <!-- ========================================== -->
+        <section>
+          <section>
+            <span class="badge-red">Módulo 01</span>
+            <h2>Introdução ao <span class="accent">Recon &amp; OSINT</span></h2>
+            <p style="font-size: 0.7em; color: var(--text-muted);">
+              [Definição fundamental do papel da fase de reconhecimento no ciclo de operações ofensivas]
+            </p>
+
+            <div class="grid-2" style="margin-top: 20px;">
+              <div class="card highlight">
+                <h4>O que é Reconnaissance?</h4>
+                <div class="placeholder-box">
+                  [Inserir conceito e importância do reconhecimento pré-ataque]
+                </div>
+              </div>
+              <div class="card highlight">
+                <h4>O que é OSINT?</h4>
+                <div class="placeholder-box">
+                  [Inserir definição de Open Source Intelligence e fontes públicas]
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 01 / PARTE 1]
+              - Explicar por que não existe ataque bem sucedido sem reconhecimento sólido.
+              - Diferenciar inteligência pública de ações de invasão direta.
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge-red">Módulo 01 • Contexto</span>
+            <h3>Recon no <span class="accent">MITRE ATT&amp;CK</span></h3>
+            <p style="font-size: 0.65em; color: var(--text-muted);">Tática <strong>TA0043: Reconnaissance</strong></p>
+
+            <div class="placeholder-box" style="padding: 40px;">
+              [Diagrama / Lista das principais técnicas do MITRE ATT&amp;CK associadas]<br />
+              <code>T1595 - Active Scanning</code> | <code>T1596 - Search Open Technical Databases</code> | <code>T1593 - Search Open Websites/Domains</code>
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 01 / PARTE 2]
+              - Conectar a prática com frameworks da indústria (MITRE ATT&amp;CK e Lockheed Martin Kill Chain).
+            </aside>
+          </section>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- BLOCO 2: METODOLOGIA & CICLO DE INTELIGÊNCIA -->
+        <!-- ========================================== -->
+        <section>
+          <section>
+            <span class="badge-red">Módulo 02</span>
+            <h2>Ciclo de <span class="accent">Inteligência OSINT</span></h2>
+
+            <div class="grid-3" style="margin-top: 25px;">
+              <div class="card">
+                <h4>1. Planejamento</h4>
+                <div class="placeholder-box">[Definição de escopo e alvos]</div>
+              </div>
+              <div class="card">
+                <h4>2. Coleta</h4>
+                <div class="placeholder-box">[Captura de dados passivos/ativos]</div>
+              </div>
+              <div class="card">
+                <h4>3. Processamento</h4>
+                <div class="placeholder-box">[Limpeza e estruturação dos dados]</div>
+              </div>
+              <div class="card">
+                <h4>4. Análise</h4>
+                <div class="placeholder-box">[Correlação e identificação de vetores]</div>
+              </div>
+              <div class="card">
+                <h4>5. Disseminação</h4>
+                <div class="placeholder-box">[Relatório tático do Red Team]</div>
+              </div>
+              <div class="card">
+                <h4>6. Feedback</h4>
+                <div class="placeholder-box">[Ajuste de escopo com o cliente]</div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 02 / PARTE 1]
+              - Destacar que OSINT não é apenas rodar ferramentas, mas sim um processo metódico de análise.
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge-red">Módulo 02 • Níveis de Interação</span>
+            <h3>Espectro do <span class="accent">Reconhecimento</span></h3>
+
+            <div class="grid-3" style="margin-top: 25px;">
+              <div class="card">
+                <h4>Passivo</h4>
+                <p>Nenhuma interação direta com os servidores ou ativos do alvo.</p>
+                <div class="placeholder-box">[Ex: WHOIS, DNS Histórico, Shodan, Google Dorks]</div>
+              </div>
+              <div class="card">
+                <h4>Semi-Passivo</h4>
+                <p>Tráfego disfarçado ou que simula navegação comum de usuários.</p>
+                <div class="placeholder-box">[Ex: Requisições web triviais, inspeção de certificados]</div>
+              </div>
+              <div class="card">
+                <h4>Ativo</h4>
+                <p>Pacotes e payloads enviados diretamente contra os sistemas do alvo.</p>
+                <div class="placeholder-box">[Ex: Port scanning, brute-force de diretórios, fuzzing]</div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 02 / PARTE 2]
+              - Enfatizar o risco de detecção e a pegada deixada em cada nível.
+            </aside>
+          </section>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- BLOCO 3: OSINT PASSIVO -->
+        <!-- ========================================== -->
+        <section>
+          <section>
+            <span class="badge-red">Módulo 03</span>
+            <h2>OSINT Passivo: <span class="accent">Fontes Abertas &amp; Dorks</span></h2>
+
+            <div class="grid-2" style="margin-top: 25px;">
+              <div class="card">
+                <h4>Google / GitHub Hacking</h4>
+                <div class="placeholder-box">
+                  [Inserir exemplos de Dorks]<br />
+                  <code>site:alvo.com ext:env OR ext:yaml</code><br />
+                  <code>filename:id_rsa org:alvo</code>
+                </div>
+              </div>
+              <div class="card">
+                <h4>Motores Especializados</h4>
+                <div class="placeholder-box">
+                  [Inserir utilidade de cada motor]<br />
+                  Shodan • Censys • Criminal IP • BinaryEdge
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 03 / PARTE 1]
+              - Explicar como vazamentos acidentais em repositórios e dorks facilitam o trabalho do invasor.
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge-red">Módulo 03</span>
+            <h3>OSINT: <span class="accent">Infraestrutura &amp; Certificados</span></h3>
+
+            <div class="placeholder-box" style="padding: 30px;">
+              [Inserir fluxo de enumeração de subdomínios via Certificate Transparency Logs (crt.sh), DNSDumpster, SecurityTrails, BGP/ASN lookup]
+            </div>
+
+            <div class="terminal-window">
+              <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span style="font-size: 0.5em; color: var(--text-muted); margin-left: 10px;">bash — subdominios.sh</span>
+              </div>
+              <div class="terminal-body">
+                # Exemplo de comando passivo via CT Logs:<br />
+                $ curl -s "https://crt.sh/?q=%.exemplo.com&output=json" | jq -r '.[].name_value' | sort -u
+              </div>
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 03 / PARTE 2]
+              - Demonstrar que logs de certificados TLS são públicos e revelam novos ambientes (staging, dev).
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge-red">Módulo 03</span>
+            <h3>OSINT: <span class="accent">Pessoas &amp; Engenharia Social</span></h3>
+
+            <div class="grid-2" style="margin-top: 25px;">
+              <div class="card">
+                <h4>Perfilamento de Colaboradores</h4>
+                <div class="placeholder-box">
+                  [Coleta via LinkedIn, redes sociais corporativas, organograma da empresa]
+                </div>
+              </div>
+              <div class="card">
+                <h4>Vazamento de Credenciais</h4>
+                <div class="placeholder-box">
+                  [Bases históricas, DeHashed, HaveIBeenPwned, stealer logs]
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 03 / PARTE 3]
+              - O elo humano: como cargos, tecnologias citadas em vagas de emprego e credenciais reutilizadas abrem portas.
+            </aside>
+          </section>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- BLOCO 4: RECONHECIMENTO ATIVO -->
+        <!-- ========================================== -->
+        <section>
+          <section>
+            <span class="badge-red">Módulo 04</span>
+            <h2>Reconhecimento Ativo: <span class="accent">Mapeamento de Superfície</span></h2>
+
+            <div class="grid-2" style="margin-top: 25px;">
+              <div class="card highlight">
+                <h4>Descoberta de Portas &amp; Serviços</h4>
+                <div class="placeholder-box">
+                  [Técnicas com Nmap, Masscan, Naabu]<br />
+                  SYN Scanning vs Connect Scanning
+                </div>
+              </div>
+              <div class="card highlight">
+                <h4>Fingerprinting de Aplicações</h4>
+                <div class="placeholder-box">
+                  [Identificação de stacks, versões vulneráveis e CMS via HTTP headers e hash de favicons]
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 04 / PARTE 1]
+              - Transição do passivo para o ativo. Agora há envio de pacotes ao alvo.
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge-red">Módulo 04</span>
+            <h3>Descoberta de <span class="accent">Endpoints &amp; Ativos Ocultos</span></h3>
+
+            <div class="placeholder-box" style="padding: 30px;">
+              [Inserir diagrama ou fluxo de Directory Brute-forcing, Virtual Host Fuzzing e Descoberta de APIs não documentadas]
+            </div>
+
+            <div class="terminal-window">
+              <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span style="font-size: 0.5em; color: var(--text-muted); margin-left: 10px;">bash — fuzzing.sh</span>
+              </div>
+              <div class="terminal-body">
+                $ ffuf -w wordlist.txt -u https://alvo.com/FUZZ -mc 200,301,302 -t 50
+              </div>
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 04 / PARTE 2]
+              - Explicar como rotas administrativas ou arquivos esquecidos de backup (.bak, .git) são encontrados.
+            </aside>
+          </section>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- BLOCO 5: TOOLING & AUTOMAÇÃO -->
+        <!-- ========================================== -->
+        <section>
+          <section>
+            <span class="badge-red">Módulo 05</span>
+            <h2>Ecosistema de <span class="accent">Ferramentas &amp; Frameworks</span></h2>
+
+            <div class="grid-3" style="margin-top: 25px;">
+              <div class="card">
+                <h4>Frameworks</h4>
+                <div class="placeholder-box">
+                  [Inserir frameworks]<br />
+                  Amass • Recon-ng • SpiderFoot • Maltego
+                </div>
+              </div>
+              <div class="card">
+                <h4>CLI &amp; Utilitários</h4>
+                <div class="placeholder-box">
+                  [Inserir ferramentas]<br />
+                  Subfinder • httpx • Naabu • Katana • Nuclei
+                </div>
+              </div>
+              <div class="card">
+                <h4>Gestão de Dados</h4>
+                <div class="placeholder-box">
+                  [Inserir repositórios]<br />
+                  Neo4j • Obsidian • OWASP Maryam
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 05 / PARTE 1]
+              - Visão geral das ferramentas consagradas de mercado.
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge-red">Módulo 05</span>
+            <h3>Pipeline de <span class="accent">Automação do Red Team</span></h3>
+
+            <div class="placeholder-box" style="padding: 40px;">
+              [Diagrama do Pipeline]<br /><br />
+              <code>Subdomínios (subfinder)</code> ➔ 
+              <code>Probe HTTP (httpx)</code> ➔ 
+              <code>Portas (naabu)</code> ➔ 
+              <code>Endpoints (katana)</code> ➔ 
+              <code>Vulnerabilidades / Triagem (nuclei)</code>
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 05 / PARTE 2]
+              - Demonstrar como o Red Team encadeia ferramentas via linha de comando para escalar a coleta.
+            </aside>
+          </section>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- BLOCO 6: DEMONSTRAÇÃO PRÁTICA / ESTUDO DE CASO -->
+        <!-- ========================================== -->
+        <section>
+          <section>
+            <span class="badge-red">Módulo 06 • Demonstração</span>
+            <h2>Estudo de Caso / <span class="accent">PoC Prática</span></h2>
+            <p style="font-size: 0.7em; color: var(--text-muted);">
+              [Simulação controlada em ambiente laboratorial autorizado]
+            </p>
+
+            <div class="card highlight" style="margin-top: 25px;">
+              <h4>Cenário do Alvo Simulado:</h4>
+              <div class="placeholder-box">
+                [Descrever o alvo, escopo autorizado e hipótese inicial da equipe]
+              </div>
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 06 / PARTE 1]
+              - Introduzir o cenário prático ou laboratório montado.
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge-red">Módulo 06 • Demonstração</span>
+            <h3>Execução Passo a Passo</h3>
+
+            <div class="grid-2" style="margin-top: 25px;">
+              <div class="card">
+                <h4>Fase 1: Descoberta</h4>
+                <div class="placeholder-box">
+                  [Print / Comandos da enumeração inicial do alvo]
+                </div>
+              </div>
+              <div class="card">
+                <h4>Fase 2: Identificação do Vetor</h4>
+                <div class="placeholder-box">
+                  [Print / Comandos evidenciando o ponto fraco encontrado]
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 06 / PARTE 2]
+              - Conduzir a demonstração prática (ao vivo ou gravada).
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge-red">Módulo 06 • Demonstração</span>
+            <h3>Resultados &amp; <span class="accent">Vetor de Entrada Descoberto</span></h3>
+
+            <div class="placeholder-box" style="padding: 40px;">
+              [Inserir resumo do ativo exposto que permitiria acesso inicial: ex. painel de admin desprotegido, chave de API vazada em JS público ou porta de debug aberta]
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 06 / PARTE 3]
+              - Concluir a PoC conectando o dado coletado no Recon com o potencial impacto se fosse um ataque real.
+            </aside>
+          </section>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- BLOCO 7: DEFESA, ÉTICA & LEGALIDADE -->
+        <!-- ========================================== -->
+        <section>
+          <section>
+            <span class="badge-red">Módulo 07</span>
+            <h2>Visão Defensiva: <span class="accent">Como o Blue Team Responde</span></h2>
+
+            <div class="grid-2" style="margin-top: 25px;">
+              <div class="card">
+                <h4>Estratégias de Mitigação</h4>
+                <ul>
+                  <li>[Gestão de Superfície de Ataque (EASM)]</li>
+                  <li>[Hardening de cabeçalhos e servidores web]</li>
+                  <li>[Desativação de serviços desnecessários]</li>
+                  <li>[Vazamento Zero de chaves em CI/CD e repositórios]</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h4>Detecção &amp; Monitoramento</h4>
+                <ul>
+                  <li>[Honeytokens e canaries públicos]</li>
+                  <li>[Alerta precoce de tráfego de scanning anômalo]</li>
+                  <li>[Threat Intelligence e monitoramento de vazamentos]</li>
+                  <li>[Análise de logs de WAF e DNS interno]</li>
+                </ul>
+              </div>
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 07 / PARTE 1]
+              - Mostrar que o objetivo do Red Team é aprimorar a defesa (Purple Teaming).
+            </aside>
+          </section>
+
+          <section>
+            <span class="badge-red">Módulo 07</span>
+            <h3>Limites <span class="accent">Éticos &amp; Legais</span></h3>
+
+            <div class="grid-2" style="margin-top: 25px;">
+              <div class="card highlight">
+                <h4>Rules of Engagement (RoE)</h4>
+                <div class="placeholder-box">
+                  [Definição clara do que está dentro e fora de escopo, horários de teste e contatos de emergência]
+                </div>
+              </div>
+              <div class="card highlight">
+                <h4>Legislação Vigente</h4>
+                <div class="placeholder-box">
+                  [LGPD, Marco Civil da Internet, Código Penal Brasileiro (Lei Carolina Dieckmann / invasão de dispositivo)]
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              [NOTAS DO ORADOR - MÓDULO 07 / PARTE 2]
+              - Enfatizar a fronteira entre hacking ético autorizado e crime cibernético.
+            </aside>
+          </section>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- BLOCO 8: CONCLUSÃO & FECHAMENTO -->
+        <!-- ========================================== -->
+        <section>
+          <span class="badge-red">Módulo 08</span>
+          <h2>Conclusões &amp; <span class="accent">Takeaways</span></h2>
+
+          <div class="grid-3" style="margin-top: 25px;">
+            <div class="card">
+              <h4>1. Informação é Poder</h4>
+              <div class="placeholder-box">
+                [Takeaway 1: A qualidade do ataque depende da profundidade do recon]
+              </div>
+            </div>
+            <div class="card">
+              <h4>2. Visão do Atacante</h4>
+              <div class="placeholder-box">
+                [Takeaway 2: Organizações precisam conhecer sua própria superfície exposta]
+              </div>
+            </div>
+            <div class="card">
+              <h4>3. Cultura Contínua</h4>
+              <div class="placeholder-box">
+                [Takeaway 3: Recon não é evento único, mas monitoramento contínuo]
+              </div>
+            </div>
+          </div>
+
+          <aside class="notes">
+            [NOTAS DO ORADOR - MÓDULO 08 / PARTE 1]
+            - Recapitular as ideias centrais apresentadas pela equipe.
+          </aside>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SLIDE: REFERÊNCIAS -->
+        <!-- ========================================== -->
+        <section>
+          <span class="badge-red">Bibliografia</span>
+          <h3>Referências &amp; <span class="accent">Leituras Recomendadas</span></h3>
+
+          <div class="card" style="margin-top: 25px;">
+            <ul>
+              <li>[MITRE ATT&amp;CK — Táticas e Técnicas de Reconnaissance (TA0043)]</li>
+              <li>[OWASP Web Security Testing Guide (WSTG) — Information Gathering]</li>
+              <li>[Bazzell, Michael — Open Source Intelligence Techniques]</li>
+              <li>[Artigos, ferramentas e links adicionais da equipe]</li>
+            </ul>
+          </div>
+
+          <aside class="notes">
+            [NOTAS DO ORADOR - REFERÊNCIAS]
+            - Citar referências formais utilizadas na elaboração do seminário.
+          </aside>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SLIDE: PERGUNTAS / Q&A -->
+        <!-- ========================================== -->
+        <section data-background-color="#0b0d13">
+          <span class="badge-red">Fim da Apresentação</span>
+          <h1>Dúvidas &amp; <span class="accent">Discussão</span></h1>
+          <p style="color: var(--text-muted); font-size: 0.8em; margin-bottom: 2em;">
+            Obrigado pela atenção! A palavra está aberta à banca e à turma.
+          </p>
+
+          <div class="card" style="max-width: 500px; margin: 0 auto; text-align: center;">
+            <p style="margin: 0; font-size: 0.7em; color: var(--text-muted);">
+              <strong>Red Team 1</strong><br />
+              [Contato / E-mail / GitHub da Equipe]
+            </p>
+          </div>
+
+          <aside class="notes">
+            [NOTAS DO ORADOR - Q&A]
+            - Agradecer a atenção de todos.
+            - Abrir para perguntas dos professores e colegas.
+          </aside>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Reveal.js & Plugins via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/notes/notes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/search/search.min.js"></script>
+
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        slideNumber: 'c/t',
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        plugins: [ RevealHighlight, RevealNotes, RevealSearch ]
+      });
+    </script>
+  </body>
+</html>
