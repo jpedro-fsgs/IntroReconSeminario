@@ -1318,34 +1318,34 @@
           <div class="slide-body">
             <div class="tool-list">
               <div class="tool-row rise" style="--d: .1s">
-                <span class="name"><button type="button" class="tool-link" data-tool="0">Shodan</button> / <button type="button" class="tool-link" data-tool="1">Censys</button></span><span class="cat">serviços indexados</span>
+                <span class="name"><button type="button" class="tool-link" data-tool="0">Shodan / Censys</button></span><span class="cat">serviços indexados</span>
                 <span class="use">Consultam índices de serviços, portas e banners já coletados por terceiros.</span>
               </div>
               <div class="tool-row rise" style="--d: .17s">
-                <span class="name"><button type="button" class="tool-link" data-tool="2">WHOIS</button></span><span class="cat">registros de domínio</span>
+                <span class="name"><button type="button" class="tool-link" data-tool="1">WHOIS</button></span><span class="cat">registros de domínio</span>
                 <span class="use">Consulta dados cadastrais e servidores de nomes; informações podem estar protegidas ou ausentes.</span>
               </div>
               <div class="tool-row rise" style="--d: .24s">
-                <span class="name"><button type="button" class="tool-link" data-tool="3">SecurityTrails</button> / <button type="button" class="tool-link" data-tool="4" aria-label="VirusTotal">VT</button></span><span class="cat">DNS histórico</span>
-                <span class="use">Reúnem associações e resoluções anteriores; resultados históricos exigem validação.</span>
+                <span class="name"><button type="button" class="tool-link" data-tool="2" aria-label="SecurityTrails e VirusTotal">SecurityTrails / VT</button></span><span class="cat">DNS e relações</span>
+                <span class="use">Combinam histórico de resoluções e relações observadas; resultados exigem validação.</span>
               </div>
               <div class="tool-row rise" style="--d: .31s">
-                <span class="name"><button type="button" class="tool-link" data-tool="5">crt.sh</button></span><span class="cat">certificados</span>
+                <span class="name"><button type="button" class="tool-link" data-tool="3">crt.sh</button></span><span class="cat">certificados</span>
                 <span class="use">Consulta logs de transparência para descobrir nomes associados a certificados.</span>
               </div>
               <div class="tool-row rise" style="--d: .38s">
-                <span class="name"><button type="button" class="tool-link" data-tool="6">Subfinder</button> / <button type="button" class="tool-link" data-tool="7">Amass</button></span><span class="cat">subdomínios</span>
+                <span class="name"><button type="button" class="tool-link" data-tool="4">Subfinder / Amass</button></span><span class="cat">subdomínios</span>
                 <span class="use">Automatizam buscas em múltiplas fontes; configure o modo passivo e confira os módulos.</span>
               </div>
               <div class="tool-row rise" style="--d: .45s">
-                <span class="name"><button type="button" class="tool-link" data-tool="8">ExifTool</button> / <button type="button" class="tool-link" data-tool="9">FOCA</button></span><span class="cat">metadados</span>
+                <span class="name"><button type="button" class="tool-link" data-tool="5">ExifTool / FOCA</button></span><span class="cat">metadados</span>
                 <span class="use">Analisam arquivos já obtidos para extrair autores, softwares e outros metadados.</span>
               </div>
             </div>
 
             <div class="slide-footline" style="margin-top: 16px">
               <span><b>Consulta passiva depende da configuração e da fonte.</b></span>
-              <span>selecione uma ferramenta para ver o exemplo ↗</span>
+              <span>selecione um grupo para ver o exemplo ↗</span>
             </div>
           </div>
 
@@ -1362,11 +1362,12 @@
               <div class="tool-detail-copy">
                 <span class="tool-detail-label">O que responde</span>
                 <p id="tool-detail-desc"></p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p class="tool-detail-scenario"></p></div>
                 <div class="tool-detail-caution"><b>Limite</b><span></span></div>
               </div>
               <div class="tool-detail-example">
-                <div class="tool-detail-label">CASO DE USO · EXEMPLO FICTÍCIO</div>
-                <p class="tool-detail-scenario"></p>
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-visual" aria-hidden="true"></div>
                 <div class="tool-detail-result"><span>PISTA</span><p></p></div>
               </div>
             </div>
@@ -1386,7 +1387,7 @@
               <li>WHOIS pode ocultar dados; DNS histórico não prova exposição atual; CT não revela necessariamente serviços ativos nem cobre todos os certificados.</li>
               <li>Subfinder e Amass têm opções e fontes distintas: desative verificações ativas. Ferramentas e o acesso inicial a um arquivo podem contatar o alvo, dependendo da configuração.</li>
               <li>Automação multiplica resultados — e multiplica erros se não houver validação.</li>
-              <li>Selecione cada nome para abrir o exemplo; dentro do painel, use as setas esquerda e direita ou os botões para percorrer as dez ferramentas. Esc retorna ao índice.</li>
+              <li>Selecione uma linha para abrir o exemplo; use as setas ou os botões para percorrer os seis grupos. Esc retorna ao índice.</li>
               <li>Exemplos fictícios: Shodan e Censys mostram serviços indexados; WHOIS consulta registros; SecurityTrails e VirusTotal revelam associações históricas; crt.sh reúne nomes em certificados; Subfinder e Amass cruzam fontes de subdomínios; ExifTool e FOCA analisam metadados em documentos já obtidos.</li>
             </ul>
           </aside>
@@ -2389,16 +2390,21 @@
       // Os detalhes pertencem ao mesmo slide: não alteram a sequência horizontal.
       (() => {
         const tools = [
-          { name: "Shodan", category: "Serviços indexados", description: "Quais serviços expostos já foram observados por um indexador?", scenario: "Uma equipe quer revisar a exposição de um endereço público sob sua responsabilidade.", result: "O índice aponta um serviço HTTPS e um banner coletado anteriormente.", caution: "O resultado é um retrato histórico, não uma confirmação da situação atual." },
-          { name: "Censys", category: "Serviços indexados", description: "Que serviços e certificados aparecem associados à infraestrutura conhecida?", scenario: "A equipe compara endereços públicos autorizados com os dados indexados pela plataforma.", result: "Um certificado e um serviço web aparecem associados a um endereço da organização.", caution: "A associação e a data da coleta precisam ser verificadas antes de concluir que o serviço continua ativo." },
+          { name: "Shodan / Censys", category: "Serviços indexados", description: "Quais serviços e certificados já foram observados por indexadores?", scenario: "Uma equipe compara um endereço público sob sua responsabilidade com os registros das duas plataformas.", result: "No exemplo, Shodan mostra um serviço HTTPS e Censys associa um certificado ao endereço.", caution: "Cada índice tem cobertura e datas próprias; os registros não confirmam a situação atual." },
           { name: "WHOIS", category: "Registros de domínio", description: "Quais informações cadastrais e servidores de nomes estão disponíveis para um domínio?", scenario: "A equipe consulta o registro público de example.com para entender sua administração.", result: "O registro pode informar registrador, datas e servidores de nomes.", caution: "Dados pessoais podem estar protegidos, omitidos ou desatualizados." },
-          { name: "SecurityTrails", category: "DNS histórico", description: "Que associações de DNS foram observadas ao longo do tempo?", scenario: "A equipe investiga se um domínio próprio já apontou para outro provedor.", result: "O histórico mostra um endereço antigo associado ao nome pesquisado.", caution: "Uma resolução histórica não prova que o endereço ainda pertence à organização." },
-          { name: "VirusTotal", category: "DNS e contexto", description: "Que relações e observações públicas existem sobre um domínio ou endereço?", scenario: "A equipe consulta um domínio sob análise para reunir contexto antes de uma investigação.", result: "As relações disponíveis sugerem endereços IP associados em observações anteriores.", caution: "As fontes têm cobertura e datas diferentes; uma associação isolada não comprova risco." },
+          { name: "SecurityTrails / VirusTotal", category: "DNS e relações", description: "Que resoluções históricas e relações observadas ajudam a contextualizar um domínio?", scenario: "A equipe investiga associações anteriores de um domínio próprio em duas fontes.", result: "SecurityTrails apresenta histórico DNS; VirusTotal reúne relações e observações adicionais.", caution: "As fontes têm datas e cobertura diferentes; associações antigas não comprovam propriedade ou risco atuais." },
           { name: "crt.sh", category: "Certificate Transparency", description: "Quais nomes aparecem em certificados registrados publicamente?", scenario: "A equipe pesquisa certificados emitidos para nomes associados ao seu domínio.", result: "Um certificado registrado inclui o nome teste.example.com.", caution: "Um nome no certificado não prova que o serviço está ativo; a cobertura não é absoluta." },
-          { name: "Subfinder", category: "Descoberta de subdomínios", description: "Que nomes podem ser reunidos a partir de fontes externas configuradas?", scenario: "A equipe lista candidatos a subdomínios do seu domínio usando fontes passivas.", result: "Diferentes fontes retornam nomes que entram na lista inicial de revisão.", caution: "Revise fontes e opções: verificações adicionais podem gerar tráfego direto." },
-          { name: "Amass", category: "Descoberta de subdomínios", description: "Como organizar nomes e relações de infraestrutura obtidos de múltiplas fontes?", scenario: "A equipe cruza resultados passivos sobre seu domínio para montar um inventário inicial.", result: "O inventário reúne nomes e associações que merecem investigação posterior.", caution: "Use apenas modos e fontes aprovados; recursos ativos podem interagir diretamente com o alvo." },
-          { name: "ExifTool", category: "Metadados", description: "Quais metadados estão presentes em um arquivo que já foi obtido?", scenario: "A equipe examina uma imagem ou um PDF público antes de republicá-lo.", result: "O arquivo pode conter autor, data de criação ou nome do software usado.", caution: "Metadados podem estar ausentes, incorretos ou ter sido modificados." },
-          { name: "FOCA", category: "Metadados de documentos", description: "Que metadados podem ser organizados a partir de documentos disponíveis?", scenario: "A equipe analisa PDFs que já obteve para revisar informações publicadas sem intenção.", result: "Os documentos podem revelar nomes de autores ou versões de software.", caution: "A obtenção dos arquivos e os módulos usados podem contatar o alvo; verifique a configuração." }
+          { name: "Subfinder / Amass", category: "Descoberta de subdomínios", description: "Que nomes e relações podem ser reunidos a partir de fontes externas?", scenario: "A equipe cruza candidatos de subdomínios do seu domínio em um inventário inicial.", result: "Subfinder reúne nomes; Amass também organiza relações entre os achados.", caution: "Revise modos e fontes: verificações ativas podem gerar tráfego direto ao alvo." },
+          { name: "ExifTool / FOCA", category: "Metadados de documentos", description: "Quais metadados podem aparecer em arquivos já obtidos?", scenario: "A equipe revisa PDFs antes de publicá-los ou compartilhá-los.", result: "ExifTool lê metadados do arquivo; FOCA ajuda a organizar achados de documentos.", caution: "Dados podem estar ausentes ou incorretos; a obtenção dos arquivos pode contatar o alvo." }
+        ];
+        // Dados ilustrativos, sem conexão com as ferramentas ou com sistemas externos.
+        const visuals = [
+          { type: 'search', title: 'Consulta comparativa · índices', query: '192.0.2.10', rows: [['SHODAN', 'HTTPS · porta 443'], ['CENSYS', 'certificado example.com'], ['ATENÇÃO', 'observações anteriores']] },
+          { type: 'record', title: 'WHOIS · registro público', query: 'example.com', rows: [['REGISTRADOR', 'Registrador Exemplo'], ['SERVIDORES', 'ns1.example.com'], ['CONTATO', 'dados protegidos']] },
+          { type: 'history', title: 'DNS histórico · relações', query: 'example.com', rows: [['SECURITYTRAILS', '2023 · 198.51.100.20'], ['VIRUSTOTAL', 'relação · 192.0.2.10'], ['ATENÇÃO', 'validar datas e vínculos']] },
+          { type: 'certificate', title: 'crt.sh · registro de certificado', query: '%.example.com', rows: [['NOMES', 'example.com'], ['SAN', 'teste.example.com'], ['FONTE', 'log público de CT']] },
+          { type: 'graph', title: 'Subdomínios · inventário combinado', query: 'fontes passivas configuradas', root: 'example.com', branches: ['Subfinder: www.example.com', 'Amass: teste.example.com'] },
+          { type: 'record', title: 'Metadados · arquivos obtidos', query: 'relatorio.pdf', rows: [['EXIFTOOL', 'Autor: Equipe Exemplo'], ['FOCA', 'Software: Editor de PDF'], ['ARQUIVO', 'documento local']] }
         ];
         const slide = document.querySelector('.tool-slide');
         const detail = slide.querySelector('.tool-detail');
@@ -2413,6 +2419,36 @@
         let controls = null;
         let controlsWereInert = false;
 
+        function visualElement(tag, className, text) {
+          const element = document.createElement(tag);
+          element.className = className;
+          if (text !== undefined) element.textContent = text;
+          return element;
+        }
+
+        function renderVisual(index) {
+          const visual = visuals[index];
+          const content = visualElement('div', `tool-visual-content is-${visual.type}`);
+          content.append(visualElement('div', 'tool-visual-bar', visual.title));
+          content.append(visualElement('div', 'tool-visual-query', visual.query));
+          if (visual.type === 'graph') {
+            const graph = visualElement('div', 'tool-visual-graph');
+            const branches = visualElement('div', 'tool-visual-branches');
+            visual.branches.forEach(name => branches.append(visualElement('div', 'tool-visual-node', name)));
+            graph.append(visualElement('div', 'tool-visual-node root', visual.root), visualElement('div', 'tool-visual-connector'), branches);
+            content.append(graph);
+          } else {
+            const rows = visualElement('div', 'tool-visual-rows');
+            visual.rows.forEach(([key, value]) => {
+              const row = visualElement('div', 'tool-visual-row');
+              row.append(visualElement('span', 'tool-visual-key', key), visualElement('span', 'tool-visual-value', value));
+              rows.append(row);
+            });
+            content.append(rows);
+          }
+          detail.querySelector('.tool-visual').replaceChildren(content);
+        }
+
         function renderTool(index) {
           current = index;
           const tool = tools[index];
@@ -2422,7 +2458,8 @@
           detail.querySelector('.tool-detail-scenario').textContent = tool.scenario;
           detail.querySelector('.tool-detail-result p').textContent = tool.result;
           detail.querySelector('.tool-detail-caution span').textContent = tool.caution;
-          detail.querySelector('.tool-detail-count').textContent = `${index + 1} / ${tools.length} · ferramentas`;
+          renderVisual(index);
+          detail.querySelector('.tool-detail-count').textContent = `${index + 1} / ${tools.length} · grupos`;
           previousButton.setAttribute('aria-disabled', String(index === 0));
           nextButton.textContent = index === tools.length - 1 ? 'Voltar ao índice ↗' : 'Próxima →';
         }

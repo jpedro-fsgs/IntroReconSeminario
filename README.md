@@ -86,7 +86,7 @@ O workflow publica apenas `index.html`, `css/` e um `.nojekyll`, sem subir arqui
 | `B` / `.` | Pausa / tela preta |
 | `Alt + clique` | Zoom no elemento clicado |
 
-No slide **O kit de coleta**, selecione o nome de uma ferramenta para abrir seu exemplo. No painel, `←` e `→` percorrem as ferramentas, e `Esc` volta ao índice; os botões também funcionam por clique ou toque. As notas do orador são compartilhadas pelo slide e os painéis não criam slides adicionais.
+No slide **O kit de coleta**, selecione um grupo de ferramentas para abrir seu exemplo. No painel, `←` e `→` percorrem os seis grupos, e `Esc` volta ao índice; os botões também funcionam por clique ou toque. As notas do orador são compartilhadas pelo slide e os painéis não criam slides adicionais.
 
 ---
 
@@ -116,7 +116,7 @@ O deck usa Reveal.js 5.1 via CDN e as fontes Instrument Serif, IBM Plex Sans e I
 - **Fallback visual:** o estado base dos elementos já é o estado final; sem JavaScript ou com animações desativadas, o conteúdo continua legível.
 - **Acessibilidade:** `prefers-reduced-motion` desativa as animações e mantém o resultado final.
 - **Dimensões:** canvas de 1280 × 720, `center: false`, transição `slide`.
-- **Demonstrações:** Nmap e Wireshark são simulações visuais em HTML/CSS/SVG, sem executar comandos reais ou tráfego de rede.
+- **Demonstrações:** Nmap, Wireshark e os painéis do kit de coleta são simulações visuais, sem executar comandos reais ou consultar os serviços mostrados. Os dados dos painéis são fictícios.
 - **Dados sensíveis:** os casos e endereços usados são didáticos ou públicos; nenhum alvo real foi testado durante a apresentação.
 - **Ícone do Twitter:** [Font Awesome Free 6.7.2](https://github.com/FortAwesome/Font-Awesome/blob/6.7.2/svgs/brands/twitter.svg), por Fonticons, Inc., sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
