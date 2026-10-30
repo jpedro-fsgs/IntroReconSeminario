@@ -86,6 +86,8 @@ O workflow publica apenas `index.html`, `css/` e um `.nojekyll`, sem subir arqui
 | `B` / `.` | Pausa / tela preta |
 | `Alt + clique` | Zoom no elemento clicado |
 
+No slide **O kit de coleta**, selecione o nome de uma ferramenta para abrir seu exemplo. No painel, `←` e `→` percorrem as ferramentas, e `Esc` volta ao índice; os botões também funcionam por clique ou toque. As notas do orador são compartilhadas pelo slide e os painéis não criam slides adicionais.
+
 ---
 
 ## Estrutura do projeto
