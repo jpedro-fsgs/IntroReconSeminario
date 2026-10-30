@@ -1117,7 +1117,7 @@
           <div class="red-rule"></div>
           <div class="kicker"><span class="who">Daniel</span> · Reconhecimento passivo</div>
           <h2 class="statement">Coletar<br /><em>sem tocar.</em></h2>
-          <p class="lede">O alvo não vê o pesquisador. Só o que já estava público.</p>
+          <p class="lede">Consultar fontes externas sem interagir diretamente com os sistemas do alvo.</p>
 
           <div class="divider-foot">
             <span class="who">com <b>Daniel</b></span>
@@ -1133,7 +1133,39 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 17 · O QUE É OSINT                                           -->
+        <!-- 17 · RECONHECIMENTO PASSIVO                                  -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Daniel</span> · Reconhecimento passivo</div>
+            <h2 class="h-md">Mapear a pegada sem consultar o alvo.</h2>
+          </div>
+
+          <div class="slide-body passive-brief">
+            <div class="passive-main">
+              <p class="lede">Uma etapa de inteligência que usa <strong>fontes externas</strong> para entender pessoas, tecnologias e exposição, sem enviar tráfego diretamente aos sistemas analisados.</p>
+              <div class="passive-route">
+                <span>pesquisador</span><b>→</b><span>fontes públicas e índices</span><b>→</b><span>perfil do alvo</span>
+              </div>
+              <p class="small">Registros públicos, metadados, buscas e plataformas de terceiros ajudam a reunir o contexto inicial.</p>
+            </div>
+            <div class="passive-tradeoffs">
+              <div><span class="passive-label">VANTAGEM</span><h3>Menos exposição direta</h3><p>Sem conexão própria ao alvo, sua coleta não gera tráfego direto nos sistemas dele.</p></div>
+              <div><span class="passive-label">LIMITE</span><h3>Dados podem envelhecer</h3><p>Índices e registros podem estar incompletos, desatualizados ou associados ao alvo errado.</p></div>
+            </div>
+          </div>
+
+          <aside class="notes"><ul>
+            <li>Definir o objetivo: mapear a pegada digital e levantar hipóteses sobre tecnologias e possíveis exposições.</li>
+            <li>Passivo em relação ao alvo não significa invisibilidade absoluta: provedores de terceiros podem registrar consultas, e seus próprios indexadores podem ter acessado o alvo.</li>
+            <li>WHOIS e DNS exigem atenção à fonte: consultar diretamente infraestrutura do alvo deixa de ser passivo em relação a ela.</li>
+          </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 18 · O QUE É OSINT                                           -->
         <!-- ============================================================ -->
         <section class="slide center">
           <div class="slide-inner">
@@ -1150,12 +1182,12 @@
                 inteligência acionável.
               </p>
               <p class="lede">
-                A regra de ouro do passivo: <strong>o alvo nunca recebe um pacote seu.</strong> Você consulta índices,
-                arquivos, históricos e o que outras pessoas publicaram.
+                No reconhecimento passivo, você consulta <strong>fontes externas</strong> — índices, arquivos e históricos —
+                sem contatar diretamente os sistemas do alvo.
               </p>
               <div class="tag-row">
-                <span class="chip">sem alerta no IDS</span>
-                <span class="chip">sem log no servidor</span>
+                <span class="chip">fontes externas</span>
+                <span class="chip">dados podem envelhecer</span>
                 <span class="chip">sem interação direta</span>
               </div>
             </div>
@@ -1168,11 +1200,11 @@
               <div class="src-list">
                 <span>Google · Bing · Brave</span>
                 <span>LinkedIn · GitHub · vagas</span>
-                <span>WHOIS · DNS · crt.sh</span>
+                <span>WHOIS · DNS histórico · crt.sh</span>
                 <span>Shodan · Censys · Wayback</span>
                 <span>HIBP · fóruns · imprensa</span>
               </div>
-              <p class="small" style="margin-top: 12px">Passivo ≠ inofensivo. Só é invisível para o alvo.</p>
+              <p class="small" style="margin-top: 12px">Terceiros podem registrar consultas; valide a data e a fonte.</p>
             </div>
           </div>
 
@@ -1181,13 +1213,43 @@
               <li>Definir OSINT com as três palavras: público, método, propósito.</li>
               <li>Diferenciar “dado” de “inteligência”: o dado isolado não decide nada.</li>
               <li>Enfatizar a regra de ouro e o contraste com o bloco anterior.</li>
+              <li>OSINT é uma metodologia; dependendo da fonte e do modo de coleta, nem toda consulta é passiva em relação ao alvo. Dados públicos também não dispensam análise legal e ética.</li>
             </ul>
           </aside>
                   </div>
         </section>
 
         <!-- ============================================================ -->
-        <!-- 18 · TÉCNICAS PASSIVAS                                       -->
+        <!-- 19 · CICLO DE OSINT                                          -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT</div>
+            <h2 class="h-md">De uma pergunta à próxima.</h2>
+            <p class="lede">Dados brutos só viram inteligência quando respondem a uma necessidade.</p>
+          </div>
+          <div class="slide-body cycle-body">
+            <div class="cycle-grid">
+              <div class="cycle-step"><span>01</span><h3>Planejar</h3><p>Definir o objetivo, o alvo e as perguntas.</p></div>
+              <div class="cycle-step"><span>02</span><h3>Coletar</h3><p>Reunir dados em fontes públicas relevantes.</p></div>
+              <div class="cycle-step"><span>03</span><h3>Processar</h3><p>Organizar, limpar e separar sinal de ruído.</p></div>
+              <div class="cycle-step"><span>04</span><h3>Analisar</h3><p>Cruzar evidências e produzir conclusões.</p></div>
+              <div class="cycle-step"><span>05</span><h3>Disseminar</h3><p>Comunicar achados e limites a quem decide.</p></div>
+              <div class="cycle-step"><span>06</span><h3>Feedback</h3><p>Avaliar respostas e abrir novas perguntas.</p></div>
+            </div>
+            <div class="cycle-return">↶ &nbsp; novas perguntas reiniciam o ciclo</div>
+          </div>
+          <aside class="notes"><ul>
+            <li>Usar um exemplo simples: descobrir quais serviços públicos aparecem associados a um domínio.</li>
+            <li>Registrar fonte e data, validar a informação e distinguir evidência de hipótese; a coleta por si só não é inteligência.</li>
+            <li>O feedback pode revelar lacunas e levar a uma nova rodada de planejamento.</li>
+          </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 20 · TÉCNICAS PASSIVAS                                       -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1202,21 +1264,21 @@
                 <div class="cat">BUSCA &amp; INDEXAÇÃO</div>
                 <h4>Dorks: a sintaxe que o buscador obedece</h4>
                 <p>Operadores transformam uma busca comum em um filtro cirúrgico por domínio, tipo de arquivo e diretório.</p>
-                <code>site:alvo.com filetype:env</code>
+                <code>site:exemplo.com filetype:pdf</code>
               </div>
 
               <div class="entry rise" style="--d: .18s">
                 <div class="cat">DNS &amp; CERTIFICADOS</div>
-                <h4>Subdomínios que ninguém lembrou de fechar</h4>
-                <p>Logs de Certificate Transparency são públicos por design. Ambientes de staging e dev costumam aparecer ali.</p>
-                <code>crt.sh → %.alvo.com</code>
+                <h4>Subdomínios em registros de certificados</h4>
+                <p>Logs de Certificate Transparency podem revelar nomes em certificados, inclusive de ambientes de teste.</p>
+                <code>crt.sh → %.exemplo.com</code>
               </div>
 
               <div class="entry rise" style="--d: .26s">
                 <div class="cat">REGISTROS &amp; INFRA</div>
                 <h4>Quem é o dono, qual é a faixa, quem é o terceiro</h4>
-                <p>WHOIS, ASN e DNS histórico revelam provedores, aquisições e a cadeia de fornecedores.</p>
-                <code>whois alvo.com → ASN → faixas</code>
+                <p>WHOIS, ASN e DNS histórico ajudam a identificar provedores e associações anteriores.</p>
+                <code>WHOIS + DNS passivo → histórico</code>
               </div>
 
               <div class="entry rise" style="--d: .34s">
@@ -1229,7 +1291,7 @@
 
             <div class="slide-footline" style="margin-top: 20px">
               <span><b>Dork é sintaxe, não magia.</b> O que aparece já estava indexado.</span>
-              <span>fontes públicas · nenhuma requisição ao alvo</span>
+                <span>fontes externas · sem requisição direta ao alvo</span>
             </div>
           </div>
 
@@ -1244,52 +1306,46 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 19 · FERRAMENTAS OSINT                                       -->
+        <!-- 21 · FERRAMENTAS OSINT                                       -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Daniel</span> · Ferramentas</div>
-            <h2 class="h-md">O kit de coleta — e o ruído de cada escolha</h2>
+            <h2 class="h-md">O kit de coleta — e o que cada fonte responde</h2>
           </div>
 
           <div class="slide-body">
             <div class="tool-list">
               <div class="tool-row rise" style="--d: .1s">
-                <span class="name">theHarvester</span><span class="cat">e-mails · subdomínios</span>
-                <span class="use">Varre buscadores e fontes públicas para montar a lista inicial de contatos e hosts.</span>
-                <span class="noise"><i class="on"></i><i></i><i></i></span>
+                <span class="name">Shodan / Censys</span><span class="cat">serviços indexados</span>
+                <span class="use">Consultam índices de serviços, portas e banners já coletados por terceiros.</span>
               </div>
               <div class="tool-row rise" style="--d: .17s">
-                <span class="name">Maltego</span><span class="cat">correlação visual</span>
-                <span class="use">Transforma entidades (pessoa, domínio, e-mail) em um grafo de relações navegável.</span>
-                <span class="noise"><i class="on"></i><i></i><i></i></span>
+                <span class="name">WHOIS</span><span class="cat">registros de domínio</span>
+                <span class="use">Consulta dados cadastrais e servidores de nomes; informações podem estar protegidas ou ausentes.</span>
               </div>
               <div class="tool-row rise" style="--d: .24s">
-                <span class="name">Shodan / Censys</span><span class="cat">índice de serviços</span>
-                <span class="use">Consultam um índice já coletado da internet — não o alvo. Ótimo para exposição de borda.</span>
-                <span class="noise"><i class="on"></i><i></i><i></i></span>
+                <span class="name">SecurityTrails / VT</span><span class="cat">DNS histórico</span>
+                <span class="use">Reúnem associações e resoluções anteriores; resultados históricos exigem validação.</span>
               </div>
               <div class="tool-row rise" style="--d: .31s">
-                <span class="name">SpiderFoot</span><span class="cat">automação multi-fonte</span>
-                <span class="use">Orquestra dezenas de módulos passivos e organiza os achados por risco.</span>
-                <span class="noise"><i class="on"></i><i class="on"></i><i></i></span>
+                <span class="name">crt.sh</span><span class="cat">certificados</span>
+                <span class="use">Consulta logs de transparência para descobrir nomes associados a certificados.</span>
               </div>
               <div class="tool-row rise" style="--d: .38s">
-                <span class="name">Sherlock</span><span class="cat">usernames</span>
-                <span class="use">Verifica a existência do mesmo nome de usuário em centenas de plataformas.</span>
-                <span class="noise"><i class="on"></i><i></i><i></i></span>
+                <span class="name">Subfinder / Amass</span><span class="cat">subdomínios</span>
+                <span class="use">Automatizam buscas em múltiplas fontes; configure o modo passivo e confira os módulos.</span>
               </div>
               <div class="tool-row rise" style="--d: .45s">
-                <span class="name">Google Dorks</span><span class="cat">busca avançada</span>
-                <span class="use">Sem instalação: operadores combinados para achar arquivos, painéis e diretórios esquecidos.</span>
-                <span class="noise"><i class="on"></i><i></i><i></i></span>
+                <span class="name">ExifTool / FOCA</span><span class="cat">metadados</span>
+                <span class="use">Analisam arquivos já obtidos para extrair autores, softwares e outros metadados.</span>
               </div>
             </div>
 
             <div class="slide-footline" style="margin-top: 16px">
-              <span><b>Pegada:</b> quanto mais à direita, mais o alvo pode perceber.</span>
-              <span>a escolha da fonte é uma decisão de OpSec</span>
+              <span><b>Consulta passiva depende da configuração e da fonte.</b></span>
+              <span>índices · registros · arquivos já obtidos</span>
             </div>
           </div>
 
@@ -1297,6 +1353,8 @@
             <ul>
               <li>Não virar catálogo: destacar o que cada uma responde.</li>
               <li>Shodan é passivo em relação ao alvo, mas os dados podem estar desatualizados.</li>
+              <li>WHOIS pode ocultar dados; DNS histórico não prova exposição atual; CT não revela necessariamente serviços ativos nem cobre todos os certificados.</li>
+              <li>Subfinder e Amass têm opções e fontes distintas: desative verificações ativas. Ferramentas e o acesso inicial a um arquivo podem contatar o alvo, dependendo da configuração.</li>
               <li>Automação multiplica resultados — e multiplica erros se não houver validação.</li>
             </ul>
           </aside>
@@ -1304,13 +1362,13 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 20 · DUMPSTER DIVING                                         -->
+        <!-- 22 · DUMPSTER DIVING                                         -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Daniel</span> · Outras técnicas</div>
-            <h2 class="h-md">Dumpster diving: o OSINT que não usa a internet</h2>
+            <h2 class="h-md">Dumpster diving: quando o descarte vira pista</h2>
           </div>
 
           <div class="slide-body bin-grid">
@@ -1334,7 +1392,7 @@
             <div>
               <p class="lede">
                 Documentos descartados, manuais, faturas, crachás e até post-its com senha. O lixo de uma organização
-                conta a história que o site institucional não conta.
+                conta a história que o site institucional não conta. Mídias descartadas também podem guardar dados.
               </p>
               <div class="tag-row" style="margin-top: 18px">
                 <span class="chip">organograma</span>
@@ -1347,8 +1405,7 @@
                 engajamento sério, isso está escrito no escopo — não no improviso.
               </div>
               <p class="small" style="margin-top: 14px">
-                A mesma lógica vale para shoulder surfing, pretexting e visitas presenciais: engenharia social é recon
-                com pessoas.
+                Descarte físico não é necessariamente fonte pública ou OSINT; sua coleta depende do contexto e da autorização.
               </p>
             </div>
           </div>
@@ -1356,7 +1413,8 @@
           <aside class="notes">
             <ul>
               <li>Contar um exemplo de manual de rede descartado com faixas de IP e senha de console.</li>
-              <li>Deixar claro o limite legal: autorização e descarte importam.</li>
+              <li>Exemplos: contratos, senhas anotadas, mídias antigas e notas fiscais que revelam fornecedores. Recomendar destruição segura de documentos e higienização de mídias.</li>
+              <li>Deixar claro o limite legal: autorização, propriedade e descarte importam; não presumir que lixo é público.</li>
               <li>Conectar com o phishing do Emilio: o canal humano é o mesmo.</li>
             </ul>
           </aside>
@@ -1364,7 +1422,38 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 21 · ECOSSISTEMA INT                                         -->
+        <!-- 23 · SHOULDER SURFING                                        -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Daniel</span> · Reconhecimento físico</div>
+            <h2 class="h-md">Shoulder surfing: informação à vista.</h2>
+          </div>
+          <div class="slide-body shoulder-grid">
+            <div>
+              <p class="lede">Observar uma tela ou um teclado pode expor informações sem malware ou acesso à rede.</p>
+              <div class="shoulder-scene" aria-hidden="true">
+                <div class="shoulder-screen"><span>ACESSO</span><b>••••••••</b><i>código de verificação</i></div>
+                <div class="shoulder-eye">◉<span>campo de visão</span></div>
+              </div>
+            </div>
+            <div class="shoulder-points">
+              <div><b>O que pode aparecer</b><p>Senhas, PINs, códigos 2FA, dados pessoais, e-mails ou documentos de trabalho.</p></div>
+              <div><b>Onde acontece</b><p>Transporte, locais públicos e escritórios; câmeras mal posicionadas também podem ampliar a exposição.</p></div>
+              <div><b>Como reduzir o risco</b><p>Proteja a tela e o teclado, bloqueie dispositivos e evite abrir dados sensíveis em locais expostos.</p></div>
+            </div>
+          </div>
+          <aside class="notes"><ul>
+            <li>Shoulder surfing é observação visual, não uma coleta necessariamente pública ou OSINT.</li>
+            <li>Exemplos incluem credenciais, informações financeiras e documentos corporativos em trânsito ou no escritório.</li>
+            <li>Discussão e demonstrações devem respeitar privacidade, autorização e limites do exercício.</li>
+          </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 24 · ECOSSISTEMA INT                                         -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1404,8 +1493,8 @@
                 <p>Ameaças digitais, infraestrutura, malware e atores de ameaça.</p>
               </div>
               <div class="int-cell rise" style="--dot: var(--green); --d: .5s">
-                <div class="abbr">DARKINT</div><div class="nm">DARK WEB INTELLIGENCE</div>
-                <p>Fóruns fechados, mercados e vazamentos fora do índice comum.</p>
+                <div class="abbr">SOCMINT</div><div class="nm">SOCIAL MEDIA INTELLIGENCE</div>
+                <p>Perfis, interações e tendências em plataformas sociais; pode usar fontes públicas.</p>
               </div>
               <div class="int-cell rise" style="--dot: var(--blue); --d: .56s">
                 <div class="abbr">SIGINT</div><div class="nm">SIGNALS INTELLIGENCE</div>
@@ -1422,7 +1511,8 @@
           <aside class="notes">
             <ul>
               <li>Não decorar siglas: explicar que cada uma responde a um tipo de fonte.</li>
-              <li>Destacar GEOINT e HUMINT, que aparecem na demonstração e nos casos.</li>
+              <li>Destacar HUMINT, SIGINT, GEOINT, SOCMINT e CYBINT/DNINT, conforme o roteiro. As categorias e suas fronteiras variam conforme o contexto.</li>
+              <li>SOCMINT pode ser uma vertente da OSINT quando usa fontes públicas; CYBINT pode envolver logs, malware e tráfego de rede, além de fontes abertas.</li>
               <li>Fechar: a fronteira entre as disciplinas é permeável; o analista cruza fontes.</li>
             </ul>
           </aside>
@@ -1430,7 +1520,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 22 · DIVISOR 04                                              -->
+        <!-- 25 · DIVISOR 04                                              -->
         <!-- ============================================================ -->
         <section class="slide divider">
           <div class="slide-inner">
@@ -1455,7 +1545,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 23 · CASO RSA                                                -->
+        <!-- 26 · CASO RSA                                                -->
         <!-- ============================================================ -->
         <section class="slide paper">
           <div class="slide-inner">
@@ -1525,7 +1615,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 24 · CASO STRAVA                                             -->
+        <!-- 27 · CASO STRAVA                                             -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1614,7 +1704,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 25 · LIÇÃO DOS CASOS                                         -->
+        <!-- 28 · LIÇÃO DOS CASOS                                         -->
         <!-- ============================================================ -->
         <section class="slide center">
           <div class="slide-inner">
@@ -1653,7 +1743,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 26 · DIVISOR 05                                              -->
+        <!-- 29 · DIVISOR 05                                              -->
         <!-- ============================================================ -->
         <section class="slide divider">
           <div class="slide-inner">
@@ -1678,7 +1768,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 27 · GEOSINT 1                                               -->
+        <!-- 30 · GEOSINT 1                                               -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1804,7 +1894,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 28 · GEOSINT 2                                               -->
+        <!-- 31 · GEOSINT 2                                               -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1886,7 +1976,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 29 · OSINT DEMO — GRAFO                                      -->
+        <!-- 32 · OSINT DEMO — GRAFO                                      -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1964,7 +2054,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 30 · DIVISOR 06                                              -->
+        <!-- 33 · DIVISOR 06                                              -->
         <!-- ============================================================ -->
         <section class="slide divider">
           <div class="slide-inner">
@@ -1988,7 +2078,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 31 · OPSEС — CONCEITO                                        -->
+        <!-- 34 · OPSEС — CONCEITO                                        -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -2045,7 +2135,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 32 · OPSEС NO DIA A DIA                                      -->
+        <!-- 35 · OPSEС NO DIA A DIA                                      -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -2105,7 +2195,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 33 · TAKEAWAYS                                               -->
+        <!-- 36 · TAKEAWAYS                                               -->
         <!-- ============================================================ -->
         <section class="slide center">
           <div class="slide-inner">
@@ -2148,7 +2238,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 34 · REFERÊNCIAS                                             -->
+        <!-- 37 · REFERÊNCIAS                                             -->
         <!-- ============================================================ -->
         <section class="slide paper">
           <div class="slide-inner">
@@ -2196,7 +2286,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 35 · Q&A                                                     -->
+        <!-- 38 · Q&A                                                     -->
         <!-- ============================================================ -->
         <section class="slide qa">
           <div class="slide-inner">

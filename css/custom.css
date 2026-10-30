@@ -1075,6 +1075,59 @@ body {
   margin-top: 4px;
 }
 
+/* ---------- Recon passivo e ciclo OSINT ---------- */
+
+.passive-brief {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.passive-main .lede { max-width: 28em; }
+
+.passive-route {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 28px 0 18px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 0.34em;
+  color: var(--text);
+}
+
+.passive-route b { color: var(--red-bright); }
+
+.passive-tradeoffs { display: grid; gap: 30px; }
+.passive-tradeoffs > div { border-left: 2px solid var(--red); padding-left: 20px; }
+.passive-label { font-family: var(--mono); font-size: 0.3em; color: var(--amber); letter-spacing: 0.07em; }
+.passive-tradeoffs h3 { font-size: 0.8em; margin: 6px 0; }
+.passive-tradeoffs p { font-size: 0.42em; color: var(--muted); line-height: 1.5; }
+
+.cycle-body { display: flex; flex-direction: column; justify-content: center; }
+.cycle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px 36px; }
+.cycle-step { border-top: 1px solid var(--line); padding: 16px 0 8px; }
+.cycle-step > span { font-family: var(--mono); font-size: 0.35em; color: var(--red-bright); }
+.cycle-step h3 { font-size: 0.8em; margin: 8px 0; }
+.cycle-step p { font-size: 0.41em; color: var(--muted); line-height: 1.45; max-width: 22em; }
+.cycle-return { margin-top: 24px; font-family: var(--mono); font-size: 0.32em; color: var(--amber); }
+
+.shoulder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+.shoulder-grid .lede { max-width: 25em; }
+.shoulder-scene { display: flex; align-items: center; gap: 25px; margin-top: 26px; }
+.shoulder-screen { display: flex; flex-direction: column; gap: 10px; width: 230px; padding: 20px; border: 1px solid #56616e; background: var(--panel); }
+.shoulder-screen span, .shoulder-screen i { font-family: var(--mono); font-size: 0.3em; color: var(--muted); font-style: normal; }
+.shoulder-screen b { font-family: var(--mono); font-size: 0.7em; letter-spacing: 0.12em; color: var(--text); }
+.shoulder-eye { font-size: 1.4em; color: var(--red-bright); }
+.shoulder-eye span { display: block; font-family: var(--mono); font-size: 0.22em; color: var(--faint); }
+.shoulder-points { display: grid; gap: 20px; }
+.shoulder-points > div { border-top: 1px solid var(--line); padding-top: 12px; }
+.shoulder-points b { display: block; font-size: 0.48em; color: var(--text); }
+.shoulder-points p { margin-top: 5px; font-size: 0.4em; color: var(--muted); line-height: 1.5; }
+
 /* ---------- Twitter case ---------- */
 
 .tw-grid {
@@ -2670,7 +2723,7 @@ body {
 
 .tool-row {
   display: grid;
-  grid-template-columns: 190px 132px 1fr 82px;
+  grid-template-columns: 190px 132px 1fr;
   gap: 16px;
   align-items: center;
   padding: 10px 0;
@@ -2694,22 +2747,6 @@ body {
   color: var(--muted);
   line-height: 1.4;
 }
-
-.noise {
-  display: flex;
-  gap: 3px;
-  justify-content: flex-end;
-}
-
-.noise i {
-  width: 14px;
-  height: 4px;
-  background: #2a313b;
-  display: block;
-}
-
-.noise i.on { background: var(--amber); }
-.noise i.hot { background: var(--red); }
 
 /* ---------- Dumpster ---------- */
 

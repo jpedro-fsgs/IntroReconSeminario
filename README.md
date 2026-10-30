@@ -4,7 +4,7 @@ Apresentação de seminário sobre reconhecimento e inteligência de fontes aber
 
 > **Duração estimada:** 45 minutos + Q&A
 >
-> **Formato:** 35 slides, 16:9, sem build e sem dependências locais além de um servidor HTTP simples.
+> **Formato:** 38 slides, 16:9, sem build e sem dependências locais além de um servidor HTTP simples.
 
 ---
 
@@ -12,12 +12,12 @@ Apresentação de seminário sobre reconhecimento e inteligência de fontes aber
 
 | Integrante | Bloco | Slides |
 | :--- | :--- | :---: |
-| **Geovana** | Conceito e contexto · OpSec e fechamento | 03–09 · 30–33 |
+| **Geovana** | Conceito e contexto · OpSec e fechamento | 03–09 · 33–36 |
 | **Emilio** | Reconhecimento ativo · Nmap · Wireshark | 10–15 |
-| **Daniel** | Reconhecimento passivo · OSINT | 16–21 |
-| **João Pedro Gonçalves** | Estudos de caso — RSA e Strava | 22–25 |
-| **João Pedro Almeida** | Demonstração — GEOSINT e OSINT | 26–29 |
-| **Todos** | Capa, agenda, referências e Q&A | 01–02 · 34–35 |
+| **Daniel** | Reconhecimento passivo · OSINT | 16–24 |
+| **João Pedro Gonçalves** | Estudos de caso — RSA e Strava | 25–28 |
+| **João Pedro Almeida** | Demonstração — GEOSINT e OSINT | 29–32 |
+| **Todos** | Capa, agenda, referências e Q&A | 01–02 · 37–38 |
 
 ---
 
@@ -28,11 +28,11 @@ Apresentação de seminário sobre reconhecimento e inteligência de fontes aber
 | — | Capa e agenda | 01–02 | Todos |
 | 01 | Era das mídias, caso Twitter, superexposição, Smart Sampa e conceito | 03–09 | Geovana |
 | 02 | Reconhecimento ativo, redes, Nmap e Wireshark | 10–15 | Emilio |
-| 03 | OSINT, técnicas passivas, ferramentas e ecossistema | 16–21 | Daniel |
-| 04 | Estudos de caso: RSA SecurID e Strava | 22–25 | João Pedro Gonçalves |
-| 05 | Demonstração: GEOSINT e grafo de OSINT | 26–29 | João Pedro Almeida |
-| 06 | OpSec, hábitos e conclusão | 30–33 | Geovana |
-| — | Referências e perguntas | 34–35 | Todos |
+| 03 | Recon passivo, ciclo de OSINT, técnicas físicas, ferramentas e ecossistema | 16–24 | Daniel |
+| 04 | Estudos de caso: RSA SecurID e Strava | 25–28 | João Pedro Gonçalves |
+| 05 | Demonstração: GEOSINT e grafo de OSINT | 29–32 | João Pedro Almeida |
+| 06 | OpSec, hábitos e conclusão | 33–36 | Geovana |
+| — | Referências e perguntas | 37–38 | Todos |
 
 Cada slide possui **notas do orador** (`<aside class="notes">`) com pontos de fala, transições e cuidados de contextualização.
 
@@ -92,7 +92,7 @@ O workflow publica apenas `index.html`, `css/` e um `.nojekyll`, sem subir arqui
 
 ```text
 .
-├── index.html                     # deck completo, 35 slides horizontais
+├── index.html                     # deck completo, 38 slides horizontais
 ├── css/
 │   └── custom.css                 # identidade visual, componentes e animações
 ├── assets/
@@ -109,7 +109,7 @@ O deck usa Reveal.js 5.1 via CDN e as fontes Instrument Serif, IBM Plex Sans e I
 
 ## Notas técnicas
 
-- **Navegação horizontal:** não há seções verticais aninhadas; `Reveal.slide(i)` percorre os 35 slides.
+- **Navegação horizontal:** não há seções verticais aninhadas; `Reveal.slide(i)` percorre os 38 slides.
 - **Animações:** as transições são ativadas pela classe `.present` que o Reveal adiciona ao slide atual. Isso faz as animações reiniciarem ao revisitar um slide.
 - **Fallback visual:** o estado base dos elementos já é o estado final; sem JavaScript ou com animações desativadas, o conteúdo continua legível.
 - **Acessibilidade:** `prefers-reduced-motion` desativa as animações e mantém o resultado final.
