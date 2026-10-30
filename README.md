@@ -1,182 +1,116 @@
-# 🎯 Red Team 1 — Recon & OSINT: Roteiro & Write-up da Apresentação
+# Red Team 1 — Recon & OSINT
 
-> **Status:** Template em Branco / Estrutura Inicial  
-> **Tema:** Reconhecimento (Recon) & Inteligência de Fontes Abertas (OSINT)  
-> **Equipe:** Red Team 1  
-> **Duração Estimada:** [Ex: 30 a 45 minutos + 10 min Q&A]  
+Apresentação de seminário sobre reconhecimento e inteligência de fontes abertas, construída em Reveal.js com navegação **exclusivamente horizontal** e animações de interface para as demonstrações de Nmap e Wireshark.
 
----
-
-## 👥 1. Identificação da Equipe & Papéis
-
-| Integrante | Papel na Apresentação | Tópico(s) de Responsabilidade |
-| :--- | :--- | :--- |
-| **[Nome 1]** | [Ex: Abertura & Metodologia] | [Tópicos X e Y] |
-| **[Nome 2]** | [Ex: Técnicas de OSINT Passivo] | [Tópicos Z e W] |
-| **[Nome 3]** | [Ex: Recon Ativo & Tooling] | [Tópicos A e B] |
-| **[Nome 4]** | [Ex: Demonstração / PoC & Fechamento] | [Tópicos C e D] |
+> **Duração estimada:** 45 minutos + Q&A
+>
+> **Formato:** 33 slides, 16:9, sem build e sem dependências locais além de um servidor HTTP simples.
 
 ---
 
-## 🎯 2. Objetivos da Apresentação
+## Equipe e divisão do conteúdo
 
-- **Objetivo Geral:** [Definir o propósito principal da apresentação — ex: demonstrar a importância e as fases de reconhecimento em um ciclo de ataque do Red Team].
-- **Objetivos Específicos:**
-  1. [Objetivo 1 — ex: Diferenciar inteligência passiva de reconhecimento ativo]
-  2. [Objetivo 2 — ex: Apresentar o framework/metodologia adotada pela equipe]
-  3. [Objetivo 3 — ex: Demonstrar fluxo de coleta e correlação de dados]
-  4. [Objetivo 4 — ex: Abordar limites éticos/legais e medidas de contra-inteligência]
-
----
-
-## ⏱️ 3. Distribuição de Tempo Sugerida
-
-| Bloco | Seção | Tempo Sugerido | Responsável |
-| :---: | :--- | :---: | :---: |
-| 1 | Abertura, Contexto & Objetivos | [00:00 - 05:00] | [Nome] |
-| 2 | Fundamentos de Recon & Ciclo de OSINT | [05:00 - 12:00] | [Nome] |
-| 3 | Técnicas de OSINT Passivo | [12:00 - 20:00] | [Nome] |
-| 4 | Reconhecimento Ativo & Mapeamento de Superfície | [20:00 - 28:00] | [Nome] |
-| 5 | Demonstração Prática / Estudo de Caso (PoC) | [28:00 - 38:00] | [Nome] |
-| 6 | Visão Defensiva (Blue Team) & Ética / Legalidade | [38:00 - 43:00] | [Nome] |
-| 7 | Conclusão & Sessão de Dúvidas (Q&A) | [43:00 - 50:00] | Todos |
+| Integrante | Bloco | Slides |
+| :--- | :--- | :---: |
+| **Geovana** | Conceito e contexto · OpSec e fechamento | 03–06 · 27–31 |
+| **Emilio** | Reconhecimento ativo · Nmap · Wireshark | 07–12 |
+| **Daniel** | Reconhecimento passivo · OSINT | 13–18 |
+| **João Pedro Gonçalves** | Estudos de caso — RSA e Strava | 19–22 |
+| **João Pedro Almeida** | Demonstração — GEOSINT e OSINT | 23–26 |
+| **Todos** | Capa, agenda, referências e Q&A | 01–02 · 32–33 |
 
 ---
 
-## 📝 4. Roteiro Detalhado (Write-up dos Slides)
+## Roteiro da apresentação
 
-### Bloco 1: Abertura e Introdução
-* **Slides correspondentes:** `01 - 03`
-* **Pontos-chave a abordar:**
-  - [ ] Boas-vindas e introdução da equipe Red Team 1.
-  - [ ] Contextualização do Recon dentro da cadeia do ciberataque (Cyber Kill Chain / MITRE ATT&CK - TA0043: Reconnaissance).
-  - [ ] Por que 80% do sucesso de uma invasão reside na fase de reconhecimento?
-* **Notas de fala do apresentador:**
-  > *[Inserir guia de fala / speech da abertura aqui]*
+| Bloco | Tema | Slides | Responsável |
+| :---: | :--- | :---: | :--- |
+| — | Capa e agenda | 01–02 | Todos |
+| 01 | Conceito, superfície de ataque e caso Smart Sampa | 03–06 | Geovana |
+| 02 | Reconhecimento ativo, redes, Nmap e Wireshark | 07–12 | Emilio |
+| 03 | OSINT, técnicas passivas, ferramentas e ecossistema | 13–18 | Daniel |
+| 04 | Estudos de caso: RSA SecurID e Strava | 19–22 | João Pedro Gonçalves |
+| 05 | Demonstração: GEOSINT e grafo de OSINT | 23–26 | João Pedro Almeida |
+| 06 | OpSec, hábitos, privacidade e conclusão | 27–31 | Geovana |
+| — | Referências e perguntas | 32–33 | Todos |
 
----
-
-### Bloco 2: Fundamentos & Metodologia
-* **Slides correspondentes:** `04 - 06`
-* **Pontos-chave a abordar:**
-  - [ ] Definição e distinção: Reconhecimento Passivo vs. Semi-Passivo vs. Ativo.
-  - [ ] O ciclo de inteligência OSINT (Planejamento, Coleta, Processamento, Análise, Disseminação).
-  - [ ] Vetores de superfície de ataque: Pessoas, Infraestrutura, Aplicações e Terceiros/Cadeia de suprimentos.
-* **Notas de fala do apresentador:**
-  > *[Inserir guia de fala aqui]*
+Cada slide possui **notas do orador** (`<aside class="notes">`) com pontos de fala, transições e cuidados de contextualização.
 
 ---
 
-### Bloco 3: Técnicas de OSINT Passivo
-* **Slides correspondentes:** `07 - 10`
-* **Pontos-chave a abordar:**
-  - [ ] Fontes públicas e busca avançada (Dorks de Google/Bing/GitHub).
-  - [ ] Enumeração de domínio, DNS histórico, WHOIS, registros BGP/ASN e certificados (Certificate Transparency logs).
-  - [ ] Engenharia Social & Perfilamento de Pessoas (redes sociais corporativas, vazamentos de credenciais, repositórios públicos).
-  - [ ] Metadados de arquivos públicos (FOCA, ExifTool, documentos indexados).
-* **Notas de fala do apresentador:**
-  > *[Inserir guia de fala aqui]*
+## Como executar
 
----
+### Servidor local (recomendado)
 
-### Bloco 4: Reconhecimento Ativo & Footprinting
-* **Slides correspondentes:** `11 - 14`
-* **Pontos-chave a abordar:**
-  - [ ] Probing e descoberta de portas/serviços (sem disparar alertas precoces).
-  - [ ] Varredura de tecnologias e fingerprinted web (Wappalyzer, Nuclei templates de recon, headers HTTP).
-  - [ ] Mapeamento de diretórios, endpoints e APIs não documentadas.
-  - [ ] Identificação de defesas perimetrais (WAF, IDS/IPS, CDN).
-* **Notas de fala do apresentador:**
-  > *[Inserir guia de fala aqui]*
-
----
-
-### Bloco 5: Ferramentas, Frameworks & Automação
-* **Slides correspondentes:** `15 - 17`
-* **Pontos-chave a abordar:**
-  - [ ] Frameworks integrados (ex: SpiderFoot, Recon-ng, Maltego, theHarvester).
-  - [ ] Pipelines de automação modernos do Red Team (ex: Amass, Subfinder, httpx, Naabu, Katana).
-  - [ ] Armazenamento e correlação de dados coletados (Bancos grafos, Neo4j, Obsidian, Elastic).
-* **Notas de fala do apresentador:**
-  > *[Inserir guia de fala aqui]*
-
----
-
-### Bloco 6: Estudo de Caso / Demonstração Prática (PoC)
-* **Slides correspondentes:** `18 - 20`
-* **Pontos-chave a abordar:**
-  - [ ] Cenário simulado (alvo fictício autorizado ou ambiente de laboratório).
-  - [ ] Demonstração do fluxo de ataque: do primeiro dado público até o vetor de entrada viável.
-  - [ ] Lições aprendidas da demonstração.
-* **Notas de fala do apresentador:**
-  > *[Inserir descrição da demonstração e comandos executados aqui]*
-
----
-
-### Bloco 7: Contramedidas (Blue Team) & Aspectos Legais/Éticos
-* **Slides correspondentes:** `21 - 23`
-* **Pontos-chave a abordar:**
-  - [ ] O que o Blue Team pode fazer para dificultar a coleta (Hardening de superfícies, redução de pegada digital, Threat Intelligence).
-  - [ ] Limites éticos e legislações vigentes (LGPD, Marco Civil, termos de serviço das plataformas).
-  - [ ] Boas práticas para um engajamento seguro de Red Team (Escopo e RoE - Rules of Engagement).
-* **Notas de fala do apresentador:**
-  > *[Inserir guia de fala aqui]*
-
----
-
-### Bloco 8: Conclusão, Referências & Perguntas
-* **Slides correspondentes:** `24 - 25`
-* **Pontos-chave a abordar:**
-  - [ ] Recapitulação das principais conclusões.
-  - [ ] Referências bibliográficas e links úteis.
-  - [ ] Espaço aberto para dúvidas da audiência (Q&A).
-* **Notas de fala do apresentador:**
-  > *[Inserir mensagem final de encerramento]*
-
----
-
-## 📋 5. Checklist Pré-Apresentação
-
-- [ ] Todos os integrantes sincronizados com a ordem de fala e limites de tempo.
-- [ ] Slides revisados e notas de orador preenchidas.
-- [ ] Se houver demonstração prática: gravada previamente em vídeo ou testada localmente em ambiente isolado.
-- [ ] Servidor de slides testado no navegador.
-- [ ] Pontos de transição entre apresentadores alinhados.
-
----
-
-## 🚀 6. Como Rodar e Visualizar a Apresentação (Reveal.js)
-
-A apresentação foi construída com [Reveal.js](https://revealjs.com/) via CDN, dispensando compilação ou instalação pesada.
-
-### Opção 1: Via Servidor Local Python (Recomendado)
-Para ter acesso completo ao **Speaker Notes (Modo Apresentador com tecla `S`)**, execute um servidor local:
+Na raiz do projeto:
 
 ```bash
-# Na raiz deste repositório:
 python3 -m http.server 8000
 ```
-Em seguida, acesse no navegador:
-👉 `http://localhost:8000/`
 
-### Opção 2: Via Node / NPX
+Acesse `http://localhost:8000/`.
+
+O servidor local é necessário para o modo de notas do orador em alguns navegadores.
+
+### Alternativas
+
 ```bash
 npx serve .
 ```
 
-### Opção 3: Abertura Direta
-Abra o arquivo [index.html](file:///home/myoui/T/Projects/IntroReconSeminário/index.html) diretamente no seu navegador preferido (dois cliques). *(Nota: O modo de anotações do orador pode requerer servidor local em alguns navegadores devido a políticas de CORS).*
+Também é possível abrir `index.html` diretamente no navegador, mas o modo de notas e o carregamento de alguns recursos podem ser limitados por políticas de CORS.
 
 ---
 
-## ⌨️ Atalhos Úteis do Reveal.js Durante a Apresentação
+## Atalhos
 
 | Tecla | Ação |
 | :---: | :--- |
-| `Espaço` / `→` | Próximo slide |
+| `→` / `Espaço` | Próximo slide |
 | `←` | Slide anterior |
-| `S` | **Modo Orador (Speaker View)** com cronômetro e anotações |
-| `F` | Tela Cheia (Fullscreen) |
-| `O` ou `Esc` | Visão geral dos slides (Overview grid) |
-| `B` ou `.` | Pausar / Tela preta (Blackout) |
-| `Alt + Clique` | Zoom no elemento clicado |
+| `S` | Modo do orador, com notas e cronômetro |
+| `F` | Tela cheia |
+| `O` / `Esc` | Visão geral dos slides |
+| `B` / `.` | Pausa / tela preta |
+| `Alt + clique` | Zoom no elemento clicado |
+
+---
+
+## Estrutura do projeto
+
+```text
+.
+├── index.html                     # deck completo, 33 slides horizontais
+├── css/
+│   └── custom.css                 # identidade visual, componentes e animações
+├── Red Team 1 - Recon e OSINT.md  # roteiro-fonte e atribuições
+└── README.md
+```
+
+O deck usa Reveal.js 5.1 via CDN e as fontes Instrument Serif, IBM Plex Sans e IBM Plex Mono via Google Fonts. Não há etapa de compilação.
+
+---
+
+## Notas técnicas
+
+- **Navegação horizontal:** não há seções verticais aninhadas; `Reveal.slide(i)` percorre os 33 slides.
+- **Animações:** as transições são ativadas pela classe `.present` que o Reveal adiciona ao slide atual. Isso faz as animações reiniciarem ao revisitar um slide.
+- **Fallback visual:** o estado base dos elementos já é o estado final; sem JavaScript ou com animações desativadas, o conteúdo continua legível.
+- **Acessibilidade:** `prefers-reduced-motion` desativa as animações e mantém o resultado final.
+- **Dimensões:** canvas de 1280 × 720, `center: false`, transição `slide`.
+- **Demonstrações:** Nmap e Wireshark são simulações visuais em HTML/CSS/SVG, sem executar comandos reais ou tráfego de rede.
+- **Dados sensíveis:** os casos e endereços usados são didáticos ou públicos; nenhum alvo real foi testado durante a apresentação.
+
+---
+
+## Referências principais
+
+- MITRE ATT&CK — [TA0043 Reconnaissance](https://attack.mitre.org/tactics/TA0043/)
+- OWASP — [Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
+- Michael Bazzell — *Open Source Intelligence Techniques*, 9ª ed., 2022
+- G1 — *Smart Sampa e as senhas expostas por 11 meses* (21 out. 2026)
+- The Guardian — [Strava e as bases militares](https://www.theguardian.com/world/2018/jan/28)
+- Zoho Workplace — [RSA spear-phishing attack](https://www.zoho.com/workplace/articles/rsa-spear-phishing-attack.html)
+- [Nmap Reference Guide](https://nmap.org/book/man.html) · [Wireshark User's Guide](https://www.wireshark.org/docs/) · [Shodan](https://www.shodan.io/) · [Censys](https://censys.com/)
+
+> Os casos foram resumidos para fins didáticos. Exposição não é o mesmo que invasão.

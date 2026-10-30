@@ -1,0 +1,49 @@
+ - Conceito de Reconhecimento (Geovana)
+    - Era das mídias sociais e super exposição
+        - História das Redes
+        - Tempo médio das pessoas nos aplicativos
+    -  Casos Reais
+        - Caso Smart Sampa
+            - [https://g1.globo.com/tecnologia/ciberseguranca/noticia/2026/10/21/smart-sampa-como-funciona-o-sistema-de-58-mil-cameras-de-sp-que-teve-senhas-expostas-por-11-meses.ghtml](https://g1.globo.com/tecnologia/ciberseguranca/noticia/2026/10/21/smart-sampa-como-funciona-o-sistema-de-58-mil-cameras-de-sp-que-teve-senhas-expostas-por-11-meses.ghtml)
+    - Definição
+        - Recon como etapa inicial, de levantamento de inteligência
+- Reconhecimento Ativo e Ferramentas (Emilio)
+    - Definição
+    - Redes simplificado
+        - Endereços, Portas e pacotes
+    - Ferramentas
+        - Nmap
+        - Wireshark
+    - Engenharia Social
+        - Phishing e Golpes
+- Reconhecimento Passivo (Daniel)
+    - Definição
+    - OSINT
+        - Definição
+        - Diferentes Técnicas
+        - Ferramentas
+    - Outras Técnicas
+        - Dumpster Diving.
+    - Ecossistema INTS
+        - HUMINT
+        - GEOINT
+        - FININT
+        - ELINT
+        - IMINT
+        - TECHINT
+        - CYBINT
+        - DARKINT
+        - SIGINT
+- Estudos de Caso (João Pedro Gonçalves)
+    - RSA's infiltration
+        - [https://www.zoho.com/workplace/articles/rsa-spear-phishing-attack.html](https://www.zoho.com/workplace/articles/rsa-spear-phishing-attack.html)
+    - Vazamento de Bases Militares pelo Strava
+        - [https://www.theguardian.com/world/2018/jan/28/fitness-tracking-app-gives-away-location-of-secret-us-army-bases](https://www.theguardian.com/world/2018/jan/28/fitness-tracking-app-gives-away-location-of-secret-us-army-bases)
+- Demonstração Prática (João Pedro Almeida)
+    - Demonstração de GEOSINT 1
+    - Demonstração de GEOSINT 2
+    - Demonstração de OSINT
+- OpSec (Geovana)
+    - Definição
+    - Implementação no dia a dia
+    - Dicas de Privacidade
