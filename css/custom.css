@@ -3208,69 +3208,6 @@ body {
   color: var(--red-bright);
 }
 
-/* ---------- Privacy ---------- */
-
-.priv-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 6px;
-}
-
-.priv-col {
-  border-top: 2px solid var(--red);
-  padding-top: 12px;
-}
-
-.priv-col h4 {
-  font-size: 0.62em;
-  margin-bottom: 10px;
-}
-
-.priv-col ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.priv-col li {
-  font-size: 0.38em;
-  color: var(--muted);
-  line-height: 1.5;
-  padding: 7px 0 7px 16px;
-  border-bottom: 1px solid var(--line-soft);
-  position: relative;
-}
-
-.priv-col li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 13px;
-  width: 7px;
-  height: 2px;
-  background: var(--red);
-}
-
-.priv-col li b {
-  color: #e7ebef;
-  font-weight: 500;
-}
-
-.priv-rule {
-  margin-top: 22px;
-  border-left: 2px solid var(--red);
-  padding-left: 14px;
-  font-size: 0.42em;
-  line-height: 1.5;
-  color: #c3c9d1;
-  max-width: 46em;
-}
-
-.priv-rule b {
-  color: #fff;
-}
-
 /* ---------- Takeaways ---------- */
 
 .take-grid {

@@ -4,7 +4,7 @@ Apresentação de seminário sobre reconhecimento e inteligência de fontes aber
 
 > **Duração estimada:** 45 minutos + Q&A
 >
-> **Formato:** 33 slides, 16:9, sem build e sem dependências locais além de um servidor HTTP simples.
+> **Formato:** 32 slides, 16:9, sem build e sem dependências locais além de um servidor HTTP simples.
 
 ---
 
@@ -12,12 +12,12 @@ Apresentação de seminário sobre reconhecimento e inteligência de fontes aber
 
 | Integrante | Bloco | Slides |
 | :--- | :--- | :---: |
-| **Geovana** | Conceito e contexto · OpSec e fechamento | 03–06 · 27–31 |
+| **Geovana** | Conceito e contexto · OpSec e fechamento | 03–06 · 27–30 |
 | **Emilio** | Reconhecimento ativo · Nmap · Wireshark | 07–12 |
 | **Daniel** | Reconhecimento passivo · OSINT | 13–18 |
 | **João Pedro Gonçalves** | Estudos de caso — RSA e Strava | 19–22 |
 | **João Pedro Almeida** | Demonstração — GEOSINT e OSINT | 23–26 |
-| **Todos** | Capa, agenda, referências e Q&A | 01–02 · 32–33 |
+| **Todos** | Capa, agenda, referências e Q&A | 01–02 · 31–32 |
 
 ---
 
@@ -31,8 +31,8 @@ Apresentação de seminário sobre reconhecimento e inteligência de fontes aber
 | 03 | OSINT, técnicas passivas, ferramentas e ecossistema | 13–18 | Daniel |
 | 04 | Estudos de caso: RSA SecurID e Strava | 19–22 | João Pedro Gonçalves |
 | 05 | Demonstração: GEOSINT e grafo de OSINT | 23–26 | João Pedro Almeida |
-| 06 | OpSec, hábitos, privacidade e conclusão | 27–31 | Geovana |
-| — | Referências e perguntas | 32–33 | Todos |
+| 06 | OpSec, hábitos e conclusão | 27–30 | Geovana |
+| — | Referências e perguntas | 31–32 | Todos |
 
 Cada slide possui **notas do orador** (`<aside class="notes">`) com pontos de fala, transições e cuidados de contextualização.
 
@@ -92,7 +92,7 @@ O workflow publica apenas `index.html`, `css/` e um `.nojekyll`, sem subir arqui
 
 ```text
 .
-├── index.html                     # deck completo, 33 slides horizontais
+├── index.html                     # deck completo, 32 slides horizontais
 ├── css/
 │   └── custom.css                 # identidade visual, componentes e animações
 ├── Red Team 1 - Recon e OSINT.md  # roteiro-fonte e atribuições
@@ -105,7 +105,7 @@ O deck usa Reveal.js 5.1 via CDN e as fontes Instrument Serif, IBM Plex Sans e I
 
 ## Notas técnicas
 
-- **Navegação horizontal:** não há seções verticais aninhadas; `Reveal.slide(i)` percorre os 33 slides.
+- **Navegação horizontal:** não há seções verticais aninhadas; `Reveal.slide(i)` percorre os 32 slides.
 - **Animações:** as transições são ativadas pela classe `.present` que o Reveal adiciona ao slide atual. Isso faz as animações reiniciarem ao revisitar um slide.
 - **Fallback visual:** o estado base dos elementos já é o estado final; sem JavaScript ou com animações desativadas, o conteúdo continua legível.
 - **Acessibilidade:** `prefers-reduced-motion` desativa as animações e mantém o resultado final.
