@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- Gerado por scripts/build.py a partir de slides/ e src/presentation.html. -->
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
@@ -23,7 +24,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
 
   <body>
@@ -1559,7 +1560,7 @@
         <!-- ============================================================ -->
         <!-- 31 · FERRAMENTAS OSINT                                       -->
         <!-- ============================================================ -->
-        <section class="slide tool-slide">
+        <section class="slide">
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Daniel</span> · Ferramentas</div>
@@ -1569,65 +1570,34 @@
           <div class="slide-body">
             <div class="tool-list">
               <div class="tool-row rise" style="--d: .1s">
-                <span class="name"><button type="button" class="tool-link" data-tool="0">Shodan / Censys</button></span><span class="cat">serviços indexados</span>
+                <span class="name">Shodan / Censys</span><span class="cat">serviços indexados</span>
                 <span class="use">Consultam índices de serviços, portas e banners já coletados por terceiros.</span>
               </div>
               <div class="tool-row rise" style="--d: .17s">
-                <span class="name"><button type="button" class="tool-link" data-tool="1">WHOIS</button></span><span class="cat">registros de domínio</span>
+                <span class="name">WHOIS</span><span class="cat">registros de domínio</span>
                 <span class="use">Consulta dados cadastrais e servidores de nomes; informações podem estar protegidas ou ausentes.</span>
               </div>
               <div class="tool-row rise" style="--d: .24s">
-                <span class="name"><button type="button" class="tool-link" data-tool="2" aria-label="SecurityTrails e VirusTotal">SecurityTrails / VT</button></span><span class="cat">DNS e relações</span>
+                <span class="name">SecurityTrails / VT</span><span class="cat">DNS e relações</span>
                 <span class="use">Combinam histórico de resoluções e relações observadas; resultados exigem validação.</span>
               </div>
               <div class="tool-row rise" style="--d: .31s">
-                <span class="name"><button type="button" class="tool-link" data-tool="3">crt.sh</button></span><span class="cat">certificados</span>
+                <span class="name">crt.sh</span><span class="cat">certificados</span>
                 <span class="use">Consulta logs de transparência para descobrir nomes associados a certificados.</span>
               </div>
               <div class="tool-row rise" style="--d: .38s">
-                <span class="name"><button type="button" class="tool-link" data-tool="4">Subfinder / Amass</button></span><span class="cat">subdomínios</span>
+                <span class="name">Subfinder / Amass</span><span class="cat">subdomínios</span>
                 <span class="use">Automatizam buscas em múltiplas fontes; configure o modo passivo e confira os módulos.</span>
               </div>
               <div class="tool-row rise" style="--d: .45s">
-                <span class="name"><button type="button" class="tool-link" data-tool="5">ExifTool / FOCA</button></span><span class="cat">metadados</span>
+                <span class="name">ExifTool / FOCA</span><span class="cat">metadados</span>
                 <span class="use">Analisam arquivos já obtidos para extrair autores, softwares e outros metadados.</span>
               </div>
             </div>
 
             <div class="slide-footline" style="margin-top: 16px">
               <span><b>Consulta passiva depende da configuração e da fonte.</b></span>
-              <span>selecione um grupo para ver o exemplo ↗</span>
-            </div>
-          </div>
-
-          <div class="tool-detail" role="dialog" aria-modal="true" aria-labelledby="tool-detail-title" aria-describedby="tool-detail-desc" tabindex="-1" hidden>
-            <div class="tool-detail-top">
-              <div class="kicker"><span class="who">Daniel</span> · Kit de coleta</div>
-              <button type="button" class="tool-detail-close">Voltar ao índice <span aria-hidden="true">×</span></button>
-            </div>
-            <div class="tool-detail-head" aria-live="polite" aria-atomic="true">
-              <span class="tool-detail-category"></span>
-              <h2 id="tool-detail-title"></h2>
-            </div>
-            <div class="tool-detail-grid">
-              <div class="tool-detail-copy">
-                <span class="tool-detail-label">O que responde</span>
-                <p id="tool-detail-desc"></p>
-                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p class="tool-detail-scenario"></p></div>
-                <div class="tool-detail-caution"><b>Limite</b><span></span></div>
-              </div>
-              <div class="tool-detail-example">
-                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
-                <div class="tool-visual" aria-hidden="true"></div>
-                <div class="tool-detail-result"><span>PISTA</span><p></p></div>
-              </div>
-            </div>
-            <div class="tool-detail-nav">
-              <span class="tool-detail-count"></span>
-              <div>
-                <button type="button" class="tool-detail-prev">← Anterior</button>
-                <button type="button" class="tool-detail-next">Próxima →</button>
-              </div>
+              <span>os próximos slides detalham cada grupo</span>
             </div>
           </div>
 
@@ -1638,15 +1608,250 @@
               <li>WHOIS pode ocultar dados; DNS histórico não prova exposição atual; registros de transparência de certificados (CT) não revelam necessariamente serviços ativos nem cobrem todos os certificados.</li>
               <li>Subfinder e Amass têm opções e fontes distintas: desative verificações ativas. Ferramentas e o acesso inicial a um arquivo podem contatar o alvo, dependendo da configuração.</li>
               <li>Automação multiplica resultados — e multiplica erros se não houver validação.</li>
-              <li>Selecione uma linha para abrir o exemplo; use as setas ou os botões para percorrer os seis grupos. Esc retorna ao índice.</li>
+              <li>Os próximos seis slides apresentam um exemplo para cada grupo de ferramentas.</li>
               <li>Exemplos fictícios: Shodan e Censys mostram serviços indexados; WHOIS consulta registros; SecurityTrails e VirusTotal revelam associações históricas; crt.sh reúne nomes em certificados; Subfinder e Amass cruzam fontes de subdomínios; ExifTool e FOCA analisam metadados em documentos já obtidos.</li>
             </ul>
           </aside>
                   </div>
         </section>
+        <!-- ============================================================ -->
+        <!-- 32 · FERRAMENTAS: SHODAN E CENSYS                            -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · serviços indexados</div>
+              <h2 class="h-md">Shodan / Censys</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Quais serviços e certificados já foram observados por indexadores?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>Uma equipe compara um endereço público sob sua responsabilidade com os registros das duas plataformas.</p></div>
+                <div class="tool-detail-caution"><b>Limite</b><span>Cada índice tem cobertura e datas próprias; os registros não confirmam a situação atual.</span></div>
+              </div>
+              <div class="tool-detail-example">
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-visual">
+                  <div class="tool-visual-content is-search">
+                    <div class="tool-visual-bar">Consulta comparativa · índices</div>
+                    <div class="tool-visual-query">192.0.2.10</div>
+                    <div class="tool-visual-rows">
+                      <div class="tool-visual-row"><span class="tool-visual-key">SHODAN</span><span class="tool-visual-value">HTTPS · porta 443</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">CENSYS</span><span class="tool-visual-value">certificado example.com</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">ATENÇÃO</span><span class="tool-visual-value">observações anteriores</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tool-detail-result"><span>PISTA</span><p>No exemplo, Shodan mostra um serviço HTTPS e Censys associa um certificado ao endereço.</p></div>
+              </div>
+            </div>
+            <aside class="notes"><ul>
+              <li>Shodan e Censys consultam índices de serviços já coletados; a consulta é passiva em relação ao alvo, mas os próprios indexadores podem ter contatado a infraestrutura.</li>
+              <li>O endereço é reservado para documentação e todos os resultados são fictícios. Conferir data e propriedade antes de tirar conclusões.</li>
+            </ul></aside>
+          </div>
+        </section>
 
         <!-- ============================================================ -->
-        <!-- 32 · DUMPSTER DIVING                                         -->
+        <!-- 33 · FERRAMENTAS: WHOIS                                     -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · registros de domínio</div>
+              <h2 class="h-md">WHOIS</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Quais informações cadastrais e servidores de nomes estão disponíveis para um domínio?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe consulta o registro público de example.com para entender sua administração.</p></div>
+                <div class="tool-detail-caution"><b>Limite</b><span>Dados pessoais podem estar protegidos, omitidos ou desatualizados.</span></div>
+              </div>
+              <div class="tool-detail-example">
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-visual">
+                  <div class="tool-visual-content is-record">
+                    <div class="tool-visual-bar">WHOIS · registro público</div>
+                    <div class="tool-visual-query">example.com</div>
+                    <div class="tool-visual-rows">
+                      <div class="tool-visual-row"><span class="tool-visual-key">REGISTRADOR</span><span class="tool-visual-value">Registrador Exemplo</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">SERVIDORES</span><span class="tool-visual-value">ns1.example.com</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">CONTATO</span><span class="tool-visual-value">dados protegidos</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tool-detail-result"><span>PISTA</span><p>O registro pode informar registrador, datas e servidores de nomes.</p></div>
+              </div>
+            </div>
+            <aside class="notes"><ul>
+              <li>WHOIS oferece informações públicas de registro, mas não necessariamente revela a identidade do responsável.</li>
+              <li>O resultado ilustrado é fictício; retenção, disponibilidade e privacidade variam entre registros.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 34 · FERRAMENTAS: SECURITYTRAILS E VIRUSTOTAL                 -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · DNS e relações</div>
+              <h2 class="h-md">SecurityTrails / VirusTotal</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Que resoluções históricas e relações observadas ajudam a contextualizar um domínio?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe investiga associações anteriores de um domínio próprio em duas fontes.</p></div>
+                <div class="tool-detail-caution"><b>Limite</b><span>As fontes têm datas e cobertura diferentes; associações antigas não comprovam propriedade ou risco atuais.</span></div>
+              </div>
+              <div class="tool-detail-example">
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-visual">
+                  <div class="tool-visual-content is-history">
+                    <div class="tool-visual-bar">DNS histórico · relações</div>
+                    <div class="tool-visual-query">example.com</div>
+                    <div class="tool-visual-rows">
+                      <div class="tool-visual-row"><span class="tool-visual-key">SECURITYTRAILS</span><span class="tool-visual-value">2023 · 198.51.100.20</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">VIRUSTOTAL</span><span class="tool-visual-value">relação · 192.0.2.10</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">ATENÇÃO</span><span class="tool-visual-value">validar datas e vínculos</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tool-detail-result"><span>PISTA</span><p>SecurityTrails apresenta histórico DNS; VirusTotal reúne relações e observações adicionais.</p></div>
+              </div>
+            </div>
+            <aside class="notes"><ul>
+              <li>SecurityTrails e VirusTotal têm fontes, datas e coberturas diferentes; relacionar informações não é confirmar uma ameaça.</li>
+              <li>As datas e os endereços são fictícios e servem apenas para ilustrar a necessidade de validar associações históricas.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 35 · FERRAMENTAS: CRT.SH                                    -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · Certificate Transparency</div>
+              <h2 class="h-md">crt.sh</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Quais nomes aparecem em registros públicos que permitem auditar a emissão de certificados digitais?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe pesquisa certificados emitidos para nomes associados ao seu domínio.</p></div>
+                <div class="tool-detail-caution"><b>Limite</b><span>Um nome no certificado não prova que o serviço está ativo; a cobertura não é absoluta.</span></div>
+              </div>
+              <div class="tool-detail-example">
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-visual">
+                  <div class="tool-visual-content is-certificate">
+                    <div class="tool-visual-bar">crt.sh · registro de certificado</div>
+                    <div class="tool-visual-query">%.example.com</div>
+                    <div class="tool-visual-rows">
+                      <div class="tool-visual-row"><span class="tool-visual-key">NOMES</span><span class="tool-visual-value">example.com</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">SAN</span><span class="tool-visual-value">teste.example.com</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">FONTE</span><span class="tool-visual-value">registro público de certificados</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tool-detail-result"><span>PISTA</span><p>Um certificado registrado inclui o nome teste.example.com.</p></div>
+              </div>
+            </div>
+            <aside class="notes"><ul>
+              <li>Certificate Transparency (CT) reúne registros públicos que permitem auditar a emissão de certificados digitais; o crt.sh facilita sua consulta.</li>
+              <li>O nome no certificado é fictício e não comprova que o serviço está ativo ou é vulnerável.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 36 · FERRAMENTAS: SUBFINDER E AMASS                          -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · descoberta de subdomínios</div>
+              <h2 class="h-md">Subfinder / Amass</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Que nomes e relações podem ser reunidos a partir de fontes externas?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe cruza candidatos de subdomínios do seu domínio em um inventário inicial.</p></div>
+                <div class="tool-detail-caution"><b>Limite</b><span>Revise modos e fontes: verificações ativas podem gerar tráfego direto ao alvo.</span></div>
+              </div>
+              <div class="tool-detail-example">
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-visual">
+                  <div class="tool-visual-content is-graph">
+                    <div class="tool-visual-bar">Subdomínios · inventário combinado</div>
+                    <div class="tool-visual-query">fontes passivas configuradas</div>
+                    <div class="tool-visual-graph">
+                      <div class="tool-visual-node root">example.com</div>
+                      <div class="tool-visual-connector" aria-hidden="true"></div>
+                      <div class="tool-visual-branches">
+                        <div class="tool-visual-node">Subfinder: www.example.com</div>
+                        <div class="tool-visual-node">Amass: teste.example.com</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tool-detail-result"><span>PISTA</span><p>Subfinder reúne nomes; Amass também organiza relações entre os achados.</p></div>
+              </div>
+            </div>
+            <aside class="notes"><ul>
+              <li>As ferramentas podem reunir fontes distintas. É necessário escolher modos passivos e revisar opções antes de qualquer execução.</li>
+              <li>Os nomes e relações são fictícios; candidatos não comprovam a existência atual de serviços.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 37 · FERRAMENTAS: EXIFTOOL E FOCA                            -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · metadados de documentos</div>
+              <h2 class="h-md">ExifTool / FOCA</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Quais metadados podem aparecer em arquivos já obtidos?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe revisa PDFs antes de publicá-los ou compartilhá-los.</p></div>
+                <div class="tool-detail-caution"><b>Limite</b><span>Dados podem estar ausentes ou incorretos; a obtenção dos arquivos pode contatar o alvo.</span></div>
+              </div>
+              <div class="tool-detail-example">
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-visual">
+                  <div class="tool-visual-content is-record">
+                    <div class="tool-visual-bar">Metadados · arquivos obtidos</div>
+                    <div class="tool-visual-query">relatorio.pdf</div>
+                    <div class="tool-visual-rows">
+                      <div class="tool-visual-row"><span class="tool-visual-key">EXIFTOOL</span><span class="tool-visual-value">Autor: Equipe Exemplo</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">FOCA</span><span class="tool-visual-value">Software: Editor de PDF</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">ARQUIVO</span><span class="tool-visual-value">documento local</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tool-detail-result"><span>PISTA</span><p>ExifTool lê metadados do arquivo; FOCA ajuda a organizar achados de documentos.</p></div>
+              </div>
+            </div>
+            <aside class="notes"><ul>
+              <li>Metadados de arquivos já obtidos podem mostrar autores, software e datas, mas também podem ter sido removidos ou alterados.</li>
+              <li>A obtenção dos documentos e os módulos habilitados podem gerar contato direto; revisar as configurações e o escopo.</li>
+            </ul></aside>
+          </div>
+        </section>
+        <!-- ============================================================ -->
+        <!-- 38 · DUMPSTER DIVING                                         -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1706,7 +1911,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 33 · SHOULDER SURFING                                        -->
+        <!-- 39 · SHOULDER SURFING                                        -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1737,7 +1942,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 34 · ECOSSISTEMA INT                                         -->
+        <!-- 40 · ECOSSISTEMA INT                                         -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1804,7 +2009,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 35 · DIVISOR 04                                              -->
+        <!-- 41 · DIVISOR 04                                              -->
         <!-- ============================================================ -->
         <section class="slide divider">
           <div class="slide-inner">
@@ -1829,7 +2034,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 36 · CASO RSA                                                -->
+        <!-- 42 · CASO RSA                                                -->
         <!-- ============================================================ -->
         <section class="slide paper">
           <div class="slide-inner">
@@ -1899,7 +2104,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 37 · CASO STRAVA                                             -->
+        <!-- 43 · CASO STRAVA                                             -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1988,7 +2193,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 38 · LIÇÃO DOS CASOS                                         -->
+        <!-- 44 · LIÇÃO DOS CASOS                                         -->
         <!-- ============================================================ -->
         <section class="slide center">
           <div class="slide-inner">
@@ -2027,7 +2232,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 39 · DIVISOR 05                                              -->
+        <!-- 45 · DIVISOR 05                                              -->
         <!-- ============================================================ -->
         <section class="slide divider">
           <div class="slide-inner">
@@ -2052,7 +2257,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 40 · GEOSINT 1                                               -->
+        <!-- 46 · GEOSINT 1                                               -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -2178,7 +2383,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 41 · GEOSINT 2                                               -->
+        <!-- 47 · GEOSINT 2                                               -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -2260,7 +2465,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 42 · OSINT DEMO — GRAFO                                      -->
+        <!-- 48 · OSINT DEMO — GRAFO                                      -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -2338,7 +2543,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 43 · DIVISOR 06                                              -->
+        <!-- 49 · DIVISOR 06                                              -->
         <!-- ============================================================ -->
         <section class="slide divider">
           <div class="slide-inner">
@@ -2362,7 +2567,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 44 · OPSEС — CONCEITO                                        -->
+        <!-- 50 · OPSEС — CONCEITO                                        -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -2419,7 +2624,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 45 · OPSEС NO DIA A DIA                                      -->
+        <!-- 51 · OPSEС NO DIA A DIA                                      -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -2479,7 +2684,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 46 · TAKEAWAYS                                               -->
+        <!-- 52 · TAKEAWAYS                                               -->
         <!-- ============================================================ -->
         <section class="slide center">
           <div class="slide-inner">
@@ -2522,7 +2727,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 47 · REFERÊNCIAS                                             -->
+        <!-- 53 · REFERÊNCIAS                                             -->
         <!-- ============================================================ -->
         <section class="slide paper">
           <div class="slide-inner">
@@ -2570,7 +2775,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 48 · Q&A                                                     -->
+        <!-- 54 · Q&A                                                     -->
         <!-- ============================================================ -->
         <section class="slide qa">
           <div class="slide-inner">
@@ -2608,178 +2813,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/search/search.min.js"></script>
 
-    <script>
-      Reveal.initialize({
-        width: 1280,
-        height: 720,
-        margin: 0,
-        minScale: 0.2,
-        maxScale: 1.6,
-
-        // Navegação exclusivamente horizontal: não há seções verticais aninhadas.
-        center: false,
-        controls: true,
-        controlsLayout: "bottom-right",
-        controlsBackArrows: "faded",
-        progress: true,
-        slideNumber: "c/t",
-        hash: true,
-        history: false,
-
-        transition: "slide",
-        transitionSpeed: "default",
-        backgroundTransition: "fade",
-
-        keyboard: true,
-        overview: true,
-        touch: true,
-        loop: false,
-
-        plugins: [RevealHighlight, RevealNotes, RevealSearch]
-      });
-
-      // Os detalhes pertencem ao mesmo slide: não alteram a sequência horizontal.
-      (() => {
-        const tools = [
-          { name: "Shodan / Censys", category: "Serviços indexados", description: "Quais serviços e certificados já foram observados por indexadores?", scenario: "Uma equipe compara um endereço público sob sua responsabilidade com os registros das duas plataformas.", result: "No exemplo, Shodan mostra um serviço HTTPS e Censys associa um certificado ao endereço.", caution: "Cada índice tem cobertura e datas próprias; os registros não confirmam a situação atual." },
-          { name: "WHOIS", category: "Registros de domínio", description: "Quais informações cadastrais e servidores de nomes estão disponíveis para um domínio?", scenario: "A equipe consulta o registro público de example.com para entender sua administração.", result: "O registro pode informar registrador, datas e servidores de nomes.", caution: "Dados pessoais podem estar protegidos, omitidos ou desatualizados." },
-          { name: "SecurityTrails / VirusTotal", category: "DNS e relações", description: "Que resoluções históricas e relações observadas ajudam a contextualizar um domínio?", scenario: "A equipe investiga associações anteriores de um domínio próprio em duas fontes.", result: "SecurityTrails apresenta histórico DNS; VirusTotal reúne relações e observações adicionais.", caution: "As fontes têm datas e cobertura diferentes; associações antigas não comprovam propriedade ou risco atuais." },
-          { name: "crt.sh", category: "Certificate Transparency · registros públicos", description: "Quais nomes aparecem em registros públicos que permitem auditar a emissão de certificados digitais?", scenario: "A equipe pesquisa certificados emitidos para nomes associados ao seu domínio.", result: "Um certificado registrado inclui o nome teste.example.com.", caution: "Um nome no certificado não prova que o serviço está ativo; a cobertura não é absoluta." },
-          { name: "Subfinder / Amass", category: "Descoberta de subdomínios", description: "Que nomes e relações podem ser reunidos a partir de fontes externas?", scenario: "A equipe cruza candidatos de subdomínios do seu domínio em um inventário inicial.", result: "Subfinder reúne nomes; Amass também organiza relações entre os achados.", caution: "Revise modos e fontes: verificações ativas podem gerar tráfego direto ao alvo." },
-          { name: "ExifTool / FOCA", category: "Metadados de documentos", description: "Quais metadados podem aparecer em arquivos já obtidos?", scenario: "A equipe revisa PDFs antes de publicá-los ou compartilhá-los.", result: "ExifTool lê metadados do arquivo; FOCA ajuda a organizar achados de documentos.", caution: "Dados podem estar ausentes ou incorretos; a obtenção dos arquivos pode contatar o alvo." }
-        ];
-        // Dados ilustrativos, sem conexão com as ferramentas ou com sistemas externos.
-        const visuals = [
-          { type: 'search', title: 'Consulta comparativa · índices', query: '192.0.2.10', rows: [['SHODAN', 'HTTPS · porta 443'], ['CENSYS', 'certificado example.com'], ['ATENÇÃO', 'observações anteriores']] },
-          { type: 'record', title: 'WHOIS · registro público', query: 'example.com', rows: [['REGISTRADOR', 'Registrador Exemplo'], ['SERVIDORES', 'ns1.example.com'], ['CONTATO', 'dados protegidos']] },
-          { type: 'history', title: 'DNS histórico · relações', query: 'example.com', rows: [['SECURITYTRAILS', '2023 · 198.51.100.20'], ['VIRUSTOTAL', 'relação · 192.0.2.10'], ['ATENÇÃO', 'validar datas e vínculos']] },
-          { type: 'certificate', title: 'crt.sh · registro de certificado', query: '%.example.com', rows: [['NOMES', 'example.com'], ['SAN', 'teste.example.com'], ['FONTE', 'registro público de certificados']] },
-          { type: 'graph', title: 'Subdomínios · inventário combinado', query: 'fontes passivas configuradas', root: 'example.com', branches: ['Subfinder: www.example.com', 'Amass: teste.example.com'] },
-          { type: 'record', title: 'Metadados · arquivos obtidos', query: 'relatorio.pdf', rows: [['EXIFTOOL', 'Autor: Equipe Exemplo'], ['FOCA', 'Software: Editor de PDF'], ['ARQUIVO', 'documento local']] }
-        ];
-        const slide = document.querySelector('.tool-slide');
-        const detail = slide.querySelector('.tool-detail');
-        const reveal = document.querySelector('.reveal');
-        const indexRegions = [slide.querySelector('.slide-head'), slide.querySelector('.slide-body')];
-        const closeButton = detail.querySelector('.tool-detail-close');
-        const previousButton = detail.querySelector('.tool-detail-prev');
-        const nextButton = detail.querySelector('.tool-detail-next');
-        let current = 0;
-        let opener = null;
-        let previousTouch = true;
-        let controls = null;
-        let controlsWereInert = false;
-
-        function visualElement(tag, className, text) {
-          const element = document.createElement(tag);
-          element.className = className;
-          if (text !== undefined) element.textContent = text;
-          return element;
-        }
-
-        function renderVisual(index) {
-          const visual = visuals[index];
-          const content = visualElement('div', `tool-visual-content is-${visual.type}`);
-          content.append(visualElement('div', 'tool-visual-bar', visual.title));
-          content.append(visualElement('div', 'tool-visual-query', visual.query));
-          if (visual.type === 'graph') {
-            const graph = visualElement('div', 'tool-visual-graph');
-            const branches = visualElement('div', 'tool-visual-branches');
-            visual.branches.forEach(name => branches.append(visualElement('div', 'tool-visual-node', name)));
-            graph.append(visualElement('div', 'tool-visual-node root', visual.root), visualElement('div', 'tool-visual-connector'), branches);
-            content.append(graph);
-          } else {
-            const rows = visualElement('div', 'tool-visual-rows');
-            visual.rows.forEach(([key, value]) => {
-              const row = visualElement('div', 'tool-visual-row');
-              row.append(visualElement('span', 'tool-visual-key', key), visualElement('span', 'tool-visual-value', value));
-              rows.append(row);
-            });
-            content.append(rows);
-          }
-          detail.querySelector('.tool-visual').replaceChildren(content);
-        }
-
-        function renderTool(index) {
-          current = index;
-          const tool = tools[index];
-          detail.querySelector('.tool-detail-category').textContent = tool.category;
-          detail.querySelector('#tool-detail-title').textContent = tool.name;
-          detail.querySelector('#tool-detail-desc').textContent = tool.description;
-          detail.querySelector('.tool-detail-scenario').textContent = tool.scenario;
-          detail.querySelector('.tool-detail-result p').textContent = tool.result;
-          detail.querySelector('.tool-detail-caution span').textContent = tool.caution;
-          renderVisual(index);
-          detail.querySelector('.tool-detail-count').textContent = `${index + 1} / ${tools.length} · grupos`;
-          previousButton.setAttribute('aria-disabled', String(index === 0));
-          nextButton.textContent = index === tools.length - 1 ? 'Voltar ao índice ↗' : 'Próxima →';
-        }
-
-        function openTool(index, button) {
-          if (index < 0 || index >= tools.length) return;
-          opener = button;
-          previousTouch = Reveal.getConfig().touch;
-          Reveal.configure({ touch: false });
-          renderTool(index);
-          indexRegions.forEach(region => { region.inert = true; });
-          controls = reveal.querySelector('.controls');
-          if (controls) { controlsWereInert = controls.inert; controls.inert = true; }
-          detail.hidden = false;
-          reveal.classList.add('tools-open');
-          detail.focus();
-        }
-
-        function closeTool(restoreFocus = true) {
-          if (detail.hidden) return;
-          detail.hidden = true;
-          indexRegions.forEach(region => { region.inert = false; });
-          if (controls) controls.inert = controlsWereInert;
-          reveal.classList.remove('tools-open');
-          Reveal.configure({ touch: previousTouch });
-          if (restoreFocus && opener) opener.focus();
-        }
-
-        function nextTool() {
-          if (current === tools.length - 1) closeTool();
-          else renderTool(current + 1);
-        }
-
-        slide.querySelectorAll('.tool-link').forEach(button => {
-          button.addEventListener('click', () => openTool(Number(button.dataset.tool), button));
-          button.addEventListener('keydown', event => {
-            if (event.key === ' ' || event.key === 'Enter') event.stopPropagation();
-          });
-        });
-        closeButton.addEventListener('click', () => closeTool());
-        previousButton.addEventListener('click', () => { if (current > 0) renderTool(current - 1); });
-        nextButton.addEventListener('click', nextTool);
-        detail.addEventListener('keydown', event => {
-          if ((event.key === ' ' || event.key === 'Enter') && event.target.tagName === 'BUTTON') event.stopPropagation();
-        });
-
-        document.addEventListener('keydown', event => {
-          if (detail.hidden || event.altKey || event.ctrlKey || event.metaKey) return;
-          if (event.key === 'Tab') {
-            const buttons = [closeButton, previousButton, nextButton];
-            if (event.shiftKey && (document.activeElement === closeButton || document.activeElement === detail)) {
-              event.preventDefault(); nextButton.focus();
-            } else if (!event.shiftKey && document.activeElement === nextButton) {
-              event.preventDefault(); closeButton.focus();
-            }
-            return;
-          }
-          if (event.key === 'Escape') { event.preventDefault(); event.stopPropagation(); closeTool(); }
-          else if (event.key === 'ArrowRight' || (event.key === ' ' && event.target.tagName !== 'BUTTON')) {
-            event.preventDefault(); event.stopPropagation(); nextTool();
-          } else if (event.key === 'ArrowLeft') {
-            event.preventDefault(); event.stopPropagation(); if (current > 0) renderTool(current - 1);
-          } else if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
-            event.preventDefault(); event.stopPropagation();
-          }
-        }, true);
-
-        Reveal.on('slidechanged', event => { if (event.currentSlide !== slide) closeTool(false); });
-      })();
-    </script>
+    <script src="js/reveal-init.js"></script>
   </body>
 </html>

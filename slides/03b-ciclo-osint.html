@@ -1,0 +1,195 @@
+        <!-- ============================================================ -->
+        <!-- 19 · CICLO DE OSINT                                          -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT</div>
+            <h2 class="h-md">De uma pergunta à próxima.</h2>
+            <p class="lede">Dados brutos só viram inteligência quando respondem a uma necessidade.</p>
+          </div>
+          <div class="slide-body orbit-body">
+            <div class="cycle-orbit">
+              <svg class="orbit-ring" viewBox="0 0 900 360" aria-hidden="true"><ellipse cx="450" cy="180" rx="260" ry="135" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 7" /></svg>
+              <div class="orbit-core"><span>dados + contexto</span><b>inteligência</b><small>↶ novas perguntas</small></div>
+              <div class="orbit-node o1"><b>01</b><div><strong>Planejar</strong><span>Definir a pergunta</span></div></div>
+              <div class="orbit-node o2"><b>02</b><div><strong>Coletar</strong><span>Reunir fontes</span></div></div>
+              <div class="orbit-node o3"><b>03</b><div><strong>Processar</strong><span>Organizar dados</span></div></div>
+              <div class="orbit-node o4"><b>04</b><div><strong>Analisar</strong><span>Cruzar evidências</span></div></div>
+              <div class="orbit-node o5"><b>05</b><div><strong>Disseminar</strong><span>Comunicar achados</span></div></div>
+              <div class="orbit-node o6"><b>06</b><div><strong>Feedback</strong><span>Ajustar o rumo</span></div></div>
+            </div>
+          </div>
+          <aside class="notes"><ul>
+            <li>Usar um exemplo simples: descobrir quais serviços públicos aparecem associados a um domínio.</li>
+            <li>Registrar fonte e data, validar a informação e distinguir evidência de hipótese; a coleta por si só não é inteligência.</li>
+            <li>O feedback pode revelar lacunas e levar a uma nova rodada de planejamento.</li>
+          </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 20 · CICLO OSINT: PLANEJAR                                   -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 01 / 06</div>
+              <h2 class="h-md">Planejar: faça a pergunta certa.</h2>
+            </div>
+            <div class="slide-body plan-board">
+              <div class="plan-question"><span>CASO FICTÍCIO · PERGUNTA INICIAL</span><p>Quais serviços web aparecem em fontes externas para <em>example.com</em>?</p></div>
+              <div class="plan-criteria">
+                <div><b>Objetivo</b><span>O que precisamos decidir?</span></div>
+                <div><b>Escopo</b><span>Fontes externas; sem acesso direto ao alvo.</span></div>
+                <div><b>Critério</b><span>Qual evidência responderia à pergunta?</span></div>
+              </div>
+            </div>
+            <div class="cycle-detail-foot"><b>01</b> Planejar <span>→ Coletar → Processar → Analisar → Disseminar → Feedback</span></div>
+            <aside class="notes"><ul>
+              <li>Apresentar o caso como fictício: example.com e os endereços de documentação dos próximos slides são apenas ilustrações.</li>
+              <li>Definir pergunta, público, prazo, escopo e limites legais; a escolha das fontes vem depois.</li>
+              <li>O resultado desta etapa é uma necessidade verificável, não uma lista indiscriminada de dados.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 21 · CICLO OSINT: COLETAR                                    -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 02 / 06</div>
+              <h2 class="h-md">Coletar: reúna evidências, não certezas.</h2>
+            </div>
+            <div class="slide-body gather-board">
+              <p class="stage-intro">Busque em fontes autorizadas e registre <strong>origem, data e contexto</strong> de cada achado.</p>
+              <div class="gather-flow">
+                <div class="gather-source"><span>FONTE 01</span><b>Registro de certificados</b><p>Certificate Transparency (CT): um log público que permite auditar a emissão de certificados.</p><code>portal.example.com</code></div>
+                <div class="gather-join" aria-hidden="true">+</div>
+                <div class="gather-source"><span>FONTE 02</span><b>Índice externo</b><p>Uma observação anterior associa o nome a um serviço.</p><code>192.0.2.10:443</code></div>
+                <div class="gather-join" aria-hidden="true">⟶</div>
+                <div class="gather-output"><b>Dados<br />brutos</b><span>fontes e datas<br />preservadas</span></div>
+              </div>
+              <p class="stage-caption">Caso fictício · dados históricos não confirmam a situação atual.</p>
+            </div>
+            <div class="cycle-detail-foot"><b>02</b> Coletar <span>→ Processar → Analisar → Disseminar → Feedback</span></div>
+            <aside class="notes"><ul>
+              <li>As informações do quadro são simuladas; nenhum domínio ou endereço foi consultado.</li>
+              <li>Certificate Transparency (CT) é um sistema de registros públicos que permite auditar a emissão de certificados digitais. Seus registros podem conter nomes de domínio.</li>
+              <li>A coleta pode reunir nomes nesses registros e observações de um índice; guarde fonte, data da consulta e data da observação.</li>
+              <li>Uma fonte de terceiros pode registrar a consulta; dados históricos não garantem situação atual.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 22 · CICLO OSINT: PROCESSAR                                  -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 03 / 06</div>
+              <h2 class="h-md">Processar: separe sinal de ruído.</h2>
+            </div>
+            <div class="slide-body process-board">
+              <p class="stage-intro">Padronize nomes e datas, agrupe duplicatas e marque lacunas ou registros antigos.</p>
+              <div class="process-flow">
+                <div class="process-input"><span>DADOS BRUTOS</span><b>portal.example.com</b><b>portal.example.com</b><small>certificado + índice histórico</small></div>
+                <svg class="process-funnel" viewBox="0 0 170 170" role="img" aria-label="Filtro: padronizar, integrar e classificar"><path d="M14 25 H156 L106 85 V142 L64 154 V85 Z" fill="rgba(226,58,46,.12)" stroke="#e23a2e" stroke-width="2"/><path d="M42 50 H128 M56 67 H114" stroke="#f0a63c" stroke-width="2"/></svg>
+                <div class="process-output"><span>REGISTRO ORGANIZADO</span><b>portal.example.com</b><p>Certificado + índice externo</p><small>Origem e datas preservadas · índice histórico</small></div>
+              </div>
+              <p class="stage-caption">Caso fictício · remover duplicatas não é apagar evidências ou versões anteriores.</p>
+            </div>
+            <div class="cycle-detail-foot"><b>03</b> Processar <span>→ Analisar → Disseminar → Feedback</span></div>
+            <aside class="notes"><ul>
+              <li>Explicar a diferença entre dado bruto e registro estruturado: normalizar nomes e datas, agrupar duplicatas e conservar as fontes originais.</li>
+              <li>Uma observação antiga não deve ser descartada silenciosamente: identificá-la como histórica ajuda a evitar conclusões falsas.</li>
+              <li>Ainda não afirmamos que há um serviço atual; isso é uma questão para a análise.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 23 · CICLO OSINT: ANALISAR                                   -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 04 / 06</div>
+              <h2 class="h-md">Analisar: conecte sem presumir.</h2>
+            </div>
+            <div class="slide-body analysis-board">
+              <p class="stage-intro">Compare fontes, contexto e tempo. Separe <strong>evidência</strong> de <strong>hipótese</strong>.</p>
+              <div class="analysis-evidence">
+                <div><span>REGISTRO PÚBLICO DE CERTIFICADOS (CT)</span><b>portal.example.com</b></div>
+                <div class="analysis-plus" aria-hidden="true">+</div>
+                <div><span>ÍNDICE EXTERNO · HISTÓRICO</span><b>192.0.2.10:443</b></div>
+              </div>
+              <div class="analysis-link" aria-hidden="true">↓</div>
+              <div class="analysis-conclusion"><span>HIPÓTESE · CASO FICTÍCIO</span><p>Pode ter existido um serviço web associado.</p><small>A situação atual exige verificação autorizada; certificado não prova serviço ativo ou vulnerabilidade.</small></div>
+            </div>
+            <div class="cycle-detail-foot"><b>04</b> Analisar <span>→ Disseminar → Feedback</span></div>
+            <aside class="notes"><ul>
+              <li>O registro de um certificado não prova que existe um servidor ativo nem que há vulnerabilidade.</li>
+              <li>A observação do índice tem data própria; verifique se a associação ao nome é contextual e não confunda coocorrência com propriedade atual.</li>
+              <li>Apresentar a conclusão como hipótese e registrar quais verificações autorizadas ainda seriam necessárias.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 24 · CICLO OSINT: DISSEMINAR                                 -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 05 / 06</div>
+              <h2 class="h-md">Disseminar: entregue algo acionável.</h2>
+            </div>
+            <div class="slide-body briefing-board">
+              <p class="stage-intro">O relatório deve ajudar alguém a <strong>decidir o próximo passo</strong>.</p>
+              <div class="briefing-head"><span>RELATÓRIO · CASO FICTÍCIO</span><h3>Possível serviço web associado.</h3></div>
+              <div class="briefing-columns">
+                <div><b>01 <em>Achado</em></b><p>Nome em registro público de certificados (CT) e observação histórica de índice externo.</p></div>
+                <div><b>02 <em>Limite</em></b><p>Fontes e datas documentadas; situação atual ainda não confirmada.</p></div>
+                <div><b>03 <em>Encaminhamento</em></b><p>Equipe responsável verifica o inventário dentro do escopo autorizado.</p></div>
+              </div>
+            </div>
+            <div class="cycle-detail-foot"><b>05</b> Disseminar <span>→ Feedback</span></div>
+            <aside class="notes"><ul>
+              <li>O produto pode ser um relatório, um resumo executivo ou um alerta adequado ao destinatário.</li>
+              <li>Incluir a pergunta original, evidências, fontes, datas, incertezas e uma recomendação viável.</li>
+              <li>Não apresentar como vulnerabilidade confirmada um serviço apenas observado em fontes históricas.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 25 · CICLO OSINT: FEEDBACK                                   -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 06 / 06</div>
+              <h2 class="h-md">Feedback: a resposta abre outra pergunta.</h2>
+            </div>
+            <div class="slide-body feedback-board">
+              <p class="stage-intro">O relatório respondeu à necessidade? Identifique lacunas e replaneje.</p>
+              <div class="feedback-flow">
+                <div class="feedback-side"><span>RETORNO DA EQUIPE</span><p>O inventário não identifica quem administra o nome observado.</p></div>
+                <div class="feedback-loop"><span>↶</span><b>O serviço<br />ainda existe?</b><small>CASO FICTÍCIO</small></div>
+                <div class="feedback-side"><span>NOVA PERGUNTA</span><p>Qual área é responsável e quais fontes autorizadas podem esclarecer a situação atual?</p></div>
+              </div>
+              <p class="stage-caption">Uma nova rodada pode exigir revisão de escopo e autorização.</p>
+            </div>
+            <div class="cycle-detail-foot"><b>06</b> Feedback <span>↶ retorna ao planejamento</span></div>
+            <aside class="notes"><ul>
+              <li>O feedback verifica se o relatório foi útil e se respondeu à necessidade original.</li>
+              <li>Uma lacuna pode gerar nova pergunta, nova coleta ou revisão de prioridades; não implica automaticamente contato com o alvo.</li>
+              <li>Fechar o ciclo retomando o planejamento e os limites de autorização.</li>
+            </ul></aside>
+          </div>
+        </section>
+

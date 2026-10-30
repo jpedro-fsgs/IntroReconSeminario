@@ -1,0 +1,236 @@
+        <!-- ============================================================ -->
+        <!-- 32 · FERRAMENTAS: SHODAN E CENSYS                            -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · serviços indexados</div>
+              <h2 class="h-md">Shodan / Censys</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Quais serviços e certificados já foram observados por indexadores?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>Uma equipe compara um endereço público sob sua responsabilidade com os registros das duas plataformas.</p></div>
+                <div class="tool-detail-caution"><b>Limite</b><span>Cada índice tem cobertura e datas próprias; os registros não confirmam a situação atual.</span></div>
+              </div>
+              <div class="tool-detail-example">
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-visual">
+                  <div class="tool-visual-content is-search">
+                    <div class="tool-visual-bar">Consulta comparativa · índices</div>
+                    <div class="tool-visual-query">192.0.2.10</div>
+                    <div class="tool-visual-rows">
+                      <div class="tool-visual-row"><span class="tool-visual-key">SHODAN</span><span class="tool-visual-value">HTTPS · porta 443</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">CENSYS</span><span class="tool-visual-value">certificado example.com</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">ATENÇÃO</span><span class="tool-visual-value">observações anteriores</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tool-detail-result"><span>PISTA</span><p>No exemplo, Shodan mostra um serviço HTTPS e Censys associa um certificado ao endereço.</p></div>
+              </div>
+            </div>
+            <aside class="notes"><ul>
+              <li>Shodan e Censys consultam índices de serviços já coletados; a consulta é passiva em relação ao alvo, mas os próprios indexadores podem ter contatado a infraestrutura.</li>
+              <li>O endereço é reservado para documentação e todos os resultados são fictícios. Conferir data e propriedade antes de tirar conclusões.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 33 · FERRAMENTAS: WHOIS                                     -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · registros de domínio</div>
+              <h2 class="h-md">WHOIS</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Quais informações cadastrais e servidores de nomes estão disponíveis para um domínio?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe consulta o registro público de example.com para entender sua administração.</p></div>
+                <div class="tool-detail-caution"><b>Limite</b><span>Dados pessoais podem estar protegidos, omitidos ou desatualizados.</span></div>
+              </div>
+              <div class="tool-detail-example">
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-visual">
+                  <div class="tool-visual-content is-record">
+                    <div class="tool-visual-bar">WHOIS · registro público</div>
+                    <div class="tool-visual-query">example.com</div>
+                    <div class="tool-visual-rows">
+                      <div class="tool-visual-row"><span class="tool-visual-key">REGISTRADOR</span><span class="tool-visual-value">Registrador Exemplo</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">SERVIDORES</span><span class="tool-visual-value">ns1.example.com</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">CONTATO</span><span class="tool-visual-value">dados protegidos</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tool-detail-result"><span>PISTA</span><p>O registro pode informar registrador, datas e servidores de nomes.</p></div>
+              </div>
+            </div>
+            <aside class="notes"><ul>
+              <li>WHOIS oferece informações públicas de registro, mas não necessariamente revela a identidade do responsável.</li>
+              <li>O resultado ilustrado é fictício; retenção, disponibilidade e privacidade variam entre registros.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 34 · FERRAMENTAS: SECURITYTRAILS E VIRUSTOTAL                 -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · DNS e relações</div>
+              <h2 class="h-md">SecurityTrails / VirusTotal</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Que resoluções históricas e relações observadas ajudam a contextualizar um domínio?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe investiga associações anteriores de um domínio próprio em duas fontes.</p></div>
+                <div class="tool-detail-caution"><b>Limite</b><span>As fontes têm datas e cobertura diferentes; associações antigas não comprovam propriedade ou risco atuais.</span></div>
+              </div>
+              <div class="tool-detail-example">
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-visual">
+                  <div class="tool-visual-content is-history">
+                    <div class="tool-visual-bar">DNS histórico · relações</div>
+                    <div class="tool-visual-query">example.com</div>
+                    <div class="tool-visual-rows">
+                      <div class="tool-visual-row"><span class="tool-visual-key">SECURITYTRAILS</span><span class="tool-visual-value">2023 · 198.51.100.20</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">VIRUSTOTAL</span><span class="tool-visual-value">relação · 192.0.2.10</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">ATENÇÃO</span><span class="tool-visual-value">validar datas e vínculos</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tool-detail-result"><span>PISTA</span><p>SecurityTrails apresenta histórico DNS; VirusTotal reúne relações e observações adicionais.</p></div>
+              </div>
+            </div>
+            <aside class="notes"><ul>
+              <li>SecurityTrails e VirusTotal têm fontes, datas e coberturas diferentes; relacionar informações não é confirmar uma ameaça.</li>
+              <li>As datas e os endereços são fictícios e servem apenas para ilustrar a necessidade de validar associações históricas.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 35 · FERRAMENTAS: CRT.SH                                    -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · Certificate Transparency</div>
+              <h2 class="h-md">crt.sh</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Quais nomes aparecem em registros públicos que permitem auditar a emissão de certificados digitais?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe pesquisa certificados emitidos para nomes associados ao seu domínio.</p></div>
+                <div class="tool-detail-caution"><b>Limite</b><span>Um nome no certificado não prova que o serviço está ativo; a cobertura não é absoluta.</span></div>
+              </div>
+              <div class="tool-detail-example">
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-visual">
+                  <div class="tool-visual-content is-certificate">
+                    <div class="tool-visual-bar">crt.sh · registro de certificado</div>
+                    <div class="tool-visual-query">%.example.com</div>
+                    <div class="tool-visual-rows">
+                      <div class="tool-visual-row"><span class="tool-visual-key">NOMES</span><span class="tool-visual-value">example.com</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">SAN</span><span class="tool-visual-value">teste.example.com</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">FONTE</span><span class="tool-visual-value">registro público de certificados</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tool-detail-result"><span>PISTA</span><p>Um certificado registrado inclui o nome teste.example.com.</p></div>
+              </div>
+            </div>
+            <aside class="notes"><ul>
+              <li>Certificate Transparency (CT) reúne registros públicos que permitem auditar a emissão de certificados digitais; o crt.sh facilita sua consulta.</li>
+              <li>O nome no certificado é fictício e não comprova que o serviço está ativo ou é vulnerável.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 36 · FERRAMENTAS: SUBFINDER E AMASS                          -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · descoberta de subdomínios</div>
+              <h2 class="h-md">Subfinder / Amass</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Que nomes e relações podem ser reunidos a partir de fontes externas?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe cruza candidatos de subdomínios do seu domínio em um inventário inicial.</p></div>
+                <div class="tool-detail-caution"><b>Limite</b><span>Revise modos e fontes: verificações ativas podem gerar tráfego direto ao alvo.</span></div>
+              </div>
+              <div class="tool-detail-example">
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-visual">
+                  <div class="tool-visual-content is-graph">
+                    <div class="tool-visual-bar">Subdomínios · inventário combinado</div>
+                    <div class="tool-visual-query">fontes passivas configuradas</div>
+                    <div class="tool-visual-graph">
+                      <div class="tool-visual-node root">example.com</div>
+                      <div class="tool-visual-connector" aria-hidden="true"></div>
+                      <div class="tool-visual-branches">
+                        <div class="tool-visual-node">Subfinder: www.example.com</div>
+                        <div class="tool-visual-node">Amass: teste.example.com</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tool-detail-result"><span>PISTA</span><p>Subfinder reúne nomes; Amass também organiza relações entre os achados.</p></div>
+              </div>
+            </div>
+            <aside class="notes"><ul>
+              <li>As ferramentas podem reunir fontes distintas. É necessário escolher modos passivos e revisar opções antes de qualquer execução.</li>
+              <li>Os nomes e relações são fictícios; candidatos não comprovam a existência atual de serviços.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 37 · FERRAMENTAS: EXIFTOOL E FOCA                            -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · metadados de documentos</div>
+              <h2 class="h-md">ExifTool / FOCA</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Quais metadados podem aparecer em arquivos já obtidos?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe revisa PDFs antes de publicá-los ou compartilhá-los.</p></div>
+                <div class="tool-detail-caution"><b>Limite</b><span>Dados podem estar ausentes ou incorretos; a obtenção dos arquivos pode contatar o alvo.</span></div>
+              </div>
+              <div class="tool-detail-example">
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-visual">
+                  <div class="tool-visual-content is-record">
+                    <div class="tool-visual-bar">Metadados · arquivos obtidos</div>
+                    <div class="tool-visual-query">relatorio.pdf</div>
+                    <div class="tool-visual-rows">
+                      <div class="tool-visual-row"><span class="tool-visual-key">EXIFTOOL</span><span class="tool-visual-value">Autor: Equipe Exemplo</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">FOCA</span><span class="tool-visual-value">Software: Editor de PDF</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">ARQUIVO</span><span class="tool-visual-value">documento local</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tool-detail-result"><span>PISTA</span><p>ExifTool lê metadados do arquivo; FOCA ajuda a organizar achados de documentos.</p></div>
+              </div>
+            </div>
+            <aside class="notes"><ul>
+              <li>Metadados de arquivos já obtidos podem mostrar autores, software e datas, mas também podem ter sido removidos ou alterados.</li>
+              <li>A obtenção dos documentos e os módulos habilitados podem gerar contato direto; revisar as configurações e o escopo.</li>
+            </ul></aside>
+          </div>
+        </section>

@@ -30,13 +30,13 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Prepare static site
+      - name: Validate presentation
         run: |
-          mkdir -p _site
-          cp index.html _site/
-          cp -r css _site/
-          cp -r assets _site/
-          touch _site/.nojekyll
+          python3 scripts/build.py --check
+          python3 -m unittest discover -s tests -v
+
+      - name: Prepare static site
+        run: python3 scripts/build.py --site-only
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

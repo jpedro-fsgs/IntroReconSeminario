@@ -1,0 +1,199 @@
+        <!-- ============================================================ -->
+        <!-- 26 · TÉCNICAS PASSIVAS                                       -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Daniel</span> · Técnicas</div>
+            <h2 class="h-md">Quatro portas de entrada — nenhuma delas é o alvo</h2>
+          </div>
+
+          <div class="slide-body source-map">
+            <p class="stage-intro">Fontes diferentes respondem a perguntas diferentes — e cada uma tem limites.</p>
+            <div class="source-columns">
+              <div><span>01</span><b>Busca e<br />indexação</b><p>O que já foi publicado e indexado?</p></div>
+              <div><span>02</span><b>DNS e<br />certificados</b><p>Quais nomes aparecem em registros públicos?</p></div>
+              <div><span>03</span><b>Registros e<br />infraestrutura</b><p>Quais associações e provedores foram observados?</p></div>
+              <div><span>04</span><b>Pessoas e<br />vazamentos</b><p>Que contexto profissional foi exposto?</p></div>
+            </div>
+            <p class="stage-caption">Fontes externas · sem requisição direta ao alvo</p>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Mostrar um dork ao vivo se houver tempo; senão, explicar os operadores.</li>
+              <li>Certificate Transparency (CT) registra certificados publicamente para permitir auditoria de sua emissão; os nomes presentes podem ser consultados.</li>
+              <li>Reforçar a correlação: cada fonte isolada vale pouco; juntas, desenham o alvo.</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 27 · TÉCNICA: BUSCA E INDEXAÇÃO                              -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Técnicas passivas · 01 / 04</div>
+              <h2 class="h-md">Busca e indexação: refine a pergunta.</h2>
+            </div>
+            <div class="slide-body search-concept">
+              <p class="stage-intro">Operadores filtram páginas e arquivos que um buscador já indexou.</p>
+              <div class="search-flow">
+                <div class="search-stack"><span>páginas</span><span>imagens</span><span>documentos</span></div>
+                <div class="search-lens"><svg viewBox="0 0 140 140" aria-hidden="true"><circle cx="58" cy="58" r="39" fill="none" stroke="currentColor" stroke-width="4"/><path d="M87 87 L125 125" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></svg><b>filtro</b></div>
+                <div class="search-result-concept"><span>RESULTADO FICTÍCIO</span><b>Relatório<br />institucional.pdf</b><small>origem e data precisam de validação</small></div>
+              </div>
+              <div class="search-formula"><code>site:example.com</code><span>domínio</span><b>+</b><code>filetype:pdf</code><span>formato</span></div>
+              <p class="stage-caption">Um resultado indexado é uma pista; abrir o arquivo pode contatar o alvo.</p>
+            </div>
+            <div class="cycle-detail-foot"><b>01</b> Busca e indexação <span>→ DNS e certificados → Registros e infraestrutura → Pessoas e vazamentos</span></div>
+            <aside class="notes"><ul>
+              <li>O domínio example.com e o resultado mostrado são fictícios; a simulação não executa buscas.</li>
+              <li>Explicar que site: e filetype: são filtros de resultados indexados, não ferramentas de invasão.</li>
+              <li>Consultar o buscador é diferente de abrir o resultado: acessar um arquivo hospedado pelo alvo pode gerar uma requisição direta.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 28 · TÉCNICA: DNS E CERTIFICADOS                             -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Técnicas passivas · 02 / 04</div>
+              <h2 class="h-md">DNS e certificados: nomes deixam rastros.</h2>
+            </div>
+            <div class="slide-body certificate-concept">
+              <p class="stage-intro"><strong>Certificate Transparency (CT)</strong> mantém registros públicos para auditar a emissão de certificados digitais.</p>
+              <div class="certificate-flow">
+                <div class="certificate-paper"><span>CERTIFICADO · EXEMPLO FICTÍCIO</span><b>example.com</b><small>também inclui</small><strong>portal.example.com</strong><i aria-hidden="true">✓</i></div>
+                <div class="certificate-route"><span>registrado em</span><b>⟶</b></div>
+                <div class="certificate-log"><span>REGISTRO PÚBLICO</span><b>CT</b><p>nomes consultáveis</p></div>
+              </div>
+              <p class="stage-caption">DNS passivo consulta resoluções históricas em fontes externas. Um certificado não comprova serviço ativo ou vulnerabilidade.</p>
+            </div>
+            <div class="cycle-detail-foot"><b>02</b> DNS e certificados <span>→ Registros e infraestrutura → Pessoas e vazamentos</span></div>
+            <aside class="notes"><ul>
+              <li>Certificate Transparency (CT) é um sistema de registros públicos que permite auditar a emissão de certificados digitais.</li>
+              <li>Os nomes podem aparecer em certificados mesmo que não haja um serviço ativo. Consulte bases de DNS histórico para observações passadas.</li>
+              <li>A simulação é fictícia. Uma consulta DNS direta à infraestrutura do alvo deixa de ser passiva em relação a ela.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 29 · TÉCNICA: REGISTROS E INFRAESTRUTURA                    -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Técnicas passivas · 03 / 04</div>
+              <h2 class="h-md">Registros e infraestrutura: conecte as fontes.</h2>
+            </div>
+            <div class="slide-body infrastructure-concept">
+              <p class="stage-intro">Cada registro acrescenta contexto — não uma prova automática de propriedade.</p>
+              <div class="infrastructure-path">
+                <div><span>DOMÍNIO · WHOIS</span><b>example.com</b><p>Registrador e servidores de nomes; dados podem estar ocultos.</p></div>
+                <i aria-hidden="true">→</i>
+                <div><span>DNS HISTÓRICO</span><b>192.0.2.10</b><p>Associação observada anteriormente.</p></div>
+                <i aria-hidden="true">→</i>
+                <div><span>ASN · REDE</span><b>Provedor</b><p>Sistema autônomo responsável pela rede do endereço.</p></div>
+              </div>
+              <p class="stage-caption">Exemplo fictício · um provedor atende vários clientes; IP antigo não comprova vínculo atual.</p>
+            </div>
+            <div class="cycle-detail-foot"><b>03</b> Registros e infraestrutura <span>→ Pessoas e vazamentos</span></div>
+            <aside class="notes"><ul>
+              <li>WHOIS pode oferecer dados de domínio ou de blocos de rede, mas informações de contato podem ser protegidas ou estar ausentes.</li>
+              <li>ASN significa Autonomous System Number: identifica uma rede sob uma política de roteamento, frequentemente operada por um provedor.</li>
+              <li>O endereço usado é reservado para documentação e a associação é fictícia. Não presumir que um provedor ou endereço histórico seja propriedade atual do domínio.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 30 · TÉCNICA: PESSOAS E VAZAMENTOS                            -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Técnicas passivas · 04 / 04</div>
+              <h2 class="h-md">Pessoas e vazamentos: contexto com cuidado.</h2>
+            </div>
+            <div class="slide-body people-concept">
+              <p class="stage-intro">Perfis públicos, vagas e repositórios oferecem <strong>contexto</strong>, não certezas.</p>
+              <div class="people-flow">
+                <div class="people-sources"><div><span>PERFIL / VAGA</span><b>Equipe de infraestrutura</b><small>administração de nuvem</small></div><div><span>REPOSITÓRIO PÚBLICO</span><b>Projeto de automação</b><small>tecnologias e dependências</small></div></div>
+                <div class="people-connector" aria-hidden="true">⟶</div>
+                <div class="people-hypothesis"><span>HIPÓTESE · CASO FICTÍCIO</span><b>Possível contexto<br />da equipe</b><p>Validar antes de concluir quem tem acesso ou responsabilidade.</p></div>
+              </div>
+              <p class="stage-caption">Vazamentos: use canais autorizados para verificar exposição, sem coletar ou testar senhas de terceiros.</p>
+            </div>
+            <div class="cycle-detail-foot"><b>04</b> Pessoas e vazamentos <span>→ Ferramentas de coleta</span></div>
+            <aside class="notes"><ul>
+              <li>O perfil, a vaga e o repositório são fictícios. Informações profissionais públicas precisam de contexto e validação.</li>
+              <li>Vazamentos exigem cautela: usar serviços e verificações autorizadas para contas sob responsabilidade da equipe, sem buscar, divulgar ou testar credenciais de terceiros.</li>
+              <li>Respeitar privacidade, legislação e escopo; uma evidência pública não autoriza qualquer uso.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 31 · FERRAMENTAS OSINT                                       -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Daniel</span> · Ferramentas</div>
+            <h2 class="h-md">O kit de coleta — e o que cada fonte responde</h2>
+          </div>
+
+          <div class="slide-body">
+            <div class="tool-list">
+              <div class="tool-row rise" style="--d: .1s">
+                <span class="name">Shodan / Censys</span><span class="cat">serviços indexados</span>
+                <span class="use">Consultam índices de serviços, portas e banners já coletados por terceiros.</span>
+              </div>
+              <div class="tool-row rise" style="--d: .17s">
+                <span class="name">WHOIS</span><span class="cat">registros de domínio</span>
+                <span class="use">Consulta dados cadastrais e servidores de nomes; informações podem estar protegidas ou ausentes.</span>
+              </div>
+              <div class="tool-row rise" style="--d: .24s">
+                <span class="name">SecurityTrails / VT</span><span class="cat">DNS e relações</span>
+                <span class="use">Combinam histórico de resoluções e relações observadas; resultados exigem validação.</span>
+              </div>
+              <div class="tool-row rise" style="--d: .31s">
+                <span class="name">crt.sh</span><span class="cat">certificados</span>
+                <span class="use">Consulta logs de transparência para descobrir nomes associados a certificados.</span>
+              </div>
+              <div class="tool-row rise" style="--d: .38s">
+                <span class="name">Subfinder / Amass</span><span class="cat">subdomínios</span>
+                <span class="use">Automatizam buscas em múltiplas fontes; configure o modo passivo e confira os módulos.</span>
+              </div>
+              <div class="tool-row rise" style="--d: .45s">
+                <span class="name">ExifTool / FOCA</span><span class="cat">metadados</span>
+                <span class="use">Analisam arquivos já obtidos para extrair autores, softwares e outros metadados.</span>
+              </div>
+            </div>
+
+            <div class="slide-footline" style="margin-top: 16px">
+              <span><b>Consulta passiva depende da configuração e da fonte.</b></span>
+              <span>os próximos slides detalham cada grupo</span>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Não virar catálogo: destacar o que cada uma responde.</li>
+              <li>Shodan é passivo em relação ao alvo, mas os dados podem estar desatualizados.</li>
+              <li>WHOIS pode ocultar dados; DNS histórico não prova exposição atual; registros de transparência de certificados (CT) não revelam necessariamente serviços ativos nem cobrem todos os certificados.</li>
+              <li>Subfinder e Amass têm opções e fontes distintas: desative verificações ativas. Ferramentas e o acesso inicial a um arquivo podem contatar o alvo, dependendo da configuração.</li>
+              <li>Automação multiplica resultados — e multiplica erros se não houver validação.</li>
+              <li>Os próximos seis slides apresentam um exemplo para cada grupo de ferramentas.</li>
+              <li>Exemplos fictícios: Shodan e Censys mostram serviços indexados; WHOIS consulta registros; SecurityTrails e VirusTotal revelam associações históricas; crt.sh reúne nomes em certificados; Subfinder e Amass cruzam fontes de subdomínios; ExifTool e FOCA analisam metadados em documentos já obtidos.</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>

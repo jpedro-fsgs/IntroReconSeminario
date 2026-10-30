@@ -1,0 +1,7 @@
+/* A ordem dos imports preserva a cascata original da apresentação. */
+@import url("01-base.css");
+@import url("02-contexto.css");
+@import url("03-ativo.css");
+@import url("04-passivo-casos.css");
+@import url("05-geosint-fechamento.css");
+@import url("06-reveal-movimento.css");

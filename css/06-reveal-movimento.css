@@ -1,0 +1,80 @@
+/* ---------- Reveal chrome ---------- */
+
+.reveal .controls {
+  color: var(--red);
+  bottom: 14px;
+  right: 14px;
+}
+
+.reveal .progress {
+  color: var(--red);
+  height: 2px;
+}
+
+.reveal .slide-number {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--faint);
+  background: transparent;
+  left: 16px;
+  right: auto;
+  bottom: 16px;
+}
+
+.paper ~ .reveal .slide-number {
+  color: #7d776c;
+}
+
+/* ---------- Generic entrance animation ---------- */
+
+.present .rise {
+  animation: riseIn 0.62s cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0.1s) both;
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+.present .fade {
+  animation: fadeIn 0.6s ease var(--d, 0.1s) both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal *,
+  .reveal *::before,
+  .reveal *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .hs-arrow,
+  .route,
+  .g-line {
+    stroke-dashoffset: 0 !important;
+  }
+
+  .ev-row .box::after {
+    transform: rotate(40deg) scale(1) !important;
+  }
+
+  .door .s-open {
+    opacity: 1 !important;
+  }
+
+  .door .s-closed {
+    opacity: 0 !important;
+  }
+
+  .door {
+    border-color: rgba(99, 201, 138, 0.45);
+    background: rgba(99, 201, 138, 0.06);
+  }
+}

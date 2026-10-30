@@ -1,0 +1,311 @@
+        <!-- ============================================================ -->
+        <!-- 45 · DIVISOR 05                                              -->
+        <!-- ============================================================ -->
+        <section class="slide divider">
+          <div class="slide-inner">
+          <span class="ghost-num">05</span>
+          <div class="red-rule"></div>
+          <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração</div>
+          <h2 class="statement">Do dado público<br /><em>ao alvo provável.</em></h2>
+          <p class="lede">Três demonstrações: duas de GEOSINT e uma de OSINT. Ambiente controlado.</p>
+
+          <div class="divider-foot">
+            <span class="who">com <b>João Pedro Almeida</b></span>
+            <span class="chapter">BLOCO 05 / 06</span>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Reforçar que tudo é feito com dados públicos e exemplos didáticos.</li>
+              <li>Avisar que a demo é uma simulação narrada, não um alvo real.</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 46 · GEOSINT 1                                               -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração 01 · GEOSINT</div>
+            <h2 class="h-md">Onde foi tirada esta foto?</h2>
+          </div>
+
+          <div class="slide-body geo-grid">
+            <div class="photo">
+              <svg viewBox="0 0 560 430" preserveAspectRatio="xMidYMid slice" aria-label="Ilustração de uma estrada ao pôr do sol com placa Ruta 40">
+                <defs>
+                  <linearGradient id="geoSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#5d7186" />
+                    <stop offset="42%" stop-color="#c08a6a" />
+                    <stop offset="100%" stop-color="#efc07c" />
+                  </linearGradient>
+                  <linearGradient id="geoGround" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#7b6248" />
+                    <stop offset="100%" stop-color="#4a3b2f" />
+                  </linearGradient>
+                </defs>
+
+                <rect width="560" height="430" fill="url(#geoSky)" />
+                <circle cx="455" cy="108" r="30" fill="#ffe0a3" opacity=".9" />
+                <circle cx="455" cy="108" r="52" fill="#ffd08c" opacity=".16" />
+
+                <path d="M0 250 L70 205 L120 232 L180 176 L240 220 L300 190 L360 232 L430 198 L500 236 L560 210 L560 290 L0 290 Z" fill="#4b3d3d" />
+                <path d="M0 268 L80 240 L150 262 L230 226 L310 258 L390 232 L470 264 L560 244 L560 300 L0 300 Z" fill="#352c2e" />
+
+                <rect y="282" width="560" height="148" fill="url(#geoGround)" />
+                <path d="M138 430 L420 430 L322 272 L278 272 Z" fill="#52443a" />
+                <path d="M280 430 L322 430 L304 272 L296 272 Z" fill="#6d5b48" opacity=".55" />
+
+                <g stroke="#e8d3a6" stroke-width="4" opacity=".7">
+                  <path d="M284 410 L292 390" />
+                  <path d="M296 370 L302 352" />
+                  <path d="M306 334 L310 320" />
+                  <path d="M314 306 L317 294" />
+                </g>
+
+                <g>
+                  <rect x="90" y="214" width="118" height="46" rx="2" fill="#e7e1cf" stroke="#3a3a34" stroke-width="1.5" />
+                  <rect x="96" y="220" width="106" height="34" fill="none" stroke="#3a3a34" stroke-width="1" />
+                  <text x="149" y="240" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" font-weight="600" fill="#23231f">RUTA 40</text>
+                  <text x="149" y="250" text-anchor="middle" font-family="IBM Plex Mono" font-size="5.5" fill="#4b4a42">MENDOZA — ARGENTINA</text>
+                  <rect x="144" y="260" width="10" height="104" fill="#6b6254" />
+                </g>
+
+                <g stroke="#3d3a35" stroke-width="3">
+                  <path d="M482 262 V196" />
+                  <path d="M454 202 H510" />
+                  <path d="M462 202 V188 M476 202 V184 M490 202 V188 M504 202 V192" />
+                  <path d="M516 280 V230" />
+                  <path d="M502 234 H530" />
+                </g>
+
+                <path d="M90 262 L20 430 L150 430 Z" fill="#1e1a18" opacity=".25" />
+                <path d="M482 262 L420 430 L540 430 Z" fill="#1e1a18" opacity=".22" />
+
+                <g fill="#3f4a35" opacity=".9">
+                  <circle cx="60" cy="330" r="10" />
+                  <circle cx="76" cy="340" r="7" />
+                  <circle cx="498" cy="330" r="9" />
+                  <circle cx="514" cy="342" r="6" />
+                  <circle cx="446" cy="360" r="8" />
+                </g>
+
+                <g fill="#221e1b" opacity=".55">
+                  <rect y="424" width="560" height="6" />
+                </g>
+              </svg>
+
+              <span class="photo-pin p1" data-label="sombra"></span>
+              <span class="photo-pin p2" data-label="placa"></span>
+              <span class="photo-pin p3" data-label="relevo"></span>
+              <span class="photo-pin p4" data-label="sol / oeste"></span>
+            </div>
+
+            <div>
+              <div class="clue-list">
+                <div class="clue">
+                  <span class="k">SOMBRA</span>
+                  <div><b>Longa e para a esquerda</b><span>Sol baixo à direita: fim de tarde. O lado da sombra sugere hemisfério oeste.</span></div>
+                </div>
+                <div class="clue">
+                  <span class="k">PLACA</span>
+                  <div><b>“RUTA 40 · Mendoza”</b><span>Entrega país, região e idioma. O detalhe mais forte da imagem.</span></div>
+                </div>
+                <div class="clue">
+                  <span class="k">RELEVO</span>
+                  <div><b>Pré-cordilheira árida</b><span>Montanhas baixas, solo seco, vegetação rasteira — não é litoral.</span></div>
+                </div>
+                <div class="clue">
+                  <span class="k">CONTEXTO</span>
+                  <div><b>Cruzamento com mapas</b><span>Rota, altitude e horário do sol confirmam a hipótese.</span></div>
+                </div>
+              </div>
+
+              <div class="hypothesis">
+                <div class="k">HIPÓTESE VALIDADA · EXEMPLO DIDÁTICO</div>
+                <b>Mendoza, Argentina · 32.89°S 68.84°W</b>
+                <span>Confiança: 78% · ferramentas: SunCalc, Google Lens, Mapillary, Overpass.</span>
+              </div>
+
+              <div class="tag-row">
+                <span class="chip">SunCalc</span>
+                <span class="chip">Mapillary</span>
+                <span class="chip">Overpass</span>
+                <span class="chip amber">confiança, não certeza</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Narrar como analista: primeiro as pistas óbvias, depois as que eliminam hipóteses.</li>
+              <li>Explicar SunCalc: posição e comprimento da sombra dão hora aproximada e orientação.</li>
+              <li>Dizer que a confiança é parte do método: 78% não é “achismo”, é hipótese testável.</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 47 · GEOSINT 2                                               -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração 02 · GEOSINT</div>
+            <h2 class="h-md">Três hipóteses. Uma coordenada.</h2>
+          </div>
+
+          <div class="slide-body geo-grid">
+            <div class="geo-map">
+              <svg viewBox="0 0 560 430" aria-label="Mapa estilizado com três pinos candidatos e um confirmado">
+                <rect width="560" height="430" fill="#0e1310" />
+                <g class="mp grid">
+                  <path d="M0 50 H560 M0 100 H560 M0 150 H560 M0 200 H560 M0 250 H560 M0 300 H560 M0 350 H560 M0 400 H560" />
+                  <path d="M50 0 V430 M100 0 V430 M150 0 V430 M200 0 V430 M250 0 V430 M300 0 V430 M350 0 V430 M400 0 V430 M450 0 V430 M500 0 V430" />
+                </g>
+
+                <path class="mp river" d="M-20 310 C 80 290 120 330 200 300 S 330 260 400 290 S 510 310 580 270" />
+                <path class="mp road" d="M20 400 C 140 340 220 330 300 260 S 420 170 540 120" />
+                <path class="mp road" d="M60 60 C 160 130 240 160 320 210 S 450 300 520 380" />
+                <path class="mp" d="M-20 220 C 90 200 150 230 240 210 S 380 180 470 210 S 540 230 580 210" />
+                <path class="mp" d="M-20 140 C 80 120 160 150 250 130 S 400 100 500 130 S 560 150 580 140" />
+                <path class="mp" d="M-20 380 C 90 360 180 390 270 370 S 430 340 540 370" />
+
+                <g>
+                  <circle cx="150" cy="140" r="26" class="pin-ring" opacity=".2" />
+                  <circle cx="150" cy="140" r="8" class="pin-map" />
+                  <text x="150" y="164" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#6f7a72">A</text>
+                </g>
+                <g>
+                  <circle cx="350" cy="300" r="8" class="pin-map" />
+                  <text x="350" y="324" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#6f7a72">B</text>
+                </g>
+                <g>
+                  <circle cx="410" cy="170" r="36" class="pin-ring" />
+                  <circle cx="410" cy="170" r="9" class="pin-map chosen" />
+                  <text x="410" y="196" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#ffcf8f">C · confirmado</text>
+                </g>
+
+                <text x="24" y="410" font-family="IBM Plex Mono" font-size="9" fill="#55655b">imagem de satélite · recorte didático</text>
+              </svg>
+            </div>
+
+            <div>
+              <h3 class="h-sm" style="margin-bottom: 8px">Eliminar, não adivinhar.</h3>
+              <p class="lede" style="margin-top: 0">
+                Cada pista precisa <strong>derrubar</strong> uma hipótese. O que sobra não é certeza: é o próximo teste.
+              </p>
+
+              <div class="evidence">
+                <div class="ev-row" style="--d: 1.6s"><span class="box"></span><span><b>Sombra</b> compatível com 15h local</span></div>
+                <div class="ev-row" style="--d: 1.8s"><span class="box"></span><span><b>Relevo</b> e linha do horizonte batem</span></div>
+                <div class="ev-row" style="--d: 2s"><span class="box"></span><span><b>Placa</b> confirma a região</span></div>
+                <div class="ev-row" style="--d: 2.2s"><span class="box"></span><span><b>Acesso</b> e rodovia compatíveis</span></div>
+                <div class="ev-row" style="--d: 2.4s"><span class="box" style="border-color: rgba(226,58,46,.4)"></span><span><b>Satélite</b> ainda ambíguo — nova imagem necessária</span></div>
+              </div>
+
+              <div class="confidence">
+                <div class="small" style="display: flex; justify-content: space-between">
+                  <span>confiança da hipótese C</span><span class="green">92%</span>
+                </div>
+                <div class="bar"><div class="fill"></div></div>
+              </div>
+
+              <p class="small" style="margin-top: 12px">
+                O método é o mesmo para uma foto de rua, um print de story ou uma imagem de satélite.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Explicar a lógica de eliminação: A e B caem por sombra/relevo; C sobrevive.</li>
+              <li>Mostrar que a barra de confiança é uma decisão comunicável, não um número mágico.</li>
+              <li>Se possível, abrir o Google Earth e comparar o recorte.</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 48 · OSINT DEMO — GRAFO                                      -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração 03 · OSINT</div>
+            <h2 class="h-md">Vinte minutos de coleta. Um grafo.</h2>
+          </div>
+
+          <div class="slide-body graph-grid">
+            <div class="graph-box">
+              <svg viewBox="0 0 620 440" aria-label="Grafo de correlação OSINT">
+                <g class="g-line" style="--d: .5s"><line x1="95" y1="85" x2="305" y2="85" /></g>
+                <g class="g-line" style="--d: .7s"><line x1="305" y1="85" x2="515" y2="75" /></g>
+                <g class="g-line" style="--d: .9s"><line x1="305" y1="85" x2="305" y2="245" /></g>
+                <g class="g-line" style="--d: 1.1s"><line x1="305" y1="245" x2="515" y2="265" /></g>
+                <g class="g-line" style="--d: 1.3s"><line x1="305" y1="245" x2="515" y2="75" /></g>
+                <g class="g-line" style="--d: 1.5s"><line x1="105" y1="330" x2="95" y2="85" /></g>
+                <g class="g-line" style="--d: 1.7s"><line x1="105" y1="330" x2="305" y2="245" /></g>
+
+                <g class="g-node fade" style="--d: .9s">
+                  <circle cx="95" cy="85" r="30" />
+                  <text x="95" y="128" text-anchor="middle">@marina.souza</text>
+                </g>
+                <g class="g-node fade" style="--d: 1.05s">
+                  <circle cx="305" cy="85" r="30" />
+                  <text x="305" y="128" text-anchor="middle">marina@acme.com</text>
+                </g>
+                <g class="g-node hot fade" style="--d: 1.2s">
+                  <circle cx="515" cy="75" r="30" />
+                  <text x="515" y="118" text-anchor="middle">2 vazamentos</text>
+                </g>
+                <g class="g-node warm fade" style="--d: 1.35s">
+                  <circle cx="305" cy="245" r="30" />
+                  <text x="305" y="288" text-anchor="middle">acme.com</text>
+                </g>
+                <g class="g-node hot fade" style="--d: 1.5s">
+                  <circle cx="515" cy="265" r="30" />
+                  <text x="515" y="308" text-anchor="middle">VPN exposta</text>
+                </g>
+                <g class="g-node fade" style="--d: 1.65s">
+                  <circle cx="105" cy="330" r="30" />
+                  <text x="105" y="373" text-anchor="middle">cargo: financeiro</text>
+                </g>
+              </svg>
+            </div>
+
+            <div class="graph-notes">
+              <h4>O que o grafo mostra</h4>
+              <ul>
+                <li>O username leva ao e-mail corporativo.</li>
+                <li>O e-mail aparece em dois vazamentos antigos.</li>
+                <li>O domínio revela um VPN de borda exposto.</li>
+                <li>O cargo indica o valor do alvo.</li>
+              </ul>
+
+              <div class="no-go">
+                <b>O QUE NÃO FAZEMOS</b>
+                <span>Não testamos a senha vazada. Não acessamos a VPN. Não enviamos nada ao alvo. Sem autorização, o grafo para aqui.</span>
+              </div>
+
+              <p class="small" style="margin-top: 12px">
+                O próximo passo é um relatório com evidências, não um login.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Narrar o encadeamento nó a nó; cada seta é uma consulta pública.</li>
+              <li>Destacar o limite ético: o valor está no mapa, não no acesso.</li>
+              <li>Se a banca perguntar “e depois?”, responder: relatório, priorização e correção.</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>
+

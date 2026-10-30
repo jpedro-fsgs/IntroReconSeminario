@@ -1,0 +1,223 @@
+        <!-- ============================================================ -->
+        <!-- 41 · DIVISOR 04                                              -->
+        <!-- ============================================================ -->
+        <section class="slide divider">
+          <div class="slide-inner">
+          <span class="ghost-num">04</span>
+          <div class="red-rule"></div>
+          <div class="kicker"><span class="who">João Pedro Gonçalves</span> · Estudos de caso</div>
+          <h2 class="statement">Quando o reconhecimento<br /><em>vira manchete.</em></h2>
+          <p class="lede">Dois casos reais. Nenhum deles começou com um exploit zero-day.</p>
+
+          <div class="divider-foot">
+            <span class="who">com <b>João Pedro Gonçalves</b></span>
+            <span class="chapter">BLOCO 04 / 06</span>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Anunciar os dois casos: RSA (2011) e Strava (2018).</li>
+              <li>Pedir atenção ao padrão: o vetor é humano ou é dado público mal pensado.</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 42 · CASO RSA                                                -->
+        <!-- ============================================================ -->
+        <section class="slide paper">
+          <div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker">Caso 01 · 2011 · RSA SecurID</div>
+            <h2 class="h-md">O e-mail que abriu a RSA</h2>
+          </div>
+
+          <div class="slide-body rsa-grid">
+            <div>
+              <div class="timeline">
+                <div class="t-item rise" style="--d: .1s">
+                  <div class="when">MARÇO DE 2011</div>
+                  <b>Spear-phishing para um grupo pequeno</b>
+                  <span>Assunto inofensivo: “encaminho este arquivo para revisão”.</span>
+                </div>
+                <div class="t-item rise" style="--d: .2s">
+                  <div class="when">ABERTURA</div>
+                  <b>Planilha com exploit de Flash</b>
+                  <span>Um único funcionário abriu o anexo. O código executou.</span>
+                </div>
+                <div class="t-item rise" style="--d: .3s">
+                  <div class="when">PIVÔ</div>
+                  <b>Acesso à rede e movimento lateral</b>
+                  <span>O atacante passou do endpoint para os sistemas internos.</span>
+                </div>
+                <div class="t-item rise" style="--d: .4s">
+                  <div class="when">IMPACTO</div>
+                  <b>Comprometimento do SecurID</b>
+                  <span>Tokens de autenticação precisaram ser substituídos em escala.</span>
+                </div>
+              </div>
+
+              <p class="source" style="margin-top: 16px">
+                Fonte: Zoho Workplace · “RSA spear-phishing attack”. O vetor não foi técnico: foi humano.
+              </p>
+            </div>
+
+            <div>
+              <div class="mail-clip">
+                <div class="from">De: recruiter@web-example.com · Para: employee@rsa.com</div>
+                <div class="subject">I forward this file to you for review. Please open and view it.</div>
+                <div class="body">
+                  Hi,<br /><br />
+                  I forward this file to you for review. Please open and view it.<br /><br />
+                  Best regards.
+                </div>
+                <div class="attachment">📎 2021_Recruitment_Plan.xlsx</div>
+                <div class="source" style="margin-top: 10px">Reprodução didática do e-mail reportado.</div>
+              </div>
+
+              <div class="side-note" style="margin-top: 16px; font-size: 0.4em; border-color: var(--red)">
+                <b style="color: var(--red)">Lição:</b> o reconhecimento não precisa descobrir uma falha. Basta descobrir
+                quem abre anexos.
+              </div>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Contexto: RSA, empresa de segurança; o ataque atingiu justamente quem vendia confiança.</li>
+              <li>Detalhe importante: o e-mail não parecia um ataque; parecia rotina.</li>
+              <li>Ligar ao slide de phishing: os cinco sinais estavam lá.</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 43 · CASO STRAVA                                             -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+          <div class="strava-grid">
+            <div>
+              <div class="kicker">Caso 02 · 2018 · Strava</div>
+              <h2 class="h-lg" style="font-size: 1.9em">O mapa que desenhou<br /><em class="red">bases secretas.</em></h2>
+              <p class="lede">
+                O Strava publicou um mapa de calor global com atividades agregadas de usuários. Pesquisadores cruzaram
+                o rastro de corridas com imagens de satélite — e localizaram instalações militares.
+              </p>
+
+              <div class="case-facts">
+                <div class="case-fact">
+                  <span class="n">01</span>
+                  <div><b>Ninguém invadiu nada.</b><span>O dado era público e autorizado. Só não deveria revelar tanto.</span></div>
+                </div>
+                <div class="case-fact">
+                  <span class="n">02</span>
+                  <div><b>O padrão era o segredo.</b><span>Rotas circulares em locais sem academia entregavam a posição.</span></div>
+                </div>
+                <div class="case-fact">
+                  <span class="n">03</span>
+                  <div><b>Correlação vence senha.</b><span>Heatmap + satélite + geografia = localização provável.</span></div>
+                </div>
+              </div>
+
+              <p class="source" style="margin-top: 16px">
+                Fonte: The Guardian, 28 jan. 2018. O mapa foi produzido com dados agregados, não com acessos indevidos.
+              </p>
+            </div>
+
+            <div class="map-panel">
+              <span class="map-tag">HEATMAP · 2015—2017</span>
+              <svg viewBox="0 0 600 430" aria-label="Mapa estilizado com rotas de atividade física convergindo para uma base">
+                <rect width="600" height="430" fill="#0d1411" />
+                <g class="mp grid">
+                  <path d="M0 60 H600 M0 120 H600 M0 180 H600 M0 240 H600 M0 300 H600 M0 360 H600" />
+                  <path d="M60 0 V430 M120 0 V430 M180 0 V430 M240 0 V430 M300 0 V430 M360 0 V430 M420 0 V430 M480 0 V430 M540 0 V430" />
+                </g>
+                <g fill="none" stroke="#1e2a24" stroke-width="1">
+                  <path d="M-20 300 C 80 260 140 300 220 270 S 380 300 470 260 S 560 280 620 250" />
+                  <path d="M-20 240 C 70 220 150 250 230 225 S 390 250 480 215 S 570 235 620 210" />
+                  <path d="M-20 180 C 90 170 160 195 240 175 S 400 195 490 170 S 570 185 620 165" />
+                </g>
+                <path d="M0 360 C 90 340 150 350 210 330 S 330 350 400 320 S 520 340 600 310" fill="none" stroke="#141d18" stroke-width="14" />
+                <path d="M70 0 C 110 80 150 120 210 160 S 300 260 340 430" fill="none" stroke="#14211b" stroke-width="10" />
+
+                <g>
+                  <path class="route" style="--d: .5s" d="M 60 380 C 140 340 180 300 240 300 S 350 250 420 180" />
+                  <path class="route" style="--d: .6s" d="M 90 410 C 170 360 200 330 280 310 S 380 240 448 180" />
+                  <path class="route" style="--d: .7s" d="M 40 300 C 120 280 180 250 250 260 S 360 210 430 170" />
+                  <path class="route" style="--d: .8s" d="M 520 380 C 480 330 500 280 460 230 S 450 190 452 168" />
+                  <path class="route" style="--d: .9s" d="M 560 130 C 520 160 500 190 470 200 S 455 180 452 168" />
+                  <path class="route" style="--d: 1s" d="M 350 400 C 380 340 400 300 440 250 S 450 190 452 168" />
+                  <path class="route" style="--d: 1.1s" d="M 20 180 C 100 170 180 190 250 200 S 380 180 440 172" />
+                  <path class="route" style="--d: 1.2s" d="M 240 60 C 300 100 340 140 400 150 S 445 165 452 168" />
+                  <path class="route" style="--d: 1.3s" d="M 130 80 C 200 120 250 160 320 180 S 420 175 448 170" />
+                  <path class="route" style="--d: 1.4s" d="M 500 60 C 470 100 460 130 452 168" />
+                  <path class="route" style="--d: 1.5s" d="M 300 380 C 330 330 370 290 420 230" />
+                  <path class="route" style="--d: 1.6s" d="M 60 250 C 120 230 200 220 280 220 S 390 200 440 176" />
+                </g>
+
+                <circle class="reticle" cx="452" cy="168" r="17" />
+                <circle class="reticle" cx="452" cy="168" r="29" opacity=".5" />
+                <circle class="reticle-ring" cx="452" cy="168" r="17" />
+                <path d="M452 138 V150 M452 186 V198 M422 168 H434 M470 168 H482" stroke="#ff4b3e" stroke-width="1.2" />
+                <circle cx="452" cy="168" r="3" fill="#ff4b3e" />
+
+                <text x="466" y="154" fill="#ff8b82" font-family="IBM Plex Mono" font-size="10">FOB</text>
+                <text x="466" y="196" fill="#7d8d84" font-family="IBM Plex Mono" font-size="8">34.5°N 69.2°E</text>
+              </svg>
+              <div class="map-legend"><span><i></i>rotas agregadas</span><span><i style="background:#ff4b3e"></i>instalação</span></div>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Contexto: Strava Heatmap, 2017/2018; dados de atividades agregados.</li>
+              <li>O caso foi descoberto por um estudante que cruzou o mapa com imagens de satélite.</li>
+              <li>Ponto central: o dado era público, mas a agregação não foi pensada como risco.</li>
+              <li>Perguntar: “quais dados a sua empresa publica achando que são inofensivos?”.</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 44 · LIÇÃO DOS CASOS                                         -->
+        <!-- ============================================================ -->
+        <section class="slide center">
+          <div class="slide-inner">
+          <div class="slide-body lesson-wrap">
+            <div class="kicker">O padrão entre os dois casos</div>
+            <h2 class="lesson-quote">O dado mais perigoso é aquele que parece <em>inofensivo.</em></h2>
+
+            <div class="lesson-items">
+              <div>
+                <b>FOTO COM GEOTAG</b>
+                <span>Entrega endereço, rotina e presença física.</span>
+              </div>
+              <div>
+                <b>PLANILHA COMPARTILHADA</b>
+                <span>Entrega nomes, estruturas e caminhos internos.</span>
+              </div>
+              <div>
+                <b>APP DE ATIVIDADE</b>
+                <span>Entrega padrões que ninguém sabia que existiam.</span>
+              </div>
+            </div>
+
+            <p class="lede" style="margin-top: 22px; max-width: 36em">
+              Reconhecimento é <strong>correlação</strong>, não coleta. O valor não está na fonte isolada — está no que
+              ela revela quando cruza com a próxima.
+            </p>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Pausa dramática: deixar a frase no telão por alguns segundos.</li>
+              <li>Repetir a ideia que vai voltar no fechamento: dado isolado ≠ inteligência.</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>
+

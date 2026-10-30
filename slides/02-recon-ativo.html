@@ -1,0 +1,506 @@
+        <!-- ============================================================ -->
+        <!-- 10 · DIVISOR 02                                              -->
+        <!-- ============================================================ -->
+        <section class="slide divider">
+          <div class="slide-inner">
+          <span class="ghost-num">02</span>
+          <div class="red-rule"></div>
+          <div class="kicker"><span class="who">Emilio</span> · Reconhecimento ativo</div>
+          <h2 class="statement">Quando o alvo<br /><em>começa a responder.</em></h2>
+          <p class="lede">Aqui saem pacotes de verdade. E com eles, rastros.</p>
+
+          <div class="divider-foot">
+            <span class="who">com <b>Emilio</b></span>
+            <span class="chapter">BLOCO 02 / 06</span>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Marcar a mudança de postura: no passivo, o alvo não vê; no ativo, ele pode ver.</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 11 · REDES EM 60 SEGUNDOS                                    -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Emilio</span> · Redes, simplificadas</div>
+            <h2 class="h-md">Três coisas que você precisa saber sobre redes</h2>
+          </div>
+
+          <div class="slide-body">
+            <div class="net-diagram">
+              <div class="node">
+                <div class="icon">
+                  <svg viewBox="0 0 60 46" fill="none" stroke="currentColor" stroke-width="1.4">
+                    <rect x="14" y="5" width="32" height="22" rx="2" />
+                    <path d="M10 36h40l-4-9H14l-4 9Z" />
+                    <path d="M28 36v4h4v-4" />
+                  </svg>
+                </div>
+                <b>notebook</b>
+                <span>10.10.14.23</span>
+              </div>
+
+              <div class="link l1">
+                <span class="packet-dot"></span>
+              </div>
+
+              <div class="node">
+                <div class="icon">
+                  <svg viewBox="0 0 60 46" fill="none" stroke="currentColor" stroke-width="1.4">
+                    <rect x="9" y="20" width="42" height="16" rx="3" />
+                    <path d="M18 20V10h24v10M22 28h3m5 0h3m5 0h3" />
+                    <path d="M14 36v5m32-5v5" />
+                  </svg>
+                </div>
+                <b>roteador</b>
+                <span>gateway da rede</span>
+              </div>
+
+              <div class="link l2">
+                <span class="packet-dot"></span>
+              </div>
+
+              <div class="node">
+                <div class="icon">
+                  <svg viewBox="0 0 60 46" fill="none" stroke="currentColor" stroke-width="1.4">
+                    <rect x="15" y="4" width="30" height="12" rx="1.5" />
+                    <rect x="15" y="17" width="30" height="12" rx="1.5" />
+                    <rect x="15" y="30" width="30" height="12" rx="1.5" />
+                    <path d="M24 10h2m-2 13h2m-2 13h2" />
+                  </svg>
+                </div>
+                <b>servidor</b>
+                <span>10.10.14.5 : 443</span>
+              </div>
+            </div>
+
+            <div class="net-caption">
+              <span>origem</span>
+              <span>SYN →</span>
+              <span>destino</span>
+            </div>
+
+            <div class="net-defs">
+              <div class="net-def">
+                <div class="lbl">ENDEREÇO</div>
+                <h4>Quem fala</h4>
+                <p>O IP identifica a máquina na rede. <code>10.10.14.23</code> é o remetente; o destino é outro IP.</p>
+              </div>
+              <div class="net-def">
+                <div class="lbl">PORTA</div>
+                <h4>Qual serviço</h4>
+                <p>A porta diz o que aquela máquina oferece. <code>443</code> costuma ser HTTPS; <code>22</code>, SSH.</p>
+              </div>
+              <div class="net-def">
+                <div class="lbl">PACOTE</div>
+                <h4>O que viaja</h4>
+                <p>Um envelope com cabeçalho e dados. O cabeçalho diz de onde vem, para onde vai e o que quer.</p>
+              </div>
+            </div>
+
+            <div class="packet-strip">
+              <div class="pf ip"><span class="k">IP ORIGEM</span>10.10.14.23</div>
+              <div class="pf ip"><span class="k">IP DESTINO</span>10.10.14.5</div>
+              <div class="pf"><span class="k">PORTA ORIG.</span>49812</div>
+              <div class="pf"><span class="k">PORTA DEST.</span>443</div>
+              <div class="pf"><span class="k">FLAGS</span>SYN</div>
+              <div class="pf payload"><span class="k">DADOS</span>········</div>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Não aprofundar TCP/IP: o objetivo é dar vocabulário para entender Nmap e Wireshark.</li>
+              <li>Analogia: IP = prédio, porta = apartamento, pacote = envelope.</li>
+              <li>Destacar que a porta é o que o scan procura.</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 12 · NMAP — SIMULAÇÃO                                        -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Emilio</span> · Ferramenta 01 · simulação</div>
+            <h2 class="h-md">Nmap: o mapa que o alvo entrega sem querer</h2>
+          </div>
+
+          <div class="slide-body nmap-grid">
+            <div class="window fill">
+              <div class="window-bar">
+                <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+                <span class="window-title">emilio@lab: ~/recon — nmap</span>
+              </div>
+              <div class="window-body">
+                <div class="term-line">
+                  <span class="prompt">$</span>
+                  <span class="type cmd-text">nmap -sS -sV -p- 10.10.14.23 -oA recon_alvo</span>
+                </div>
+                <div class="term-line dim fade" style="--d: 1.9s">Starting Nmap 7.95 ( https://nmap.org ) at 2026-10-30 20:14 -03</div>
+                <div class="term-line fade" style="--d: 2.05s">Nmap scan report for <span class="arg">alvo.local</span> (10.10.14.23)</div>
+                <div class="term-line fade" style="--d: 2.15s">Host is up (0.0021s latency).</div>
+                <div class="term-line dim fade" style="--d: 2.25s">Not shown: 65529 closed tcp ports (reset)</div>
+                <div class="term-result fade" style="--d: 2.4s">
+                  <div class="head">
+                    <span>PORT</span><span>STATE</span><span>SERVICE</span><span>VERSION</span>
+                  </div>
+                  <div class="row"><span class="t-port">22/tcp</span><span class="t-state">open</span><span class="t-svc">ssh</span><span class="t-ver">OpenSSH 8.9p1 Ubuntu 3ubuntu0.6</span></div>
+                  <div class="row"><span class="t-port">80/tcp</span><span class="t-state">open</span><span class="t-svc">http</span><span class="t-ver">nginx 1.24.0</span></div>
+                  <div class="row"><span class="t-port">443/tcp</span><span class="t-state">open</span><span class="t-svc">ssl/http</span><span class="t-ver">nginx 1.24.0</span></div>
+                  <div class="row"><span class="t-port">3306/tcp</span><span class="t-state">open</span><span class="t-svc">mysql</span><span class="t-ver">MySQL 8.0.35</span></div>
+                  <div class="row"><span class="t-port">8080/tcp</span><span class="t-state">open</span><span class="t-svc">http-proxy</span><span class="t-ver">Jetty 9.4.53</span></div>
+                </div>
+                <div class="term-line fade" style="--d: 2.9s">Service detection performed. Please report any incorrect results.</div>
+                <div class="term-line dim fade" style="--d: 3.05s">Nmap done: 1 IP address (1 host up) scanned in 41.72 seconds</div>
+                <div class="term-line warn" style="margin-top: 6px">
+                  <span class="fade" style="--d: 3.4s">▌ 5 portas abertas em 65.535 · nenhuma exploração executada</span>
+                </div>
+                <div class="term-line fade" style="margin-top: 8px; --d: 3.7s">
+                  <span class="prompt">$</span> ls -la recon_alvo.*
+                </div>
+                <div class="term-line dim fade" style="--d: 3.9s">
+                  -rw-r--r-- 1 emilio emilio 18K out 30 20:15 recon_alvo.nmap<br />
+                  -rw-r--r-- 1 emilio emilio 42K out 30 20:15 recon_alvo.xml
+                </div>
+              </div>
+            </div>
+
+            <div class="nmap-side">
+              <div class="target-card">
+                <div class="target-top">
+                  <div>
+                    <div class="ip">10.10.14.23</div>
+                    <div class="host">alvo.local · up 0.0021s</div>
+                  </div>
+                  <div class="target-radar"></div>
+                </div>
+
+                <div class="side-stat">
+                  <span class="n">5</span>
+                  <span class="l">portas abertas<br /><span class="muted">de 65.535 testadas</span></span>
+                </div>
+
+                <div class="doors">
+                  <div class="door" style="--d: 2.6s"><span class="p">22 · SSH</span><span class="s"><span class="s-closed">closed</span><span class="s-open">open</span></span></div>
+                  <div class="door" style="--d: 2.75s"><span class="p">80 · HTTP</span><span class="s"><span class="s-closed">closed</span><span class="s-open">open</span></span></div>
+                  <div class="door" style="--d: 2.9s"><span class="p">443 · HTTPS</span><span class="s"><span class="s-closed">closed</span><span class="s-open">open</span></span></div>
+                  <div class="door" style="--d: 3.05s"><span class="p">3306 · SQL</span><span class="s"><span class="s-closed">closed</span><span class="s-open">open</span></span></div>
+                  <div class="door" style="--d: 3.2s"><span class="p">8080 · JETTY</span><span class="s"><span class="s-closed">closed</span><span class="s-open">open</span></span></div>
+                  <div class="door filtered"><span class="p">3389 · RDP</span><span class="s"><span class="s-closed">filtered</span></span></div>
+                </div>
+
+                <div class="side-note" style="margin-top: auto">
+                  <b>SYN scan</b> não completa a conexão. A aplicação não registra o handshake — mas o firewall vê.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footline">
+            <span><b>O scan não explora nada.</b> Ele só pergunta — e o alvo responde.</span>
+            <span>laboratório autorizado · 10.10.14.0/24</span>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Explicar o comando: -sS (SYN), -sV (versões), -p- (todas as portas), -oA (salvar em três formatos).</li>
+              <li>Mostrar o tempo: 41s para 65 mil portas — por isso o scan é barato para o atacante.</li>
+              <li>Ressaltar: a saída dá hipóteses, não conclusões. Versão antiga ≠ vulnerável.</li>
+              <li>Perguntar: “o que vocês olhariam primeiro nesta lista?” (8080 e 3306 são os candidatos).</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 13 · WIRESHARK — SIMULAÇÃO                                   -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Emilio</span> · Ferramenta 02 · simulação</div>
+            <h2 class="h-md">Wireshark: o que realmente passa no fio</h2>
+          </div>
+
+          <div class="slide-body" style="display: flex; flex-direction: column; min-height: 0">
+            <div class="ws fill">
+              <div class="ws-menu">
+                <span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Capture</span>
+                <span>Analyze</span><span>Statistics</span><span>Telephony</span><span>Tools</span><span>Help</span>
+              </div>
+
+              <div class="ws-filter">
+                <span class="filter-clear">⌕</span>
+                <div class="filter-input">
+                  <span class="typed">ip.addr == 10.10.14.23 &amp;&amp; tcp.port == 80</span>
+                </div>
+                <span class="filter-clear">✕</span>
+              </div>
+
+              <div class="ws-cols">
+                <span>No.</span><span>Time</span><span>Source</span><span>Destination</span><span>Protocol</span><span class="len">Len</span><span>Info</span>
+              </div>
+
+              <div class="ws-list">
+                <div class="ws-row sel" style="--d: 2.3s">
+                  <span class="no">1</span><span>0.000000</span><span class="src">10.10.14.23</span><span class="dst">10.10.14.5</span><span class="proto">TCP</span><span class="len">74</span><span class="info">49812 → 80 [SYN] Seq=0 Win=64240 Len=0</span>
+                </div>
+                <div class="ws-row" style="--d: 2.42s">
+                  <span class="no">2</span><span>0.000187</span><span class="src">10.10.14.5</span><span class="dst">10.10.14.23</span><span class="proto">TCP</span><span class="len">74</span><span class="info">80 → 49812 [SYN, ACK] Seq=0 Ack=1 Win=65160 Len=0</span>
+                </div>
+                <div class="ws-row" style="--d: 2.54s">
+                  <span class="no">3</span><span>0.000203</span><span class="src">10.10.14.23</span><span class="dst">10.10.14.5</span><span class="proto">TCP</span><span class="len">66</span><span class="info">49812 → 80 [ACK] Seq=1 Ack=1 Win=64240 Len=0</span>
+                </div>
+                <div class="ws-row proto-http" style="--d: 2.66s">
+                  <span class="no">4</span><span>0.000310</span><span class="src">10.10.14.23</span><span class="dst">10.10.14.5</span><span class="proto">HTTP</span><span class="len">148</span><span class="info">GET /admin/ HTTP/1.1</span>
+                </div>
+                <div class="ws-row" style="--d: 2.78s">
+                  <span class="no">5</span><span>0.000492</span><span class="src">10.10.14.5</span><span class="dst">10.10.14.23</span><span class="proto">TCP</span><span class="len">66</span><span class="info">80 → 49812 [ACK] Seq=1 Ack=83 Win=65160 Len=0</span>
+                </div>
+                <div class="ws-row proto-http" style="--d: 2.9s">
+                  <span class="no">6</span><span>0.000531</span><span class="src">10.10.14.5</span><span class="dst">10.10.14.23</span><span class="proto">HTTP</span><span class="len">199</span><span class="info">HTTP/1.1 401 Unauthorized (text/html)</span>
+                </div>
+                <div class="ws-row proto-http" style="--d: 3.02s">
+                  <span class="no">7</span><span>0.000612</span><span class="src">10.10.14.23</span><span class="dst">10.10.14.5</span><span class="proto">HTTP</span><span class="len">214</span><span class="info">GET /admin/ HTTP/1.1</span>
+                </div>
+              </div>
+
+              <div class="ws-detail">
+                <span class="dt"><span class="caret2">▾</span> Frame 1: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)</span>
+                <span class="dt" style="--i: 1"><span class="caret2">▾</span> Ethernet II, Src: 00:1a:2b:3c:4d:5e, Dst: 00:0c:29:aa:bb:cc</span>
+                <span class="dt" style="--i: 1"><span class="caret2">▾</span> Internet Protocol Version 4, Src: <span class="val">10.10.14.23</span>, Dst: <span class="val">10.10.14.5</span></span>
+                <span class="dt" style="--i: 1"><span class="caret2">▾</span> Transmission Control Protocol, Src Port: <span class="val">49812</span>, Dst Port: <span class="val">80</span>, Seq: 0, Len: 0</span>
+                <span class="dt sel-line" style="--i: 2"><span class="caret2">▸</span> Flags: <span class="val">0x002 (SYN)</span></span>
+                <span class="dt" style="--i: 2"><span class="caret2">▸</span> Window: 64240 · Options: (12 bytes), MSS=1460, SACK_PERM</span>
+              </div>
+
+              <div class="ws-hex">
+                <span class="addr">0000</span>
+                <span>00 0c 29 aa bb cc 00 1a 2b 3c 4d 5e 08 00 45 00 00 3c 1c 46 40 00 40 06</span>
+                <span class="ascii">..).....+&lt;M^..E..&lt;.F@.@.</span>
+                <span class="addr">0020</span>
+                <span>4b 1a 0a 0a 0e 17 0a 0a 0e 05 c2 94 00 50 00 00 00 00 00 00 00 00 50 02</span>
+                <span class="ascii">K............P......P.</span>
+                <span class="addr">0040</span>
+                <span>fa f0 8c 4e 00 00 02 04 05 b4 04 02 08 0a 00 00 00 00 00 00 00 00 01 03</span>
+                <span class="ascii">...N..................</span>
+              </div>
+
+              <div class="ws-status">
+                <span>Packets: <b>1.284</b> · Displayed: <b>7 (0.5%)</b> · Dropped: 0</span>
+                <span>Profile: Default · <b>tcp.port == 80</b></span>
+              </div>
+            </div>
+
+            <div class="slide-footline">
+              <span><b>Sem filtro</b>, 1.284 pacotes viram ruído. Com filtro, sete contam uma história.</span>
+              <span>captura passiva · interface eth0</span>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Wireshark é passivo: ele observa o tráfego que já passa pela interface.</li>
+              <li>Explicar a barra de filtro: o verde indica sintaxe válida; o filtro não altera a captura.</li>
+              <li>Apontar o pacote 1 selecionado: árvore de protocolos embaixo, bytes à esquerda.</li>
+              <li>Gancho para o próximo slide: “vamos seguir essa conexão inteira”.</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 14 · WIRESHARK — HANDSHAKE E STREAM                          -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Emilio</span> · Wireshark · lendo a conversa</div>
+            <h2 class="h-md">Três pacotes para abrir uma conexão.<br />Um clique para ler tudo.</h2>
+          </div>
+
+          <div class="slide-body hs-grid">
+            <div class="hs-card">
+              <div class="cap">TCP THREE-WAY HANDSHAKE · 0.000203s</div>
+              <svg class="hs-svg" viewBox="0 0 380 330" aria-label="Diagrama do handshake TCP">
+                <defs>
+                  <marker id="ahAmber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#f0a63c" />
+                  </marker>
+                  <marker id="ahGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#63c98a" />
+                  </marker>
+                  <marker id="ahBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#6fa9f5" />
+                  </marker>
+                </defs>
+
+                <line class="hs-line" x1="90" y1="26" x2="90" y2="310" />
+                <line class="hs-line" x1="300" y1="26" x2="300" y2="310" />
+                <text x="90" y="18" text-anchor="middle" fill="#f0f4f8">cliente :49812</text>
+                <text x="300" y="18" text-anchor="middle" fill="#f0f4f8">servidor :80</text>
+
+                <text x="14" y="86">0.000000</text>
+                <path class="hs-arrow" style="--d: .5s" d="M 90 92 L 292 92" marker-end="url(#ahAmber)" />
+                <text x="196" y="84" text-anchor="middle" fill="#ffcf8f">SYN · seq=0</text>
+
+                <text x="14" y="156">0.000187</text>
+                <path class="hs-arrow" style="--d: .9s" d="M 300 162 L 98 162" marker-end="url(#ahAmber)" />
+                <text x="196" y="154" text-anchor="middle" fill="#ffcf8f">SYN, ACK · seq=0 ack=1</text>
+
+                <text x="14" y="226">0.000203</text>
+                <path class="hs-arrow ack" style="--d: 1.3s" d="M 90 232 L 292 232" marker-end="url(#ahGreen)" />
+                <text x="196" y="224" text-anchor="middle" fill="#8ee0af">ACK · seq=1 ack=1</text>
+
+                <text x="14" y="292">0.000310</text>
+                <path class="hs-arrow data" d="M 90 298 L 190 298" marker-end="url(#ahBlue)" />
+                <text x="240" y="294" text-anchor="middle" fill="#7fb2ff">GET /admin/</text>
+              </svg>
+              <div class="hs-note">O handshake só confirma que o serviço está ouvindo. Não diz o que ele responde.</div>
+
+              <div class="insight-row">
+                <span class="chip amber">SYN → SYN/ACK → ACK</span>
+                <span class="chip green">conexão estabelecida</span>
+              </div>
+            </div>
+
+            <div class="stream">
+              <div class="stream-bar">
+                <span class="tab">Follow · TCP Stream</span>
+                <span>Stream 0</span>
+                <span>Entire conversation (412 bytes)</span>
+                <span class="filter">http</span>
+              </div>
+              <div class="stream-body">
+                <div><span class="req">GET /admin/ HTTP/1.1</span></div>
+                <div class="hdr">Host: <span class="amber">10.10.14.5:8080</span></div>
+                <div class="hdr">User-Agent: Mozilla/5.0 (X11; Linux x86_64)</div>
+                <div class="hdr">Accept: text/html,application/xhtml+xml</div>
+                <div>&nbsp;</div>
+                <div><span class="res">HTTP/1.1 401 Unauthorized</span></div>
+                <div class="hdr">Date: Fri, 30 Oct 2026 23:14:02 GMT</div>
+                <div class="hdr">WWW-Authenticate: Basic realm=<span class="amber">"Jetty Admin"</span></div>
+                <div class="hdr">Content-Length: 0</div>
+                <div>&nbsp;</div>
+                <div><span class="req">GET /admin/ HTTP/1.1</span></div>
+                <div class="hdr">Host: 10.10.14.5:8080</div>
+                <div class="hdr"><span class="hl">Authorization: Basic YWRtaW46YWRtaW4=</span></div>
+              </div>
+              <div class="stream-note">
+                Basic auth não criptografa: <span class="amber">YWRtaW46YWRtaW4=</span> decodifica para <span class="red">admin:admin</span>.
+                Em HTTPS o conteúdo seria cifrado — os metadados, não.
+              </div>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Ler o handshake em voz alta, com os tempos: tudo acontece em 0,2 ms.</li>
+              <li>Mostrar que o 401 revela o tipo de autenticação; o segundo GET já vai com credenciais.</li>
+              <li>Decodificar Base64 ao vivo: “não é criptografia, é transporte”.</li>
+              <li>Fechar: o scan achou a porta; a captura contou a história.</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 15 · PHISHING                                                -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Emilio</span> · Engenharia social</div>
+            <h2 class="h-md">O exploit é a confiança</h2>
+          </div>
+
+          <div class="slide-body phish-grid">
+            <div class="mail">
+              <div class="mail-bar">
+                <span>Caixa de entrada · 1 não lida</span>
+                <span>hoje, 09:41</span>
+              </div>
+
+              <div class="mail-head">
+                <div><b>De:</b> RH · Benefícios &lt;rh@beneficios-acme.com&gt;<span class="pin">1</span></div>
+                <div><b>Para:</b> voce@acme.com.br</div>
+                <div class="subj">Atualização obrigatória do plano de saúde — até hoje<span class="pin">2</span></div>
+              </div>
+
+              <div class="mail-body">
+                <p>Prezado(a) colaborador(a),<span class="pin">4</span></p>
+                <p style="margin-top: 8px">
+                  Identificamos que seu cadastro está <span class="suspect">desatualizado</span> e o benefício será
+                  <span class="suspect">suspenso hoje às 18h</span> caso não seja regularizado.
+                </p>
+                <p style="margin-top: 8px">Abra o formulário em anexo e confirme seus dados.</p>
+
+                <div class="attach">
+                  <span class="fileicon"></span>
+                  <span>
+                    Formulario_Plano_2026.xlsx
+                    <small>Planilha do Excel · 84 KB · habilitar macros</small>
+                  </span>
+                  <span class="pin">3</span>
+                </div>
+
+                <p style="margin-top: 10px; font-size: 0.9em; color: #6f6b62">
+                  Dúvidas: <span class="suspect">suporte@acme-beneficios-suporte.net</span><span class="pin">5</span>
+                </p>
+              </div>
+
+              <div class="mail-foot">
+                <span class="mail-actions"><b>Responder</b><b>Encaminhar</b></span>
+                <span class="mail-warning">remetente externo · rh@beneficios-acme.com</span>
+              </div>
+            </div>
+
+            <div class="phish-legend">
+              <h4>Cinco sinais que o olho treinado vê</h4>
+
+              <div class="legend-row">
+                <span class="n">1</span>
+                <div><b>Domínio que imita o real</b><span>beneficios-acme.com ≠ acme.com.br. O nome certo está no lugar errado.</span></div>
+              </div>
+              <div class="legend-row">
+                <span class="n">2</span>
+                <div><b>Urgência artificial</b><span>“até hoje”, “suspenso às 18h”. Pressa desliga o pensamento crítico.</span></div>
+              </div>
+              <div class="legend-row">
+                <span class="n">3</span>
+                <div><b>Anexo inesperado</b><span>Planilha com macros não é formulário de RH. É execução de código.</span></div>
+              </div>
+              <div class="legend-row">
+                <span class="n">4</span>
+                <div><b>Saudação genérica</b><span>“Prezado(a) colaborador(a)” não sabe quem você é.</span></div>
+              </div>
+              <div class="legend-row">
+                <span class="n">5</span>
+                <div><b>Canal de contato divergente</b><span>Um domínio diferente do oficial para “tirar dúvidas”.</span></div>
+              </div>
+
+              <p class="small" style="margin-top: 10px">
+                Defesa simples: confirmar por outro canal antes de abrir. Telefone, chat interno, pessoa conhecida.
+              </p>
+            </div>
+          </div>
+
+          <aside class="notes">
+            <ul>
+              <li>Ler o e-mail como se fosse real; perguntar quem clicaria.</li>
+              <li>Explicar que o phishing não quebra a rede: convence alguém a abrir a porta.</li>
+              <li>Ligar ao caso RSA, que vem no bloco de estudos de caso.</li>
+            </ul>
+          </aside>
+                  </div>
+        </section>
+
