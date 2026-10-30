@@ -62,6 +62,18 @@ Também é possível abrir `index.html` diretamente no navegador, mas o modo de 
 
 ---
 
+## Deploy no GitHub Pages
+
+O deploy é automático pelo workflow [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml), disparado em cada push para `main` ou manualmente pela aba **Actions**.
+
+Na primeira configuração, acesse **Settings → Pages** no repositório e selecione **Source: GitHub Actions**. Depois disso, o site fica disponível em:
+
+`https://jpedro-fsgs.github.io/IntroReconSeminario/`
+
+O workflow publica apenas `index.html`, `css/` e um `.nojekyll`, sem subir arquivos de desenvolvimento ou o roteiro em Markdown.
+
+---
+
 ## Atalhos
 
 | Tecla | Ação |
