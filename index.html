@@ -1249,7 +1249,214 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 20 · TÉCNICAS PASSIVAS                                       -->
+        <!-- 20 · CICLO OSINT: PLANEJAR                                   -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 01 / 06</div>
+              <h2 class="h-md">Planejar: faça a pergunta certa.</h2>
+            </div>
+            <div class="slide-body cycle-detail-grid">
+              <div class="cycle-detail-copy">
+                <p class="lede">Defina a necessidade de inteligência antes de escolher fontes ou ferramentas.</p>
+                <div class="cycle-actions">
+                  <div><b>Objetivo</b><span>O que a equipe precisa decidir?</span></div>
+                  <div><b>Escopo</b><span>Qual alvo, período e quais limites são autorizados?</span></div>
+                  <div><b>Critério</b><span>Que evidência ajudaria a responder?</span></div>
+                </div>
+              </div>
+              <div class="cycle-dossier">
+                <span class="cycle-dossier-k">CASO FICTÍCIO · PONTO DE PARTIDA</span>
+                <h3>O que está associado ao nosso domínio?</h3>
+                <div class="cycle-evidence"><span>PERGUNTA</span><p>Quais serviços web aparecem em fontes externas para example.com?</p></div>
+                <div class="cycle-evidence"><span>LIMITE</span><p>Consultar apenas índices e registros públicos; sem acesso direto ao alvo.</p></div>
+              </div>
+            </div>
+            <div class="cycle-detail-foot"><b>01</b> Planejar <span>→ Coletar → Processar → Analisar → Disseminar → Feedback</span></div>
+            <aside class="notes"><ul>
+              <li>Apresentar o caso como fictício: example.com e os endereços de documentação dos próximos slides são apenas ilustrações.</li>
+              <li>Definir pergunta, público, prazo, escopo e limites legais; a escolha das fontes vem depois.</li>
+              <li>O resultado desta etapa é uma necessidade verificável, não uma lista indiscriminada de dados.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 21 · CICLO OSINT: COLETAR                                    -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 02 / 06</div>
+              <h2 class="h-md">Coletar: reúna evidências, não certezas.</h2>
+            </div>
+            <div class="slide-body cycle-detail-grid">
+              <div class="cycle-detail-copy">
+                <p class="lede">Busque dados relevantes em fontes públicas e registre como cada informação foi obtida.</p>
+                <div class="cycle-actions">
+                  <div><b>Fontes</b><span>Índices externos, registros públicos e documentos.</span></div>
+                  <div><b>Proveniência</b><span>Guarde origem, data e contexto de cada achado.</span></div>
+                  <div><b>Escopo</b><span>Use somente fontes e procedimentos autorizados.</span></div>
+                </div>
+              </div>
+              <div class="cycle-dossier">
+                <span class="cycle-dossier-k">CASO FICTÍCIO · DADOS BRUTOS</span>
+                <h3>Duas fontes, duas observações.</h3>
+                <div class="cycle-evidence"><span>CERTIFICADO</span><p>Um registro de transparência de certificados (Certificate Transparency, ou CT) inclui portal.example.com.</p></div>
+                <div class="cycle-evidence"><span>ÍNDICE EXTERNO</span><p>O nome aparece associado a 192.0.2.10:443 em uma observação anterior.</p></div>
+                <p class="cycle-dossier-note">Registrar a data de consulta e a data observada em cada fonte.</p>
+              </div>
+            </div>
+            <div class="cycle-detail-foot"><b>02</b> Coletar <span>→ Processar → Analisar → Disseminar → Feedback</span></div>
+            <aside class="notes"><ul>
+              <li>As informações do quadro são simuladas; nenhum domínio ou endereço foi consultado.</li>
+              <li>Certificate Transparency (CT) é um sistema de registros públicos que permite auditar a emissão de certificados digitais. Seus registros podem conter nomes de domínio.</li>
+              <li>A coleta pode reunir nomes nesses registros e observações de um índice; guarde fonte, data da consulta e data da observação.</li>
+              <li>Uma fonte de terceiros pode registrar a consulta; dados históricos não garantem situação atual.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 22 · CICLO OSINT: PROCESSAR                                  -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 03 / 06</div>
+              <h2 class="h-md">Processar: separe sinal de ruído.</h2>
+            </div>
+            <div class="slide-body cycle-detail-grid">
+              <div class="cycle-detail-copy">
+                <p class="lede">Organize os dados para que possam ser comparados, preservando a origem e o contexto.</p>
+                <div class="cycle-actions">
+                  <div><b>Padronizar</b><span>Unifique nomes, formatos e datas.</span></div>
+                  <div><b>Integrar</b><span>Agrupe registros relacionados e duplicados.</span></div>
+                  <div><b>Classificar</b><span>Marque lacunas, conflitos e dados antigos.</span></div>
+                </div>
+              </div>
+              <div class="cycle-dossier">
+                <span class="cycle-dossier-k">CASO FICTÍCIO · ORGANIZAÇÃO</span>
+                <h3>O mesmo nome, em duas fontes.</h3>
+                <div class="cycle-evidence"><span>NOME</span><p>portal.example.com · certificado e índice externo</p></div>
+                <div class="cycle-evidence"><span>CONTEXTO</span><p>Fontes e datas preservadas; observação do índice marcada como histórica.</p></div>
+                <p class="cycle-dossier-note">Remover duplicatas não é apagar evidências ou versões anteriores.</p>
+              </div>
+            </div>
+            <div class="cycle-detail-foot"><b>03</b> Processar <span>→ Analisar → Disseminar → Feedback</span></div>
+            <aside class="notes"><ul>
+              <li>Explicar a diferença entre dado bruto e registro estruturado: normalizar nomes e datas, agrupar duplicatas e conservar as fontes originais.</li>
+              <li>Uma observação antiga não deve ser descartada silenciosamente: identificá-la como histórica ajuda a evitar conclusões falsas.</li>
+              <li>Ainda não afirmamos que há um serviço atual; isso é uma questão para a análise.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 23 · CICLO OSINT: ANALISAR                                   -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 04 / 06</div>
+              <h2 class="h-md">Analisar: conecte sem presumir.</h2>
+            </div>
+            <div class="slide-body cycle-detail-grid">
+              <div class="cycle-detail-copy">
+                <p class="lede">Cruze as evidências para responder à pergunta, distinguindo fatos, hipóteses e lacunas.</p>
+                <div class="cycle-actions">
+                  <div><b>Correlacionar</b><span>Compare fonte, contexto e tempo de cada registro.</span></div>
+                  <div><b>Interpretar</b><span>Busque convergências e explicações alternativas.</span></div>
+                  <div><b>Qualificar</b><span>Explicite incertezas e o que ainda falta confirmar.</span></div>
+                </div>
+              </div>
+              <div class="cycle-dossier">
+                <span class="cycle-dossier-k">CASO FICTÍCIO · HIPÓTESE</span>
+                <h3>Uma pista não é um diagnóstico.</h3>
+                <div class="cycle-evidence"><span>EVIDÊNCIAS</span><p>Um nome em registro público de certificados (CT) e uma observação histórica em índice externo.</p></div>
+                <div class="cycle-evidence"><span>CONCLUSÃO PROVISÓRIA</span><p>Pode ter existido um serviço web associado; a situação atual precisa de verificação autorizada.</p></div>
+              </div>
+            </div>
+            <div class="cycle-detail-foot"><b>04</b> Analisar <span>→ Disseminar → Feedback</span></div>
+            <aside class="notes"><ul>
+              <li>O registro de um certificado não prova que existe um servidor ativo nem que há vulnerabilidade.</li>
+              <li>A observação do índice tem data própria; verifique se a associação ao nome é contextual e não confunda coocorrência com propriedade atual.</li>
+              <li>Apresentar a conclusão como hipótese e registrar quais verificações autorizadas ainda seriam necessárias.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 24 · CICLO OSINT: DISSEMINAR                                 -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 05 / 06</div>
+              <h2 class="h-md">Disseminar: entregue algo acionável.</h2>
+            </div>
+            <div class="slide-body cycle-detail-grid">
+              <div class="cycle-detail-copy">
+                <p class="lede">Comunique o que foi encontrado, o que isso significa e quais decisões podem ser tomadas.</p>
+                <div class="cycle-actions">
+                  <div><b>Achado</b><span>Descreva a evidência e indique sua origem.</span></div>
+                  <div><b>Limite</b><span>Informe datas, incertezas e pontos não verificados.</span></div>
+                  <div><b>Próximo passo</b><span>Adapte a recomendação a quem vai decidir.</span></div>
+                </div>
+              </div>
+              <div class="cycle-dossier">
+                <span class="cycle-dossier-k">CASO FICTÍCIO · RELATÓRIO</span>
+                <h3>Possível serviço web associado.</h3>
+                <div class="cycle-evidence"><span>BASE</span><p>Registro público de certificados (CT) e observação histórica do índice, com fontes e datas documentadas.</p></div>
+                <div class="cycle-evidence"><span>ENCAMINHAMENTO</span><p>A equipe responsável deve verificar o inventário e a situação atual dentro do escopo autorizado.</p></div>
+              </div>
+            </div>
+            <div class="cycle-detail-foot"><b>05</b> Disseminar <span>→ Feedback</span></div>
+            <aside class="notes"><ul>
+              <li>O produto pode ser um relatório, um resumo executivo ou um alerta adequado ao destinatário.</li>
+              <li>Incluir a pergunta original, evidências, fontes, datas, incertezas e uma recomendação viável.</li>
+              <li>Não apresentar como vulnerabilidade confirmada um serviço apenas observado em fontes históricas.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 25 · CICLO OSINT: FEEDBACK                                   -->
+        <!-- ============================================================ -->
+        <section class="slide cycle-detail">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 06 / 06</div>
+              <h2 class="h-md">Feedback: a resposta abre outra pergunta.</h2>
+            </div>
+            <div class="slide-body cycle-detail-grid">
+              <div class="cycle-detail-copy">
+                <p class="lede">Avalie se o produto respondeu à necessidade e ajuste a próxima rodada de investigação.</p>
+                <div class="cycle-actions">
+                  <div><b>Revisar</b><span>A conclusão ajudou quem precisava decidir?</span></div>
+                  <div><b>Identificar lacunas</b><span>O que ainda é incerto ou ficou fora do escopo?</span></div>
+                  <div><b>Replanejar</b><span>Defina novas perguntas e, se necessário, nova autorização.</span></div>
+                </div>
+              </div>
+              <div class="cycle-dossier">
+                <span class="cycle-dossier-k">CASO FICTÍCIO · PRÓXIMA RODADA</span>
+                <h3>O serviço ainda existe?</h3>
+                <div class="cycle-evidence"><span>RETORNO DA EQUIPE</span><p>O inventário não identifica quem administra o nome observado.</p></div>
+                <div class="cycle-evidence"><span>NOVA PERGUNTA</span><p>Qual área é responsável e quais fontes autorizadas podem esclarecer a situação atual?</p></div>
+              </div>
+            </div>
+            <div class="cycle-detail-foot"><b>06</b> Feedback <span>↶ retorna ao planejamento</span></div>
+            <aside class="notes"><ul>
+              <li>O feedback verifica se o relatório foi útil e se respondeu à necessidade original.</li>
+              <li>Uma lacuna pode gerar nova pergunta, nova coleta ou revisão de prioridades; não implica automaticamente contato com o alvo.</li>
+              <li>Fechar o ciclo retomando o planejamento e os limites de autorização.</li>
+            </ul></aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 26 · TÉCNICAS PASSIVAS                                       -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1270,7 +1477,7 @@
               <div class="entry rise" style="--d: .18s">
                 <div class="cat">DNS &amp; CERTIFICADOS</div>
                 <h4>Subdomínios em registros de certificados</h4>
-                <p>Logs de Certificate Transparency podem revelar nomes em certificados, inclusive de ambientes de teste.</p>
+                <p>Registros públicos de Certificate Transparency (CT) permitem auditar certificados e podem revelar nomes de ambientes de teste.</p>
                 <code>crt.sh → %.exemplo.com</code>
               </div>
 
@@ -1298,7 +1505,7 @@
           <aside class="notes">
             <ul>
               <li>Mostrar um dork ao vivo se houver tempo; senão, explicar os operadores.</li>
-              <li>Certificate Transparency: explicar que o log existe para auditar TLS, não para expor, mas expõe.</li>
+              <li>Certificate Transparency (CT) registra certificados publicamente para permitir auditoria de sua emissão; os nomes presentes podem ser consultados.</li>
               <li>Reforçar a correlação: cada fonte isolada vale pouco; juntas, desenham o alvo.</li>
             </ul>
           </aside>
@@ -1306,7 +1513,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 21 · FERRAMENTAS OSINT                                       -->
+        <!-- 27 · FERRAMENTAS OSINT                                       -->
         <!-- ============================================================ -->
         <section class="slide tool-slide">
           <div class="slide-inner">
@@ -1384,7 +1591,7 @@
             <ul>
               <li>Não virar catálogo: destacar o que cada uma responde.</li>
               <li>Shodan é passivo em relação ao alvo, mas os dados podem estar desatualizados.</li>
-              <li>WHOIS pode ocultar dados; DNS histórico não prova exposição atual; CT não revela necessariamente serviços ativos nem cobre todos os certificados.</li>
+              <li>WHOIS pode ocultar dados; DNS histórico não prova exposição atual; registros de transparência de certificados (CT) não revelam necessariamente serviços ativos nem cobrem todos os certificados.</li>
               <li>Subfinder e Amass têm opções e fontes distintas: desative verificações ativas. Ferramentas e o acesso inicial a um arquivo podem contatar o alvo, dependendo da configuração.</li>
               <li>Automação multiplica resultados — e multiplica erros se não houver validação.</li>
               <li>Selecione uma linha para abrir o exemplo; use as setas ou os botões para percorrer os seis grupos. Esc retorna ao índice.</li>
@@ -1395,7 +1602,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 22 · DUMPSTER DIVING                                         -->
+        <!-- 28 · DUMPSTER DIVING                                         -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1455,7 +1662,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 23 · SHOULDER SURFING                                        -->
+        <!-- 29 · SHOULDER SURFING                                        -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1486,7 +1693,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 24 · ECOSSISTEMA INT                                         -->
+        <!-- 30 · ECOSSISTEMA INT                                         -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1553,7 +1760,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 25 · DIVISOR 04                                              -->
+        <!-- 31 · DIVISOR 04                                              -->
         <!-- ============================================================ -->
         <section class="slide divider">
           <div class="slide-inner">
@@ -1578,7 +1785,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 26 · CASO RSA                                                -->
+        <!-- 32 · CASO RSA                                                -->
         <!-- ============================================================ -->
         <section class="slide paper">
           <div class="slide-inner">
@@ -1648,7 +1855,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 27 · CASO STRAVA                                             -->
+        <!-- 33 · CASO STRAVA                                             -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1737,7 +1944,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 28 · LIÇÃO DOS CASOS                                         -->
+        <!-- 34 · LIÇÃO DOS CASOS                                         -->
         <!-- ============================================================ -->
         <section class="slide center">
           <div class="slide-inner">
@@ -1776,7 +1983,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 29 · DIVISOR 05                                              -->
+        <!-- 35 · DIVISOR 05                                              -->
         <!-- ============================================================ -->
         <section class="slide divider">
           <div class="slide-inner">
@@ -1801,7 +2008,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 30 · GEOSINT 1                                               -->
+        <!-- 36 · GEOSINT 1                                               -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -1927,7 +2134,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 31 · GEOSINT 2                                               -->
+        <!-- 37 · GEOSINT 2                                               -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -2009,7 +2216,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 32 · OSINT DEMO — GRAFO                                      -->
+        <!-- 38 · OSINT DEMO — GRAFO                                      -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -2087,7 +2294,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 33 · DIVISOR 06                                              -->
+        <!-- 39 · DIVISOR 06                                              -->
         <!-- ============================================================ -->
         <section class="slide divider">
           <div class="slide-inner">
@@ -2111,7 +2318,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 34 · OPSEС — CONCEITO                                        -->
+        <!-- 40 · OPSEС — CONCEITO                                        -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -2168,7 +2375,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 35 · OPSEС NO DIA A DIA                                      -->
+        <!-- 41 · OPSEС NO DIA A DIA                                      -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -2228,7 +2435,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 36 · TAKEAWAYS                                               -->
+        <!-- 42 · TAKEAWAYS                                               -->
         <!-- ============================================================ -->
         <section class="slide center">
           <div class="slide-inner">
@@ -2271,7 +2478,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 37 · REFERÊNCIAS                                             -->
+        <!-- 43 · REFERÊNCIAS                                             -->
         <!-- ============================================================ -->
         <section class="slide paper">
           <div class="slide-inner">
@@ -2319,7 +2526,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 38 · Q&A                                                     -->
+        <!-- 44 · Q&A                                                     -->
         <!-- ============================================================ -->
         <section class="slide qa">
           <div class="slide-inner">
@@ -2393,7 +2600,7 @@
           { name: "Shodan / Censys", category: "Serviços indexados", description: "Quais serviços e certificados já foram observados por indexadores?", scenario: "Uma equipe compara um endereço público sob sua responsabilidade com os registros das duas plataformas.", result: "No exemplo, Shodan mostra um serviço HTTPS e Censys associa um certificado ao endereço.", caution: "Cada índice tem cobertura e datas próprias; os registros não confirmam a situação atual." },
           { name: "WHOIS", category: "Registros de domínio", description: "Quais informações cadastrais e servidores de nomes estão disponíveis para um domínio?", scenario: "A equipe consulta o registro público de example.com para entender sua administração.", result: "O registro pode informar registrador, datas e servidores de nomes.", caution: "Dados pessoais podem estar protegidos, omitidos ou desatualizados." },
           { name: "SecurityTrails / VirusTotal", category: "DNS e relações", description: "Que resoluções históricas e relações observadas ajudam a contextualizar um domínio?", scenario: "A equipe investiga associações anteriores de um domínio próprio em duas fontes.", result: "SecurityTrails apresenta histórico DNS; VirusTotal reúne relações e observações adicionais.", caution: "As fontes têm datas e cobertura diferentes; associações antigas não comprovam propriedade ou risco atuais." },
-          { name: "crt.sh", category: "Certificate Transparency", description: "Quais nomes aparecem em certificados registrados publicamente?", scenario: "A equipe pesquisa certificados emitidos para nomes associados ao seu domínio.", result: "Um certificado registrado inclui o nome teste.example.com.", caution: "Um nome no certificado não prova que o serviço está ativo; a cobertura não é absoluta." },
+          { name: "crt.sh", category: "Certificate Transparency · registros públicos", description: "Quais nomes aparecem em registros públicos que permitem auditar a emissão de certificados digitais?", scenario: "A equipe pesquisa certificados emitidos para nomes associados ao seu domínio.", result: "Um certificado registrado inclui o nome teste.example.com.", caution: "Um nome no certificado não prova que o serviço está ativo; a cobertura não é absoluta." },
           { name: "Subfinder / Amass", category: "Descoberta de subdomínios", description: "Que nomes e relações podem ser reunidos a partir de fontes externas?", scenario: "A equipe cruza candidatos de subdomínios do seu domínio em um inventário inicial.", result: "Subfinder reúne nomes; Amass também organiza relações entre os achados.", caution: "Revise modos e fontes: verificações ativas podem gerar tráfego direto ao alvo." },
           { name: "ExifTool / FOCA", category: "Metadados de documentos", description: "Quais metadados podem aparecer em arquivos já obtidos?", scenario: "A equipe revisa PDFs antes de publicá-los ou compartilhá-los.", result: "ExifTool lê metadados do arquivo; FOCA ajuda a organizar achados de documentos.", caution: "Dados podem estar ausentes ou incorretos; a obtenção dos arquivos pode contatar o alvo." }
         ];
@@ -2402,7 +2609,7 @@
           { type: 'search', title: 'Consulta comparativa · índices', query: '192.0.2.10', rows: [['SHODAN', 'HTTPS · porta 443'], ['CENSYS', 'certificado example.com'], ['ATENÇÃO', 'observações anteriores']] },
           { type: 'record', title: 'WHOIS · registro público', query: 'example.com', rows: [['REGISTRADOR', 'Registrador Exemplo'], ['SERVIDORES', 'ns1.example.com'], ['CONTATO', 'dados protegidos']] },
           { type: 'history', title: 'DNS histórico · relações', query: 'example.com', rows: [['SECURITYTRAILS', '2023 · 198.51.100.20'], ['VIRUSTOTAL', 'relação · 192.0.2.10'], ['ATENÇÃO', 'validar datas e vínculos']] },
-          { type: 'certificate', title: 'crt.sh · registro de certificado', query: '%.example.com', rows: [['NOMES', 'example.com'], ['SAN', 'teste.example.com'], ['FONTE', 'log público de CT']] },
+          { type: 'certificate', title: 'crt.sh · registro de certificado', query: '%.example.com', rows: [['NOMES', 'example.com'], ['SAN', 'teste.example.com'], ['FONTE', 'registro público de certificados']] },
           { type: 'graph', title: 'Subdomínios · inventário combinado', query: 'fontes passivas configuradas', root: 'example.com', branches: ['Subfinder: www.example.com', 'Amass: teste.example.com'] },
           { type: 'record', title: 'Metadados · arquivos obtidos', query: 'relatorio.pdf', rows: [['EXIFTOOL', 'Autor: Equipe Exemplo'], ['FOCA', 'Software: Editor de PDF'], ['ARQUIVO', 'documento local']] }
         ];
