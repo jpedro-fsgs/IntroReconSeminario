@@ -21,7 +21,7 @@ No entanto, o diagnóstico emitido pelo relatório `AUDITORIA_AI_SLOP.md` compro
 4. **Artifícios dramáticos e direção cênica artificial:** Títulos fragmentados sem verbo ("Três hipóteses. Uma coordenada."), aforismos pretensiosos ("O exploit é a confiança") e rubricas teatrais nas notas do orador ("Pausa dramática").
 5. **Conflitos de dados e anacronismos:** Ocorrência de métricas conflitantes no slide 04 (9h de tela/dia versus 116h/semana) e anacronismo no slide 42 (anexo nomeado `2021_Recruitment_Plan.xlsx` em um caso ocorrido em março de 2011).
 
-Este documento estabelece o **Plano Mestre de Implementação Didática** para a futura etapa de aplicação (M3), fornecendo propostas concretas de reescrita, modelos mentais e notas faladas para cada um dos 54 slides da apresentação, garantindo máxima fluidez didática para a banca examinadora e 100% de preservação técnica.
+Este documento estabelece o **Plano Mestre de Implementação Didática** para a futura etapa de aplicação (M3), fornecendo propostas concretas de reescrita, modelos mentais e notas faladas para cada um dos 54 slides da apresentação, garantindo máxima fluidez didática para a apresentação e 100% de preservação técnica.
 
 ---
 
@@ -1370,7 +1370,7 @@ Slides: 49 a 52
 - **Fatos Técnicos Preservados:**
   - [x] As três teses centrais do seminário (Método, Superfície e Defesa Pró-ativa)
   - [x] Encerramento temático com declarações afirmativas
-  - [x] Transição para as referências e arguição da banca
+  - [x] Transição para as referências e sessão de perguntas
 
 ---
 
@@ -1414,21 +1414,21 @@ Slides: 53 e 54
 
 ### Slide 54 · Sessão de Perguntas e Respostas (Q&A)
 - **Cabeçalho:** Slide 54 | Arquivo: `slides/07-referencias-perguntas.html` | Apresentadores: Todos | Título Original: `Perguntas ?`
-- **Objetivo Didático Central:** Finalizar formalmente a apresentação perante a banca examinadora e a turma, abrindo a sessão de arguição técnica de forma receptiva, colaborativa e profissional.
+- **Objetivo Didático Central:** Finalizar formalmente a apresentação perante o professor e a turma, abrindo a sessão de perguntas técnicas de forma receptiva, colaborativa e profissional.
 - **Diagnóstico de AI Slop & Engessamento:** Aforismo pretensioso na legenda (*"A parte mais interessante do recon é o que a gente não pensou em perguntar"*).
 - **Proposta de Reformulação Didática ("Dessengessada"):**
-  - *Proposta de Título / Manchete:* `Sessão de Perguntas e Discussão Técnica` | Subtítulo: `Agradecemos a atenção da banca examinadora e dos colegas`.
+  - *Proposta de Título / Manchete:* `Sessão de Perguntas e Discussão Técnica` | Subtítulo: `Agradecemos a atenção do professor e dos colegas`.
   - *Proposta de Corpo de Texto e Tópicos:*
     - Mensagem de encerramento direta:
       - "Estamos à disposição dos professores e colegas para esclarecimentos técnicos, aprofundamento metodológico e debate sobre os tópicos apresentados."
       - Exibição dos nomes dos cinco apresentadores e dados de contato institucional.
     - *(Eliminação do aforismo pretensioso de fechamento).*
   - *Modelo Mental / Metáfora Funcional:* A mesa-redonda acadêmica: o fim da exposição unilateral e o início do debate de alto nível entre pesquisadores e engenheiros.
-  - *Roteiro e Tom do Apresentador:* "Concluímos aqui a nossa exposição de 45 minutos. Agradecemos a atenção do professor e de toda a turma e abrimos a palavra para a banca para perguntas, observações e discussão técnica sobre qualquer um dos tópicos abordados. Muito obrigado."
+  - *Roteiro e Tom do Apresentador:* "Concluímos aqui a nossa exposição de 45 minutos. Agradecemos a atenção do professor e de toda a turma e abrimos espaço para perguntas, observações e discussão técnica sobre qualquer um dos tópicos abordados. Muito obrigado."
 - **Fatos Técnicos Preservados:**
   - [x] Sessão de perguntas e respostas (Q&A)
   - [x] Presença dos cinco integrantes da equipe no encerramento
-  - [x] Tom respeitoso e acadêmico para avaliação perante a banca
+  - [x] Tom respeitoso e acadêmico para avaliação final
 
 ---
 # 3. Matriz de Rastreabilidade e Preservação Técnica Integral

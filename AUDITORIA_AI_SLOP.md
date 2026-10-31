@@ -871,7 +871,7 @@ Quantidade de Slides: 2 (Slides 53 e 54)
   1. **Trecho Citado:** `<p class="qa-sub">O microfone é de vocês. A parte mais interessante do recon é o que a gente não pensou em perguntar.</p>` (Linha 57)  
      - **Padrão (`no-ai-slop`):** *Faux-insight kicker* / *Aforismo de encerramento*.  
      - **Crítica:** Frase artificial tentando encerrar o evento com um toque reflexivo pretensioso ("a parte mais interessante é o que não pensou em perguntar").  
-     - **Recomendação:** Substituir por saudação direta e receptiva: *"Agradecemos a atenção da banca examinadora e da turma e abrimos espaço para perguntas, observações e discussão técnica"*.
+     - **Recomendação:** Substituir por saudação direta e receptiva: *"Agradecemos a atenção do professor e da turma e abrimos espaço para perguntas, observações e discussão técnica"*.
 
 ---
 
@@ -919,4 +919,4 @@ Com base nos achados desta auditoria, o Milestone 2 (`PLANO_IMPLEMENTACAO_DIDATI
    - Nas Ferramentas (slide 35): focar na operação do buscador `crt.sh` e uso de curingas (`%.dominio.com`).
 3. **Resolução de Inconsistências:** Ajustar o conflito das métricas de tela no slide 04 (adotar 9h diárias totais e 3h de redes, removendo as 116h semanais) e corrigir o anacronismo do anexo da RSA no slide 42 para `2011_Recruitment_Plan.xls`.
 4. **Alinhamento do Fio Narrativo Unificado:** Conectar a personagem Marina Sousa (@marina.souza) e a empresa fictícia Acme Pagamentos do início (slide 06) ao phishing (slide 15) e ao grafo de correlação final (slide 48), criando um arco didático memorável.
-5. **Humanização das Notas do Orador:** Substituir prescrições teatrais por notas técnicas naturais adaptadas à dicção dos estudantes, oferecendo segurança para a apresentação perante a banca acadêmica.
+5. **Humanização das Notas do Orador:** Substituir prescrições teatrais por notas técnicas naturais adaptadas à dicção dos estudantes, oferecendo segurança para a apresentação no seminário acadêmico.
