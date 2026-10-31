@@ -403,7 +403,7 @@ Quantidade de Slides: 3 (Slides 16 a 18)
 - **Kicker Original:** `Daniel · Reconhecimento passivo`
 - **Título Original:** `Mapear a pegada sem consultar o alvo.`
 - **Ocorrências Identificadas:**
-  1. **Trecho Citado:** `<h2 class="h-md">Mapear a pegada sem consultar o alvo.</h2>` (Linha 32)  
+  1. **Trecho Citado:** `<h2 class="h-md">Topologia de coleta passiva</h2>` (Linha 33)  
      - **Padrão (`no-ai-slop`):** *Banned jargon* (`pegada`).  
      - **Crítica:** "Pegada" é um termo informal e genérico que substitui o vocabulário técnico de cibersegurança.  
      - **Recomendação:** *"Mapeamento da superfície de ataque externa através de repositórios e bases públicas de terceiros"*.
