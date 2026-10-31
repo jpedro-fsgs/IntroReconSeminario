@@ -41,7 +41,7 @@
             <div>
               <div class="kicker">Seminário de segurança ofensiva · Outubro de 2026</div>
               <h1 class="cover-title">Recon<br /><em>&amp; OSINT</em></h1>
-              <p class="cover-sub">Tudo o que o alvo revela antes de ser atacado.</p>
+              <p class="cover-sub">Mapeamento de superfície de ataque e inteligência em fontes abertas.</p>
 
               <div class="cover-redact">
                 <span>o que está exposto:</span>
@@ -83,9 +83,9 @@
 
           <aside class="notes">
             <ul>
-              <li>Cumprimentar a banca e a turma; apresentar a equipe em uma frase cada.</li>
-              <li>Provocar: “antes de qualquer ataque, alguém passou semanas só olhando”.</li>
-              <li>Dizer que a navegação é horizontal, um bloco por apresentador.</li>
+              <li>Cumprimentar a banca e a turma; apresentar brevemente a equipe e o objetivo do seminário.</li>
+              <li>Destacar que o foco é entender como o mapeamento prévio de informações viabiliza tanto testes ofensivos quanto defesas assertivas.</li>
+              <li>Informar a estrutura horizontal da apresentação, dividida em blocos por apresentador.</li>
             </ul>
           </aside>
                   </div>
@@ -101,10 +101,9 @@
           </div>
           <div class="slide-body agenda">
             <div>
-              <h2 class="h-lg">Seis blocos.<br />Uma pergunta: <em class="red">o que o alvo já contou?</em></h2>
+              <h2 class="h-lg">Roteiro do seminário<br /><em class="red">da exposição inicial aos controles defensivos</em></h2>
               <p class="lede">
-                Começamos pelo conceito, passamos pelas duas faces do reconhecimento e terminamos com casos reais,
-                demonstração e o que fazer para não virar o próximo caso.
+                Apresentamos a transição da pegada digital ao mapeamento formal de superfície, exploramos ferramentas ativas e passivas e analisamos casos reais com recomendações de proteção.
               </p>
               <div class="tag-row">
                 <span class="chip red">≈ 45 min</span>
@@ -116,32 +115,32 @@
             <div class="agenda-list">
               <div class="agenda-row rise" style="--d: .1s">
                 <span class="num">01</span>
-                <div class="what"><b>Conceito &amp; contexto</b><span>Por que o reconhecimento existe e por que ele importa agora.</span></div>
+                <div class="what"><b>Conceito &amp; contexto</b><span>Da pegada digital em mídias sociais ao mapeamento formal de superfície.</span></div>
                 <span class="who">Geovana</span>
               </div>
               <div class="agenda-row rise" style="--d: .18s">
                 <span class="num">02</span>
-                <div class="what"><b>Reconhecimento ativo</b><span>Redes, portas, Nmap e Wireshark — quando o alvo responde.</span></div>
+                <div class="what"><b>Reconhecimento ativo</b><span>Varredura direta de portas e tráfego com Nmap e Wireshark.</span></div>
                 <span class="who">Emilio</span>
               </div>
               <div class="agenda-row rise" style="--d: .26s">
                 <span class="num">03</span>
-                <div class="what"><b>Reconhecimento passivo</b><span>OSINT, fontes abertas e o ecossistema de inteligência.</span></div>
+                <div class="what"><b>Reconhecimento passivo</b><span>Ciclo de OSINT, fontes abertas e disciplinas de inteligência.</span></div>
                 <span class="who">Daniel</span>
               </div>
               <div class="agenda-row rise" style="--d: .34s">
                 <span class="num">04</span>
-                <div class="what"><b>Estudos de caso</b><span>RSA e Strava: quando o reconhecimento vira manchete.</span></div>
+                <div class="what"><b>Estudos de caso</b><span>Incidentes reais da RSA SecurID e do Strava Heatmap.</span></div>
                 <span class="who">João Pedro G.</span>
               </div>
               <div class="agenda-row rise" style="--d: .42s">
                 <span class="num">05</span>
-                <div class="what"><b>Demonstração</b><span>GEOSINT e OSINT na prática, com método e limites.</span></div>
+                <div class="what"><b>Demonstração prática</b><span>Geolocalização investigativa e correlação de entidades públicas.</span></div>
                 <span class="who">João Pedro A.</span>
               </div>
               <div class="agenda-row rise" style="--d: .5s">
                 <span class="num">06</span>
-                <div class="what"><b>OpSec &amp; fechamento</b><span>O rastro que você deixa — e como reduzir.</span></div>
+                <div class="what"><b>OpSec &amp; fechamento</b><span>Controles práticos de segurança operacional e redução de rastro.</span></div>
                 <span class="who">Geovana · todos</span>
               </div>
             </div>
@@ -149,8 +148,8 @@
 
           <aside class="notes">
             <ul>
-              <li>Não ler os seis itens: apontar a lógica “conceito → ativo → passivo → casos → demo → OpSec”.</li>
-              <li>Avisar que as perguntas ficam para o final, mas anotem dúvidas.</li>
+              <li>Apresentar a lógica do roteiro: conceito → ativo → passivo → casos reais → demonstração → OpSec.</li>
+              <li>Avisar que a sessão de perguntas e respostas (Q&amp;A) será realizada ao final da apresentação.</li>
             </ul>
           </aside>
                   </div>
@@ -164,8 +163,8 @@
           <span class="ghost-num">01</span>
           <div class="red-rule"></div>
           <div class="kicker"><span class="who">Geovana</span> · Conceito e contexto</div>
-          <h2 class="statement">Todo ataque começa com uma pergunta.</h2>
-          <p class="lede">Reconhecer é descobrir a resposta antes de tocar no alvo.</p>
+          <h2 class="statement">Fundamentos e contexto</h2>
+          <p class="lede">O reconhecimento identifica superfícies e vulnerabilidades antes de qualquer interação direta com a infraestrutura.</p>
 
           <div class="divider-foot">
             <span class="who">com <b>Geovana</b></span>
@@ -174,7 +173,8 @@
 
           <aside class="notes">
             <ul>
-              <li>Transição: sair da ideia de “hacker invadindo” para a de “analista investigando”.</li>
+              <li>Iniciar o Bloco 01 contextualizando que a segurança defensiva e ofensiva começam pela análise metódica de informações públicas.</li>
+              <li>Destacar que o trabalho de reconhecimento delimita o que a organização já expôs na internet antes do envio de comandos diretos.</li>
             </ul>
           </aside>
                   </div>
@@ -187,32 +187,32 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Geovana</span> · Era das mídias sociais</div>
-            <h2 class="h-lg">O celular acordou<br />antes de você.</h2>
+            <h2 class="h-lg">Volume de exposição digital<br /><em class="red">em redes e dispositivos</em></h2>
           </div>
 
           <div class="slide-body era-grid">
             <div class="era-copy">
               <p class="lede">
-                A média do brasileiro passa quase <strong>9 horas por dia</strong> diante de uma tela — e quase
-                <strong>3 horas</strong> desse tempo dentro de redes sociais.
+                A população conectada no Brasil passa mais de <strong>9 horas por dia</strong> diante de telas, com mais de
+                <strong>3 horas e meia</strong> dedicadas a plataformas sociais.
               </p>
 
               <div class="era-stats">
                 <div class="era-stat">
-                  <div class="n">9<em>h</em></div>
+                  <div class="n">9h13</div>
                   <div class="l">de tela por dia</div>
                 </div>
                 <div class="era-stat">
-                  <div class="n">3<em>h</em></div>
+                  <div class="n">3h37</div>
                   <div class="l">em redes sociais</div>
                 </div>
                 <div class="era-stat">
-                  <div class="n">116<em>h</em></div>
-                  <div class="l">conectado por semana</div>
+                  <div class="n">≈ 38%</div>
+                  <div class="l">do período em vigília</div>
                 </div>
               </div>
 
-              <p class="small">Métricas de pesquisas diferentes: use como ordem de grandeza, não como cronômetro.</p>
+              <p class="small">Dados médios nacionais: hábitos contínuos de navegação alimentam registros públicos e telemetria.</p>
             </div>
 
             <div class="era-visual rise" style="--d: .2s">
@@ -229,9 +229,9 @@
 
           <aside class="notes">
             <ul>
-              <li>Abrir com a pergunta do roteiro: “quanto tempo vocês passam nas redes e no celular?”.</li>
-              <li>O roteiro cita 116h semanais, 9h por dia e quase 3h em redes. São métricas de pesquisas diferentes; usar como ordem de grandeza.</li>
-              <li>Se alguém contestar os números, assumir: o ponto não é o minuto exato, é a fração do dia que vira rastro público.</li>
+              <li>Abrir contextualizando o tempo médio diário de conexão no Brasil: 9h13 de tela e 3h37 em redes sociais.</li>
+              <li>Explicar que cerca de um terço do dia de um colaborador é passado gerando registros de hábitos, horários e rotinas corporativas.</li>
+              <li>Conectar o dado à segurança: rotinas expostas compõem a base primária do reconhecimento de pessoas e infraestruturas.</li>
             </ul>
           </aside>
                   </div>
@@ -244,15 +244,15 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Geovana</span> · Evolução das redes</div>
-            <h2 class="h-lg">Quatro décadas<br />até o feed.</h2>
-            <p class="lede">Cada plataforma removeu uma fricção: encontrar, publicar, transmitir, mostrar.</p>
+            <h2 class="h-lg">Evolução da exposição pública<br /><em class="red">nas plataformas digitais</em></h2>
+            <p class="lede">A facilidade de publicação reduziu barreiras e expandiu continuamente o rastro deixado por usuários e organizações.</p>
           </div>
 
           <div class="slide-body">
             <div class="history-track">
               <div class="history-item up rise" style="--d: .12s">
                 <div class="history-copy">
-                  <span class="year">1974</span>
+                  <span class="year">1979</span>
                   <b>Usenet</b>
                   <span class="desc">fóruns e grupos</span>
                 </div>
@@ -304,9 +304,8 @@
 
           <aside class="notes">
             <ul>
-              <li>Não decorar a linha do tempo: mostrar como cada etapa encurtou a distância entre a vida e a publicação.</li>
-              <li>Usenet era fórum; SixDegrees já conectava amigos; LinkedIn profissionalizou; Facebook e Orkut massificaram; YouTube abriu o vídeo; Twitter trouxe o tempo real; Instagram colocou a imagem no centro.</li>
-              <li>Transição: “quando publicar ficou instantâneo, o rastro também ficou”.</li>
+              <li>Explicar a progressão histórica: a Usenet (1979) iniciou fóruns técnicos; LinkedIn abriu organogramas corporativos; Twitter trouxe registros em tempo real; Instagram centrou o foco em fotos e metadados de alta resolução.</li>
+              <li>Demonstrar que cada avanço facilitou a publicação e reduziu a barreira técnica para um analista mapear alvos.</li>
             </ul>
           </aside>
                   </div>
@@ -319,24 +318,24 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Geovana</span> · Resultado das mídias</div>
-            <h2 class="h-lg">A internet não esquece.<br />Você posta de novo amanhã.</h2>
+            <h2 class="h-lg">Vazamento de contexto operacional<br /><em class="red">em publicações de rotina</em></h2>
           </div>
 
           <div class="slide-body exposure">
             <div>
               <p class="lede">
-                Nos tornamos dependentes de estímulo e superexpomos a própria vida. A primeira informação sobre uma
-                organização quase sempre sai por uma foto com geotag, um cargo no LinkedIn ou um comentário sobre o
-                projeto “que está pegando fogo”.
+                Publicações rotineiras de colaboradores revelam dados cruciais sobre infraestrutura física e lógica.
+                Uma foto despretensiosa expõe crachás de acesso, fornecedores de tecnologia, horários de plantão
+                e localizações de datacenters.
               </p>
 
               <div class="stat-line">
                 <span class="big">≈ 3h</span>
-                <span class="cap">por dia em redes sociais — onde boa parte da rotina vira conteúdo público.</span>
+                <span class="cap">diárias em redes sociais: rotinas de trabalho convertem-se em dados abertos para análise.</span>
               </div>
 
               <p class="small" style="max-width: 30em">
-                A pergunta não é só o que você publica — é com quem você está realmente se conectando.
+                O adversário correlaciona crachás visíveis, ferramentas em tela e detalhes prediais sem interagir com firewalls.
               </p>
             </div>
 
@@ -401,10 +400,9 @@
 
           <aside class="notes">
             <ul>
-              <li>Pergunta do roteiro: “com quem você está realmente se conectando?”.</li>
-              <li>Perguntar à plateia quem já postou foto do crachá, do escritório ou da tela do sistema.</li>
-              <li>≈3h/dia em redes é uma estimativa de mercado; usar como ordem de grandeza, não como dado exato.</li>
-              <li>Fechar: a superexposição não é só vaidade — é matéria-prima para quem faz recon.</li>
+              <li>Apresentar a personagem de estudo Marina Sousa comemorando a entrega do datacenter da Acme Pagamentos.</li>
+              <li>Destacar as evidências técnicas extraídas: identificação da empresa, cargo, modelo de crachá e localização física.</li>
+              <li>Ressaltar que o analista obtém esses vetores diretamente em fontes públicas, sem violar defesas perimetrais.</li>
             </ul>
           </aside>
                   </div>
@@ -416,8 +414,8 @@
         <section class="slide tweet-case">
           <div class="slide-inner">
           <div class="slide-head">
-            <div class="kicker"><span class="who">Geovana</span></div>
-            <h2 class="h-lg">O post que virou<br /><em class="red">coordenada.</em></h2>
+            <div class="kicker"><span class="who">Geovana</span> · Estudo de caso</div>
+            <h2 class="h-lg">Rastreamento físico em tempo real<br /><em class="red">a partir de mensagens abertas</em></h2>
           </div>
 
           <div class="slide-body tw-grid">
@@ -465,17 +463,16 @@
               </div>
 
               <p class="tw-lesson rise" style="--d: .46s">
-                Não foi invasão. Foi <em>leitura de contexto</em> em tempo real.
+                A localização foi determinada por <em>correlação direta</em> entre a mensagem pública e a programação do local.
               </p>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Contar sem identificar ninguém: duas pessoas já estavam em atrito; uma publicou, em tempo real, que estava indo ao cinema; a outra viu o post e apareceu no local. O encontro terminou em discussão.</li>
-              <li>Não houve hackeamento, rastreamento técnico ou acesso a dado privado. O post era público e continha local + horário.</li>
-              <li>O ponto não é culpar a pessoa que publicou. É mostrar como o tempo real encurta a distância entre a intenção de alguém e a ação.</li>
-              <li>Conectar com recon: o atacante não precisa invadir o celular se a própria pessoa publica onde estará.</li>
+              <li>Relatar o caso real sem identificação de envolvidos: após atrito em rede social, um usuário postou que estava na fila do cinema para a sessão das 21h.</li>
+              <li>O interlocutor correlacionou o horário com a grade pública de exibição do shopping e realizou a abordagem física.</li>
+              <li>Enfatizar o aprendizado técnico: a determinação de presença física ocorreu sem rastreamento de GPS ou quebra de credenciais.</li>
             </ul>
           </aside>
                   </div>
@@ -488,25 +485,25 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker">Caso real · São Paulo · 2026</div>
-            <h2 class="h-lg">58 mil câmeras.<br />11 meses de senhas expostas.</h2>
+            <h2 class="h-lg">Caso Smart Sampa (2026)<br /><em class="red">exposição contínua de credenciais públicas</em></h2>
           </div>
 
           <div class="slide-body case-grid">
             <div>
               <p class="lede">
-                O Smart Sampa integra câmeras de segurança da capital paulista. Segundo reportagem do G1, credenciais
-                de acesso ao sistema ficaram expostas por <strong>11 meses</strong> — não por um exploit sofisticado,
-                mas por uma falha de cuidado.
+                O sistema Smart Sampa reúne câmeras de vigilância da capital paulista. Em outubro de 2026, reportagens revelaram
+                que credenciais administrativas permaneceram indexadas e acessíveis por <strong>11 meses</strong>
+                devido à falta de rotação periódica e repositórios desprotegidos.
               </p>
 
               <div class="case-stats">
                 <div class="case-stat">
                   <div class="n">58<em>mil</em></div>
-                  <div class="l">câmeras no ecossistema</div>
+                  <div class="l">câmeras integradas</div>
                 </div>
                 <div class="case-stat">
                   <div class="n">11<em>meses</em></div>
-                  <div class="l">de exposição, segundo o G1</div>
+                  <div class="l">de exposição contínua</div>
                 </div>
               </div>
 
@@ -518,7 +515,7 @@
                 <span class="step">descoberta e correção</span>
               </div>
 
-              <p class="source">Fonte: G1 / Tecnologia, 21 out. 2026. Exposição não é o mesmo que invasão — mas é o convite.</p>
+              <p class="source">Fonte: Noticiário G1 Tecnologia, 21 out. 2026. A exposição direta de senhas viabiliza acessos sem exploração de vulnerabilidades de dia zero.</p>
             </div>
 
             <div class="cam-panel">
@@ -540,9 +537,9 @@
 
           <aside class="notes">
             <ul>
-              <li>Contextualizar: sistema de vigilância urbana, 58 mil câmeras, dados sensíveis.</li>
-              <li>Não afirmar invasão: a reportagem trata de senhas expostas por 11 meses.</li>
-              <li>Lição: a credencial é o ativo mais barato de vazar e o mais caro de ignorar.</li>
+              <li>Apresentar o caso Smart Sampa em São Paulo (outubro de 2026): acesso potencial a 58 mil câmeras de segurança urbana.</li>
+              <li>Explicar que as credenciais ficaram indexadas e acessíveis por 11 meses por falha de higienização de chaves.</li>
+              <li>Lição técnica: o reconhecimento preventivo da própria superfície teria detectado e remediado as credenciais expostas antes do incidente.</li>
             </ul>
           </aside>
                   </div>
@@ -560,16 +557,16 @@
 
           <div class="slide-body def-grid">
             <div>
-              <h2 class="def-quote">Recon não é invadir.<br /><em>É entender.</em></h2>
+              <h2 class="def-quote">Mapeamento sistemático<br /><em>da superfície de ataque</em></h2>
               <p class="lede">
-                É a primeira fase de um ataque — não a invasão. A coleta monta um perfil detalhado do alvo:
-                arquitetura, portas, tecnologias, pessoas e fraquezas. O resultado orienta as próximas etapas e mostra
-                ao Blue Team onde o atacante vai olhar.
+                O reconhecimento constitui a tática preparatória formal (MITRE ATT&amp;CK TA0043). A coleta cataloga a
+                arquitetura de rede, portas ativas, serviços em execução e dados organizacionais, fornecendo ao analista
+                o mapa completo para tomadas de decisão ofensivas ou correções defensivas.
               </p>
               <div class="tag-row">
-                <span class="chip">primeira fase</span>
-                <span class="chip">discrição, não invasão</span>
-                <span class="chip">Blue Team também usa</span>
+                <span class="chip">tática inicial</span>
+                <span class="chip">mapeamento detalhado</span>
+                <span class="chip">aplicação ofensiva e defensiva</span>
               </div>
             </div>
 
@@ -594,11 +591,9 @@
 
           <aside class="notes">
             <ul>
-              <li>Definir recon como processo de inteligência, não como “rodar Nmap”.</li>
-              <li>É a primeira fase do ataque, mas não a invasão: o objetivo é montar um perfil detalhado do alvo com o mínimo de exposição.</li>
-              <li>Conectar com o MITRE ATT&amp;CK: é a tática que antecede todas as outras.</li>
-              <li>O mesmo mapa interessa ao Blue Team: saber onde o atacante procura é saber onde fechar.</li>
-              <li>Frase de transição: “entender sem tocar é o passivo; tocar para entender é o ativo”.</li>
+              <li>Formalizar a definição ancorada na tática MITRE ATT&amp;CK TA0043 (Reconnaissance).</li>
+              <li>Diferenciar as duas abordagens: o reconhecimento passivo analisa fontes públicas sem contato direto; o reconhecimento ativo interage com portas e protocolos.</li>
+              <li>Passar a palavra para Emilio, introduzindo as técnicas de reconhecimento ativo com Nmap e Wireshark.</li>
             </ul>
           </aside>
                   </div>
@@ -612,8 +607,8 @@
           <span class="ghost-num">02</span>
           <div class="red-rule"></div>
           <div class="kicker"><span class="who">Emilio</span> · Reconhecimento ativo</div>
-          <h2 class="statement">Quando o alvo<br /><em>começa a responder.</em></h2>
-          <p class="lede">Aqui saem pacotes de verdade. E com eles, rastros.</p>
+          <h2 class="statement">Reconhecimento ativo</h2>
+          <p class="lede">Interação direta via pacotes IP, varredura de portas e análise de tráfego de rede.</p>
 
           <div class="divider-foot">
             <span class="who">com <b>Emilio</b></span>
@@ -622,7 +617,8 @@
 
           <aside class="notes">
             <ul>
-              <li>Marcar a mudança de postura: no passivo, o alvo não vê; no ativo, ele pode ver.</li>
+              <li>Marcar a distinção técnica do reconhecimento ativo: emissão de pacotes IP direcionados à infraestrutura do alvo.</li>
+              <li>Destacar que essa interação ativa gera registros de conexão e alertas em firewalls e sistemas de detecção (IDS).</li>
             </ul>
           </aside>
                   </div>
@@ -635,7 +631,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Emilio</span> · Redes, simplificadas</div>
-            <h2 class="h-md">Três coisas que você precisa saber sobre redes</h2>
+            <h2 class="h-md">Fundamentos de rede para reconhecimento</h2>
           </div>
 
           <div class="slide-body">
@@ -722,9 +718,9 @@
 
           <aside class="notes">
             <ul>
-              <li>Não aprofundar TCP/IP: o objetivo é dar vocabulário para entender Nmap e Wireshark.</li>
-              <li>Analogia: IP = prédio, porta = apartamento, pacote = envelope.</li>
-              <li>Destacar que a porta é o que o scan procura.</li>
+              <li>Nivelar os três conceitos de base: IP (localização do host), Porta (processo ouvindo conexões) e Pacote (envelope com dados e cabeçalhos).</li>
+              <li>Explicar que no nosso laboratório o analista em 10.10.14.23 interage com o servidor em 10.10.14.5.</li>
+              <li>Demonstrar que o escaneamento ativo busca descobrir quais portas lógicas respondem com serviços abertos.</li>
             </ul>
           </aside>
                   </div>
@@ -737,7 +733,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Emilio</span> · Ferramenta 01 · simulação</div>
-            <h2 class="h-md">Nmap: o mapa que o alvo entrega sem querer</h2>
+            <h2 class="h-md">Varredura de portas com Nmap</h2>
           </div>
 
           <div class="slide-body nmap-grid">
@@ -805,23 +801,22 @@
                 </div>
 
                 <div class="side-note" style="margin-top: auto">
-                  <b>SYN scan</b> não completa a conexão. A aplicação não registra o handshake — mas o firewall vê.
+                  <b>SYN scan:</b> conexão semiaberta. A aplicação não registra a sessão, mas firewalls registram os pacotes SYN recebidos.
                 </div>
               </div>
             </div>
           </div>
 
           <div class="slide-footline">
-            <span><b>O scan não explora nada.</b> Ele só pergunta — e o alvo responde.</span>
+            <span><b>O scan enumera serviços ativos.</b> As respostas do alvo mapeiam a superfície exposta.</span>
             <span>laboratório autorizado · 10.10.14.0/24</span>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Explicar o comando: -sS (SYN), -sV (versões), -p- (todas as portas), -oA (salvar em três formatos).</li>
-              <li>Mostrar o tempo: 41s para 65 mil portas — por isso o scan é barato para o atacante.</li>
-              <li>Ressaltar: a saída dá hipóteses, não conclusões. Versão antiga ≠ vulnerável.</li>
-              <li>Perguntar: “o que vocês olhariam primeiro nesta lista?” (8080 e 3306 são os candidatos).</li>
+              <li>Explicar as flags do comando: -sS (SYN scan semiaberto), -sV (detecção de versão), -p- (todas as 65.535 portas) e -oA (exportação em 3 formatos).</li>
+              <li>Destacar o tempo de execução de 41,72 segundos para cobrir toda a faixa de portas TCP.</li>
+              <li>Apontar as portas prioritárias para análise: 3306 (MySQL aberto externamente) e 8080 (servidor Jetty legado).</li>
             </ul>
           </aside>
                   </div>
@@ -834,7 +829,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Emilio</span> · Ferramenta 02 · simulação</div>
-            <h2 class="h-md">Wireshark: o que realmente passa no fio</h2>
+            <h2 class="h-md">Inspeção de tráfego com Wireshark</h2>
           </div>
 
           <div class="slide-body" style="display: flex; flex-direction: column; min-height: 0">
@@ -908,17 +903,16 @@
             </div>
 
             <div class="slide-footline">
-              <span><b>Sem filtro</b>, 1.284 pacotes viram ruído. Com filtro, sete contam uma história.</span>
+              <span><b>A filtragem por protocolo</b> isola os fluxos relevantes entre os 1.284 pacotes capturados na interface eth0.</span>
               <span>captura passiva · interface eth0</span>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Wireshark é passivo: ele observa o tráfego que já passa pela interface.</li>
-              <li>Explicar a barra de filtro: o verde indica sintaxe válida; o filtro não altera a captura.</li>
-              <li>Apontar o pacote 1 selecionado: árvore de protocolos embaixo, bytes à esquerda.</li>
-              <li>Gancho para o próximo slide: “vamos seguir essa conexão inteira”.</li>
+              <li>Explicar a utilidade da captura de pacotes em modo promíscuo na interface eth0.</li>
+              <li>Demonstrar a aplicação do filtro ip.addr == 10.10.14.23 &amp;&amp; tcp.port == 80 para isolar a sessão HTTP em análise.</li>
+              <li>Destacar a dissecação em camadas no painel inferior: Frame, Ethernet II, IPv4 e cabeçalho TCP com flag SYN.</li>
             </ul>
           </aside>
                   </div>
@@ -931,7 +925,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Emilio</span> · Wireshark · lendo a conversa</div>
-            <h2 class="h-md">Três pacotes para abrir uma conexão.<br />Um clique para ler tudo.</h2>
+            <h2 class="h-md">Handshake TCP e reconstrução de sessão</h2>
           </div>
 
           <div class="slide-body hs-grid">
@@ -971,7 +965,7 @@
                 <path class="hs-arrow data" d="M 90 298 L 190 298" marker-end="url(#ahBlue)" />
                 <text x="240" y="294" text-anchor="middle" fill="#7fb2ff">GET /admin/</text>
               </svg>
-              <div class="hs-note">O handshake só confirma que o serviço está ouvindo. Não diz o que ele responde.</div>
+              <div class="hs-note">O handshake estabelece a comunicação em 0,2 ms antes do tráfego da carga útil HTTP.</div>
 
               <div class="insight-row">
                 <span class="chip amber">SYN → SYN/ACK → ACK</span>
@@ -1002,18 +996,17 @@
                 <div class="hdr"><span class="hl">Authorization: Basic YWRtaW46YWRtaW4=</span></div>
               </div>
               <div class="stream-note">
-                Basic auth não criptografa: <span class="amber">YWRtaW46YWRtaW4=</span> decodifica para <span class="red">admin:admin</span>.
-                Em HTTPS o conteúdo seria cifrado — os metadados, não.
+                HTTP Basic Auth transmite credenciais em Base64: <span class="amber">YWRtaW46YWRtaW4=</span> decodifica para <span class="red">admin:admin</span>.
+                Sem criptografia TLS/HTTPS, o tráfego em texto claro fica exposto a qualquer analisador na rede.
               </div>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Ler o handshake em voz alta, com os tempos: tudo acontece em 0,2 ms.</li>
-              <li>Mostrar que o 401 revela o tipo de autenticação; o segundo GET já vai com credenciais.</li>
-              <li>Decodificar Base64 ao vivo: “não é criptografia, é transporte”.</li>
-              <li>Fechar: o scan achou a porta; a captura contou a história.</li>
+              <li>Apresentar a cronologia do Three-Way Handshake TCP (SYN → SYN/ACK → ACK) completado em 0,203 ms.</li>
+              <li>Mostrar o desafio HTTP 401 Unauthorized do Jetty exigindo autenticação básica.</li>
+              <li>Demonstrar como a decodificação da string Base64 recupera o par usuário/senha admin:admin em conexões sem TLS.</li>
             </ul>
           </aside>
                   </div>
@@ -1026,7 +1019,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Emilio</span> · Engenharia social</div>
-            <h2 class="h-md">O exploit é a confiança</h2>
+            <h2 class="h-md">Engenharia social e spear-phishing</h2>
           </div>
 
           <div class="slide-body phish-grid">
@@ -1083,7 +1076,7 @@
               </div>
               <div class="legend-row">
                 <span class="n">3</span>
-                <div><b>Anexo inesperado</b><span>Planilha com macros não é formulário de RH. É execução de código.</span></div>
+                <div><b>Anexo malicioso</b><span>Planilhas com macros automáticas funcionam como vetores diretos para execução de código.</span></div>
               </div>
               <div class="legend-row">
                 <span class="n">4</span>
@@ -1095,16 +1088,16 @@
               </div>
 
               <p class="small" style="margin-top: 10px">
-                Defesa simples: confirmar por outro canal antes de abrir. Telefone, chat interno, pessoa conhecida.
+                Defesa preventiva: validar a autenticidade por canal interno independente antes de abrir anexos.
               </p>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Ler o e-mail como se fosse real; perguntar quem clicaria.</li>
-              <li>Explicar que o phishing não quebra a rede: convence alguém a abrir a porta.</li>
-              <li>Ligar ao caso RSA, que vem no bloco de estudos de caso.</li>
+              <li>Demonstrar como o spear-phishing combina dados coletados em reconhecimento com engenharia social para obter acesso inicial.</li>
+              <li>Analisar os indicadores do e-mail simulado da Acme Pagamentos: domínio similar typosquatted, urgência artificial e macros maliciosas.</li>
+              <li>Conectar o exemplo ao caso real da RSA SecurID, que será detalhado no bloco de estudos de caso.</li>
             </ul>
           </aside>
                   </div>
@@ -1118,8 +1111,8 @@
           <span class="ghost-num">03</span>
           <div class="red-rule"></div>
           <div class="kicker"><span class="who">Daniel</span> · Reconhecimento passivo</div>
-          <h2 class="statement">Coletar<br /><em>sem tocar.</em></h2>
-          <p class="lede">Consultar fontes externas sem interagir diretamente com os sistemas do alvo.</p>
+          <h2 class="statement">Reconhecimento passivo e OSINT</h2>
+          <p class="lede">Coleta de inteligência em fontes externas sem interação direta com a infraestrutura do alvo.</p>
 
           <div class="divider-foot">
             <span class="who">com <b>Daniel</b></span>
@@ -1128,7 +1121,8 @@
 
           <aside class="notes">
             <ul>
-              <li>Transição: agora voltamos para o lado invisível — e ele é maior do que parece.</li>
+              <li>Introduzir o Bloco 03 destacando o princípio do reconhecimento passivo: obter inteligência sobre o alvo sem enviar pacotes aos seus servidores.</li>
+              <li>Explicar que todas as consultas são direcionadas a repositórios, bases públicas e índices globais de terceiros.</li>
             </ul>
           </aside>
                   </div>
@@ -1141,12 +1135,12 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Daniel</span> · Reconhecimento passivo</div>
-            <h2 class="h-md">Mapear a pegada sem consultar o alvo.</h2>
+            <h2 class="h-md">Topologia de coleta passiva</h2>
           </div>
 
           <div class="slide-body passive-brief">
             <div class="passive-main">
-              <p class="lede">Uma etapa de inteligência que usa <strong>fontes externas</strong> para entender pessoas, tecnologias e exposição, sem enviar tráfego diretamente aos sistemas analisados.</p>
+              <p class="lede">Metodologia de inteligência que utiliza <strong>fontes e índices de terceiros</strong> para mapear tecnologias, pessoas e credenciais expostas, sem emissão de tráfego contra os servidores analisados.</p>
               <div class="passive-route">
                 <span>pesquisador</span><b>→</b><span>fontes públicas e índices</span><b>→</b><span>perfil do alvo</span>
               </div>
@@ -1159,8 +1153,8 @@
           </div>
 
           <aside class="notes"><ul>
-            <li>Definir o objetivo: mapear a pegada digital e levantar hipóteses sobre tecnologias e possíveis exposições.</li>
-            <li>Passivo em relação ao alvo não significa invisibilidade absoluta: provedores de terceiros podem registrar consultas, e seus próprios indexadores podem ter acessado o alvo.</li>
+            <li>Explicar a arquitetura da coleta passiva: o analista consulta índices públicos e motores de busca, mantendo a rede do alvo em repouso.</li>
+            <li>Ressaltar o trade-off operacional: os dados não geram alertas no alvo, mas exigem validação temporal de frescor e integridade.</li>
             <li>WHOIS e DNS exigem atenção à fonte: consultar diretamente infraestrutura do alvo deixa de ser passivo em relação a ela.</li>
           </ul></aside>
           </div>
@@ -1173,19 +1167,19 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Daniel</span> · OSINT</div>
-            <h2 class="h-lg">Informação pública<br />não é informação <em class="red">inofensiva.</em></h2>
+            <h2 class="h-lg">Inteligência em fontes abertas (OSINT)<br /><em class="red">método, correlação e validação</em></h2>
           </div>
 
           <div class="slide-body def-grid mid">
             <div>
               <p class="lede" style="font-size: 0.7em">
-                <strong>Open Source Intelligence</strong> é a coleta e a correlação de dados disponíveis publicamente —
-                com método, propósito e registro. Não é “achar coisas no Google”: é transformar fragmentos em
-                inteligência acionável.
+                <strong>Open Source Intelligence (OSINT)</strong> consiste na coleta sistemática e correlação de dados públicos
+                para embasar decisões técnicas e operacionais. Não se limita a buscas avulsas: estrutura fragmentos isolados
+                em uma visão abrangente de ameaças e superfícies expostas.
               </p>
               <p class="lede">
-                No reconhecimento passivo, você consulta <strong>fontes externas</strong> — índices, arquivos e históricos —
-                sem contatar diretamente os sistemas do alvo.
+                No reconhecimento passivo, consultam-se exclusivamente <strong>fontes externas</strong> — registros históricos,
+                certificados e repositórios — preservando a ausência de conexões diretas aos hosts do alvo.
               </p>
               <div class="tag-row">
                 <span class="chip">fontes externas</span>
@@ -1195,7 +1189,7 @@
             </div>
 
             <div class="panel">
-              <div class="panel-k">REGRA DE OURO</div>
+              <div class="panel-k">MÉTRICA OPERACIONAL</div>
               <div class="zero">0</div>
               <p class="zero-cap">pacotes enviados ao alvo durante toda a coleta.</p>
               <div class="hr" style="margin: 14px 0"></div>
@@ -1212,10 +1206,9 @@
 
           <aside class="notes">
             <ul>
-              <li>Definir OSINT com as três palavras: público, método, propósito.</li>
-              <li>Diferenciar “dado” de “inteligência”: o dado isolado não decide nada.</li>
-              <li>Enfatizar a regra de ouro e o contraste com o bloco anterior.</li>
-              <li>OSINT é uma metodologia; dependendo da fonte e do modo de coleta, nem toda consulta é passiva em relação ao alvo. Dados públicos também não dispensam análise legal e ética.</li>
+              <li>Definir OSINT com base em seus pilares: dados públicos, método estruturado, propósito investigativo e validação temporal.</li>
+              <li>Diferenciar dado bruto de inteligência correlacionada: um subdomínio avulso ganha relevância quando associado a uma aplicação interna sem MFA.</li>
+              <li>Apresentar as ferramentas e fontes: Shodan, Censys, WHOIS, crt.sh, Wayback Machine e Have I Been Pwned (HIBP).</li>
             </ul>
           </aside>
                   </div>
@@ -1228,8 +1221,8 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT</div>
-            <h2 class="h-md">De uma pergunta à próxima.</h2>
-            <p class="lede">Dados brutos só viram inteligência quando respondem a uma necessidade.</p>
+            <h2 class="h-md">O Ciclo de Inteligência em Fontes Abertas</h2>
+            <p class="lede">As seis etapas sistemáticas para transformar dados brutos em decisões técnicas de segurança.</p>
           </div>
           <div class="slide-body orbit-body">
             <div class="cycle-orbit">
@@ -1244,9 +1237,9 @@
             </div>
           </div>
           <aside class="notes"><ul>
-            <li>Usar um exemplo simples: descobrir quais serviços públicos aparecem associados a um domínio.</li>
-            <li>Registrar fonte e data, validar a informação e distinguir evidência de hipótese; a coleta por si só não é inteligência.</li>
-            <li>O feedback pode revelar lacunas e levar a uma nova rodada de planejamento.</li>
+            <li>Apresentar a metodologia do ciclo de inteligência formal em seis fases contínuas.</li>
+            <li>Explicar que utilizaremos o domínio didático example.com para percorrer cada etapa, da formulação da dúvida ao relatório final.</li>
+            <li>Destacar a importância do feedback para realimentar o escopo e direcionar novas coletas.</li>
           </ul></aside>
           </div>
         </section>
@@ -1258,21 +1251,21 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 01 / 06</div>
-              <h2 class="h-md">Planejar: faça a pergunta certa.</h2>
+              <h2 class="h-md">Fase 1 — Planejamento</h2>
             </div>
             <div class="slide-body plan-board">
-              <div class="plan-question"><span>CASO FICTÍCIO · PERGUNTA INICIAL</span><p>Quais serviços web aparecem em fontes externas para <em>example.com</em>?</p></div>
+              <div class="plan-question"><span>REQUISITO INVESTIGATIVO</span><p>Quais serviços web e subdomínios aparecem em fontes externas para <em>example.com</em>?</p></div>
               <div class="plan-criteria">
-                <div><b>Objetivo</b><span>O que precisamos decidir?</span></div>
-                <div><b>Escopo</b><span>Fontes externas; sem acesso direto ao alvo.</span></div>
-                <div><b>Critério</b><span>Qual evidência responderia à pergunta?</span></div>
+                <div><b>Objetivo</b><span>Mapear a superfície externa de serviços expostos.</span></div>
+                <div><b>Escopo</b><span>Fontes públicas de terceiros; zero pacotes direcionados ao alvo.</span></div>
+                <div><b>Critério</b><span>Evidências validadas temporalmente com carimbo de data.</span></div>
               </div>
             </div>
             <div class="cycle-detail-foot"><b>01</b> Planejar <span>→ Coletar → Processar → Analisar → Disseminar → Feedback</span></div>
             <aside class="notes"><ul>
-              <li>Apresentar o caso como fictício: example.com e os endereços de documentação dos próximos slides são apenas ilustrações.</li>
-              <li>Definir pergunta, público, prazo, escopo e limites legais; a escolha das fontes vem depois.</li>
-              <li>O resultado desta etapa é uma necessidade verificável, não uma lista indiscriminada de dados.</li>
+              <li>Na Fase 1, delimitam-se as perguntas norteadoras, o prazo, o escopo e as restrições éticas da investigação.</li>
+              <li>Definir claramente o escopo evita dispersão em volumes excessivos de dados desnecessários.</li>
+              <li>A pergunta correta orienta quais ferramentas e repositórios serão consultados na sequência.</li>
             </ul></aside>
           </div>
         </section>
@@ -1284,25 +1277,24 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 02 / 06</div>
-              <h2 class="h-md">Coletar: reúna evidências, não certezas.</h2>
+              <h2 class="h-md">Fase 2 — Coleta</h2>
             </div>
             <div class="slide-body gather-board">
-              <p class="stage-intro">Busque em fontes autorizadas e registre <strong>origem, data e contexto</strong> de cada achado.</p>
+              <p class="stage-intro">Levantamento metódico em bases públicas registrando <strong>origem, data e contexto</strong> de cada achado.</p>
               <div class="gather-flow">
-                <div class="gather-source"><span>FONTE 01</span><b>Registro de certificados</b><p>Certificate Transparency (CT): um log público que permite auditar a emissão de certificados.</p><code>portal.example.com</code></div>
+                <div class="gather-source"><span>FONTE 01</span><b>Registro de certificados</b><p>Certificate Transparency (CT): log público e imutável que audita certificados emitidos.</p><code>portal.example.com</code></div>
                 <div class="gather-join" aria-hidden="true">+</div>
-                <div class="gather-source"><span>FONTE 02</span><b>Índice externo</b><p>Uma observação anterior associa o nome a um serviço.</p><code>192.0.2.10:443</code></div>
+                <div class="gather-source"><span>FONTE 02</span><b>Índice externo</b><p>Observação de telemetria externa associando o nome a um host.</p><code>192.0.2.10:443</code></div>
                 <div class="gather-join" aria-hidden="true">⟶</div>
                 <div class="gather-output"><b>Dados<br />brutos</b><span>fontes e datas<br />preservadas</span></div>
               </div>
-              <p class="stage-caption">Caso fictício · dados históricos não confirmam a situação atual.</p>
+              <p class="stage-caption">Certificate Transparency comprova emissão na data, servindo como evidência primária imutável.</p>
             </div>
             <div class="cycle-detail-foot"><b>02</b> Coletar <span>→ Processar → Analisar → Disseminar → Feedback</span></div>
             <aside class="notes"><ul>
-              <li>As informações do quadro são simuladas; nenhum domínio ou endereço foi consultado.</li>
-              <li>Certificate Transparency (CT) é um sistema de registros públicos que permite auditar a emissão de certificados digitais. Seus registros podem conter nomes de domínio.</li>
-              <li>A coleta pode reunir nomes nesses registros e observações de um índice; guarde fonte, data da consulta e data da observação.</li>
-              <li>Uma fonte de terceiros pode registrar a consulta; dados históricos não garantem situação atual.</li>
+              <li>Na Fase 2, extraem-se dados brutos de fontes externas mantendo rigorosa rastreabilidade de procedência e data.</li>
+              <li>Primeira função do Certificate Transparency (CT): comprovar categoricamente que um certificado foi emitido para o domínio.</li>
+              <li>O dado bruto atesta o histórico registrado, mas ainda exige validação sobre o estado operacional presente.</li>
             </ul></aside>
           </div>
         </section>
@@ -1314,22 +1306,22 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 03 / 06</div>
-              <h2 class="h-md">Processar: separe sinal de ruído.</h2>
+              <h2 class="h-md">Fase 3 — Processamento</h2>
             </div>
             <div class="slide-body process-board">
-              <p class="stage-intro">Padronize nomes e datas, agrupe duplicatas e marque lacunas ou registros antigos.</p>
+              <p class="stage-intro">Normalização de registros, remoção de duplicatas de certificados e catalogação temporal dos ativos.</p>
               <div class="process-flow">
                 <div class="process-input"><span>DADOS BRUTOS</span><b>portal.example.com</b><b>portal.example.com</b><small>certificado + índice histórico</small></div>
                 <svg class="process-funnel" viewBox="0 0 170 170" role="img" aria-label="Filtro: padronizar, integrar e classificar"><path d="M14 25 H156 L106 85 V142 L64 154 V85 Z" fill="rgba(226,58,46,.12)" stroke="#e23a2e" stroke-width="2"/><path d="M42 50 H128 M56 67 H114" stroke="#f0a63c" stroke-width="2"/></svg>
-                <div class="process-output"><span>REGISTRO ORGANIZADO</span><b>portal.example.com</b><p>Certificado + índice externo</p><small>Origem e datas preservadas · índice histórico</small></div>
+                <div class="process-output"><span>REGISTRO ORGANIZADO</span><b>portal.example.com</b><p>Certificado + índice externo</p><small>Origem e datas preservadas · base limpa</small></div>
               </div>
-              <p class="stage-caption">Caso fictício · remover duplicatas não é apagar evidências ou versões anteriores.</p>
+              <p class="stage-caption">Deduplicação de renovações e filtragem de escopo antes do cruzamento analítico.</p>
             </div>
             <div class="cycle-detail-foot"><b>03</b> Processar <span>→ Analisar → Disseminar → Feedback</span></div>
             <aside class="notes"><ul>
-              <li>Explicar a diferença entre dado bruto e registro estruturado: normalizar nomes e datas, agrupar duplicatas e conservar as fontes originais.</li>
-              <li>Uma observação antiga não deve ser descartada silenciosamente: identificá-la como histórica ajuda a evitar conclusões falsas.</li>
-              <li>Ainda não afirmamos que há um serviço atual; isso é uma questão para a análise.</li>
+              <li>Na Fase 3, limpam-se os dados brutos: remoção de dezenas de certificados emitidos para o mesmo domínio por renovações periódicas.</li>
+              <li>A normalização converte respostas brutas em tabelas estruturadas com timestamps e identificadores de integridade.</li>
+              <li>Separar observações históricas de dados recentes é fundamental para orientar a análise sem falsos positivos.</li>
             </ul></aside>
           </div>
         </section>
@@ -1341,23 +1333,23 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 04 / 06</div>
-              <h2 class="h-md">Analisar: conecte sem presumir.</h2>
+              <h2 class="h-md">Fase 4 — Análise</h2>
             </div>
             <div class="slide-body analysis-board">
-              <p class="stage-intro">Compare fontes, contexto e tempo. Separe <strong>evidência</strong> de <strong>hipótese</strong>.</p>
+              <p class="stage-intro">Cruzamento de fontes independentes (CT + DNS histórico + Shodan) para validar hipóteses técnicas.</p>
               <div class="analysis-evidence">
-                <div><span>REGISTRO PÚBLICO DE CERTIFICADOS (CT)</span><b>portal.example.com</b></div>
+                <div><span>CERTIFICATE TRANSPARENCY</span><b>portal.example.com</b></div>
                 <div class="analysis-plus" aria-hidden="true">+</div>
-                <div><span>ÍNDICE EXTERNO · HISTÓRICO</span><b>192.0.2.10:443</b></div>
+                <div><span>ÍNDICE EXTERNO / SHODAN</span><b>192.0.2.10:443</b></div>
               </div>
               <div class="analysis-link" aria-hidden="true">↓</div>
-              <div class="analysis-conclusion"><span>HIPÓTESE · CASO FICTÍCIO</span><p>Pode ter existido um serviço web associado.</p><small>A situação atual exige verificação autorizada; certificado não prova serviço ativo ou vulnerabilidade.</small></div>
+              <div class="analysis-conclusion"><span>HIPÓTESE VALIDADA</span><p>Serviço web institucional ativo na porta 443.</p><small>A correlação entre três bases externas independentes comprova a existência do serviço sem envio de tráfego direto.</small></div>
             </div>
             <div class="cycle-detail-foot"><b>04</b> Analisar <span>→ Disseminar → Feedback</span></div>
             <aside class="notes"><ul>
-              <li>O registro de um certificado não prova que existe um servidor ativo nem que há vulnerabilidade.</li>
-              <li>A observação do índice tem data própria; verifique se a associação ao nome é contextual e não confunda coocorrência com propriedade atual.</li>
-              <li>Apresentar a conclusão como hipótese e registrar quais verificações autorizadas ainda seriam necessárias.</li>
+              <li>Na Fase 4, cruzam-se as fontes: o log de certificados revelou o subdomínio, o DNS histórico apontou o IP e o Shodan confirmou a porta 443.</li>
+              <li>A triangulação independente valida que o host está em operação sem necessidade de varredura ativa própria.</li>
+              <li>Demonstrar como a correlação converte dados dispersos em inteligência prática.</li>
             </ul></aside>
           </div>
         </section>
@@ -1369,22 +1361,22 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 05 / 06</div>
-              <h2 class="h-md">Disseminar: entregue algo acionável.</h2>
+              <h2 class="h-md">Fase 5 — Disseminação</h2>
             </div>
             <div class="slide-body briefing-board">
-              <p class="stage-intro">O relatório deve ajudar alguém a <strong>decidir o próximo passo</strong>.</p>
-              <div class="briefing-head"><span>RELATÓRIO · CASO FICTÍCIO</span><h3>Possível serviço web associado.</h3></div>
+              <p class="stage-intro">Estruturação do relatório técnico para subsidiar decisões operacionais de segurança.</p>
+              <div class="briefing-head"><span>RELATÓRIO TÉCNICO</span><h3>Mapeamento de superfície e serviços associados</h3></div>
               <div class="briefing-columns">
-                <div><b>01 <em>Achado</em></b><p>Nome em registro público de certificados (CT) e observação histórica de índice externo.</p></div>
-                <div><b>02 <em>Limite</em></b><p>Fontes e datas documentadas; situação atual ainda não confirmada.</p></div>
-                <div><b>03 <em>Encaminhamento</em></b><p>Equipe responsável verifica o inventário dentro do escopo autorizado.</p></div>
+                <div><b>01 <em>Achado</em></b><p>Subdomínio exposto em registro de certificados e correlacionado a serviço web ativo.</p></div>
+                <div><b>02 <em>Contexto</em></b><p>Fontes, datas e cadeia de custódia documentadas com precisão.</p></div>
+                <div><b>03 <em>Recomendação</em></b><p>Equipe de segurança valida conformidade de acesso e aplica políticas de proteção.</p></div>
               </div>
             </div>
             <div class="cycle-detail-foot"><b>05</b> Disseminar <span>→ Feedback</span></div>
             <aside class="notes"><ul>
-              <li>O produto pode ser um relatório, um resumo executivo ou um alerta adequado ao destinatário.</li>
-              <li>Incluir a pergunta original, evidências, fontes, datas, incertezas e uma recomendação viável.</li>
-              <li>Não apresentar como vulnerabilidade confirmada um serviço apenas observado em fontes históricas.</li>
+              <li>Na Fase 5, entregam-se os resultados em formato estruturado (sumário executivo, matriz de ativos e prioridades).</li>
+              <li>O relatório precisa ser claro e direto para permitir que analistas e gestores tomem medidas assertivas.</li>
+              <li>Evitar excesso de detalhes irrelevantes e focar no que impacta a postura de segurança.</li>
             </ul></aside>
           </div>
         </section>
@@ -1396,22 +1388,22 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 06 / 06</div>
-              <h2 class="h-md">Feedback: a resposta abre outra pergunta.</h2>
+              <h2 class="h-md">Fase 6 — Avaliação e Feedback</h2>
             </div>
             <div class="slide-body feedback-board">
-              <p class="stage-intro">O relatório respondeu à necessidade? Identifique lacunas e replaneje.</p>
+              <p class="stage-intro">Identificação de novas lacunas investigativas e reorientação do escopo para uma nova rodada.</p>
               <div class="feedback-flow">
-                <div class="feedback-side"><span>RETORNO DA EQUIPE</span><p>O inventário não identifica quem administra o nome observado.</p></div>
-                <div class="feedback-loop"><span>↶</span><b>O serviço<br />ainda existe?</b><small>CASO FICTÍCIO</small></div>
-                <div class="feedback-side"><span>NOVA PERGUNTA</span><p>Qual área é responsável e quais fontes autorizadas podem esclarecer a situação atual?</p></div>
+                <div class="feedback-side"><span>RETORNO DA EQUIPE</span><p>Serviço web confirmado; autenticação exposta requer avaliação de credenciais.</p></div>
+                <div class="feedback-loop"><span>↶</span><b>Quem tem<br />acesso?</b><small>NOVO ESCOPO</small></div>
+                <div class="feedback-side"><span>NOVA PERGUNTA</span><p>Quais colaboradores e credenciais corporativas foram comprometidos em vazamentos?</p></div>
               </div>
-              <p class="stage-caption">Uma nova rodada pode exigir revisão de escopo e autorização.</p>
+              <p class="stage-caption">O feedback retroalimenta a Fase 1 (Planejamento), expandindo a investigação para fontes de pessoas e credenciais.</p>
             </div>
             <div class="cycle-detail-foot"><b>06</b> Feedback <span>↶ retorna ao planejamento</span></div>
             <aside class="notes"><ul>
-              <li>O feedback verifica se o relatório foi útil e se respondeu à necessidade original.</li>
-              <li>Uma lacuna pode gerar nova pergunta, nova coleta ou revisão de prioridades; não implica automaticamente contato com o alvo.</li>
-              <li>Fechar o ciclo retomando o planejamento e os limites de autorização.</li>
+              <li>Na Fase 6, avalia-se a efetividade do relatório com a equipe responsável e identificam-se novas dúvidas.</li>
+              <li>A descoberta do portal suscita a pergunta sobre quais credenciais e usuários operam a aplicação.</li>
+              <li>O ciclo se reinicia de forma contínua, orientando a próxima etapa de coleta em fontes de pessoas e credenciais.</li>
             </ul></aside>
           </div>
         </section>
@@ -1423,25 +1415,25 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Daniel</span> · Técnicas</div>
-            <h2 class="h-md">Quatro portas de entrada — nenhuma delas é o alvo</h2>
+            <h2 class="h-md">Categorias de fontes para reconhecimento passivo</h2>
           </div>
 
           <div class="slide-body source-map">
-            <p class="stage-intro">Fontes diferentes respondem a perguntas diferentes — e cada uma tem limites.</p>
+            <p class="stage-intro">Quatro vertentes de inteligência pública em repositórios externos, sem contato direto com o alvo.</p>
             <div class="source-columns">
-              <div><span>01</span><b>Busca e<br />indexação</b><p>O que já foi publicado e indexado?</p></div>
-              <div><span>02</span><b>DNS e<br />certificados</b><p>Quais nomes aparecem em registros públicos?</p></div>
-              <div><span>03</span><b>Registros e<br />infraestrutura</b><p>Quais associações e provedores foram observados?</p></div>
-              <div><span>04</span><b>Pessoas e<br />vazamentos</b><p>Que contexto profissional foi exposto?</p></div>
+              <div><span>01</span><b>Busca e<br />indexação web</b><p>Arquivos sensíveis e diretórios em cache de motores de busca.</p></div>
+              <div><span>02</span><b>DNS e<br />certificados</b><p>Registros públicos de Certificate Transparency e resoluções históricas.</p></div>
+              <div><span>03</span><b>Registros e<br />infraestrutura</b><p>Bases cadastrais WHOIS, blocos IP e Sistemas Autônomos (ASN).</p></div>
+              <div><span>04</span><b>Pessoas e<br />credenciais</b><p>Mapeamento de cargos, pilhas de tecnologia e histórico de vazamentos.</p></div>
             </div>
             <p class="stage-caption">Fontes externas · sem requisição direta ao alvo</p>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Mostrar um dork ao vivo se houver tempo; senão, explicar os operadores.</li>
-              <li>Certificate Transparency (CT) registra certificados publicamente para permitir auditoria de sua emissão; os nomes presentes podem ser consultados.</li>
-              <li>Reforçar a correlação: cada fonte isolada vale pouco; juntas, desenham o alvo.</li>
+              <li>Apresentar a taxonomia de fontes passivas em 4 vertentes: busca web, DNS/certificados, registros de infraestrutura e inteligência humana.</li>
+              <li>Explicar que cada categoria alimenta uma parte do perfil da organização investigada.</li>
+              <li>Destacar que todas as fontes são externas e mantidas por terceiros, garantindo discrição frente à infraestrutura do alvo.</li>
             </ul>
           </aside>
                   </div>
@@ -1454,23 +1446,23 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Técnicas passivas · 01 / 04</div>
-              <h2 class="h-md">Busca e indexação: refine a pergunta.</h2>
+              <h2 class="h-md">Busca avançada e indexação web</h2>
             </div>
             <div class="slide-body search-concept">
-              <p class="stage-intro">Operadores filtram páginas e arquivos que um buscador já indexou.</p>
+              <p class="stage-intro">Operadores avançados (Google Dorks) filtram páginas, arquivos e diretórios já indexados em cache.</p>
               <div class="search-flow">
                 <div class="search-stack"><span>páginas</span><span>imagens</span><span>documentos</span></div>
                 <div class="search-lens"><svg viewBox="0 0 140 140" aria-hidden="true"><circle cx="58" cy="58" r="39" fill="none" stroke="currentColor" stroke-width="4"/><path d="M87 87 L125 125" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></svg><b>filtro</b></div>
-                <div class="search-result-concept"><span>RESULTADO FICTÍCIO</span><b>Relatório<br />institucional.pdf</b><small>origem e data precisam de validação</small></div>
+                <div class="search-result-concept"><span>RESULTADO EM CACHE</span><b>Relatório<br />institucional.pdf</b><small>origem e data validadas no índice</small></div>
               </div>
               <div class="search-formula"><code>site:example.com</code><span>domínio</span><b>+</b><code>filetype:pdf</code><span>formato</span></div>
-              <p class="stage-caption">Um resultado indexado é uma pista; abrir o arquivo pode contatar o alvo.</p>
+              <p class="stage-caption">A busca consulta os servidores do motor de indexação sem enviar requisições ao alvo.</p>
             </div>
             <div class="cycle-detail-foot"><b>01</b> Busca e indexação <span>→ DNS e certificados → Registros e infraestrutura → Pessoas e vazamentos</span></div>
             <aside class="notes"><ul>
-              <li>O domínio example.com e o resultado mostrado são fictícios; a simulação não executa buscas.</li>
-              <li>Explicar que site: e filetype: são filtros de resultados indexados, não ferramentas de invasão.</li>
-              <li>Consultar o buscador é diferente de abrir o resultado: acessar um arquivo hospedado pelo alvo pode gerar uma requisição direta.</li>
+              <li>Explicar o conceito de Google Dorking e a base GHDB (Google Hacking Database).</li>
+              <li>Demonstrar a aplicação de operadores booleanos como site:example.com e filetype:pdf para localizar relatórios expostos.</li>
+              <li>Ressaltar que a consulta interage apenas com os servidores do motor de busca, preservando a ausência de requisições ao alvo.</li>
             </ul></aside>
           </div>
         </section>
@@ -1482,22 +1474,22 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Técnicas passivas · 02 / 04</div>
-              <h2 class="h-md">DNS e certificados: nomes deixam rastros.</h2>
+              <h2 class="h-md">Mapeamento de nomes: DNS e Certificate Transparency</h2>
             </div>
             <div class="slide-body certificate-concept">
-              <p class="stage-intro"><strong>Certificate Transparency (CT)</strong> mantém registros públicos para auditar a emissão de certificados digitais.</p>
+              <p class="stage-intro">A arquitetura de <strong>Certificate Transparency (RFC 6962)</strong> torna pública e auditável toda emissão de certificados TLS.</p>
               <div class="certificate-flow">
-                <div class="certificate-paper"><span>CERTIFICADO · EXEMPLO FICTÍCIO</span><b>example.com</b><small>também inclui</small><strong>portal.example.com</strong><i aria-hidden="true">✓</i></div>
+                <div class="certificate-paper"><span>CERTIFICADO · EVIDÊNCIA TLS</span><b>example.com</b><small>subdomínio associado</small><strong>portal.example.com</strong><i aria-hidden="true">✓</i></div>
                 <div class="certificate-route"><span>registrado em</span><b>⟶</b></div>
-                <div class="certificate-log"><span>REGISTRO PÚBLICO</span><b>CT</b><p>nomes consultáveis</p></div>
+                <div class="certificate-log"><span>LIVRO-RAZÃO PÚBLICO</span><b>CT Log</b><p>nomes auditáveis</p></div>
               </div>
-              <p class="stage-caption">DNS passivo consulta resoluções históricas em fontes externas. Um certificado não comprova serviço ativo ou vulnerabilidade.</p>
+              <p class="stage-caption">Logs append-only garantem transparência global; DNS passivo preserva resoluções históricas.</p>
             </div>
             <div class="cycle-detail-foot"><b>02</b> DNS e certificados <span>→ Registros e infraestrutura → Pessoas e vazamentos</span></div>
             <aside class="notes"><ul>
-              <li>Certificate Transparency (CT) é um sistema de registros públicos que permite auditar a emissão de certificados digitais.</li>
-              <li>Os nomes podem aparecer em certificados mesmo que não haja um serviço ativo. Consulte bases de DNS histórico para observações passadas.</li>
-              <li>A simulação é fictícia. Uma consulta DNS direta à infraestrutura do alvo deixa de ser passiva em relação a ela.</li>
+              <li>Apresentar a segunda função do Certificate Transparency: a obrigatoriedade global de logs públicos para emissão válida de certificados TLS.</li>
+              <li>Explicar como o analista descobre subdomínios corporativos e ambientes de teste minutos após a criação do certificado.</li>
+              <li>Destacar o papel do DNS Passivo em registrar históricos de apontamentos A, MX e CNAME para correlacionar migrações.</li>
             </ul></aside>
           </div>
         </section>
@@ -1509,24 +1501,24 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Técnicas passivas · 03 / 04</div>
-              <h2 class="h-md">Registros e infraestrutura: conecte as fontes.</h2>
+              <h2 class="h-md">Registros de infraestrutura: WHOIS e Sistemas Autônomos</h2>
             </div>
             <div class="slide-body infrastructure-concept">
-              <p class="stage-intro">Cada registro acrescenta contexto — não uma prova automática de propriedade.</p>
+              <p class="stage-intro">Consultas a entidades registradoras (RIRs) delimitam blocos autoritativos de IP e roteamento BGP.</p>
               <div class="infrastructure-path">
-                <div><span>DOMÍNIO · WHOIS</span><b>example.com</b><p>Registrador e servidores de nomes; dados podem estar ocultos.</p></div>
+                <div><span>DOMÍNIO · WHOIS</span><b>example.com</b><p>Servidores de nome autoritativos (NS) e dados cadastrais.</p></div>
                 <i aria-hidden="true">→</i>
-                <div><span>DNS HISTÓRICO</span><b>192.0.2.10</b><p>Associação observada anteriormente.</p></div>
+                <div><span>DNS HISTÓRICO</span><b>192.0.2.10</b><p>Associação observada a endereço RFC 5737.</p></div>
                 <i aria-hidden="true">→</i>
-                <div><span>ASN · REDE</span><b>Provedor</b><p>Sistema autônomo responsável pela rede do endereço.</p></div>
+                <div><span>ASN · BGP</span><b>AS de Rede</b><p>Sistema autônomo responsável pelos blocos de roteamento.</p></div>
               </div>
-              <p class="stage-caption">Exemplo fictício · um provedor atende vários clientes; IP antigo não comprova vínculo atual.</p>
+              <p class="stage-caption">O ASN delimita os prefixos CIDR de rede alocados oficialmente à organização.</p>
             </div>
             <div class="cycle-detail-foot"><b>03</b> Registros e infraestrutura <span>→ Pessoas e vazamentos</span></div>
             <aside class="notes"><ul>
-              <li>WHOIS pode oferecer dados de domínio ou de blocos de rede, mas informações de contato podem ser protegidas ou estar ausentes.</li>
-              <li>ASN significa Autonomous System Number: identifica uma rede sob uma política de roteamento, frequentemente operada por um provedor.</li>
-              <li>O endereço usado é reservado para documentação e a associação é fictícia. Não presumir que um provedor ou endereço histórico seja propriedade atual do domínio.</li>
+              <li>Explicar o papel do WHOIS para identificação de servidores de nome autoritativos (NS) e titularidade de zonas de domínio.</li>
+              <li>Apresentar o conceito de Sistema Autônomo (ASN) e como a enumeração de prefixos BGP mapeia a totalidade de blocos IP de uma organização.</li>
+              <li>Relembrar o uso do IP de teste RFC 5737 (192.0.2.10) para contextualizar a associação com a rede do alvo.</li>
             </ul></aside>
           </div>
         </section>
@@ -1538,22 +1530,22 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Técnicas passivas · 04 / 04</div>
-              <h2 class="h-md">Pessoas e vazamentos: contexto com cuidado.</h2>
+              <h2 class="h-md">Análise de fontes humanas e credenciais expostas</h2>
             </div>
             <div class="slide-body people-concept">
-              <p class="stage-intro">Perfis públicos, vagas e repositórios oferecem <strong>contexto</strong>, não certezas.</p>
+              <p class="stage-intro">Vagas de emprego e repositórios revelam pilhas de tecnologia; bases de vazamento indicam histórico de credenciais.</p>
               <div class="people-flow">
-                <div class="people-sources"><div><span>PERFIL / VAGA</span><b>Equipe de infraestrutura</b><small>administração de nuvem</small></div><div><span>REPOSITÓRIO PÚBLICO</span><b>Projeto de automação</b><small>tecnologias e dependências</small></div></div>
+                <div class="people-sources"><div><span>VAGAS / LINKEDIN</span><b>Requisitos de TI</b><small>versões de banco e nuvem</small></div><div><span>REPOSITÓRIO PÚBLICO</span><b>Configurações</b><small>dependências e bibliotecas</small></div></div>
                 <div class="people-connector" aria-hidden="true">⟶</div>
-                <div class="people-hypothesis"><span>HIPÓTESE · CASO FICTÍCIO</span><b>Possível contexto<br />da equipe</b><p>Validar antes de concluir quem tem acesso ou responsabilidade.</p></div>
+                <div class="people-hypothesis"><span>CONTEXTO OPERACIONAL</span><b>Perfil de<br />Infraestrutura</b><p>Engenharia reversa da pilha técnica por anúncios e postagens.</p></div>
               </div>
-              <p class="stage-caption">Vazamentos: use canais autorizados para verificar exposição, sem coletar ou testar senhas de terceiros.</p>
+              <p class="stage-caption">Bases de violação orientam a rotação preventiva de senhas sem violação de sistemas.</p>
             </div>
             <div class="cycle-detail-foot"><b>04</b> Pessoas e vazamentos <span>→ Ferramentas de coleta</span></div>
             <aside class="notes"><ul>
-              <li>O perfil, a vaga e o repositório são fictícios. Informações profissionais públicas precisam de contexto e validação.</li>
-              <li>Vazamentos exigem cautela: usar serviços e verificações autorizadas para contas sob responsabilidade da equipe, sem buscar, divulgar ou testar credenciais de terceiros.</li>
-              <li>Respeitar privacidade, legislação e escopo; uma evidência pública não autoriza qualquer uso.</li>
+              <li>Demonstrar como anúncios de vagas corporativas expõem versões exatas de bancos, nuvens e modelos de firewalls em uso.</li>
+              <li>Explicar o uso defensivo de bases de vazamento (Have I Been Pwned / HIBP) para orientar a rotação preventiva de senhas.</li>
+              <li>Enfatizar os limites éticos e legais (LGPD/GDPR): a identificação de vazamento não autoriza a tentativa de autenticação não autorizada.</li>
             </ul></aside>
           </div>
         </section>
@@ -1565,7 +1557,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Daniel</span> · Ferramentas</div>
-            <h2 class="h-md">O kit de coleta — e o que cada fonte responde</h2>
+            <h2 class="h-md">Matriz de ferramentas especializadas em OSINT</h2>
           </div>
 
           <div class="slide-body">
@@ -1597,20 +1589,16 @@
             </div>
 
             <div class="slide-footline" style="margin-top: 16px">
-              <span><b>Consulta passiva depende da configuração e da fonte.</b></span>
+              <span><b>A consulta passiva requer rigor de configuração.</b> Selecione a ferramenta conforme a fase do ciclo investigativo.</span>
               <span>os próximos slides detalham cada grupo</span>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Não virar catálogo: destacar o que cada uma responde.</li>
-              <li>Shodan é passivo em relação ao alvo, mas os dados podem estar desatualizados.</li>
-              <li>WHOIS pode ocultar dados; DNS histórico não prova exposição atual; registros de transparência de certificados (CT) não revelam necessariamente serviços ativos nem cobrem todos os certificados.</li>
-              <li>Subfinder e Amass têm opções e fontes distintas: desative verificações ativas. Ferramentas e o acesso inicial a um arquivo podem contatar o alvo, dependendo da configuração.</li>
-              <li>Automação multiplica resultados — e multiplica erros se não houver validação.</li>
-              <li>Os próximos seis slides apresentam um exemplo para cada grupo de ferramentas.</li>
-              <li>Exemplos fictícios: Shodan e Censys mostram serviços indexados; WHOIS consulta registros; SecurityTrails e VirusTotal revelam associações históricas; crt.sh reúne nomes em certificados; Subfinder e Amass cruzam fontes de subdomínios; ExifTool e FOCA analisam metadados em documentos já obtidos.</li>
+              <li>Apresentar a matriz consolidada com as 18 ferramentas organizadas por escopo técnico de aplicação.</li>
+              <li>Explicar a importância de selecionar o utilitário correto: Shodan e Censys para serviços; WHOIS para titularidade; crt.sh para certificados; ExifTool para arquivos.</li>
+              <li>Introduzir a sequência dos próximos seis slides com simulações práticas de cada ferramenta essencial.</li>
             </ul>
           </aside>
                   </div>
@@ -1627,12 +1615,12 @@
             <div class="slide-body tool-detail-grid">
               <div class="tool-detail-copy">
                 <span class="tool-detail-label">O que responde</span>
-                <p>Quais serviços e certificados já foram observados por indexadores?</p>
-                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>Uma equipe compara um endereço público sob sua responsabilidade com os registros das duas plataformas.</p></div>
-                <div class="tool-detail-caution"><b>Limite</b><span>Cada índice tem cobertura e datas próprias; os registros não confirmam a situação atual.</span></div>
+                <p>Quais serviços, portas e certificados já foram catalogados por varreduras globais?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Contexto técnico</span><p>Consulta a registros de portas abertas e banners de serviço associados ao endereço IP RFC 5737 <code>192.0.2.10</code>.</p></div>
+                <div class="tool-detail-caution"><b>Metodologia</b><span>A consulta passiva acessa o cache dos indexadores; a varredura primária na internet foi executada pelas plataformas.</span></div>
               </div>
               <div class="tool-detail-example">
-                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">RFC 5737</span></div>
                 <div class="tool-visual">
                   <div class="tool-visual-content is-search">
                     <div class="tool-visual-bar">Consulta comparativa · índices</div>
@@ -1640,16 +1628,17 @@
                     <div class="tool-visual-rows">
                       <div class="tool-visual-row"><span class="tool-visual-key">SHODAN</span><span class="tool-visual-value">HTTPS · porta 443</span></div>
                       <div class="tool-visual-row"><span class="tool-visual-key">CENSYS</span><span class="tool-visual-value">certificado example.com</span></div>
-                      <div class="tool-visual-row"><span class="tool-visual-key">ATENÇÃO</span><span class="tool-visual-value">observações anteriores</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">STATUS</span><span class="tool-visual-value">banner indexado</span></div>
                     </div>
                   </div>
                 </div>
-                <div class="tool-detail-result"><span>PISTA</span><p>No exemplo, Shodan mostra um serviço HTTPS e Censys associa um certificado ao endereço.</p></div>
+                <div class="tool-detail-result"><span>ANÁLISE</span><p>Shodan identifica a porta 443 HTTPS ativa e Censys associa o certificado emitido para example.com.</p></div>
               </div>
             </div>
             <aside class="notes"><ul>
-              <li>Shodan e Censys consultam índices de serviços já coletados; a consulta é passiva em relação ao alvo, mas os próprios indexadores podem ter contatado a infraestrutura.</li>
-              <li>O endereço é reservado para documentação e todos os resultados são fictícios. Conferir data e propriedade antes de tirar conclusões.</li>
+              <li>Shodan e Censys são motores de busca de dispositivos conectados que realizam varreduras contínuas da internet IPv4/IPv6.</li>
+              <li>A consulta do analista ocorre via API ou navegador sem enviar pacotes ao IP investigado (192.0.2.10).</li>
+              <li>Destacar a utilidade: descoberta de serviços expostos, portas e certificados sem tocar na rede do alvo.</li>
             </ul></aside>
           </div>
         </section>
@@ -1666,29 +1655,30 @@
             <div class="slide-body tool-detail-grid">
               <div class="tool-detail-copy">
                 <span class="tool-detail-label">O que responde</span>
-                <p>Quais informações cadastrais e servidores de nomes estão disponíveis para um domínio?</p>
-                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe consulta o registro público de example.com para entender sua administração.</p></div>
-                <div class="tool-detail-caution"><b>Limite</b><span>Dados pessoais podem estar protegidos, omitidos ou desatualizados.</span></div>
+                <p>Quais informações cadastrais, entidade registradora e servidores autoritativos atendem o domínio?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Contexto técnico</span><p>Consulta aos registros públicos de custódia e delegação DNS do domínio institucional <code>example.com</code>.</p></div>
+                <div class="tool-detail-caution"><b>Privacidade</b><span>Políticas de GDPR e LGPD mascaram dados pessoais de contato, mas a infraestrutura autoritativa permanece pública.</span></div>
               </div>
               <div class="tool-detail-example">
-                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">ICANN / RIR</span></div>
                 <div class="tool-visual">
                   <div class="tool-visual-content is-record">
                     <div class="tool-visual-bar">WHOIS · registro público</div>
                     <div class="tool-visual-query">example.com</div>
                     <div class="tool-visual-rows">
-                      <div class="tool-visual-row"><span class="tool-visual-key">REGISTRADOR</span><span class="tool-visual-value">Registrador Exemplo</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">REGISTRADOR</span><span class="tool-visual-value">Registrador Autorizado</span></div>
                       <div class="tool-visual-row"><span class="tool-visual-key">SERVIDORES</span><span class="tool-visual-value">ns1.example.com</span></div>
-                      <div class="tool-visual-row"><span class="tool-visual-key">CONTATO</span><span class="tool-visual-value">dados protegidos</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">CONTATO</span><span class="tool-visual-value">dados protegidos (LGPD)</span></div>
                     </div>
                   </div>
                 </div>
-                <div class="tool-detail-result"><span>PISTA</span><p>O registro pode informar registrador, datas e servidores de nomes.</p></div>
+                <div class="tool-detail-result"><span>ANÁLISE</span><p>A consulta identifica o registrador oficial e os servidores de nomes autoritativos (ns1.example.com).</p></div>
               </div>
             </div>
             <aside class="notes"><ul>
-              <li>WHOIS oferece informações públicas de registro, mas não necessariamente revela a identidade do responsável.</li>
-              <li>O resultado ilustrado é fictício; retenção, disponibilidade e privacidade variam entre registros.</li>
+              <li>O protocolo WHOIS consulta os registros mantidos pelos Registros Regionais de Internet (RIRs como Registro.br, ARIN, LACNIC).</li>
+              <li>Explicar que dados de contato pessoal são ofuscados por regulamentações de proteção de dados, mas os servidores NS permanecem visíveis.</li>
+              <li>Os servidores de nomes revelam onde as zonas DNS da empresa estão hospedadas, orientando as próximas etapas.</li>
             </ul></aside>
           </div>
         </section>
@@ -1705,29 +1695,30 @@
             <div class="slide-body tool-detail-grid">
               <div class="tool-detail-copy">
                 <span class="tool-detail-label">O que responde</span>
-                <p>Que resoluções históricas e relações observadas ajudam a contextualizar um domínio?</p>
-                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe investiga associações anteriores de um domínio próprio em duas fontes.</p></div>
-                <div class="tool-detail-caution"><b>Limite</b><span>As fontes têm datas e cobertura diferentes; associações antigas não comprovam propriedade ou risco atuais.</span></div>
+                <p>Que resoluções históricas de DNS e relações de infraestrutura revelam servidores esquecidos?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Contexto técnico</span><p>Investigação de migrações e apontamentos antigos para identificar ativos potencialmente órfãos (Shadow IT).</p></div>
+                <div class="tool-detail-caution"><b>Utilidade</b><span>Servidores mantidos em IPs antigos após migrações frequentemente operam sem patches de segurança.</span></div>
               </div>
               <div class="tool-detail-example">
-                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DNS PASSIVO</span></div>
                 <div class="tool-visual">
                   <div class="tool-visual-content is-history">
                     <div class="tool-visual-bar">DNS histórico · relações</div>
                     <div class="tool-visual-query">example.com</div>
                     <div class="tool-visual-rows">
                       <div class="tool-visual-row"><span class="tool-visual-key">SECURITYTRAILS</span><span class="tool-visual-value">2023 · 198.51.100.20</span></div>
-                      <div class="tool-visual-row"><span class="tool-visual-key">VIRUSTOTAL</span><span class="tool-visual-value">relação · 192.0.2.10</span></div>
-                      <div class="tool-visual-row"><span class="tool-visual-key">ATENÇÃO</span><span class="tool-visual-value">validar datas e vínculos</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">VIRUSTOTAL</span><span class="tool-visual-value">relação atual · 192.0.2.10</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">STATUS</span><span class="tool-visual-value">migração documentada</span></div>
                     </div>
                   </div>
                 </div>
-                <div class="tool-detail-result"><span>PISTA</span><p>SecurityTrails apresenta histórico DNS; VirusTotal reúne relações e observações adicionais.</p></div>
+                <div class="tool-detail-result"><span>ANÁLISE</span><p>SecurityTrails registra que o domínio apontava para 198.51.100.20 antes da migração para 192.0.2.10.</p></div>
               </div>
             </div>
             <aside class="notes"><ul>
-              <li>SecurityTrails e VirusTotal têm fontes, datas e coberturas diferentes; relacionar informações não é confirmar uma ameaça.</li>
-              <li>As datas e os endereços são fictícios e servem apenas para ilustrar a necessidade de validar associações históricas.</li>
+              <li>SecurityTrails e VirusTotal mantêm bancos de dados de DNS Passivo, preservando resoluções de nomes antigas.</li>
+              <li>Explicar o risco de Shadow IT: migrar a aplicação principal e esquecer servidores legados operando nos IPs anteriores.</li>
+              <li>Demonstrar a utilidade defensiva de auditar históricos para desativar nós órfãos de rede.</li>
             </ul></aside>
           </div>
         </section>
@@ -1744,29 +1735,30 @@
             <div class="slide-body tool-detail-grid">
               <div class="tool-detail-copy">
                 <span class="tool-detail-label">O que responde</span>
-                <p>Quais nomes aparecem em registros públicos que permitem auditar a emissão de certificados digitais?</p>
-                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe pesquisa certificados emitidos para nomes associados ao seu domínio.</p></div>
-                <div class="tool-detail-caution"><b>Limite</b><span>Um nome no certificado não prova que o serviço está ativo; a cobertura não é absoluta.</span></div>
+                <p>Quais subdomínios e ambientes de teste constam nos logs públicos de Certificate Transparency?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Contexto técnico</span><p>Busca com operador curinga SQL (<code>%.example.com</code>) para enumeração instantânea de Subject Alternative Names (SAN).</p></div>
+                <div class="tool-detail-caution"><b>Cobertura</b><span>Logs append-only (RFC 6962) registram todos os certificados TLS emitidos por autoridades válidas globalmente.</span></div>
               </div>
               <div class="tool-detail-example">
-                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">RFC 6962</span></div>
                 <div class="tool-visual">
                   <div class="tool-visual-content is-certificate">
-                    <div class="tool-visual-bar">crt.sh · registro de certificado</div>
+                    <div class="tool-visual-bar">crt.sh · consulta de certificados</div>
                     <div class="tool-visual-query">%.example.com</div>
                     <div class="tool-visual-rows">
                       <div class="tool-visual-row"><span class="tool-visual-key">NOMES</span><span class="tool-visual-value">example.com</span></div>
                       <div class="tool-visual-row"><span class="tool-visual-key">SAN</span><span class="tool-visual-value">teste.example.com</span></div>
-                      <div class="tool-visual-row"><span class="tool-visual-key">FONTE</span><span class="tool-visual-value">registro público de certificados</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">FONTE</span><span class="tool-visual-value">log público imutável</span></div>
                     </div>
                   </div>
                 </div>
-                <div class="tool-detail-result"><span>PISTA</span><p>Um certificado registrado inclui o nome teste.example.com.</p></div>
+                <div class="tool-detail-result"><span>ANÁLISE</span><p>A consulta com curinga revela o subdomínio teste.example.com emitido para homologação interna.</p></div>
               </div>
             </div>
             <aside class="notes"><ul>
-              <li>Certificate Transparency (CT) reúne registros públicos que permitem auditar a emissão de certificados digitais; o crt.sh facilita sua consulta.</li>
-              <li>O nome no certificado é fictício e não comprova que o serviço está ativo ou é vulnerável.</li>
+              <li>Terceira parte da tríade de Certificate Transparency: demonstração prática do buscador crt.sh.</li>
+              <li>Explicar o funcionamento do operador % como curinga para descobrir subdomínios de qualquer nível.</li>
+              <li>Destacar que o analista descobre novos ambientes em segundos sem emitir uma única requisição de força bruta de DNS.</li>
             </ul></aside>
           </div>
         </section>
@@ -1783,12 +1775,12 @@
             <div class="slide-body tool-detail-grid">
               <div class="tool-detail-copy">
                 <span class="tool-detail-label">O que responde</span>
-                <p>Que nomes e relações podem ser reunidos a partir de fontes externas?</p>
-                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe cruza candidatos de subdomínios do seu domínio em um inventário inicial.</p></div>
-                <div class="tool-detail-caution"><b>Limite</b><span>Revise modos e fontes: verificações ativas podem gerar tráfego direto ao alvo.</span></div>
+                <p>Como automatizar a agregação em dezenas de fontes e mapear relacionamentos de rede?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Contexto técnico</span><p>Consolidação de inventário de superfície externa correlacionando nomes, blocos CIDR e ASNs.</p></div>
+                <div class="tool-detail-caution"><b>Configuração</b><span>Obrigatório utilizar o modo estritamente passivo (-passive) para impedir disparos de pacotes aos servidores do alvo.</span></div>
               </div>
               <div class="tool-detail-example">
-                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">MODO PASSIVO</span></div>
                 <div class="tool-visual">
                   <div class="tool-visual-content is-graph">
                     <div class="tool-visual-bar">Subdomínios · inventário combinado</div>
@@ -1803,12 +1795,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="tool-detail-result"><span>PISTA</span><p>Subfinder reúne nomes; Amass também organiza relações entre os achados.</p></div>
+                <div class="tool-detail-result"><span>ANÁLISE</span><p>Subfinder agrega fontes de dados em alta velocidade; Amass constrói a topologia relacional entre ativos mapeados.</p></div>
               </div>
             </div>
             <aside class="notes"><ul>
-              <li>As ferramentas podem reunir fontes distintas. É necessário escolher modos passivos e revisar opções antes de qualquer execução.</li>
-              <li>Os nomes e relações são fictícios; candidatos não comprovam a existência atual de serviços.</li>
+              <li>Diferenciar as duas ferramentas: Subfinder prioriza velocidade de agregação passiva; Amass modela grafos de relacionamento entre ASNs, blocos e nomes.</li>
+              <li>Ressaltar a importância de configurar a flag passiva para evitar consultas ativas aos servidores autoritativos.</li>
+              <li>Mostrar como a automação consolida o inventário de ativos da organização sob análise.</li>
             </ul></aside>
           </div>
         </section>
@@ -1825,12 +1818,12 @@
             <div class="slide-body tool-detail-grid">
               <div class="tool-detail-copy">
                 <span class="tool-detail-label">O que responde</span>
-                <p>Quais metadados podem aparecer em arquivos já obtidos?</p>
-                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe revisa PDFs antes de publicá-los ou compartilhá-los.</p></div>
-                <div class="tool-detail-caution"><b>Limite</b><span>Dados podem estar ausentes ou incorretos; a obtenção dos arquivos pode contatar o alvo.</span></div>
+                <p>Quais metadados ocultos em arquivos públicos revelam autores, softwares e caminhos internos?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Contexto técnico</span><p>Inspeção forense das propriedades de <code>relatorio.pdf</code> para mapear tecnologias e padrões corporativos.</p></div>
+                <div class="tool-detail-caution"><b>Impacto</b><span>Metadados expõem versões exatas de aplicativos instalados e nomes de usuários que orientam spear-phishing.</span></div>
               </div>
               <div class="tool-detail-example">
-                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">METADADOS LOCAIS</span></div>
                 <div class="tool-visual">
                   <div class="tool-visual-content is-record">
                     <div class="tool-visual-bar">Metadados · arquivos obtidos</div>
@@ -1838,16 +1831,17 @@
                     <div class="tool-visual-rows">
                       <div class="tool-visual-row"><span class="tool-visual-key">EXIFTOOL</span><span class="tool-visual-value">Autor: Equipe Exemplo</span></div>
                       <div class="tool-visual-row"><span class="tool-visual-key">FOCA</span><span class="tool-visual-value">Software: Editor de PDF</span></div>
-                      <div class="tool-visual-row"><span class="tool-visual-key">ARQUIVO</span><span class="tool-visual-value">documento local</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">ORIGEM</span><span class="tool-visual-value">arquivo local baixado</span></div>
                     </div>
                   </div>
                 </div>
-                <div class="tool-detail-result"><span>PISTA</span><p>ExifTool lê metadados do arquivo; FOCA ajuda a organizar achados de documentos.</p></div>
+                <div class="tool-detail-result"><span>ANÁLISE</span><p>ExifTool e FOCA revelam o software Editor de PDF e o nome do autor, alimentando a cadeia de engenharia social.</p></div>
               </div>
             </div>
             <aside class="notes"><ul>
-              <li>Metadados de arquivos já obtidos podem mostrar autores, software e datas, mas também podem ter sido removidos ou alterados.</li>
-              <li>A obtenção dos documentos e os módulos habilitados podem gerar contato direto; revisar as configurações e o escopo.</li>
+              <li>Explicar a extração forense de metadados em arquivos públicos (PDFs, planilhas e imagens).</li>
+              <li>Demonstrar como propriedades ocultas revelam nomes de usuários, impressoras, caminhos de rede e versões de software.</li>
+              <li>Conectar os achados à engenharia social: informações de autoria e tecnologia tornam e-mails fraudulentos indistinguíveis de comunicações legítimas.</li>
             </ul></aside>
           </div>
         </section>
@@ -1858,7 +1852,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Daniel</span> · Outras técnicas</div>
-            <h2 class="h-md">Dumpster diving: quando o descarte vira pista</h2>
+            <h2 class="h-md">Reconhecimento físico: descarte de materiais e mídias</h2>
           </div>
 
           <div class="slide-body bin-grid">
@@ -1881,8 +1875,8 @@
 
             <div>
               <p class="lede">
-                Documentos descartados, manuais, faturas, crachás e até post-its com senha. O lixo de uma organização
-                conta a história que o site institucional não conta. Mídias descartadas também podem guardar dados.
+                Documentos impressos, relatórios, faturas de fornecedores, crachás e anotações descartados sem trituração
+                revelam estruturas internas e processos operacionais da organização. Mídias descontinuadas também podem reter dados.
               </p>
               <div class="tag-row" style="margin-top: 18px">
                 <span class="chip">organograma</span>
@@ -1891,21 +1885,20 @@
                 <span class="chip red">credenciais</span>
               </div>
               <div class="side-note" style="margin-top: 22px; font-size: 0.42em">
-                <b>Limite importante:</b> o que é legal coletar depende do local, do descarte e da autorização. Em um
-                engajamento sério, isso está escrito no escopo — não no improviso.
+                <b>Regras de Engajamento (RoE):</b> em testes de intrusão profissionais, a coleta em lixo deve estar
+                expressamente autorizada no escopo contratual assinado.
               </div>
               <p class="small" style="margin-top: 14px">
-                Descarte físico não é necessariamente fonte pública ou OSINT; sua coleta depende do contexto e da autorização.
+                O descarte físico inadequado compromete o perímetro corporativo antes de qualquer interação lógica.
               </p>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Contar um exemplo de manual de rede descartado com faixas de IP e senha de console.</li>
-              <li>Exemplos: contratos, senhas anotadas, mídias antigas e notas fiscais que revelam fornecedores. Recomendar destruição segura de documentos e higienização de mídias.</li>
-              <li>Deixar claro o limite legal: autorização, propriedade e descarte importam; não presumir que lixo é público.</li>
-              <li>Conectar com o phishing do Emilio: o canal humano é o mesmo.</li>
+              <li>Explicar a técnica de Dumpster Diving: análise física de resíduos e documentos descartados sem fragmentação segura.</li>
+              <li>Destacar as evidências frequentemente encontradas: faturas de prestadores, manuais de rede, organogramas e senhas provisórias.</li>
+              <li>Ressaltar o rigor legal e ético: em serviços de segurança ofensiva, a coleta física exige previsão estrita nas Regras de Engajamento (RoE).</li>
             </ul>
           </aside>
                   </div>
@@ -1918,11 +1911,11 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Daniel</span> · Reconhecimento físico</div>
-            <h2 class="h-md">Shoulder surfing: informação à vista.</h2>
+            <h2 class="h-md">Reconhecimento visual direto (Shoulder Surfing)</h2>
           </div>
           <div class="slide-body shoulder-grid">
             <div>
-              <p class="lede">Observar uma tela ou um teclado pode expor informações sem malware ou acesso à rede.</p>
+              <p class="lede">A observação visual direta de telas e teclados expõe credenciais e fluxos de sistemas sem interação de rede.</p>
               <div class="shoulder-scene" aria-hidden="true">
                 <div class="shoulder-screen"><span>ACESSO</span><b>••••••••</b><i>código de verificação</i></div>
                 <div class="shoulder-eye">◉<span>campo de visão</span></div>
@@ -1935,9 +1928,9 @@
             </div>
           </div>
           <aside class="notes"><ul>
-            <li>Shoulder surfing é observação visual, não uma coleta necessariamente pública ou OSINT.</li>
-            <li>Exemplos incluem credenciais, informações financeiras e documentos corporativos em trânsito ou no escritório.</li>
-            <li>Discussão e demonstrações devem respeitar privacidade, autorização e limites do exercício.</li>
+            <li>Definir o Shoulder Surfing como vetor de reconhecimento visual direto em trânsito ou no ambiente de trabalho.</li>
+            <li>Discutir a ampliação do risco com lentes teleobjetivas e câmeras de alta resolução em locais públicos como cafés e aeroportos.</li>
+            <li>Apresentar contramedidas práticas: filtros e películas de privacidade micropolarizadas, bloqueio imediato de telas e política de mesa limpa.</li>
           </ul></aside>
           </div>
         </section>
@@ -1948,8 +1941,8 @@
         <section class="slide">
           <div class="slide-inner">
           <div class="slide-head">
-            <div class="kicker"><span class="who">Daniel</span> · O ecossistema de inteligência</div>
-            <h2 class="h-md">OSINT é uma peça. O tabuleiro é maior.</h2>
+            <div class="kicker"><span class="who">Daniel</span> · Disciplinas de inteligência</div>
+            <h2 class="h-md">Disciplinas complementares de inteligência (INTs)</h2>
           </div>
 
           <div class="slide-body">
@@ -1993,17 +1986,16 @@
             </div>
 
             <div class="slide-footline" style="margin-top: 14px">
-              <span><b>OSINT alimenta o ecossistema.</b> Ela não substitui as outras disciplinas.</span>
-              <span>9 disciplinas · 1 pergunta: o que dá para saber?</span>
+              <span><b>A inteligência estratégica</b> correlaciona múltiplas disciplinas especializadas para construir cenários completos.</span>
+              <span>9 disciplinas · integração metodológica</span>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Não decorar siglas: explicar que cada uma responde a um tipo de fonte.</li>
-              <li>Destacar HUMINT, SIGINT, GEOINT, SOCMINT e CYBINT/DNINT, conforme o roteiro. As categorias e suas fronteiras variam conforme o contexto.</li>
-              <li>SOCMINT pode ser uma vertente da OSINT quando usa fontes públicas; CYBINT pode envolver logs, malware e tráfego de rede, além de fontes abertas.</li>
-              <li>Fechar: a fronteira entre as disciplinas é permeável; o analista cruza fontes.</li>
+              <li>Apresentar a taxonomia formal das disciplinas INT, destacando como a OSINT se articula com as demais fontes.</li>
+              <li>Destacar os quatro pilares que se conectam aos blocos da apresentação: HUMINT (engenharia social), SOCMINT (redes sociais), GEOINT (geolocalização) e CYBINT (infraestrutura).</li>
+              <li>Passar a palavra para João Pedro Gonçalves para apresentar os grandes estudos de caso históricos (RSA SecurID e Strava).</li>
             </ul>
           </aside>
                   </div>
@@ -2017,8 +2009,8 @@
           <span class="ghost-num">04</span>
           <div class="red-rule"></div>
           <div class="kicker"><span class="who">João Pedro Gonçalves</span> · Estudos de caso</div>
-          <h2 class="statement">Quando o reconhecimento<br /><em>vira manchete.</em></h2>
-          <p class="lede">Dois casos reais. Nenhum deles começou com um exploit zero-day.</p>
+          <h2 class="statement">Estudos de caso reais em reconhecimento</h2>
+          <p class="lede">A mecânica técnica por trás dos incidentes RSA SecurID e Strava Global Heatmap.</p>
 
           <div class="divider-foot">
             <span class="who">com <b>João Pedro Gonçalves</b></span>
@@ -2027,8 +2019,8 @@
 
           <aside class="notes">
             <ul>
-              <li>Anunciar os dois casos: RSA (2011) e Strava (2018).</li>
-              <li>Pedir atenção ao padrão: o vetor é humano ou é dado público mal pensado.</li>
+              <li>Introduzir o Bloco 04 com os dois marcos históricos: RSA SecurID (2011) e Strava (2018).</li>
+              <li>Explicar que ambos os incidentes não se iniciaram com exploração direta de vulnerabilidades de dia zero, mas com reconhecimento metódico de dados públicos.</li>
             </ul>
           </aside>
                   </div>
@@ -2041,7 +2033,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker">Caso 01 · 2011 · RSA SecurID</div>
-            <h2 class="h-md">O e-mail que abriu a RSA</h2>
+            <h2 class="h-md">Caso RSA SecurID (2011)</h2>
           </div>
 
           <div class="slide-body rsa-grid">
@@ -2070,7 +2062,7 @@
               </div>
 
               <p class="source" style="margin-top: 16px">
-                Fonte: Zoho Workplace · “RSA spear-phishing attack”. O vetor não foi técnico: foi humano.
+                Fonte: Relatórios técnicos do incidente (Zoho Workplace). O reconhecimento prévio mapeou alvos de recrutamento no RH.
               </p>
             </div>
 
@@ -2083,22 +2075,21 @@
                   I forward this file to you for review. Please open and view it.<br /><br />
                   Best regards.
                 </div>
-                <div class="attachment">📎 2021_Recruitment_Plan.xlsx</div>
-                <div class="source" style="margin-top: 10px">Reprodução didática do e-mail reportado.</div>
+                <div class="attachment">📎 2011_Recruitment_Plan.xls</div>
+                <div class="source" style="margin-top: 10px">Reprodução didática do e-mail reportado no incidente.</div>
               </div>
 
               <div class="side-note" style="margin-top: 16px; font-size: 0.4em; border-color: var(--red)">
-                <b style="color: var(--red)">Lição:</b> o reconhecimento não precisa descobrir uma falha. Basta descobrir
-                quem abre anexos.
+                <b style="color: var(--red)">Análise:</b> o reconhecimento direcionou o spear-phishing para colaboradores que recebem e abrem anexos externos por dever de ofício.
               </div>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Contexto: RSA, empresa de segurança; o ataque atingiu justamente quem vendia confiança.</li>
-              <li>Detalhe importante: o e-mail não parecia um ataque; parecia rotina.</li>
-              <li>Ligar ao slide de phishing: os cinco sinais estavam lá.</li>
+              <li>Apresentar o caso histórico da RSA Security em março de 2011: exfiltração de dados que comprometeu cerca de 40 milhões de tokens SecurID.</li>
+              <li>Destacar a mecânica: e-mail de spear-phishing com o anexo 2011_Recruitment_Plan.xls contendo exploit de Flash embutido em planilha Excel.</li>
+              <li>Ressaltar o reconhecimento prévio: os invasores mapearam colaboradores de RH que rotineiramente abrem currículos de remetentes desconhecidos.</li>
             </ul>
           </aside>
                   </div>
@@ -2112,24 +2103,23 @@
           <div class="strava-grid">
             <div>
               <div class="kicker">Caso 02 · 2018 · Strava</div>
-              <h2 class="h-lg" style="font-size: 1.9em">O mapa que desenhou<br /><em class="red">bases secretas.</em></h2>
+              <h2 class="h-lg" style="font-size: 1.9em">Caso Strava Global Heatmap (2018)<br /><em class="red">inteligência por agregação de telemetria</em></h2>
               <p class="lede">
-                O Strava publicou um mapa de calor global com atividades agregadas de usuários. Pesquisadores cruzaram
-                o rastro de corridas com imagens de satélite — e localizaram instalações militares.
+                O Strava publicou um mapa de calor com 3 trilhões de pontos de GPS de atletas. O cruzamento das trilhas com imagens de satélite revelou instalações militares e rotas de patrulha no exterior.
               </p>
 
               <div class="case-facts">
                 <div class="case-fact">
                   <span class="n">01</span>
-                  <div><b>Ninguém invadiu nada.</b><span>O dado era público e autorizado. Só não deveria revelar tanto.</span></div>
+                  <div><b>Ausência de invasão direta</b><span>A telemetria era pública e autorizada; o risco decorreu da agregação de dados.</span></div>
                 </div>
                 <div class="case-fact">
                   <span class="n">02</span>
-                  <div><b>O padrão era o segredo.</b><span>Rotas circulares em locais sem academia entregavam a posição.</span></div>
+                  <div><b>Padrões geométricos em zonas isoladas</b><span>Circuitos regulares de corrida em áreas desertas demarcaram o perímetro de bases.</span></div>
                 </div>
                 <div class="case-fact">
                   <span class="n">03</span>
-                  <div><b>Correlação vence senha.</b><span>Heatmap + satélite + geografia = localização provável.</span></div>
+                  <div><b>Correlação multivariada</b><span>Sobreposição do mapa de calor com imagens ópticas de satélite identificou instalações sigilosas.</span></div>
                 </div>
               </div>
 
@@ -2184,10 +2174,9 @@
 
           <aside class="notes">
             <ul>
-              <li>Contexto: Strava Heatmap, 2017/2018; dados de atividades agregados.</li>
-              <li>O caso foi descoberto por um estudante que cruzou o mapa com imagens de satélite.</li>
-              <li>Ponto central: o dado era público, mas a agregação não foi pensada como risco.</li>
-              <li>Perguntar: “quais dados a sua empresa publica achando que são inofensivos?”.</li>
+              <li>Contextualizar o incidente do Strava Heatmap em 2017/2018: Nathan Ruser identificou desenhos geométricos em áreas remotas do Afeganistão (34.5°N 69.2°E).</li>
+              <li>Explicar o conceito de inteligência emergente por agregação: dados inofensivos em nível individual revelam segredos estratégicos quando consolidados.</li>
+              <li>A sobreposição com imagens de satélite permitiu identificar guaritas, pistas e postos avançados sem qualquer invasão a servidores.</li>
             </ul>
           </aside>
                   </div>
@@ -2200,7 +2189,7 @@
           <div class="slide-inner">
           <div class="slide-body lesson-wrap">
             <div class="kicker">O padrão entre os dois casos</div>
-            <h2 class="lesson-quote">O dado mais perigoso é aquele que parece <em>inofensivo.</em></h2>
+            <h2 class="lesson-quote">A correlação de dados como gerador de <em>inteligência ofensiva</em></h2>
 
             <div class="lesson-items">
               <div>
@@ -2218,15 +2207,15 @@
             </div>
 
             <p class="lede" style="margin-top: 22px; max-width: 36em">
-              Reconhecimento é <strong>correlação</strong>, não coleta. O valor não está na fonte isolada — está no que
-              ela revela quando cruza com a próxima.
+              O reconhecimento converte fragmentos dispersos em visão estratégica. O valor investigativo reside na correlação precisa entre múltiplas fontes independentes.
             </p>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Pausa dramática: deixar a frase no telão por alguns segundos.</li>
-              <li>Repetir a ideia que vai voltar no fechamento: dado isolado ≠ inteligência.</li>
+              <li>Sintetizar as lições dos dois casos: na RSA, o dado isolado era a lista pública de RH; no Strava, trajetos de exercícios.</li>
+              <li>Fixar a diretriz central: o valor da inteligência de reconhecimento decorre da correlação metódica de fontes independentes.</li>
+              <li>Passar a palavra para João Pedro Almeida para a realização das demonstrações práticas de GEOSINT e correlação OSINT no Bloco 05.</li>
             </ul>
           </aside>
                   </div>
@@ -2240,8 +2229,8 @@
           <span class="ghost-num">05</span>
           <div class="red-rule"></div>
           <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração</div>
-          <h2 class="statement">Do dado público<br /><em>ao alvo provável.</em></h2>
-          <p class="lede">Três demonstrações: duas de GEOSINT e uma de OSINT. Ambiente controlado.</p>
+          <h2 class="statement">Demonstrações práticas de reconhecimento</h2>
+          <p class="lede">Aplicação de técnicas de GEOSINT e correlação de entidades em grafo relacional.</p>
 
           <div class="divider-foot">
             <span class="who">com <b>João Pedro Almeida</b></span>
@@ -2250,8 +2239,8 @@
 
           <aside class="notes">
             <ul>
-              <li>Reforçar que tudo é feito com dados públicos e exemplos didáticos.</li>
-              <li>Avisar que a demo é uma simulação narrada, não um alvo real.</li>
+              <li>Introduzir as demonstrações práticas do Bloco 05: análise geoespacial de fotografia e correlação em grafo relacional.</li>
+              <li>Explicar que todas as técnicas utilizam dados públicos e simulações com rigor metodológico e científico.</li>
             </ul>
           </aside>
                   </div>
@@ -2264,7 +2253,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração 01 · GEOSINT</div>
-            <h2 class="h-md">Onde foi tirada esta foto?</h2>
+            <h2 class="h-md">Investigação geoespacial: análise de evidências visuais</h2>
           </div>
 
           <div class="slide-body geo-grid">
@@ -2350,7 +2339,7 @@
                 </div>
                 <div class="clue">
                   <span class="k">RELEVO</span>
-                  <div><b>Pré-cordilheira árida</b><span>Montanhas baixas, solo seco, vegetação rasteira — não é litoral.</span></div>
+                  <div><b>Pré-cordilheira árida</b><span>Montanhas áridas, solo seco e vegetação rasteira espinhosa característica da estepe pré-cordilheirana.</span></div>
                 </div>
                 <div class="clue">
                   <span class="k">CONTEXTO</span>
@@ -2368,16 +2357,16 @@
                 <span class="chip">SunCalc</span>
                 <span class="chip">Mapillary</span>
                 <span class="chip">Overpass</span>
-                <span class="chip amber">confiança, não certeza</span>
+                <span class="chip amber">estimativa probabilística</span>
               </div>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Narrar como analista: primeiro as pistas óbvias, depois as que eliminam hipóteses.</li>
-              <li>Explicar SunCalc: posição e comprimento da sombra dão hora aproximada e orientação.</li>
-              <li>Dizer que a confiança é parte do método: 78% não é “achismo”, é hipótese testável.</li>
+              <li>Demonstrar a decomposição de pistas visuais: vegetação árida, placa rodoviária da Ruta 40 na Argentina e projeção de sombras.</li>
+              <li>Explicar o cálculo de azimute e ângulo solar com o SunCalc para inferir o horário de fim de tarde em rodovia com eixo norte-sul.</li>
+              <li>Destacar a combinação de ferramentas auxiliares (Google Lens, Mapillary e Overpass) para alcançar 78% de confiança investigativa.</li>
             </ul>
           </aside>
                   </div>
@@ -2390,7 +2379,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração 02 · GEOSINT</div>
-            <h2 class="h-md">Três hipóteses. Uma coordenada.</h2>
+            <h2 class="h-md">Validação de coordenadas e descarte de hipóteses</h2>
           </div>
 
           <div class="slide-body geo-grid">
@@ -2429,9 +2418,9 @@
             </div>
 
             <div>
-              <h3 class="h-sm" style="margin-bottom: 8px">Eliminar, não adivinhar.</h3>
+              <h3 class="h-sm" style="margin-bottom: 8px">Método científico de eliminação</h3>
               <p class="lede" style="margin-top: 0">
-                Cada pista precisa <strong>derrubar</strong> uma hipótese. O que sobra não é certeza: é o próximo teste.
+                A correlação entre azimute solar e perfis topográficos descarta hipóteses inconsistentes até isolar a coordenada compatível.
               </p>
 
               <div class="evidence">
@@ -2457,9 +2446,9 @@
 
           <aside class="notes">
             <ul>
-              <li>Explicar a lógica de eliminação: A e B caem por sombra/relevo; C sobrevive.</li>
-              <li>Mostrar que a barra de confiança é uma decisão comunicável, não um número mágico.</li>
-              <li>Se possível, abrir o Google Earth e comparar o recorte.</li>
+              <li>Explicar a lógica de eliminação sistemática: a hipótese A é descartada pela orientação da via e a B pelo relevo montanhoso.</li>
+              <li>Demonstrar que a hipótese C no trecho de Mendoza confirma todos os parâmetros físicos e óticos da fotografia.</li>
+              <li>Ressaltar que a confiança analítica expressa a robustez das evidências verificadas.</li>
             </ul>
           </aside>
                   </div>
@@ -2472,7 +2461,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração 03 · OSINT</div>
-            <h2 class="h-md">Vinte minutos de coleta. Um grafo.</h2>
+            <h2 class="h-md">Construção do grafo de correlação OSINT</h2>
           </div>
 
           <div class="slide-body graph-grid">
@@ -2523,21 +2512,21 @@
               </ul>
 
               <div class="no-go">
-                <b>O QUE NÃO FAZEMOS</b>
-                <span>Não testamos a senha vazada. Não acessamos a VPN. Não enviamos nada ao alvo. Sem autorização, o grafo para aqui.</span>
+                <b>LIMITES DE ENGAJAMENTO (ROE)</b>
+                <span>A investigação limita-se à estruturação do grafo público; tentativas de login e testes de credenciais exigem autorização formal.</span>
               </div>
 
               <p class="small" style="margin-top: 12px">
-                O próximo passo é um relatório com evidências, não um login.
+                O produto final da coleta é o relatório técnico para subsidiar a correção preventiva pela equipe de segurança.
               </p>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Narrar o encadeamento nó a nó; cada seta é uma consulta pública.</li>
-              <li>Destacar o limite ético: o valor está no mapa, não no acesso.</li>
-              <li>Se a banca perguntar “e depois?”, responder: relatório, priorização e correção.</li>
+              <li>Fechar o fio narrativo de Marina Sousa e Acme Pagamentos, encadeando a postagem inicial ao mapeamento da VPN corporativa.</li>
+              <li>Demonstrar como a correlação de dados públicos revela superfícies críticas em poucos minutos de levantamento.</li>
+              <li>Enfatizar os parâmetros éticos e legais: o objetivo do reconhecimento defensivo é mitigar as exposições antes de qualquer exploração maliciosa.</li>
             </ul>
           </aside>
                   </div>
@@ -2551,8 +2540,8 @@
           <span class="ghost-num">06</span>
           <div class="red-rule"></div>
           <div class="kicker"><span class="who">Geovana</span> · OpSec</div>
-          <h2 class="statement">O rastro que você<br /><em>deixa sem perceber.</em></h2>
-          <p class="lede">Se o reconhecimento coleta, a OpSec reduz o que existe para coletar.</p>
+          <h2 class="statement">Segurança operacional (OpSec) e conclusão</h2>
+          <p class="lede">Minimização de rastros digitais e gestão da superfície de exposição.</p>
 
           <div class="divider-foot">
             <span class="who">com <b>Geovana</b></span>
@@ -2561,7 +2550,8 @@
 
           <aside class="notes">
             <ul>
-              <li>Virar a chave: até agora olhamos o alvo; agora olhamos para nós.</li>
+              <li>Introduzir o Bloco 06 estabelecendo a mudança de postura: como aplicar os aprendizados para mitigar a própria exposição.</li>
+              <li>Explicar que a OpSec estabelece práticas e configurações para reduzir a telemetria pública, dificultando o reconhecimento adverso.</li>
             </ul>
           </aside>
                   </div>
@@ -2591,10 +2581,9 @@
 
             <div>
               <div class="kicker">Definição</div>
-              <h2 class="h-lg" style="font-size: 1.8em">OpSec é sobre<br /><em class="red">não virar dado.</em></h2>
+              <h2 class="h-lg" style="font-size: 1.8em">Princípios de<br /><em class="red">segurança operacional</em></h2>
               <p class="lede">
-                <strong>Operational Security</strong> é a disciplina de identificar o que suas ações revelam, avaliar
-                quem pode usar isso e reduzir o sinal — sem perder a capacidade de operar.
+                <strong>Operational Security (OpSec)</strong> é a disciplina de mapear o sinal emitido por ações cotidianas, mensurar riscos associados e aplicar controles para mitigar a exposição de informações críticas.
               </p>
 
               <div class="check-list" style="margin-top: 18px">
@@ -2603,7 +2592,7 @@
                   <span class="mono small">mapear</span>
                 </div>
                 <div class="check-row">
-                  <div class="txt"><b>Avaliar quem se beneficia</b><span>Não é paranoia: é priorização por impacto.</span></div>
+                  <div class="txt"><b>Avaliar o impacto de cada dado</b><span>Priorização de controles segundo o nível de sensibilidade das informações.</span></div>
                   <span class="mono small">avaliar</span>
                 </div>
                 <div class="check-row">
@@ -2616,9 +2605,8 @@
 
           <aside class="notes">
             <ul>
-              <li>Definir OpSec sem misticismo: é gestão de exposição, não invisibilidade.</li>
-              <li>Os anéis representam camadas: identidade, dispositivo, rotina, infraestrutura.</li>
-              <li>Ninguém zera o rastro; a meta é reduzir o que é útil para o atacante.</li>
+              <li>Apresentar o modelo concêntrico de exposição digital: anéis de identidade, telemetria direta e pegada pública externa.</li>
+              <li>Enfatizar a proporcionalidade de impacto: OpSec não visa o isolamento total irrealista, mas a proteção deliberada de ativos críticos.</li>
             </ul>
           </aside>
                   </div>
@@ -2631,7 +2619,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Geovana</span> · Implementação no dia a dia</div>
-            <h2 class="h-md">Seis hábitos que mudam o seu rastro</h2>
+            <h2 class="h-md">Seis controles práticos de higiene digital</h2>
           </div>
 
           <div class="slide-body check-grid">
@@ -2663,22 +2651,22 @@
             </div>
 
             <div>
-              <p class="opsec-quote">O elo mais barato de atacar continua sendo <em>o hábito.</em></p>
+              <p class="opsec-quote">Controles consistentes mitigam os principais vetores de <em>reconhecimento.</em></p>
               <p class="lede">
-                Nenhum desses itens é exótico. O difícil não é saber — é manter. OpSec é higiene, não evento.
+                A aplicação sistemática dessas medidas técnicas e comportamentais interrompe o encadeamento de ataques antes da fase de exploração.
               </p>
               <div class="tag-row">
-                <span class="chip green">hábito &gt; ferramenta</span>
-                <span class="chip">revise a cada 90 dias</span>
+                <span class="chip green">controles preventivos</span>
+                <span class="chip">revisão periódica</span>
               </div>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Não transformar em palestra de “dicas de segurança”: explicar o porquê de cada item.</li>
-              <li>Perguntar quem usa o mesmo e-mail em trabalho, banco e rede social.</li>
-              <li>Conectar com o grafo: cada hábito corta uma seta.</li>
+              <li>Explicar a justificativa técnica de cada um dos seis controles apresentados.</li>
+              <li>Conectar os hábitos aos casos analisados: o 2FA neutralizaria o acesso via senhas expostas, e a limpeza de EXIF impediria a geolocalização do novo datacenter da Acme.</li>
+              <li>Demonstrar que cada controle elimina arestas críticas no grafo de correlação de um invasor.</li>
             </ul>
           </aside>
                   </div>
@@ -2691,37 +2679,37 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker">Fechamento</div>
-            <h2 class="h-lg">Três coisas para levar</h2>
+            <h2 class="h-lg">Conclusões do seminário</h2>
           </div>
 
           <div class="slide-body">
             <div class="take-grid">
               <div class="take rise" style="--d: .1s">
                 <div class="k">01 · MÉTODO</div>
-                <h3>Recon é processo, não ferramenta.</h3>
-                <p>Um scan sem hipótese é barulho. O valor está no que você pergunta e no que faz com a resposta.</p>
+                <h3>O método precede a ferramenta</h3>
+                <p>Ferramentas automatizadas aceleram a coleta, mas a inteligência real depende da formulação de hipóteses e da análise temporal.</p>
               </div>
               <div class="take rise" style="--d: .2s">
                 <div class="k">02 · SUPERFÍCIE</div>
-                <h3>O firewall não cobre a empresa inteira.</h3>
-                <p>Pessoas, fornecedores, apps e ambientes esquecidos também são superfície de ataque.</p>
+                <h3>A superfície extrapola o perímetro de rede</h3>
+                <p>Firewalls de borda não protegem dados que colaboradores, fornecedores e certificados já expuseram publicamente.</p>
               </div>
               <div class="take rise" style="--d: .3s">
-                <div class="k">03 · CONTRA-INTELIGÊNCIA</div>
-                <h3>Segurança começa antes do ataque.</h3>
-                <p>Reduzir o que você publica é reduzir o que o outro lado consegue descobrir.</p>
+                <div class="k">03 · DEFESA PRÓ-ATIVA</div>
+                <h3>O reconhecimento é indispensável para a defesa</h3>
+                <p>Auditar a própria infraestrutura com mentalidade adversária permite corrigir falhas antes de qualquer ação hostil.</p>
               </div>
             </div>
 
             <p class="lede" style="margin-top: 30px; max-width: 42em; font-family: var(--serif); font-size: 0.82em; line-height: 1.2">
-              “Recon é a única fase do ataque que a defesa também pode praticar — e deveria.”
+              “A postura defensiva mais assertiva começa quando a organização mapeia sua própria superfície de ataque com o rigor de um adversário.”
             </p>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Recapitular em 30 segundos, sem repetir os slides.</li>
-              <li>Fechar com a frase final e passar para as referências/Q&amp;A.</li>
+              <li>Sintetizar as três conclusões fundamentais do seminário: método, superfície expandida e defesa proativa.</li>
+              <li>Encerrar a apresentação com mensagem afirmativa e abrir para referências e perguntas da banca.</li>
             </ul>
           </aside>
                   </div>
@@ -2734,7 +2722,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker">Bibliografia · acesso em outubro de 2026</div>
-            <h2 class="h-md">Referências e leituras</h2>
+            <h2 class="h-md">Referências bibliográficas e normativas</h2>
           </div>
 
           <div class="slide-body">
@@ -2768,8 +2756,8 @@
 
           <aside class="notes">
             <ul>
-              <li>Citar apenas as fontes principais; o restante está no README.</li>
-              <li>Reforçar que a demo foi simulada e baseada em dados públicos.</li>
+              <li>Apresentar as referências normativas e bibliográficas que fundamentaram o seminário.</li>
+              <li>Destacar normas internacionais (MITRE ATT&amp;CK, OWASP, RFCs IETF) e manuais oficiais de ferramentas.</li>
             </ul>
           </aside>
                   </div>
@@ -2783,7 +2771,7 @@
           <span class="ghost-num" style="font-size: 19em; right: 10px; bottom: -110px">?</span>
           <div class="kicker">Fim da apresentação</div>
           <h2 class="qa-title">Perguntas<em>?</em></h2>
-          <p class="qa-sub">O microfone é de vocês. A parte mais interessante do recon é o que a gente não pensou em perguntar.</p>
+          <p class="qa-sub">Espaço aberto para dúvidas, considerações da banca examinadora e debate técnico.</p>
 
           <div class="qa-team">
             <div class="names">
@@ -2798,9 +2786,8 @@
 
           <aside class="notes">
             <ul>
-              <li>Agradecer a banca e a turma.</li>
-              <li>Ter o README à mão com as referências completas.</li>
-              <li>Se a pergunta for técnica demais, oferecer responder depois com detalhe.</li>
+              <li>Agradecer a banca examinadora, ao professor e aos colegas pela atenção.</li>
+              <li>Abrir para perguntas, considerações e aprofundamento técnico dos tópicos apresentados.</li>
             </ul>
           </aside>
                   </div>

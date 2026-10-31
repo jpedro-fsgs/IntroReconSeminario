@@ -6,8 +6,8 @@
           <span class="ghost-num">02</span>
           <div class="red-rule"></div>
           <div class="kicker"><span class="who">Emilio</span> · Reconhecimento ativo</div>
-          <h2 class="statement">Quando o alvo<br /><em>começa a responder.</em></h2>
-          <p class="lede">Aqui saem pacotes de verdade. E com eles, rastros.</p>
+          <h2 class="statement">Reconhecimento ativo</h2>
+          <p class="lede">Interação direta via pacotes IP, varredura de portas e análise de tráfego de rede.</p>
 
           <div class="divider-foot">
             <span class="who">com <b>Emilio</b></span>
@@ -16,7 +16,8 @@
 
           <aside class="notes">
             <ul>
-              <li>Marcar a mudança de postura: no passivo, o alvo não vê; no ativo, ele pode ver.</li>
+              <li>Marcar a distinção técnica do reconhecimento ativo: emissão de pacotes IP direcionados à infraestrutura do alvo.</li>
+              <li>Destacar que essa interação ativa gera registros de conexão e alertas em firewalls e sistemas de detecção (IDS).</li>
             </ul>
           </aside>
                   </div>
@@ -29,7 +30,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Emilio</span> · Redes, simplificadas</div>
-            <h2 class="h-md">Três coisas que você precisa saber sobre redes</h2>
+            <h2 class="h-md">Fundamentos de rede para reconhecimento</h2>
           </div>
 
           <div class="slide-body">
@@ -116,9 +117,9 @@
 
           <aside class="notes">
             <ul>
-              <li>Não aprofundar TCP/IP: o objetivo é dar vocabulário para entender Nmap e Wireshark.</li>
-              <li>Analogia: IP = prédio, porta = apartamento, pacote = envelope.</li>
-              <li>Destacar que a porta é o que o scan procura.</li>
+              <li>Nivelar os três conceitos de base: IP (localização do host), Porta (processo ouvindo conexões) e Pacote (envelope com dados e cabeçalhos).</li>
+              <li>Explicar que no nosso laboratório o analista em 10.10.14.23 interage com o servidor em 10.10.14.5.</li>
+              <li>Demonstrar que o escaneamento ativo busca descobrir quais portas lógicas respondem com serviços abertos.</li>
             </ul>
           </aside>
                   </div>
@@ -131,7 +132,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Emilio</span> · Ferramenta 01 · simulação</div>
-            <h2 class="h-md">Nmap: o mapa que o alvo entrega sem querer</h2>
+            <h2 class="h-md">Varredura de portas com Nmap</h2>
           </div>
 
           <div class="slide-body nmap-grid">
@@ -199,23 +200,22 @@
                 </div>
 
                 <div class="side-note" style="margin-top: auto">
-                  <b>SYN scan</b> não completa a conexão. A aplicação não registra o handshake — mas o firewall vê.
+                  <b>SYN scan:</b> conexão semiaberta. A aplicação não registra a sessão, mas firewalls registram os pacotes SYN recebidos.
                 </div>
               </div>
             </div>
           </div>
 
           <div class="slide-footline">
-            <span><b>O scan não explora nada.</b> Ele só pergunta — e o alvo responde.</span>
+            <span><b>O scan enumera serviços ativos.</b> As respostas do alvo mapeiam a superfície exposta.</span>
             <span>laboratório autorizado · 10.10.14.0/24</span>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Explicar o comando: -sS (SYN), -sV (versões), -p- (todas as portas), -oA (salvar em três formatos).</li>
-              <li>Mostrar o tempo: 41s para 65 mil portas — por isso o scan é barato para o atacante.</li>
-              <li>Ressaltar: a saída dá hipóteses, não conclusões. Versão antiga ≠ vulnerável.</li>
-              <li>Perguntar: “o que vocês olhariam primeiro nesta lista?” (8080 e 3306 são os candidatos).</li>
+              <li>Explicar as flags do comando: -sS (SYN scan semiaberto), -sV (detecção de versão), -p- (todas as 65.535 portas) e -oA (exportação em 3 formatos).</li>
+              <li>Destacar o tempo de execução de 41,72 segundos para cobrir toda a faixa de portas TCP.</li>
+              <li>Apontar as portas prioritárias para análise: 3306 (MySQL aberto externamente) e 8080 (servidor Jetty legado).</li>
             </ul>
           </aside>
                   </div>
@@ -228,7 +228,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Emilio</span> · Ferramenta 02 · simulação</div>
-            <h2 class="h-md">Wireshark: o que realmente passa no fio</h2>
+            <h2 class="h-md">Inspeção de tráfego com Wireshark</h2>
           </div>
 
           <div class="slide-body" style="display: flex; flex-direction: column; min-height: 0">
@@ -302,17 +302,16 @@
             </div>
 
             <div class="slide-footline">
-              <span><b>Sem filtro</b>, 1.284 pacotes viram ruído. Com filtro, sete contam uma história.</span>
+              <span><b>A filtragem por protocolo</b> isola os fluxos relevantes entre os 1.284 pacotes capturados na interface eth0.</span>
               <span>captura passiva · interface eth0</span>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Wireshark é passivo: ele observa o tráfego que já passa pela interface.</li>
-              <li>Explicar a barra de filtro: o verde indica sintaxe válida; o filtro não altera a captura.</li>
-              <li>Apontar o pacote 1 selecionado: árvore de protocolos embaixo, bytes à esquerda.</li>
-              <li>Gancho para o próximo slide: “vamos seguir essa conexão inteira”.</li>
+              <li>Explicar a utilidade da captura de pacotes em modo promíscuo na interface eth0.</li>
+              <li>Demonstrar a aplicação do filtro ip.addr == 10.10.14.23 &amp;&amp; tcp.port == 80 para isolar a sessão HTTP em análise.</li>
+              <li>Destacar a dissecação em camadas no painel inferior: Frame, Ethernet II, IPv4 e cabeçalho TCP com flag SYN.</li>
             </ul>
           </aside>
                   </div>
@@ -325,7 +324,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Emilio</span> · Wireshark · lendo a conversa</div>
-            <h2 class="h-md">Três pacotes para abrir uma conexão.<br />Um clique para ler tudo.</h2>
+            <h2 class="h-md">Handshake TCP e reconstrução de sessão</h2>
           </div>
 
           <div class="slide-body hs-grid">
@@ -365,7 +364,7 @@
                 <path class="hs-arrow data" d="M 90 298 L 190 298" marker-end="url(#ahBlue)" />
                 <text x="240" y="294" text-anchor="middle" fill="#7fb2ff">GET /admin/</text>
               </svg>
-              <div class="hs-note">O handshake só confirma que o serviço está ouvindo. Não diz o que ele responde.</div>
+              <div class="hs-note">O handshake estabelece a comunicação em 0,2 ms antes do tráfego da carga útil HTTP.</div>
 
               <div class="insight-row">
                 <span class="chip amber">SYN → SYN/ACK → ACK</span>
@@ -396,18 +395,17 @@
                 <div class="hdr"><span class="hl">Authorization: Basic YWRtaW46YWRtaW4=</span></div>
               </div>
               <div class="stream-note">
-                Basic auth não criptografa: <span class="amber">YWRtaW46YWRtaW4=</span> decodifica para <span class="red">admin:admin</span>.
-                Em HTTPS o conteúdo seria cifrado — os metadados, não.
+                HTTP Basic Auth transmite credenciais em Base64: <span class="amber">YWRtaW46YWRtaW4=</span> decodifica para <span class="red">admin:admin</span>.
+                Sem criptografia TLS/HTTPS, o tráfego em texto claro fica exposto a qualquer analisador na rede.
               </div>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Ler o handshake em voz alta, com os tempos: tudo acontece em 0,2 ms.</li>
-              <li>Mostrar que o 401 revela o tipo de autenticação; o segundo GET já vai com credenciais.</li>
-              <li>Decodificar Base64 ao vivo: “não é criptografia, é transporte”.</li>
-              <li>Fechar: o scan achou a porta; a captura contou a história.</li>
+              <li>Apresentar a cronologia do Three-Way Handshake TCP (SYN → SYN/ACK → ACK) completado em 0,203 ms.</li>
+              <li>Mostrar o desafio HTTP 401 Unauthorized do Jetty exigindo autenticação básica.</li>
+              <li>Demonstrar como a decodificação da string Base64 recupera o par usuário/senha admin:admin em conexões sem TLS.</li>
             </ul>
           </aside>
                   </div>
@@ -420,7 +418,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Emilio</span> · Engenharia social</div>
-            <h2 class="h-md">O exploit é a confiança</h2>
+            <h2 class="h-md">Engenharia social e spear-phishing</h2>
           </div>
 
           <div class="slide-body phish-grid">
@@ -477,7 +475,7 @@
               </div>
               <div class="legend-row">
                 <span class="n">3</span>
-                <div><b>Anexo inesperado</b><span>Planilha com macros não é formulário de RH. É execução de código.</span></div>
+                <div><b>Anexo malicioso</b><span>Planilhas com macros automáticas funcionam como vetores diretos para execução de código.</span></div>
               </div>
               <div class="legend-row">
                 <span class="n">4</span>
@@ -489,16 +487,16 @@
               </div>
 
               <p class="small" style="margin-top: 10px">
-                Defesa simples: confirmar por outro canal antes de abrir. Telefone, chat interno, pessoa conhecida.
+                Defesa preventiva: validar a autenticidade por canal interno independente antes de abrir anexos.
               </p>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Ler o e-mail como se fosse real; perguntar quem clicaria.</li>
-              <li>Explicar que o phishing não quebra a rede: convence alguém a abrir a porta.</li>
-              <li>Ligar ao caso RSA, que vem no bloco de estudos de caso.</li>
+              <li>Demonstrar como o spear-phishing combina dados coletados em reconhecimento com engenharia social para obter acesso inicial.</li>
+              <li>Analisar os indicadores do e-mail simulado da Acme Pagamentos: domínio similar typosquatted, urgência artificial e macros maliciosas.</li>
+              <li>Conectar o exemplo ao caso real da RSA SecurID, que será detalhado no bloco de estudos de caso.</li>
             </ul>
           </aside>
                   </div>

@@ -10,12 +10,12 @@
             <div class="slide-body tool-detail-grid">
               <div class="tool-detail-copy">
                 <span class="tool-detail-label">O que responde</span>
-                <p>Quais serviços e certificados já foram observados por indexadores?</p>
-                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>Uma equipe compara um endereço público sob sua responsabilidade com os registros das duas plataformas.</p></div>
-                <div class="tool-detail-caution"><b>Limite</b><span>Cada índice tem cobertura e datas próprias; os registros não confirmam a situação atual.</span></div>
+                <p>Quais serviços, portas e certificados já foram catalogados por varreduras globais?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Contexto técnico</span><p>Consulta a registros de portas abertas e banners de serviço associados ao endereço IP RFC 5737 <code>192.0.2.10</code>.</p></div>
+                <div class="tool-detail-caution"><b>Metodologia</b><span>A consulta passiva acessa o cache dos indexadores; a varredura primária na internet foi executada pelas plataformas.</span></div>
               </div>
               <div class="tool-detail-example">
-                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">RFC 5737</span></div>
                 <div class="tool-visual">
                   <div class="tool-visual-content is-search">
                     <div class="tool-visual-bar">Consulta comparativa · índices</div>
@@ -23,16 +23,17 @@
                     <div class="tool-visual-rows">
                       <div class="tool-visual-row"><span class="tool-visual-key">SHODAN</span><span class="tool-visual-value">HTTPS · porta 443</span></div>
                       <div class="tool-visual-row"><span class="tool-visual-key">CENSYS</span><span class="tool-visual-value">certificado example.com</span></div>
-                      <div class="tool-visual-row"><span class="tool-visual-key">ATENÇÃO</span><span class="tool-visual-value">observações anteriores</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">STATUS</span><span class="tool-visual-value">banner indexado</span></div>
                     </div>
                   </div>
                 </div>
-                <div class="tool-detail-result"><span>PISTA</span><p>No exemplo, Shodan mostra um serviço HTTPS e Censys associa um certificado ao endereço.</p></div>
+                <div class="tool-detail-result"><span>ANÁLISE</span><p>Shodan identifica a porta 443 HTTPS ativa e Censys associa o certificado emitido para example.com.</p></div>
               </div>
             </div>
             <aside class="notes"><ul>
-              <li>Shodan e Censys consultam índices de serviços já coletados; a consulta é passiva em relação ao alvo, mas os próprios indexadores podem ter contatado a infraestrutura.</li>
-              <li>O endereço é reservado para documentação e todos os resultados são fictícios. Conferir data e propriedade antes de tirar conclusões.</li>
+              <li>Shodan e Censys são motores de busca de dispositivos conectados que realizam varreduras contínuas da internet IPv4/IPv6.</li>
+              <li>A consulta do analista ocorre via API ou navegador sem enviar pacotes ao IP investigado (192.0.2.10).</li>
+              <li>Destacar a utilidade: descoberta de serviços expostos, portas e certificados sem tocar na rede do alvo.</li>
             </ul></aside>
           </div>
         </section>
@@ -49,29 +50,30 @@
             <div class="slide-body tool-detail-grid">
               <div class="tool-detail-copy">
                 <span class="tool-detail-label">O que responde</span>
-                <p>Quais informações cadastrais e servidores de nomes estão disponíveis para um domínio?</p>
-                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe consulta o registro público de example.com para entender sua administração.</p></div>
-                <div class="tool-detail-caution"><b>Limite</b><span>Dados pessoais podem estar protegidos, omitidos ou desatualizados.</span></div>
+                <p>Quais informações cadastrais, entidade registradora e servidores autoritativos atendem o domínio?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Contexto técnico</span><p>Consulta aos registros públicos de custódia e delegação DNS do domínio institucional <code>example.com</code>.</p></div>
+                <div class="tool-detail-caution"><b>Privacidade</b><span>Políticas de GDPR e LGPD mascaram dados pessoais de contato, mas a infraestrutura autoritativa permanece pública.</span></div>
               </div>
               <div class="tool-detail-example">
-                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">ICANN / RIR</span></div>
                 <div class="tool-visual">
                   <div class="tool-visual-content is-record">
                     <div class="tool-visual-bar">WHOIS · registro público</div>
                     <div class="tool-visual-query">example.com</div>
                     <div class="tool-visual-rows">
-                      <div class="tool-visual-row"><span class="tool-visual-key">REGISTRADOR</span><span class="tool-visual-value">Registrador Exemplo</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">REGISTRADOR</span><span class="tool-visual-value">Registrador Autorizado</span></div>
                       <div class="tool-visual-row"><span class="tool-visual-key">SERVIDORES</span><span class="tool-visual-value">ns1.example.com</span></div>
-                      <div class="tool-visual-row"><span class="tool-visual-key">CONTATO</span><span class="tool-visual-value">dados protegidos</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">CONTATO</span><span class="tool-visual-value">dados protegidos (LGPD)</span></div>
                     </div>
                   </div>
                 </div>
-                <div class="tool-detail-result"><span>PISTA</span><p>O registro pode informar registrador, datas e servidores de nomes.</p></div>
+                <div class="tool-detail-result"><span>ANÁLISE</span><p>A consulta identifica o registrador oficial e os servidores de nomes autoritativos (ns1.example.com).</p></div>
               </div>
             </div>
             <aside class="notes"><ul>
-              <li>WHOIS oferece informações públicas de registro, mas não necessariamente revela a identidade do responsável.</li>
-              <li>O resultado ilustrado é fictício; retenção, disponibilidade e privacidade variam entre registros.</li>
+              <li>O protocolo WHOIS consulta os registros mantidos pelos Registros Regionais de Internet (RIRs como Registro.br, ARIN, LACNIC).</li>
+              <li>Explicar que dados de contato pessoal são ofuscados por regulamentações de proteção de dados, mas os servidores NS permanecem visíveis.</li>
+              <li>Os servidores de nomes revelam onde as zonas DNS da empresa estão hospedadas, orientando as próximas etapas.</li>
             </ul></aside>
           </div>
         </section>
@@ -88,29 +90,30 @@
             <div class="slide-body tool-detail-grid">
               <div class="tool-detail-copy">
                 <span class="tool-detail-label">O que responde</span>
-                <p>Que resoluções históricas e relações observadas ajudam a contextualizar um domínio?</p>
-                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe investiga associações anteriores de um domínio próprio em duas fontes.</p></div>
-                <div class="tool-detail-caution"><b>Limite</b><span>As fontes têm datas e cobertura diferentes; associações antigas não comprovam propriedade ou risco atuais.</span></div>
+                <p>Que resoluções históricas de DNS e relações de infraestrutura revelam servidores esquecidos?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Contexto técnico</span><p>Investigação de migrações e apontamentos antigos para identificar ativos potencialmente órfãos (Shadow IT).</p></div>
+                <div class="tool-detail-caution"><b>Utilidade</b><span>Servidores mantidos em IPs antigos após migrações frequentemente operam sem patches de segurança.</span></div>
               </div>
               <div class="tool-detail-example">
-                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DNS PASSIVO</span></div>
                 <div class="tool-visual">
                   <div class="tool-visual-content is-history">
                     <div class="tool-visual-bar">DNS histórico · relações</div>
                     <div class="tool-visual-query">example.com</div>
                     <div class="tool-visual-rows">
                       <div class="tool-visual-row"><span class="tool-visual-key">SECURITYTRAILS</span><span class="tool-visual-value">2023 · 198.51.100.20</span></div>
-                      <div class="tool-visual-row"><span class="tool-visual-key">VIRUSTOTAL</span><span class="tool-visual-value">relação · 192.0.2.10</span></div>
-                      <div class="tool-visual-row"><span class="tool-visual-key">ATENÇÃO</span><span class="tool-visual-value">validar datas e vínculos</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">VIRUSTOTAL</span><span class="tool-visual-value">relação atual · 192.0.2.10</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">STATUS</span><span class="tool-visual-value">migração documentada</span></div>
                     </div>
                   </div>
                 </div>
-                <div class="tool-detail-result"><span>PISTA</span><p>SecurityTrails apresenta histórico DNS; VirusTotal reúne relações e observações adicionais.</p></div>
+                <div class="tool-detail-result"><span>ANÁLISE</span><p>SecurityTrails registra que o domínio apontava para 198.51.100.20 antes da migração para 192.0.2.10.</p></div>
               </div>
             </div>
             <aside class="notes"><ul>
-              <li>SecurityTrails e VirusTotal têm fontes, datas e coberturas diferentes; relacionar informações não é confirmar uma ameaça.</li>
-              <li>As datas e os endereços são fictícios e servem apenas para ilustrar a necessidade de validar associações históricas.</li>
+              <li>SecurityTrails e VirusTotal mantêm bancos de dados de DNS Passivo, preservando resoluções de nomes antigas.</li>
+              <li>Explicar o risco de Shadow IT: migrar a aplicação principal e esquecer servidores legados operando nos IPs anteriores.</li>
+              <li>Demonstrar a utilidade defensiva de auditar históricos para desativar nós órfãos de rede.</li>
             </ul></aside>
           </div>
         </section>
@@ -127,29 +130,30 @@
             <div class="slide-body tool-detail-grid">
               <div class="tool-detail-copy">
                 <span class="tool-detail-label">O que responde</span>
-                <p>Quais nomes aparecem em registros públicos que permitem auditar a emissão de certificados digitais?</p>
-                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe pesquisa certificados emitidos para nomes associados ao seu domínio.</p></div>
-                <div class="tool-detail-caution"><b>Limite</b><span>Um nome no certificado não prova que o serviço está ativo; a cobertura não é absoluta.</span></div>
+                <p>Quais subdomínios e ambientes de teste constam nos logs públicos de Certificate Transparency?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Contexto técnico</span><p>Busca com operador curinga SQL (<code>%.example.com</code>) para enumeração instantânea de Subject Alternative Names (SAN).</p></div>
+                <div class="tool-detail-caution"><b>Cobertura</b><span>Logs append-only (RFC 6962) registram todos os certificados TLS emitidos por autoridades válidas globalmente.</span></div>
               </div>
               <div class="tool-detail-example">
-                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">RFC 6962</span></div>
                 <div class="tool-visual">
                   <div class="tool-visual-content is-certificate">
-                    <div class="tool-visual-bar">crt.sh · registro de certificado</div>
+                    <div class="tool-visual-bar">crt.sh · consulta de certificados</div>
                     <div class="tool-visual-query">%.example.com</div>
                     <div class="tool-visual-rows">
                       <div class="tool-visual-row"><span class="tool-visual-key">NOMES</span><span class="tool-visual-value">example.com</span></div>
                       <div class="tool-visual-row"><span class="tool-visual-key">SAN</span><span class="tool-visual-value">teste.example.com</span></div>
-                      <div class="tool-visual-row"><span class="tool-visual-key">FONTE</span><span class="tool-visual-value">registro público de certificados</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">FONTE</span><span class="tool-visual-value">log público imutável</span></div>
                     </div>
                   </div>
                 </div>
-                <div class="tool-detail-result"><span>PISTA</span><p>Um certificado registrado inclui o nome teste.example.com.</p></div>
+                <div class="tool-detail-result"><span>ANÁLISE</span><p>A consulta com curinga revela o subdomínio teste.example.com emitido para homologação interna.</p></div>
               </div>
             </div>
             <aside class="notes"><ul>
-              <li>Certificate Transparency (CT) reúne registros públicos que permitem auditar a emissão de certificados digitais; o crt.sh facilita sua consulta.</li>
-              <li>O nome no certificado é fictício e não comprova que o serviço está ativo ou é vulnerável.</li>
+              <li>Terceira parte da tríade de Certificate Transparency: demonstração prática do buscador crt.sh.</li>
+              <li>Explicar o funcionamento do operador % como curinga para descobrir subdomínios de qualquer nível.</li>
+              <li>Destacar que o analista descobre novos ambientes em segundos sem emitir uma única requisição de força bruta de DNS.</li>
             </ul></aside>
           </div>
         </section>
@@ -166,12 +170,12 @@
             <div class="slide-body tool-detail-grid">
               <div class="tool-detail-copy">
                 <span class="tool-detail-label">O que responde</span>
-                <p>Que nomes e relações podem ser reunidos a partir de fontes externas?</p>
-                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe cruza candidatos de subdomínios do seu domínio em um inventário inicial.</p></div>
-                <div class="tool-detail-caution"><b>Limite</b><span>Revise modos e fontes: verificações ativas podem gerar tráfego direto ao alvo.</span></div>
+                <p>Como automatizar a agregação em dezenas de fontes e mapear relacionamentos de rede?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Contexto técnico</span><p>Consolidação de inventário de superfície externa correlacionando nomes, blocos CIDR e ASNs.</p></div>
+                <div class="tool-detail-caution"><b>Configuração</b><span>Obrigatório utilizar o modo estritamente passivo (-passive) para impedir disparos de pacotes aos servidores do alvo.</span></div>
               </div>
               <div class="tool-detail-example">
-                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">MODO PASSIVO</span></div>
                 <div class="tool-visual">
                   <div class="tool-visual-content is-graph">
                     <div class="tool-visual-bar">Subdomínios · inventário combinado</div>
@@ -186,12 +190,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="tool-detail-result"><span>PISTA</span><p>Subfinder reúne nomes; Amass também organiza relações entre os achados.</p></div>
+                <div class="tool-detail-result"><span>ANÁLISE</span><p>Subfinder agrega fontes de dados em alta velocidade; Amass constrói a topologia relacional entre ativos mapeados.</p></div>
               </div>
             </div>
             <aside class="notes"><ul>
-              <li>As ferramentas podem reunir fontes distintas. É necessário escolher modos passivos e revisar opções antes de qualquer execução.</li>
-              <li>Os nomes e relações são fictícios; candidatos não comprovam a existência atual de serviços.</li>
+              <li>Diferenciar as duas ferramentas: Subfinder prioriza velocidade de agregação passiva; Amass modela grafos de relacionamento entre ASNs, blocos e nomes.</li>
+              <li>Ressaltar a importância de configurar a flag passiva para evitar consultas ativas aos servidores autoritativos.</li>
+              <li>Mostrar como a automação consolida o inventário de ativos da organização sob análise.</li>
             </ul></aside>
           </div>
         </section>
@@ -208,12 +213,12 @@
             <div class="slide-body tool-detail-grid">
               <div class="tool-detail-copy">
                 <span class="tool-detail-label">O que responde</span>
-                <p>Quais metadados podem aparecer em arquivos já obtidos?</p>
-                <div class="tool-detail-context"><span class="tool-detail-label">Cenário fictício</span><p>A equipe revisa PDFs antes de publicá-los ou compartilhá-los.</p></div>
-                <div class="tool-detail-caution"><b>Limite</b><span>Dados podem estar ausentes ou incorretos; a obtenção dos arquivos pode contatar o alvo.</span></div>
+                <p>Quais metadados ocultos em arquivos públicos revelam autores, softwares e caminhos internos?</p>
+                <div class="tool-detail-context"><span class="tool-detail-label">Contexto técnico</span><p>Inspeção forense das propriedades de <code>relatorio.pdf</code> para mapear tecnologias e padrões corporativos.</p></div>
+                <div class="tool-detail-caution"><b>Impacto</b><span>Metadados expõem versões exatas de aplicativos instalados e nomes de usuários que orientam spear-phishing.</span></div>
               </div>
               <div class="tool-detail-example">
-                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">DADOS FICTÍCIOS</span></div>
+                <div class="tool-detail-example-top"><span class="tool-detail-label">SIMULAÇÃO DE INTERFACE</span><span class="tool-detail-example-tag">METADADOS LOCAIS</span></div>
                 <div class="tool-visual">
                   <div class="tool-visual-content is-record">
                     <div class="tool-visual-bar">Metadados · arquivos obtidos</div>
@@ -221,16 +226,17 @@
                     <div class="tool-visual-rows">
                       <div class="tool-visual-row"><span class="tool-visual-key">EXIFTOOL</span><span class="tool-visual-value">Autor: Equipe Exemplo</span></div>
                       <div class="tool-visual-row"><span class="tool-visual-key">FOCA</span><span class="tool-visual-value">Software: Editor de PDF</span></div>
-                      <div class="tool-visual-row"><span class="tool-visual-key">ARQUIVO</span><span class="tool-visual-value">documento local</span></div>
+                      <div class="tool-visual-row"><span class="tool-visual-key">ORIGEM</span><span class="tool-visual-value">arquivo local baixado</span></div>
                     </div>
                   </div>
                 </div>
-                <div class="tool-detail-result"><span>PISTA</span><p>ExifTool lê metadados do arquivo; FOCA ajuda a organizar achados de documentos.</p></div>
+                <div class="tool-detail-result"><span>ANÁLISE</span><p>ExifTool e FOCA revelam o software Editor de PDF e o nome do autor, alimentando a cadeia de engenharia social.</p></div>
               </div>
             </div>
             <aside class="notes"><ul>
-              <li>Metadados de arquivos já obtidos podem mostrar autores, software e datas, mas também podem ter sido removidos ou alterados.</li>
-              <li>A obtenção dos documentos e os módulos habilitados podem gerar contato direto; revisar as configurações e o escopo.</li>
+              <li>Explicar a extração forense de metadados em arquivos públicos (PDFs, planilhas e imagens).</li>
+              <li>Demonstrar como propriedades ocultas revelam nomes de usuários, impressoras, caminhos de rede e versões de software.</li>
+              <li>Conectar os achados à engenharia social: informações de autoria e tecnologia tornam e-mails fraudulentos indistinguíveis de comunicações legítimas.</li>
             </ul></aside>
           </div>
         </section>

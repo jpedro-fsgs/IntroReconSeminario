@@ -5,8 +5,8 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT</div>
-            <h2 class="h-md">De uma pergunta à próxima.</h2>
-            <p class="lede">Dados brutos só viram inteligência quando respondem a uma necessidade.</p>
+            <h2 class="h-md">O Ciclo de Inteligência em Fontes Abertas</h2>
+            <p class="lede">As seis etapas sistemáticas para transformar dados brutos em decisões técnicas de segurança.</p>
           </div>
           <div class="slide-body orbit-body">
             <div class="cycle-orbit">
@@ -21,9 +21,9 @@
             </div>
           </div>
           <aside class="notes"><ul>
-            <li>Usar um exemplo simples: descobrir quais serviços públicos aparecem associados a um domínio.</li>
-            <li>Registrar fonte e data, validar a informação e distinguir evidência de hipótese; a coleta por si só não é inteligência.</li>
-            <li>O feedback pode revelar lacunas e levar a uma nova rodada de planejamento.</li>
+            <li>Apresentar a metodologia do ciclo de inteligência formal em seis fases contínuas.</li>
+            <li>Explicar que utilizaremos o domínio didático example.com para percorrer cada etapa, da formulação da dúvida ao relatório final.</li>
+            <li>Destacar a importância do feedback para realimentar o escopo e direcionar novas coletas.</li>
           </ul></aside>
           </div>
         </section>
@@ -35,21 +35,21 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 01 / 06</div>
-              <h2 class="h-md">Planejar: faça a pergunta certa.</h2>
+              <h2 class="h-md">Fase 1 — Planejamento</h2>
             </div>
             <div class="slide-body plan-board">
-              <div class="plan-question"><span>CASO FICTÍCIO · PERGUNTA INICIAL</span><p>Quais serviços web aparecem em fontes externas para <em>example.com</em>?</p></div>
+              <div class="plan-question"><span>REQUISITO INVESTIGATIVO</span><p>Quais serviços web e subdomínios aparecem em fontes externas para <em>example.com</em>?</p></div>
               <div class="plan-criteria">
-                <div><b>Objetivo</b><span>O que precisamos decidir?</span></div>
-                <div><b>Escopo</b><span>Fontes externas; sem acesso direto ao alvo.</span></div>
-                <div><b>Critério</b><span>Qual evidência responderia à pergunta?</span></div>
+                <div><b>Objetivo</b><span>Mapear a superfície externa de serviços expostos.</span></div>
+                <div><b>Escopo</b><span>Fontes públicas de terceiros; zero pacotes direcionados ao alvo.</span></div>
+                <div><b>Critério</b><span>Evidências validadas temporalmente com carimbo de data.</span></div>
               </div>
             </div>
             <div class="cycle-detail-foot"><b>01</b> Planejar <span>→ Coletar → Processar → Analisar → Disseminar → Feedback</span></div>
             <aside class="notes"><ul>
-              <li>Apresentar o caso como fictício: example.com e os endereços de documentação dos próximos slides são apenas ilustrações.</li>
-              <li>Definir pergunta, público, prazo, escopo e limites legais; a escolha das fontes vem depois.</li>
-              <li>O resultado desta etapa é uma necessidade verificável, não uma lista indiscriminada de dados.</li>
+              <li>Na Fase 1, delimitam-se as perguntas norteadoras, o prazo, o escopo e as restrições éticas da investigação.</li>
+              <li>Definir claramente o escopo evita dispersão em volumes excessivos de dados desnecessários.</li>
+              <li>A pergunta correta orienta quais ferramentas e repositórios serão consultados na sequência.</li>
             </ul></aside>
           </div>
         </section>
@@ -61,25 +61,24 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 02 / 06</div>
-              <h2 class="h-md">Coletar: reúna evidências, não certezas.</h2>
+              <h2 class="h-md">Fase 2 — Coleta</h2>
             </div>
             <div class="slide-body gather-board">
-              <p class="stage-intro">Busque em fontes autorizadas e registre <strong>origem, data e contexto</strong> de cada achado.</p>
+              <p class="stage-intro">Levantamento metódico em bases públicas registrando <strong>origem, data e contexto</strong> de cada achado.</p>
               <div class="gather-flow">
-                <div class="gather-source"><span>FONTE 01</span><b>Registro de certificados</b><p>Certificate Transparency (CT): um log público que permite auditar a emissão de certificados.</p><code>portal.example.com</code></div>
+                <div class="gather-source"><span>FONTE 01</span><b>Registro de certificados</b><p>Certificate Transparency (CT): log público e imutável que audita certificados emitidos.</p><code>portal.example.com</code></div>
                 <div class="gather-join" aria-hidden="true">+</div>
-                <div class="gather-source"><span>FONTE 02</span><b>Índice externo</b><p>Uma observação anterior associa o nome a um serviço.</p><code>192.0.2.10:443</code></div>
+                <div class="gather-source"><span>FONTE 02</span><b>Índice externo</b><p>Observação de telemetria externa associando o nome a um host.</p><code>192.0.2.10:443</code></div>
                 <div class="gather-join" aria-hidden="true">⟶</div>
                 <div class="gather-output"><b>Dados<br />brutos</b><span>fontes e datas<br />preservadas</span></div>
               </div>
-              <p class="stage-caption">Caso fictício · dados históricos não confirmam a situação atual.</p>
+              <p class="stage-caption">Certificate Transparency comprova emissão na data, servindo como evidência primária imutável.</p>
             </div>
             <div class="cycle-detail-foot"><b>02</b> Coletar <span>→ Processar → Analisar → Disseminar → Feedback</span></div>
             <aside class="notes"><ul>
-              <li>As informações do quadro são simuladas; nenhum domínio ou endereço foi consultado.</li>
-              <li>Certificate Transparency (CT) é um sistema de registros públicos que permite auditar a emissão de certificados digitais. Seus registros podem conter nomes de domínio.</li>
-              <li>A coleta pode reunir nomes nesses registros e observações de um índice; guarde fonte, data da consulta e data da observação.</li>
-              <li>Uma fonte de terceiros pode registrar a consulta; dados históricos não garantem situação atual.</li>
+              <li>Na Fase 2, extraem-se dados brutos de fontes externas mantendo rigorosa rastreabilidade de procedência e data.</li>
+              <li>Primeira função do Certificate Transparency (CT): comprovar categoricamente que um certificado foi emitido para o domínio.</li>
+              <li>O dado bruto atesta o histórico registrado, mas ainda exige validação sobre o estado operacional presente.</li>
             </ul></aside>
           </div>
         </section>
@@ -91,22 +90,22 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 03 / 06</div>
-              <h2 class="h-md">Processar: separe sinal de ruído.</h2>
+              <h2 class="h-md">Fase 3 — Processamento</h2>
             </div>
             <div class="slide-body process-board">
-              <p class="stage-intro">Padronize nomes e datas, agrupe duplicatas e marque lacunas ou registros antigos.</p>
+              <p class="stage-intro">Normalização de registros, remoção de duplicatas de certificados e catalogação temporal dos ativos.</p>
               <div class="process-flow">
                 <div class="process-input"><span>DADOS BRUTOS</span><b>portal.example.com</b><b>portal.example.com</b><small>certificado + índice histórico</small></div>
                 <svg class="process-funnel" viewBox="0 0 170 170" role="img" aria-label="Filtro: padronizar, integrar e classificar"><path d="M14 25 H156 L106 85 V142 L64 154 V85 Z" fill="rgba(226,58,46,.12)" stroke="#e23a2e" stroke-width="2"/><path d="M42 50 H128 M56 67 H114" stroke="#f0a63c" stroke-width="2"/></svg>
-                <div class="process-output"><span>REGISTRO ORGANIZADO</span><b>portal.example.com</b><p>Certificado + índice externo</p><small>Origem e datas preservadas · índice histórico</small></div>
+                <div class="process-output"><span>REGISTRO ORGANIZADO</span><b>portal.example.com</b><p>Certificado + índice externo</p><small>Origem e datas preservadas · base limpa</small></div>
               </div>
-              <p class="stage-caption">Caso fictício · remover duplicatas não é apagar evidências ou versões anteriores.</p>
+              <p class="stage-caption">Deduplicação de renovações e filtragem de escopo antes do cruzamento analítico.</p>
             </div>
             <div class="cycle-detail-foot"><b>03</b> Processar <span>→ Analisar → Disseminar → Feedback</span></div>
             <aside class="notes"><ul>
-              <li>Explicar a diferença entre dado bruto e registro estruturado: normalizar nomes e datas, agrupar duplicatas e conservar as fontes originais.</li>
-              <li>Uma observação antiga não deve ser descartada silenciosamente: identificá-la como histórica ajuda a evitar conclusões falsas.</li>
-              <li>Ainda não afirmamos que há um serviço atual; isso é uma questão para a análise.</li>
+              <li>Na Fase 3, limpam-se os dados brutos: remoção de dezenas de certificados emitidos para o mesmo domínio por renovações periódicas.</li>
+              <li>A normalização converte respostas brutas em tabelas estruturadas com timestamps e identificadores de integridade.</li>
+              <li>Separar observações históricas de dados recentes é fundamental para orientar a análise sem falsos positivos.</li>
             </ul></aside>
           </div>
         </section>
@@ -118,23 +117,23 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 04 / 06</div>
-              <h2 class="h-md">Analisar: conecte sem presumir.</h2>
+              <h2 class="h-md">Fase 4 — Análise</h2>
             </div>
             <div class="slide-body analysis-board">
-              <p class="stage-intro">Compare fontes, contexto e tempo. Separe <strong>evidência</strong> de <strong>hipótese</strong>.</p>
+              <p class="stage-intro">Cruzamento de fontes independentes (CT + DNS histórico + Shodan) para validar hipóteses técnicas.</p>
               <div class="analysis-evidence">
-                <div><span>REGISTRO PÚBLICO DE CERTIFICADOS (CT)</span><b>portal.example.com</b></div>
+                <div><span>CERTIFICATE TRANSPARENCY</span><b>portal.example.com</b></div>
                 <div class="analysis-plus" aria-hidden="true">+</div>
-                <div><span>ÍNDICE EXTERNO · HISTÓRICO</span><b>192.0.2.10:443</b></div>
+                <div><span>ÍNDICE EXTERNO / SHODAN</span><b>192.0.2.10:443</b></div>
               </div>
               <div class="analysis-link" aria-hidden="true">↓</div>
-              <div class="analysis-conclusion"><span>HIPÓTESE · CASO FICTÍCIO</span><p>Pode ter existido um serviço web associado.</p><small>A situação atual exige verificação autorizada; certificado não prova serviço ativo ou vulnerabilidade.</small></div>
+              <div class="analysis-conclusion"><span>HIPÓTESE VALIDADA</span><p>Serviço web institucional ativo na porta 443.</p><small>A correlação entre três bases externas independentes comprova a existência do serviço sem envio de tráfego direto.</small></div>
             </div>
             <div class="cycle-detail-foot"><b>04</b> Analisar <span>→ Disseminar → Feedback</span></div>
             <aside class="notes"><ul>
-              <li>O registro de um certificado não prova que existe um servidor ativo nem que há vulnerabilidade.</li>
-              <li>A observação do índice tem data própria; verifique se a associação ao nome é contextual e não confunda coocorrência com propriedade atual.</li>
-              <li>Apresentar a conclusão como hipótese e registrar quais verificações autorizadas ainda seriam necessárias.</li>
+              <li>Na Fase 4, cruzam-se as fontes: o log de certificados revelou o subdomínio, o DNS histórico apontou o IP e o Shodan confirmou a porta 443.</li>
+              <li>A triangulação independente valida que o host está em operação sem necessidade de varredura ativa própria.</li>
+              <li>Demonstrar como a correlação converte dados dispersos em inteligência prática.</li>
             </ul></aside>
           </div>
         </section>
@@ -146,22 +145,22 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 05 / 06</div>
-              <h2 class="h-md">Disseminar: entregue algo acionável.</h2>
+              <h2 class="h-md">Fase 5 — Disseminação</h2>
             </div>
             <div class="slide-body briefing-board">
-              <p class="stage-intro">O relatório deve ajudar alguém a <strong>decidir o próximo passo</strong>.</p>
-              <div class="briefing-head"><span>RELATÓRIO · CASO FICTÍCIO</span><h3>Possível serviço web associado.</h3></div>
+              <p class="stage-intro">Estruturação do relatório técnico para subsidiar decisões operacionais de segurança.</p>
+              <div class="briefing-head"><span>RELATÓRIO TÉCNICO</span><h3>Mapeamento de superfície e serviços associados</h3></div>
               <div class="briefing-columns">
-                <div><b>01 <em>Achado</em></b><p>Nome em registro público de certificados (CT) e observação histórica de índice externo.</p></div>
-                <div><b>02 <em>Limite</em></b><p>Fontes e datas documentadas; situação atual ainda não confirmada.</p></div>
-                <div><b>03 <em>Encaminhamento</em></b><p>Equipe responsável verifica o inventário dentro do escopo autorizado.</p></div>
+                <div><b>01 <em>Achado</em></b><p>Subdomínio exposto em registro de certificados e correlacionado a serviço web ativo.</p></div>
+                <div><b>02 <em>Contexto</em></b><p>Fontes, datas e cadeia de custódia documentadas com precisão.</p></div>
+                <div><b>03 <em>Recomendação</em></b><p>Equipe de segurança valida conformidade de acesso e aplica políticas de proteção.</p></div>
               </div>
             </div>
             <div class="cycle-detail-foot"><b>05</b> Disseminar <span>→ Feedback</span></div>
             <aside class="notes"><ul>
-              <li>O produto pode ser um relatório, um resumo executivo ou um alerta adequado ao destinatário.</li>
-              <li>Incluir a pergunta original, evidências, fontes, datas, incertezas e uma recomendação viável.</li>
-              <li>Não apresentar como vulnerabilidade confirmada um serviço apenas observado em fontes históricas.</li>
+              <li>Na Fase 5, entregam-se os resultados em formato estruturado (sumário executivo, matriz de ativos e prioridades).</li>
+              <li>O relatório precisa ser claro e direto para permitir que analistas e gestores tomem medidas assertivas.</li>
+              <li>Evitar excesso de detalhes irrelevantes e focar no que impacta a postura de segurança.</li>
             </ul></aside>
           </div>
         </section>
@@ -173,22 +172,22 @@
           <div class="slide-inner">
             <div class="slide-head">
               <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 06 / 06</div>
-              <h2 class="h-md">Feedback: a resposta abre outra pergunta.</h2>
+              <h2 class="h-md">Fase 6 — Avaliação e Feedback</h2>
             </div>
             <div class="slide-body feedback-board">
-              <p class="stage-intro">O relatório respondeu à necessidade? Identifique lacunas e replaneje.</p>
+              <p class="stage-intro">Identificação de novas lacunas investigativas e reorientação do escopo para uma nova rodada.</p>
               <div class="feedback-flow">
-                <div class="feedback-side"><span>RETORNO DA EQUIPE</span><p>O inventário não identifica quem administra o nome observado.</p></div>
-                <div class="feedback-loop"><span>↶</span><b>O serviço<br />ainda existe?</b><small>CASO FICTÍCIO</small></div>
-                <div class="feedback-side"><span>NOVA PERGUNTA</span><p>Qual área é responsável e quais fontes autorizadas podem esclarecer a situação atual?</p></div>
+                <div class="feedback-side"><span>RETORNO DA EQUIPE</span><p>Serviço web confirmado; autenticação exposta requer avaliação de credenciais.</p></div>
+                <div class="feedback-loop"><span>↶</span><b>Quem tem<br />acesso?</b><small>NOVO ESCOPO</small></div>
+                <div class="feedback-side"><span>NOVA PERGUNTA</span><p>Quais colaboradores e credenciais corporativas foram comprometidos em vazamentos?</p></div>
               </div>
-              <p class="stage-caption">Uma nova rodada pode exigir revisão de escopo e autorização.</p>
+              <p class="stage-caption">O feedback retroalimenta a Fase 1 (Planejamento), expandindo a investigação para fontes de pessoas e credenciais.</p>
             </div>
             <div class="cycle-detail-foot"><b>06</b> Feedback <span>↶ retorna ao planejamento</span></div>
             <aside class="notes"><ul>
-              <li>O feedback verifica se o relatório foi útil e se respondeu à necessidade original.</li>
-              <li>Uma lacuna pode gerar nova pergunta, nova coleta ou revisão de prioridades; não implica automaticamente contato com o alvo.</li>
-              <li>Fechar o ciclo retomando o planejamento e os limites de autorização.</li>
+              <li>Na Fase 6, avalia-se a efetividade do relatório com a equipe responsável e identificam-se novas dúvidas.</li>
+              <li>A descoberta do portal suscita a pergunta sobre quais credenciais e usuários operam a aplicação.</li>
+              <li>O ciclo se reinicia de forma contínua, orientando a próxima etapa de coleta em fontes de pessoas e credenciais.</li>
             </ul></aside>
           </div>
         </section>

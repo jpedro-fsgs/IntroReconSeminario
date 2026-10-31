@@ -1,0 +1,941 @@
+[
+  {
+    "num": "01",
+    "file": "00-abertura.html",
+    "who": "",
+    "title": "CAPA                                                    -->\n        <!-- ============================================================",
+    "header": "Recon & OSINT",
+    "tools": [
+      "nmap",
+      "wireshark"
+    ],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "02",
+    "file": "00-abertura.html",
+    "who": "",
+    "title": "AGENDA                                                  -->\n        <!-- ============================================================",
+    "header": "Seis blocos. Uma pergunta: o que o alvo já contou?",
+    "tools": [
+      "nmap",
+      "wireshark"
+    ],
+    "ips": [],
+    "ports": [],
+    "metrics": [
+      "45 min"
+    ],
+    "frameworks": []
+  },
+  {
+    "num": "03",
+    "file": "01-conceito-contexto.html",
+    "who": "",
+    "title": "DIVISOR 01                                              -->\n        <!-- ============================================================",
+    "header": "Todo ataque começa com uma pergunta.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "04",
+    "file": "01-conceito-contexto.html",
+    "who": "",
+    "title": "ERA DAS MÍDIAS SOCIAIS                                  -->\n        <!-- ============================================================",
+    "header": "O celular acordou antes de você.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [
+      "116 h",
+      "116h",
+      "15h",
+      "3 h",
+      "3h",
+      "6h",
+      "9 h",
+      "9h"
+    ],
+    "frameworks": []
+  },
+  {
+    "num": "05",
+    "file": "01-conceito-contexto.html",
+    "who": "",
+    "title": "EVOLUÇÃO DAS REDES                                      -->\n        <!-- ============================================================",
+    "header": "Quatro décadas até o feed.",
+    "tools": [
+      "linkedin"
+    ],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "06",
+    "file": "01-conceito-contexto.html",
+    "who": "",
+    "title": "SUPEREXPOSIÇÃO                                          -->\n        <!-- ============================================================",
+    "header": "A internet não esquece. Você posta de novo amanhã.",
+    "tools": [
+      "linkedin"
+    ],
+    "ips": [],
+    "ports": [],
+    "metrics": [
+      "3h"
+    ],
+    "frameworks": []
+  },
+  {
+    "num": "07",
+    "file": "01-conceito-contexto.html",
+    "who": "",
+    "title": "CASO TWITTER                                            -->\n        <!-- ============================================================",
+    "header": "O post que virou coordenada.",
+    "tools": [],
+    "ips": [],
+    "ports": [
+      "04"
+    ],
+    "metrics": [
+      "21h"
+    ],
+    "frameworks": []
+  },
+  {
+    "num": "08",
+    "file": "01-conceito-contexto.html",
+    "who": "",
+    "title": "CASO SMART SAMPA                                        -->\n        <!-- ============================================================",
+    "header": "58 mil câmeras. 11 meses de senhas expostas.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [
+      "58 mil"
+    ],
+    "frameworks": []
+  },
+  {
+    "num": "09",
+    "file": "01-conceito-contexto.html",
+    "who": "",
+    "title": "DEFINIÇÃO                                               -->\n        <!-- ============================================================",
+    "header": "Recon não é invadir. É entender.",
+    "tools": [
+      "nmap"
+    ],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": [
+      "MITRE ATT&CK",
+      "TA0043"
+    ]
+  },
+  {
+    "num": "10",
+    "file": "02-recon-ativo.html",
+    "who": "",
+    "title": "DIVISOR 02                                              -->\n        <!-- ============================================================",
+    "header": "Quando o alvo começa a responder.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "11",
+    "file": "02-recon-ativo.html",
+    "who": "",
+    "title": "REDES EM 60 SEGUNDOS                                    -->\n        <!-- ============================================================",
+    "header": "Três coisas que você precisa saber sobre redes",
+    "tools": [
+      "nmap",
+      "wireshark"
+    ],
+    "ips": [
+      "10.10.14.23",
+      "10.10.14.5"
+    ],
+    "ports": [],
+    "metrics": [
+      "10.10",
+      "14.23 ",
+      "14.5",
+      "14.5 "
+    ],
+    "frameworks": [
+      "HTTPS",
+      "SSH",
+      "TCP/IP"
+    ]
+  },
+  {
+    "num": "12",
+    "file": "02-recon-ativo.html",
+    "who": "",
+    "title": "NMAP — SIMULAÇÃO                                        -->\n        <!-- ============================================================",
+    "header": "Nmap: o mapa que o alvo entrega sem querer",
+    "tools": [
+      "nmap"
+    ],
+    "ips": [
+      "10.10.14.0/24",
+      "10.10.14.23"
+    ],
+    "ports": [
+      "14",
+      "15",
+      "65529"
+    ],
+    "metrics": [
+      "0.0021s",
+      "1.24",
+      "10.10",
+      "14.0",
+      "14.23",
+      "14.23 ",
+      "41.72 ",
+      "5 portas",
+      "65 mil",
+      "65.535",
+      "65.535 ",
+      "7.95",
+      "8.0",
+      "9.4"
+    ],
+    "frameworks": [
+      "HTTP",
+      "HTTPS",
+      "MYSQL",
+      "RDP",
+      "SSH"
+    ]
+  },
+  {
+    "num": "13",
+    "file": "02-recon-ativo.html",
+    "who": "",
+    "title": "WIRESHARK — SIMULAÇÃO                                   -->\n        <!-- ============================================================",
+    "header": "Wireshark: o que realmente passa no fio",
+    "tools": [
+      "wireshark"
+    ],
+    "ips": [
+      "10.10.14.23",
+      "10.10.14.5"
+    ],
+    "ports": [
+      "00",
+      "10",
+      "29",
+      "49812",
+      "64240",
+      "74",
+      "80"
+    ],
+    "metrics": [
+      "0.000000 ",
+      "0.000187 ",
+      "0.000203 ",
+      "0.000310 ",
+      "0.000492 ",
+      "0.000531 ",
+      "0.000612 ",
+      "0.5",
+      "1.1",
+      "1.1 ",
+      "1.284",
+      "1.284 ",
+      "10.10",
+      "14.23",
+      "14.23 ",
+      "14.5",
+      "14.5 "
+    ],
+    "frameworks": [
+      "HTTP"
+    ]
+  },
+  {
+    "num": "14",
+    "file": "02-recon-ativo.html",
+    "who": "",
+    "title": "WIRESHARK — HANDSHAKE E STREAM                          -->\n        <!-- ============================================================",
+    "header": "Três pacotes para abrir uma conexão. Um clique para ler tudo.",
+    "tools": [
+      "wireshark"
+    ],
+    "ips": [
+      "10.10.14.5"
+    ],
+    "ports": [
+      "02",
+      "10",
+      "14",
+      "8080"
+    ],
+    "metrics": [
+      "0,2 ms",
+      "0.000000 ",
+      "0.000187 ",
+      "0.000203 ",
+      "0.000203s",
+      "0.000310 ",
+      "1.1 ",
+      "10.10",
+      "14.5",
+      "5.0"
+    ],
+    "frameworks": [
+      "HTTP",
+      "HTTPS"
+    ]
+  },
+  {
+    "num": "15",
+    "file": "02-recon-ativo.html",
+    "who": "",
+    "title": "PHISHING                                                -->\n        <!-- ============================================================",
+    "header": "O exploit é a confiança",
+    "tools": [],
+    "ips": [],
+    "ports": [
+      "41"
+    ],
+    "metrics": [
+      "18h"
+    ],
+    "frameworks": []
+  },
+  {
+    "num": "16",
+    "file": "03a-passivo-introducao.html",
+    "who": "",
+    "title": "DIVISOR 03                                              -->\n        <!-- ============================================================",
+    "header": "Coletar sem tocar.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "17",
+    "file": "03a-passivo-introducao.html",
+    "who": "",
+    "title": "RECONHECIMENTO PASSIVO                                  -->\n        <!-- ============================================================",
+    "header": "Mapear a pegada sem consultar o alvo.",
+    "tools": [
+      "whois"
+    ],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": [
+      "DNS"
+    ]
+  },
+  {
+    "num": "18",
+    "file": "03a-passivo-introducao.html",
+    "who": "",
+    "title": "O QUE É OSINT                                           -->\n        <!-- ============================================================",
+    "header": "Informação pública não é informação inofensiva.",
+    "tools": [
+      "bing",
+      "brave",
+      "censys",
+      "crt.sh",
+      "github",
+      "hibp",
+      "linkedin",
+      "shodan",
+      "wayback",
+      "whois"
+    ],
+    "ips": [],
+    "ports": [],
+    "metrics": [
+      "0 pacotes"
+    ],
+    "frameworks": [
+      "DNS"
+    ]
+  },
+  {
+    "num": "19",
+    "file": "03b-ciclo-osint.html",
+    "who": "",
+    "title": "CICLO DE OSINT                                          -->\n        <!-- ============================================================",
+    "header": "De uma pergunta à próxima.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "20",
+    "file": "03b-ciclo-osint.html",
+    "who": "",
+    "title": "CICLO OSINT: PLANEJAR                                   -->\n        <!-- ============================================================",
+    "header": "Planejar: faça a pergunta certa.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "21",
+    "file": "03b-ciclo-osint.html",
+    "who": "",
+    "title": "CICLO OSINT: COLETAR                                    -->\n        <!-- ============================================================",
+    "header": "Coletar: reúna evidências, não certezas.",
+    "tools": [],
+    "ips": [
+      "192.0.2.10"
+    ],
+    "ports": [
+      "443"
+    ],
+    "metrics": [
+      "192.0",
+      "2.10"
+    ],
+    "frameworks": [
+      "CERTIFICATE TRANSPARENCY",
+      "CT"
+    ]
+  },
+  {
+    "num": "22",
+    "file": "03b-ciclo-osint.html",
+    "who": "",
+    "title": "CICLO OSINT: PROCESSAR                                  -->\n        <!-- ============================================================",
+    "header": "Processar: separe sinal de ruído.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "23",
+    "file": "03b-ciclo-osint.html",
+    "who": "",
+    "title": "CICLO OSINT: ANALISAR                                   -->\n        <!-- ============================================================",
+    "header": "Analisar: conecte sem presumir.",
+    "tools": [],
+    "ips": [
+      "192.0.2.10"
+    ],
+    "ports": [
+      "443"
+    ],
+    "metrics": [
+      "192.0",
+      "2.10"
+    ],
+    "frameworks": [
+      "CT"
+    ]
+  },
+  {
+    "num": "24",
+    "file": "03b-ciclo-osint.html",
+    "who": "",
+    "title": "CICLO OSINT: DISSEMINAR                                 -->\n        <!-- ============================================================",
+    "header": "Disseminar: entregue algo acionável.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": [
+      "CT"
+    ]
+  },
+  {
+    "num": "25",
+    "file": "03b-ciclo-osint.html",
+    "who": "",
+    "title": "CICLO OSINT: FEEDBACK                                   -->\n        <!-- ============================================================",
+    "header": "Feedback: a resposta abre outra pergunta.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "26",
+    "file": "03c-tecnicas-ferramentas.html",
+    "who": "",
+    "title": "TÉCNICAS PASSIVAS                                       -->\n        <!-- ============================================================",
+    "header": "Quatro portas de entrada — nenhuma delas é o alvo",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": [
+      "CERTIFICATE TRANSPARENCY",
+      "CT",
+      "DNS"
+    ]
+  },
+  {
+    "num": "27",
+    "file": "03c-tecnicas-ferramentas.html",
+    "who": "",
+    "title": "TÉCNICA: BUSCA E INDEXAÇÃO                              -->\n        <!-- ============================================================",
+    "header": "Busca e indexação: refine a pergunta.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": [
+      "DNS"
+    ]
+  },
+  {
+    "num": "28",
+    "file": "03c-tecnicas-ferramentas.html",
+    "who": "",
+    "title": "TÉCNICA: DNS E CERTIFICADOS                             -->\n        <!-- ============================================================",
+    "header": "DNS e certificados: nomes deixam rastros.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": [
+      "CERTIFICATE TRANSPARENCY",
+      "CT",
+      "DNS"
+    ]
+  },
+  {
+    "num": "29",
+    "file": "03c-tecnicas-ferramentas.html",
+    "who": "",
+    "title": "TÉCNICA: REGISTROS E INFRAESTRUTURA                    -->\n        <!-- ============================================================",
+    "header": "Registros e infraestrutura: conecte as fontes.",
+    "tools": [
+      "whois"
+    ],
+    "ips": [
+      "192.0.2.10"
+    ],
+    "ports": [],
+    "metrics": [
+      "192.0",
+      "2.10 "
+    ],
+    "frameworks": [
+      "ASN",
+      "DNS"
+    ]
+  },
+  {
+    "num": "30",
+    "file": "03c-tecnicas-ferramentas.html",
+    "who": "",
+    "title": "TÉCNICA: PESSOAS E VAZAMENTOS                            -->\n        <!-- ============================================================",
+    "header": "Pessoas e vazamentos: contexto com cuidado.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "31",
+    "file": "03c-tecnicas-ferramentas.html",
+    "who": "",
+    "title": "FERRAMENTAS OSINT                                       -->\n        <!-- ============================================================",
+    "header": "O kit de coleta — e o que cada fonte responde",
+    "tools": [
+      "amass",
+      "censys",
+      "crt.sh",
+      "exiftool",
+      "foca",
+      "securitytrails",
+      "shodan",
+      "subfinder",
+      "virustotal",
+      "whois"
+    ],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": [
+      "CT",
+      "DNS"
+    ]
+  },
+  {
+    "num": "32",
+    "file": "03c1-ferramentas-detalhes.html",
+    "who": "",
+    "title": "FERRAMENTAS: SHODAN E CENSYS                            -->\n        <!-- ============================================================",
+    "header": "Shodan / Censys",
+    "tools": [
+      "censys",
+      "shodan"
+    ],
+    "ips": [
+      "192.0.2.10"
+    ],
+    "ports": [
+      "443"
+    ],
+    "metrics": [
+      "192.0",
+      "2.10 "
+    ],
+    "frameworks": [
+      "HTTPS"
+    ]
+  },
+  {
+    "num": "33",
+    "file": "03c1-ferramentas-detalhes.html",
+    "who": "",
+    "title": "FERRAMENTAS: WHOIS                                     -->\n        <!-- ============================================================",
+    "header": "WHOIS",
+    "tools": [
+      "whois"
+    ],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "34",
+    "file": "03c1-ferramentas-detalhes.html",
+    "who": "",
+    "title": "FERRAMENTAS: SECURITYTRAILS E VIRUSTOTAL                 -->\n        <!-- ============================================================",
+    "header": "SecurityTrails / VirusTotal",
+    "tools": [
+      "securitytrails",
+      "virustotal"
+    ],
+    "ips": [
+      "192.0.2.10",
+      "198.51.100.20"
+    ],
+    "ports": [],
+    "metrics": [
+      "100.20 ",
+      "192.0",
+      "198.51",
+      "2.10 "
+    ],
+    "frameworks": [
+      "DNS"
+    ]
+  },
+  {
+    "num": "35",
+    "file": "03c1-ferramentas-detalhes.html",
+    "who": "",
+    "title": "FERRAMENTAS: CRT.SH                                    -->\n        <!-- ============================================================",
+    "header": "crt.sh",
+    "tools": [
+      "crt.sh"
+    ],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": [
+      "CERTIFICATE TRANSPARENCY",
+      "CT"
+    ]
+  },
+  {
+    "num": "36",
+    "file": "03c1-ferramentas-detalhes.html",
+    "who": "",
+    "title": "FERRAMENTAS: SUBFINDER E AMASS                          -->\n        <!-- ============================================================",
+    "header": "Subfinder / Amass",
+    "tools": [
+      "amass",
+      "subfinder"
+    ],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "37",
+    "file": "03c1-ferramentas-detalhes.html",
+    "who": "",
+    "title": "FERRAMENTAS: EXIFTOOL E FOCA                            -->\n        <!-- ============================================================",
+    "header": "ExifTool / FOCA",
+    "tools": [
+      "exiftool",
+      "foca"
+    ],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "38",
+    "file": "03d-fisico-ecossistema.html",
+    "who": "",
+    "title": "DUMPSTER DIVING                                         -->\n        <!-- ============================================================",
+    "header": "Dumpster diving: quando o descarte vira pista",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "39",
+    "file": "03d-fisico-ecossistema.html",
+    "who": "",
+    "title": "SHOULDER SURFING                                        -->\n        <!-- ============================================================",
+    "header": "Shoulder surfing: informação à vista.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": [
+      "2FA"
+    ]
+  },
+  {
+    "num": "40",
+    "file": "03d-fisico-ecossistema.html",
+    "who": "",
+    "title": "ECOSSISTEMA INT                                         -->\n        <!-- ============================================================",
+    "header": "OSINT é uma peça. O tabuleiro é maior.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "41",
+    "file": "04-estudos-caso.html",
+    "who": "",
+    "title": "DIVISOR 04                                              -->\n        <!-- ============================================================",
+    "header": "Quando o reconhecimento vira manchete.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "42",
+    "file": "04-estudos-caso.html",
+    "who": "",
+    "title": "CASO RSA                                                -->\n        <!-- ============================================================",
+    "header": "O e-mail que abriu a RSA",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "43",
+    "file": "04-estudos-caso.html",
+    "who": "",
+    "title": "CASO STRAVA                                             -->\n        <!-- ============================================================",
+    "header": "O mapa que desenhou bases secretas.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [
+      "34.5",
+      "69.2"
+    ],
+    "frameworks": []
+  },
+  {
+    "num": "44",
+    "file": "04-estudos-caso.html",
+    "who": "",
+    "title": "LIÇÃO DOS CASOS                                         -->\n        <!-- ============================================================",
+    "header": "O dado mais perigoso é aquele que parece inofensivo.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "45",
+    "file": "05-geosint-osint.html",
+    "who": "",
+    "title": "DIVISOR 05                                              -->\n        <!-- ============================================================",
+    "header": "Do dado público ao alvo provável.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "46",
+    "file": "05-geosint-osint.html",
+    "who": "",
+    "title": "GEOSINT 1                                               -->\n        <!-- ============================================================",
+    "header": "Onde foi tirada esta foto?",
+    "tools": [
+      "google lens",
+      "mapillary",
+      "overpass",
+      "suncalc"
+    ],
+    "ips": [],
+    "ports": [
+      "78"
+    ],
+    "metrics": [
+      "32.89",
+      "68.84"
+    ],
+    "frameworks": []
+  },
+  {
+    "num": "47",
+    "file": "05-geosint-osint.html",
+    "who": "",
+    "title": "GEOSINT 2                                               -->\n        <!-- ============================================================",
+    "header": "Três hipóteses. Uma coordenada.",
+    "tools": [
+      "google earth"
+    ],
+    "ips": [],
+    "ports": [],
+    "metrics": [
+      "15h"
+    ],
+    "frameworks": []
+  },
+  {
+    "num": "48",
+    "file": "05-geosint-osint.html",
+    "who": "",
+    "title": "OSINT DEMO — GRAFO                                      -->\n        <!-- ============================================================",
+    "header": "Vinte minutos de coleta. Um grafo.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "49",
+    "file": "06-opsec-fechamento.html",
+    "who": "",
+    "title": "DIVISOR 06                                              -->\n        <!-- ============================================================",
+    "header": "O rastro que você deixa sem perceber.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "50",
+    "file": "06-opsec-fechamento.html",
+    "who": "",
+    "title": "OPSEС — CONCEITO                                        -->\n        <!-- ============================================================",
+    "header": "OpSec é sobre não virar dado.",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  },
+  {
+    "num": "51",
+    "file": "06-opsec-fechamento.html",
+    "who": "",
+    "title": "OPSEС NO DIA A DIA                                      -->\n        <!-- ============================================================",
+    "header": "Seis hábitos que mudam o seu rastro",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [
+      "90 dias"
+    ],
+    "frameworks": [
+      "2FA",
+      "CVE",
+      "EXIF",
+      "SMS"
+    ]
+  },
+  {
+    "num": "52",
+    "file": "06-opsec-fechamento.html",
+    "who": "",
+    "title": "TAKEAWAYS                                               -->\n        <!-- ============================================================",
+    "header": "Três coisas para levar",
+    "tools": [],
+    "ips": [],
+    "ports": [],
+    "metrics": [
+      "30 segundos"
+    ],
+    "frameworks": []
+  },
+  {
+    "num": "53",
+    "file": "07-referencias-perguntas.html",
+    "who": "",
+    "title": "REFERÊNCIAS                                             -->\n        <!-- ============================================================",
+    "header": "Referências e leituras",
+    "tools": [
+      "censys",
+      "nmap",
+      "shodan",
+      "wireshark"
+    ],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": [
+      "MITRE ATT&CK",
+      "OWASP",
+      "TA0043"
+    ]
+  },
+  {
+    "num": "54",
+    "file": "07-referencias-perguntas.html",
+    "who": "",
+    "title": "Q&A                                                     -->\n        <!-- ============================================================",
+    "header": "Perguntas ?",
+    "tools": [
+      "nmap",
+      "wireshark"
+    ],
+    "ips": [],
+    "ports": [],
+    "metrics": [],
+    "frameworks": []
+  }
+]

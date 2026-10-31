@@ -6,8 +6,8 @@
           <span class="ghost-num">04</span>
           <div class="red-rule"></div>
           <div class="kicker"><span class="who">João Pedro Gonçalves</span> · Estudos de caso</div>
-          <h2 class="statement">Quando o reconhecimento<br /><em>vira manchete.</em></h2>
-          <p class="lede">Dois casos reais. Nenhum deles começou com um exploit zero-day.</p>
+          <h2 class="statement">Estudos de caso reais em reconhecimento</h2>
+          <p class="lede">A mecânica técnica por trás dos incidentes RSA SecurID e Strava Global Heatmap.</p>
 
           <div class="divider-foot">
             <span class="who">com <b>João Pedro Gonçalves</b></span>
@@ -16,8 +16,8 @@
 
           <aside class="notes">
             <ul>
-              <li>Anunciar os dois casos: RSA (2011) e Strava (2018).</li>
-              <li>Pedir atenção ao padrão: o vetor é humano ou é dado público mal pensado.</li>
+              <li>Introduzir o Bloco 04 com os dois marcos históricos: RSA SecurID (2011) e Strava (2018).</li>
+              <li>Explicar que ambos os incidentes não se iniciaram com exploração direta de vulnerabilidades de dia zero, mas com reconhecimento metódico de dados públicos.</li>
             </ul>
           </aside>
                   </div>
@@ -30,7 +30,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker">Caso 01 · 2011 · RSA SecurID</div>
-            <h2 class="h-md">O e-mail que abriu a RSA</h2>
+            <h2 class="h-md">Caso RSA SecurID (2011)</h2>
           </div>
 
           <div class="slide-body rsa-grid">
@@ -59,7 +59,7 @@
               </div>
 
               <p class="source" style="margin-top: 16px">
-                Fonte: Zoho Workplace · “RSA spear-phishing attack”. O vetor não foi técnico: foi humano.
+                Fonte: Relatórios técnicos do incidente (Zoho Workplace). O reconhecimento prévio mapeou alvos de recrutamento no RH.
               </p>
             </div>
 
@@ -72,22 +72,21 @@
                   I forward this file to you for review. Please open and view it.<br /><br />
                   Best regards.
                 </div>
-                <div class="attachment">📎 2021_Recruitment_Plan.xlsx</div>
-                <div class="source" style="margin-top: 10px">Reprodução didática do e-mail reportado.</div>
+                <div class="attachment">📎 2011_Recruitment_Plan.xls</div>
+                <div class="source" style="margin-top: 10px">Reprodução didática do e-mail reportado no incidente.</div>
               </div>
 
               <div class="side-note" style="margin-top: 16px; font-size: 0.4em; border-color: var(--red)">
-                <b style="color: var(--red)">Lição:</b> o reconhecimento não precisa descobrir uma falha. Basta descobrir
-                quem abre anexos.
+                <b style="color: var(--red)">Análise:</b> o reconhecimento direcionou o spear-phishing para colaboradores que recebem e abrem anexos externos por dever de ofício.
               </div>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Contexto: RSA, empresa de segurança; o ataque atingiu justamente quem vendia confiança.</li>
-              <li>Detalhe importante: o e-mail não parecia um ataque; parecia rotina.</li>
-              <li>Ligar ao slide de phishing: os cinco sinais estavam lá.</li>
+              <li>Apresentar o caso histórico da RSA Security em março de 2011: exfiltração de dados que comprometeu cerca de 40 milhões de tokens SecurID.</li>
+              <li>Destacar a mecânica: e-mail de spear-phishing com o anexo 2011_Recruitment_Plan.xls contendo exploit de Flash embutido em planilha Excel.</li>
+              <li>Ressaltar o reconhecimento prévio: os invasores mapearam colaboradores de RH que rotineiramente abrem currículos de remetentes desconhecidos.</li>
             </ul>
           </aside>
                   </div>
@@ -101,24 +100,23 @@
           <div class="strava-grid">
             <div>
               <div class="kicker">Caso 02 · 2018 · Strava</div>
-              <h2 class="h-lg" style="font-size: 1.9em">O mapa que desenhou<br /><em class="red">bases secretas.</em></h2>
+              <h2 class="h-lg" style="font-size: 1.9em">Caso Strava Global Heatmap (2018)<br /><em class="red">inteligência por agregação de telemetria</em></h2>
               <p class="lede">
-                O Strava publicou um mapa de calor global com atividades agregadas de usuários. Pesquisadores cruzaram
-                o rastro de corridas com imagens de satélite — e localizaram instalações militares.
+                O Strava publicou um mapa de calor com 3 trilhões de pontos de GPS de atletas. O cruzamento das trilhas com imagens de satélite revelou instalações militares e rotas de patrulha no exterior.
               </p>
 
               <div class="case-facts">
                 <div class="case-fact">
                   <span class="n">01</span>
-                  <div><b>Ninguém invadiu nada.</b><span>O dado era público e autorizado. Só não deveria revelar tanto.</span></div>
+                  <div><b>Ausência de invasão direta</b><span>A telemetria era pública e autorizada; o risco decorreu da agregação de dados.</span></div>
                 </div>
                 <div class="case-fact">
                   <span class="n">02</span>
-                  <div><b>O padrão era o segredo.</b><span>Rotas circulares em locais sem academia entregavam a posição.</span></div>
+                  <div><b>Padrões geométricos em zonas isoladas</b><span>Circuitos regulares de corrida em áreas desertas demarcaram o perímetro de bases.</span></div>
                 </div>
                 <div class="case-fact">
                   <span class="n">03</span>
-                  <div><b>Correlação vence senha.</b><span>Heatmap + satélite + geografia = localização provável.</span></div>
+                  <div><b>Correlação multivariada</b><span>Sobreposição do mapa de calor com imagens ópticas de satélite identificou instalações sigilosas.</span></div>
                 </div>
               </div>
 
@@ -173,10 +171,9 @@
 
           <aside class="notes">
             <ul>
-              <li>Contexto: Strava Heatmap, 2017/2018; dados de atividades agregados.</li>
-              <li>O caso foi descoberto por um estudante que cruzou o mapa com imagens de satélite.</li>
-              <li>Ponto central: o dado era público, mas a agregação não foi pensada como risco.</li>
-              <li>Perguntar: “quais dados a sua empresa publica achando que são inofensivos?”.</li>
+              <li>Contextualizar o incidente do Strava Heatmap em 2017/2018: Nathan Ruser identificou desenhos geométricos em áreas remotas do Afeganistão (34.5°N 69.2°E).</li>
+              <li>Explicar o conceito de inteligência emergente por agregação: dados inofensivos em nível individual revelam segredos estratégicos quando consolidados.</li>
+              <li>A sobreposição com imagens de satélite permitiu identificar guaritas, pistas e postos avançados sem qualquer invasão a servidores.</li>
             </ul>
           </aside>
                   </div>
@@ -189,7 +186,7 @@
           <div class="slide-inner">
           <div class="slide-body lesson-wrap">
             <div class="kicker">O padrão entre os dois casos</div>
-            <h2 class="lesson-quote">O dado mais perigoso é aquele que parece <em>inofensivo.</em></h2>
+            <h2 class="lesson-quote">A correlação de dados como gerador de <em>inteligência ofensiva</em></h2>
 
             <div class="lesson-items">
               <div>
@@ -207,15 +204,15 @@
             </div>
 
             <p class="lede" style="margin-top: 22px; max-width: 36em">
-              Reconhecimento é <strong>correlação</strong>, não coleta. O valor não está na fonte isolada — está no que
-              ela revela quando cruza com a próxima.
+              O reconhecimento converte fragmentos dispersos em visão estratégica. O valor investigativo reside na correlação precisa entre múltiplas fontes independentes.
             </p>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Pausa dramática: deixar a frase no telão por alguns segundos.</li>
-              <li>Repetir a ideia que vai voltar no fechamento: dado isolado ≠ inteligência.</li>
+              <li>Sintetizar as lições dos dois casos: na RSA, o dado isolado era a lista pública de RH; no Strava, trajetos de exercícios.</li>
+              <li>Fixar a diretriz central: o valor da inteligência de reconhecimento decorre da correlação metódica de fontes independentes.</li>
+              <li>Passar a palavra para João Pedro Almeida para a realização das demonstrações práticas de GEOSINT e correlação OSINT no Bloco 05.</li>
             </ul>
           </aside>
                   </div>

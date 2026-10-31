@@ -6,8 +6,8 @@
           <span class="ghost-num">05</span>
           <div class="red-rule"></div>
           <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração</div>
-          <h2 class="statement">Do dado público<br /><em>ao alvo provável.</em></h2>
-          <p class="lede">Três demonstrações: duas de GEOSINT e uma de OSINT. Ambiente controlado.</p>
+          <h2 class="statement">Demonstrações práticas de reconhecimento</h2>
+          <p class="lede">Aplicação de técnicas de GEOSINT e correlação de entidades em grafo relacional.</p>
 
           <div class="divider-foot">
             <span class="who">com <b>João Pedro Almeida</b></span>
@@ -16,8 +16,8 @@
 
           <aside class="notes">
             <ul>
-              <li>Reforçar que tudo é feito com dados públicos e exemplos didáticos.</li>
-              <li>Avisar que a demo é uma simulação narrada, não um alvo real.</li>
+              <li>Introduzir as demonstrações práticas do Bloco 05: análise geoespacial de fotografia e correlação em grafo relacional.</li>
+              <li>Explicar que todas as técnicas utilizam dados públicos e simulações com rigor metodológico e científico.</li>
             </ul>
           </aside>
                   </div>
@@ -30,7 +30,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração 01 · GEOSINT</div>
-            <h2 class="h-md">Onde foi tirada esta foto?</h2>
+            <h2 class="h-md">Investigação geoespacial: análise de evidências visuais</h2>
           </div>
 
           <div class="slide-body geo-grid">
@@ -116,7 +116,7 @@
                 </div>
                 <div class="clue">
                   <span class="k">RELEVO</span>
-                  <div><b>Pré-cordilheira árida</b><span>Montanhas baixas, solo seco, vegetação rasteira — não é litoral.</span></div>
+                  <div><b>Pré-cordilheira árida</b><span>Montanhas áridas, solo seco e vegetação rasteira espinhosa característica da estepe pré-cordilheirana.</span></div>
                 </div>
                 <div class="clue">
                   <span class="k">CONTEXTO</span>
@@ -134,16 +134,16 @@
                 <span class="chip">SunCalc</span>
                 <span class="chip">Mapillary</span>
                 <span class="chip">Overpass</span>
-                <span class="chip amber">confiança, não certeza</span>
+                <span class="chip amber">estimativa probabilística</span>
               </div>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Narrar como analista: primeiro as pistas óbvias, depois as que eliminam hipóteses.</li>
-              <li>Explicar SunCalc: posição e comprimento da sombra dão hora aproximada e orientação.</li>
-              <li>Dizer que a confiança é parte do método: 78% não é “achismo”, é hipótese testável.</li>
+              <li>Demonstrar a decomposição de pistas visuais: vegetação árida, placa rodoviária da Ruta 40 na Argentina e projeção de sombras.</li>
+              <li>Explicar o cálculo de azimute e ângulo solar com o SunCalc para inferir o horário de fim de tarde em rodovia com eixo norte-sul.</li>
+              <li>Destacar a combinação de ferramentas auxiliares (Google Lens, Mapillary e Overpass) para alcançar 78% de confiança investigativa.</li>
             </ul>
           </aside>
                   </div>
@@ -156,7 +156,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração 02 · GEOSINT</div>
-            <h2 class="h-md">Três hipóteses. Uma coordenada.</h2>
+            <h2 class="h-md">Validação de coordenadas e descarte de hipóteses</h2>
           </div>
 
           <div class="slide-body geo-grid">
@@ -195,9 +195,9 @@
             </div>
 
             <div>
-              <h3 class="h-sm" style="margin-bottom: 8px">Eliminar, não adivinhar.</h3>
+              <h3 class="h-sm" style="margin-bottom: 8px">Método científico de eliminação</h3>
               <p class="lede" style="margin-top: 0">
-                Cada pista precisa <strong>derrubar</strong> uma hipótese. O que sobra não é certeza: é o próximo teste.
+                A correlação entre azimute solar e perfis topográficos descarta hipóteses inconsistentes até isolar a coordenada compatível.
               </p>
 
               <div class="evidence">
@@ -223,9 +223,9 @@
 
           <aside class="notes">
             <ul>
-              <li>Explicar a lógica de eliminação: A e B caem por sombra/relevo; C sobrevive.</li>
-              <li>Mostrar que a barra de confiança é uma decisão comunicável, não um número mágico.</li>
-              <li>Se possível, abrir o Google Earth e comparar o recorte.</li>
+              <li>Explicar a lógica de eliminação sistemática: a hipótese A é descartada pela orientação da via e a B pelo relevo montanhoso.</li>
+              <li>Demonstrar que a hipótese C no trecho de Mendoza confirma todos os parâmetros físicos e óticos da fotografia.</li>
+              <li>Ressaltar que a confiança analítica expressa a robustez das evidências verificadas.</li>
             </ul>
           </aside>
                   </div>
@@ -238,7 +238,7 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração 03 · OSINT</div>
-            <h2 class="h-md">Vinte minutos de coleta. Um grafo.</h2>
+            <h2 class="h-md">Construção do grafo de correlação OSINT</h2>
           </div>
 
           <div class="slide-body graph-grid">
@@ -289,21 +289,21 @@
               </ul>
 
               <div class="no-go">
-                <b>O QUE NÃO FAZEMOS</b>
-                <span>Não testamos a senha vazada. Não acessamos a VPN. Não enviamos nada ao alvo. Sem autorização, o grafo para aqui.</span>
+                <b>LIMITES DE ENGAJAMENTO (ROE)</b>
+                <span>A investigação limita-se à estruturação do grafo público; tentativas de login e testes de credenciais exigem autorização formal.</span>
               </div>
 
               <p class="small" style="margin-top: 12px">
-                O próximo passo é um relatório com evidências, não um login.
+                O produto final da coleta é o relatório técnico para subsidiar a correção preventiva pela equipe de segurança.
               </p>
             </div>
           </div>
 
           <aside class="notes">
             <ul>
-              <li>Narrar o encadeamento nó a nó; cada seta é uma consulta pública.</li>
-              <li>Destacar o limite ético: o valor está no mapa, não no acesso.</li>
-              <li>Se a banca perguntar “e depois?”, responder: relatório, priorização e correção.</li>
+              <li>Fechar o fio narrativo de Marina Sousa e Acme Pagamentos, encadeando a postagem inicial ao mapeamento da VPN corporativa.</li>
+              <li>Demonstrar como a correlação de dados públicos revela superfícies críticas em poucos minutos de levantamento.</li>
+              <li>Enfatizar os parâmetros éticos e legais: o objetivo do reconhecimento defensivo é mitigar as exposições antes de qualquer exploração maliciosa.</li>
             </ul>
           </aside>
                   </div>

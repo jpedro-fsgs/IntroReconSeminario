@@ -1,0 +1,1358 @@
+================================================================================
+SLIDE 01 | File: 00-abertura.html | Speaker: 
+Title: CAPA                                                    -->
+        <!-- ============================================================
+H1: Recon & OSINT | H2:  | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Seminário de segurança ofensiva · Outubro de 2026 Recon & OSINT Tudo o que o alvo revela antes de ser atacado. o que está exposto: superfície de ataque N S E W SIGNAL // 001 23°33′S 46°38′W · alvo.local Geovana conceito · OpSec Emilio recon ativo · Nmap · Wireshark Daniel recon passivo · OSINT João Pedro Gonçalves estudos de caso João Pedro Almeida demonstração prática → avançar
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Cumprimentar a banca e a turma; apresentar a equipe em uma frase cada. Provocar: “antes de qualquer ataque, alguém passou semanas só olhando”. Dizer que a navegação é horizontal, um bloco por apresentador.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="cover-grid">
+            <div>
+              <div class="kicker">Seminário de segurança ofensiva · Outubro de 2026</div>
+              <h1 class="cover-title">Recon<br /><em>&amp; OSINT</em></h1>
+              <p class="cover-sub">Tudo o que o alvo revela antes de ser atacado.</p>
+
+              <div class="cover-redact">
+                <span>o que está exposto:</span>
+                <span class="redact-wrap">
+                  <span class="redac
+
+================================================================================
+SLIDE 02 | File: 00-abertura.html | Speaker: 
+Title: AGENDA                                                  -->
+        <!-- ============================================================
+H1:  | H2: Seis blocos. Uma pergunta: o que o alvo já contou? | H3: 
+Kicker:  | Lede: Começamos pelo conceito, passamos pelas duas faces do reconhecimento e terminamos com casos reais, demonstração e o que fazer para não virar o próximo caso.
+--------------------------------------------------------------------------------
+BODY TEXT:
+O caminho da apresentação Seis blocos. Uma pergunta: o que o alvo já contou? Começamos pelo conceito, passamos pelas duas faces do reconhecimento e terminamos com casos reais, demonstração e o que fazer para não virar o próximo caso. ≈ 45 min 5 apresentadores Q&A no final 01 Conceito & contexto Por que o reconhecimento existe e por que ele importa agora. Geovana 02 Reconhecimento ativo Redes, portas, Nmap e Wireshark — quando o alvo responde. Emilio 03 Reconhecimento passivo OSINT, fontes abertas e o ecossistema de inteligência. Daniel 04 Estudos de caso RSA e Strava: quando o reconhecimento vira manchete. João Pedro G. 05 Demonstração GEOSINT e OSINT na prática, com método e limites. João Pedro A. 06 OpSec & fechamento O rastro que você deixa — e como reduzir. Geovana · todos
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Não ler os seis itens: apontar a lógica “conceito → ativo → passivo → casos → demo → OpSec”. Avisar que as perguntas ficam para o final, mas anotem dúvidas.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker">O caminho da apresentação</div>
+          </div>
+          <div class="slide-body agenda">
+            <div>
+              <h2 class="h-lg">Seis blocos.<br />Uma pergunta: <em class="red">o que o alvo já contou?</em></h2>
+              <p class="lede">
+                Começamos pelo conceito, passamos pelas duas faces do reconhecimento e terminamos com casos reais,
+                demonstração e o que fa
+
+================================================================================
+SLIDE 03 | File: 01-conceito-contexto.html | Speaker: 
+Title: DIVISOR 01                                              -->
+        <!-- ============================================================
+H1:  | H2: Todo ataque começa com uma pergunta. | H3: 
+Kicker:  | Lede: Reconhecer é descobrir a resposta antes de tocar no alvo.
+--------------------------------------------------------------------------------
+BODY TEXT:
+01 Geovana · Conceito e contexto Todo ataque começa com uma pergunta. Reconhecer é descobrir a resposta antes de tocar no alvo. com Geovana BLOCO 01 / 06
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Transição: sair da ideia de “hacker invadindo” para a de “analista investigando”.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <span class="ghost-num">01</span>
+          <div class="red-rule"></div>
+          <div class="kicker"><span class="who">Geovana</span> · Conceito e contexto</div>
+          <h2 class="statement">Todo ataque começa com uma pergunta.</h2>
+          <p class="lede">Reconhecer é descobrir a resposta antes de tocar no alvo.</p>
+
+          <div class="divider-foot">
+            <span class="who">com <b>Geovana</b></span>
+            <span class="chapter">BLOCO 01 /
+
+================================================================================
+SLIDE 04 | File: 01-conceito-contexto.html | Speaker: 
+Title: ERA DAS MÍDIAS SOCIAIS                                  -->
+        <!-- ============================================================
+H1:  | H2: O celular acordou antes de você. | H3: 
+Kicker:  | Lede: A média do brasileiro passa quase 9 horas por dia diante de uma tela — e quase 3 horas desse tempo dentro de redes sociais.
+--------------------------------------------------------------------------------
+BODY TEXT:
+Geovana · Era das mídias sociais O celular acordou antes de você. A média do brasileiro passa quase 9 horas por dia diante de uma tela — e quase 3 horas desse tempo dentro de redes sociais. 9 h de tela por dia 3 h em redes sociais 116 h conectado por semana Métricas de pesquisas diferentes: use como ordem de grandeza, não como cronômetro. 9h tela / dia 3h em redes 6h outras telas 15h fora
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Abrir com a pergunta do roteiro: “quanto tempo vocês passam nas redes e no celular?”. O roteiro cita 116h semanais, 9h por dia e quase 3h em redes. São métricas de pesquisas diferentes; usar como ordem de grandeza. Se alguém contestar os números, assumir: o ponto não é o minuto exato, é a fração do dia que vira rastro público.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Geovana</span> · Era das mídias sociais</div>
+            <h2 class="h-lg">O celular acordou<br />antes de você.</h2>
+          </div>
+
+          <div class="slide-body era-grid">
+            <div class="era-copy">
+              <p class="lede">
+                A média do brasileiro passa quase <strong>9 horas por dia</strong> diante de uma tela — e quase
+                <strong>3 horas
+
+================================================================================
+SLIDE 05 | File: 01-conceito-contexto.html | Speaker: 
+Title: EVOLUÇÃO DAS REDES                                      -->
+        <!-- ============================================================
+H1:  | H2: Quatro décadas até o feed. | H3: 
+Kicker:  | Lede: Cada plataforma removeu uma fricção: encontrar, publicar, transmitir, mostrar.
+--------------------------------------------------------------------------------
+BODY TEXT:
+Geovana · Evolução das redes Quatro décadas até o feed. Cada plataforma removeu uma fricção: encontrar, publicar, transmitir, mostrar. 1974 Usenet fóruns e grupos 1997 SixDegrees amigos e grupos 2003 LinkedIn rede profissional 2004 Facebook · Orkut rede de massa 2005 YouTube vídeo 2006 Twitter tempo real 2010 Instagram imagem
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Não decorar a linha do tempo: mostrar como cada etapa encurtou a distância entre a vida e a publicação. Usenet era fórum; SixDegrees já conectava amigos; LinkedIn profissionalizou; Facebook e Orkut massificaram; YouTube abriu o vídeo; Twitter trouxe o tempo real; Instagram colocou a imagem no centro. Transição: “quando publicar ficou instantâneo, o rastro também ficou”.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Geovana</span> · Evolução das redes</div>
+            <h2 class="h-lg">Quatro décadas<br />até o feed.</h2>
+            <p class="lede">Cada plataforma removeu uma fricção: encontrar, publicar, transmitir, mostrar.</p>
+          </div>
+
+          <div class="slide-body">
+            <div class="history-track">
+              <div class="history-item up rise" style="--d: .12s">
+          
+
+================================================================================
+SLIDE 06 | File: 01-conceito-contexto.html | Speaker: 
+Title: SUPEREXPOSIÇÃO                                          -->
+        <!-- ============================================================
+H1:  | H2: A internet não esquece. Você posta de novo amanhã. | H3: 
+Kicker:  | Lede: Nos tornamos dependentes de estímulo e superexpomos a própria vida. A primeira informação sobre uma organização quase sempre sai por uma foto com geotag, um cargo no LinkedIn ou um comentário sobre o projeto “que está pegando fogo”.
+--------------------------------------------------------------------------------
+BODY TEXT:
+Geovana · Resultado das mídias A internet não esquece. Você posta de novo amanhã. Nos tornamos dependentes de estímulo e superexpomos a própria vida. A primeira informação sobre uma organização quase sempre sai por uma foto com geotag, um cargo no LinkedIn ou um comentário sobre o projeto “que está pegando fogo”. ≈ 3h por dia em redes sociais — onde boa parte da rotina vira conteúdo público. A pergunta não é só o que você publica — é com quem você está realmente se conectando. Marina Sousa @marina.souza · agora 📍 São Paulo, SP 🏢 Acme Pagamentos #deplantão marina.souza Último dia de plantão no novo datacenter. Agora sim, férias! 🏖️ ♥ 214 💬 12 ↗ compartilhar GEOTAG endereço exato CARGO organograma ROTINA janela de ataque
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Pergunta do roteiro: “com quem você está realmente se conectando?”. Perguntar à plateia quem já postou foto do crachá, do escritório ou da tela do sistema. ≈3h/dia em redes é uma estimativa de mercado; usar como ordem de grandeza, não como dado exato. Fechar: a superexposição não é só vaidade — é matéria-prima para quem faz recon.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Geovana</span> · Resultado das mídias</div>
+            <h2 class="h-lg">A internet não esquece.<br />Você posta de novo amanhã.</h2>
+          </div>
+
+          <div class="slide-body exposure">
+            <div>
+              <p class="lede">
+                Nos tornamos dependentes de estímulo e superexpomos a própria vida. A primeira informação sobre uma
+                organização 
+
+================================================================================
+SLIDE 07 | File: 01-conceito-contexto.html | Speaker: 
+Title: CASO TWITTER                                            -->
+        <!-- ============================================================
+H1:  | H2: O post que virou coordenada. | H3: O que o post entregou
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Geovana O post que virou coordenada. @.... Twitter · agora tempo real acabando de chegar no cinema pra ver o filme das 21h 🍿 📍 cinema · zona sul 21:04 18 respostas 104 curtis post público · 21:04 O que o post entregou 21:04 Local e horário “Cinema” + “filme das 21h” entregam onde e quando. em seguida Deslocamento Quem já estava em atrito vê o post e sabe onde encontrá-la. no local Confronto O encontro acontece no cinema — sem invasão ou rastreamento técnico. Não foi invasão. Foi leitura de contexto em tempo real.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Contar sem identificar ninguém: duas pessoas já estavam em atrito; uma publicou, em tempo real, que estava indo ao cinema; a outra viu o post e apareceu no local. O encontro terminou em discussão. Não houve hackeamento, rastreamento técnico ou acesso a dado privado. O post era público e continha local + horário. O ponto não é culpar a pessoa que publicou. É mostrar como o tempo real encurta a distância entre a intenção de alguém e a ação. Conectar com recon: o atacante não precisa invadir o celular se a própria pessoa publica onde estará.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Geovana</span></div>
+            <h2 class="h-lg">O post que virou<br /><em class="red">coordenada.</em></h2>
+          </div>
+
+          <div class="slide-body tw-grid">
+            <div class="tw-wrap rise" style="--d: .12s">
+              <div class="tw-card">
+                <div class="tw-head">
+                  <img class="tw-logo" src="assets/twitter.svg" alt="" />
+             
+
+================================================================================
+SLIDE 08 | File: 01-conceito-contexto.html | Speaker: 
+Title: CASO SMART SAMPA                                        -->
+        <!-- ============================================================
+H1:  | H2: 58 mil câmeras. 11 meses de senhas expostas. | H3: 
+Kicker:  | Lede: O Smart Sampa integra câmeras de segurança da capital paulista. Segundo reportagem do G1, credenciais de acesso ao sistema ficaram expostas por 11 meses — não por um exploit sofisticado, mas por uma falha de cuidado.
+--------------------------------------------------------------------------------
+BODY TEXT:
+Caso real · São Paulo · 2026 58 mil câmeras. 11 meses de senhas expostas. O Smart Sampa integra câmeras de segurança da capital paulista. Segundo reportagem do G1, credenciais de acesso ao sistema ficaram expostas por 11 meses — não por um exploit sofisticado, mas por uma falha de cuidado. 58 mil câmeras no ecossistema 11 meses de exposição, segundo o G1 credencial exposta → 11 meses sem rotação → descoberta e correção Fonte: G1 / Tecnologia, 21 out. 2026. Exposição não é o mesmo que invasão — mas é o convite. SMART SAMPA · PAINEL DE MONITORAMENTO LIVE cam_047 · zona leste acesso: admin / ••••••
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Contextualizar: sistema de vigilância urbana, 58 mil câmeras, dados sensíveis. Não afirmar invasão: a reportagem trata de senhas expostas por 11 meses. Lição: a credencial é o ativo mais barato de vazar e o mais caro de ignorar.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker">Caso real · São Paulo · 2026</div>
+            <h2 class="h-lg">58 mil câmeras.<br />11 meses de senhas expostas.</h2>
+          </div>
+
+          <div class="slide-body case-grid">
+            <div>
+              <p class="lede">
+                O Smart Sampa integra câmeras de segurança da capital paulista. Segundo reportagem do G1, credenciais
+                de acesso ao sistema ficaram expostas por 
+
+================================================================================
+SLIDE 09 | File: 01-conceito-contexto.html | Speaker: 
+Title: DEFINIÇÃO                                               -->
+        <!-- ============================================================
+H1:  | H2: Recon não é invadir. É entender. | H3: 
+Kicker:  | Lede: É a primeira fase de um ataque — não a invasão. A coleta monta um perfil detalhado do alvo: arquitetura, portas, tecnologias, pessoas e fraquezas. O resultado orienta as próximas etapas e mostra ao Blue Team onde o atacante vai olhar.
+--------------------------------------------------------------------------------
+BODY TEXT:
+Definição · o que é reconhecimento MITRE ATT&CK · TA0043 Reconnaissance Recon não é invadir. É entender. É a primeira fase de um ataque — não a invasão. A coleta monta um perfil detalhado do alvo: arquitetura, portas, tecnologias, pessoas e fraquezas. O resultado orienta as próximas etapas e mostra ao Blue Team onde o atacante vai olhar. primeira fase discrição, não invasão Blue Team também usa SUPERFÍCIE O que está exposto Domínios, portas, serviços, APIs, ambientes de teste e serviços esquecidos. PESSOAS Quem opera Cargos, hábitos, fornecedores e o que cada pessoa publica sem perceber. CONEXÕES Como tudo se liga Nuvem, terceiros, integrações e a cadeia que sustenta o negócio.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Definir recon como processo de inteligência, não como “rodar Nmap”. É a primeira fase do ataque, mas não a invasão: o objetivo é montar um perfil detalhado do alvo com o mínimo de exposição. Conectar com o MITRE ATT&CK: é a tática que antecede todas as outras. O mesmo mapa interessa ao Blue Team: saber onde o atacante procura é saber onde fechar. Frase de transição: “entender sem tocar é o passivo; tocar para entender é o ativo”.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Definição</span> · o que é reconhecimento</div>
+            <span class="chip amber">MITRE ATT&amp;CK · TA0043 Reconnaissance</span>
+          </div>
+
+          <div class="slide-body def-grid">
+            <div>
+              <h2 class="def-quote">Recon não é invadir.<br /><em>É entender.</em></h2>
+              <p class="lede">
+                É a primeira fase de um ataque — não a in
+
+================================================================================
+SLIDE 10 | File: 02-recon-ativo.html | Speaker: 
+Title: DIVISOR 02                                              -->
+        <!-- ============================================================
+H1:  | H2: Quando o alvo começa a responder. | H3: 
+Kicker:  | Lede: Aqui saem pacotes de verdade. E com eles, rastros.
+--------------------------------------------------------------------------------
+BODY TEXT:
+02 Emilio · Reconhecimento ativo Quando o alvo começa a responder. Aqui saem pacotes de verdade. E com eles, rastros. com Emilio BLOCO 02 / 06
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Marcar a mudança de postura: no passivo, o alvo não vê; no ativo, ele pode ver.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <span class="ghost-num">02</span>
+          <div class="red-rule"></div>
+          <div class="kicker"><span class="who">Emilio</span> · Reconhecimento ativo</div>
+          <h2 class="statement">Quando o alvo<br /><em>começa a responder.</em></h2>
+          <p class="lede">Aqui saem pacotes de verdade. E com eles, rastros.</p>
+
+          <div class="divider-foot">
+            <span class="who">com <b>Emilio</b></span>
+            <span class="chapter">BLOCO 0
+
+================================================================================
+SLIDE 11 | File: 02-recon-ativo.html | Speaker: 
+Title: REDES EM 60 SEGUNDOS                                    -->
+        <!-- ============================================================
+H1:  | H2: Três coisas que você precisa saber sobre redes | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Emilio · Redes, simplificadas Três coisas que você precisa saber sobre redes notebook 10.10.14.23 roteador gateway da rede servidor 10.10.14.5 : 443 origem SYN → destino ENDEREÇO Quem fala O IP identifica a máquina na rede. 10.10.14.23 é o remetente; o destino é outro IP. PORTA Qual serviço A porta diz o que aquela máquina oferece. 443 costuma ser HTTPS; 22 , SSH. PACOTE O que viaja Um envelope com cabeçalho e dados. O cabeçalho diz de onde vem, para onde vai e o que quer. IP ORIGEM 10.10.14.23 IP DESTINO 10.10.14.5 PORTA ORIG. 49812 PORTA DEST. 443 FLAGS SYN DADOS ········
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Não aprofundar TCP/IP: o objetivo é dar vocabulário para entender Nmap e Wireshark. Analogia: IP = prédio, porta = apartamento, pacote = envelope. Destacar que a porta é o que o scan procura.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Emilio</span> · Redes, simplificadas</div>
+            <h2 class="h-md">Três coisas que você precisa saber sobre redes</h2>
+          </div>
+
+          <div class="slide-body">
+            <div class="net-diagram">
+              <div class="node">
+                <div class="icon">
+                  <svg viewBox="0 0 60 46" fill="none" stroke="currentColor" stroke-width="1.4">
+         
+
+================================================================================
+SLIDE 12 | File: 02-recon-ativo.html | Speaker: 
+Title: NMAP — SIMULAÇÃO                                        -->
+        <!-- ============================================================
+H1:  | H2: Nmap: o mapa que o alvo entrega sem querer | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Emilio · Ferramenta 01 · simulação Nmap: o mapa que o alvo entrega sem querer emilio@lab: ~/recon — nmap $ nmap -sS -sV -p- 10.10.14.23 -oA recon_alvo Starting Nmap 7.95 ( https://nmap.org ) at 2026-10-30 20:14 -03 Nmap scan report for alvo.local (10.10.14.23) Host is up (0.0021s latency). Not shown: 65529 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.9p1 Ubuntu 3ubuntu0.6 80/tcp open http nginx 1.24.0 443/tcp open ssl/http nginx 1.24.0 3306/tcp open mysql MySQL 8.0.35 8080/tcp open http-proxy Jetty 9.4.53 Service detection performed. Please report any incorrect results. Nmap done: 1 IP address (1 host up) scanned in 41.72 seconds ▌ 5 portas abertas em 65.535 · nenhuma exploração executada $ ls -la recon_alvo.* -rw-r--r-- 1 emilio emilio 18K out 30 20:15 recon_alvo.nmap -rw-r--r-- 1 emilio emilio 42K out 30 20:15 recon_alvo.xml 10.10.14.23 alvo.local · up 0.0021s 5 portas abertas de 65.535 testadas 22 · SSH closed open 80 · HTTP closed open 443 · HTTPS closed open 3306 · SQL closed open 8080 · JETTY closed open 3389 · RDP filtered SYN scan não completa a conexão. A aplicação não registra o handshake — mas o firewall vê. O scan não explora nada. Ele só pergunta — e o alvo responde. laboratório autorizado · 10.10.14.0/24
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Explicar o comando: -sS (SYN), -sV (versões), -p- (todas as portas), -oA (salvar em três formatos). Mostrar o tempo: 41s para 65 mil portas — por isso o scan é barato para o atacante. Ressaltar: a saída dá hipóteses, não conclusões. Versão antiga ≠ vulnerável. Perguntar: “o que vocês olhariam primeiro nesta lista?” (8080 e 3306 são os candidatos).
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Emilio</span> · Ferramenta 01 · simulação</div>
+            <h2 class="h-md">Nmap: o mapa que o alvo entrega sem querer</h2>
+          </div>
+
+          <div class="slide-body nmap-grid">
+            <div class="window fill">
+              <div class="window-bar">
+                <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+                <span clas
+
+================================================================================
+SLIDE 13 | File: 02-recon-ativo.html | Speaker: 
+Title: WIRESHARK — SIMULAÇÃO                                   -->
+        <!-- ============================================================
+H1:  | H2: Wireshark: o que realmente passa no fio | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Emilio · Ferramenta 02 · simulação Wireshark: o que realmente passa no fio File Edit View Go Capture Analyze Statistics Telephony Tools Help ⌕ ip.addr == 10.10.14.23 && tcp.port == 80 ✕ No. Time Source Destination Protocol Len Info 1 0.000000 10.10.14.23 10.10.14.5 TCP 74 49812 → 80 [SYN] Seq=0 Win=64240 Len=0 2 0.000187 10.10.14.5 10.10.14.23 TCP 74 80 → 49812 [SYN, ACK] Seq=0 Ack=1 Win=65160 Len=0 3 0.000203 10.10.14.23 10.10.14.5 TCP 66 49812 → 80 [ACK] Seq=1 Ack=1 Win=64240 Len=0 4 0.000310 10.10.14.23 10.10.14.5 HTTP 148 GET /admin/ HTTP/1.1 5 0.000492 10.10.14.5 10.10.14.23 TCP 66 80 → 49812 [ACK] Seq=1 Ack=83 Win=65160 Len=0 6 0.000531 10.10.14.5 10.10.14.23 HTTP 199 HTTP/1.1 401 Unauthorized (text/html) 7 0.000612 10.10.14.23 10.10.14.5 HTTP 214 GET /admin/ HTTP/1.1 ▾ Frame 1: 74 bytes on wire (592 bits), 74 bytes captured (592 bits) ▾ Ethernet II, Src: 00:1a:2b:3c:4d:5e, Dst: 00:0c:29:aa:bb:cc ▾ Internet Protocol Version 4, Src: 10.10.14.23 , Dst: 10.10.14.5 ▾ Transmission Control Protocol, Src Port: 49812 , Dst Port: 80 , Seq: 0, Len: 0 ▸ Flags: 0x002 (SYN) ▸ Window: 64240 · Options: (12 bytes), MSS=1460, SACK_PERM 0000 00 0c 29 aa bb cc 00 1a 2b 3c 4d 5e 08 00 45 00 00 3c 1c 46 40 00 40 06 ..).....+<M^..E..<.F@.@. 0020 4b 1a 0a 0a 0e 17 0a 0a 0e 05 c2 94 00 50 00 00 00 00 00 00 00 00 50 02 K............P......P. 0040 fa f0 8c 4e 00 00 02 04 05 b4 04 02 08 0a 00 00 00 00 00 00 00 00 01 03 ...N.................. Packets: 1.284 · Displayed: 7 (0.5%) · Dropped: 0 Profile: Default · tcp.port == 80 Sem filtro , 1.284 pacotes viram ruído. Com filtro, sete contam uma história. captura passiva · interface eth0
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Wireshark é passivo: ele observa o tráfego que já passa pela interface. Explicar a barra de filtro: o verde indica sintaxe válida; o filtro não altera a captura. Apontar o pacote 1 selecionado: árvore de protocolos embaixo, bytes à esquerda. Gancho para o próximo slide: “vamos seguir essa conexão inteira”.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Emilio</span> · Ferramenta 02 · simulação</div>
+            <h2 class="h-md">Wireshark: o que realmente passa no fio</h2>
+          </div>
+
+          <div class="slide-body" style="display: flex; flex-direction: column; min-height: 0">
+            <div class="ws fill">
+              <div class="ws-menu">
+                <span>File</span><span>Edit</span><span>View</span><span>Go</span><
+
+================================================================================
+SLIDE 14 | File: 02-recon-ativo.html | Speaker: 
+Title: WIRESHARK — HANDSHAKE E STREAM                          -->
+        <!-- ============================================================
+H1:  | H2: Três pacotes para abrir uma conexão. Um clique para ler tudo. | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Emilio · Wireshark · lendo a conversa Três pacotes para abrir uma conexão. Um clique para ler tudo. TCP THREE-WAY HANDSHAKE · 0.000203s cliente :49812 servidor :80 0.000000 SYN · seq=0 0.000187 SYN, ACK · seq=0 ack=1 0.000203 ACK · seq=1 ack=1 0.000310 GET /admin/ O handshake só confirma que o serviço está ouvindo. Não diz o que ele responde. SYN → SYN/ACK → ACK conexão estabelecida Follow · TCP Stream Stream 0 Entire conversation (412 bytes) http GET /admin/ HTTP/1.1 Host: 10.10.14.5:8080 User-Agent: Mozilla/5.0 (X11; Linux x86_64) Accept: text/html,application/xhtml+xml HTTP/1.1 401 Unauthorized Date: Fri, 30 Oct 2026 23:14:02 GMT WWW-Authenticate: Basic realm= "Jetty Admin" Content-Length: 0 GET /admin/ HTTP/1.1 Host: 10.10.14.5:8080 Authorization: Basic YWRtaW46YWRtaW4= Basic auth não criptografa: YWRtaW46YWRtaW4= decodifica para admin:admin . Em HTTPS o conteúdo seria cifrado — os metadados, não.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Ler o handshake em voz alta, com os tempos: tudo acontece em 0,2 ms. Mostrar que o 401 revela o tipo de autenticação; o segundo GET já vai com credenciais. Decodificar Base64 ao vivo: “não é criptografia, é transporte”. Fechar: o scan achou a porta; a captura contou a história.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Emilio</span> · Wireshark · lendo a conversa</div>
+            <h2 class="h-md">Três pacotes para abrir uma conexão.<br />Um clique para ler tudo.</h2>
+          </div>
+
+          <div class="slide-body hs-grid">
+            <div class="hs-card">
+              <div class="cap">TCP THREE-WAY HANDSHAKE · 0.000203s</div>
+              <svg class="hs-svg" viewBox="0 0 380 330" aria-label="D
+
+================================================================================
+SLIDE 15 | File: 02-recon-ativo.html | Speaker: 
+Title: PHISHING                                                -->
+        <!-- ============================================================
+H1:  | H2: O exploit é a confiança | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Emilio · Engenharia social O exploit é a confiança Caixa de entrada · 1 não lida hoje, 09:41 De: RH · Benefícios <rh@beneficios-acme.com> 1 Para: voce@acme.com.br Atualização obrigatória do plano de saúde — até hoje 2 Prezado(a) colaborador(a), 4 Identificamos que seu cadastro está desatualizado e o benefício será suspenso hoje às 18h caso não seja regularizado. Abra o formulário em anexo e confirme seus dados. Formulario_Plano_2026.xlsx Planilha do Excel · 84 KB · habilitar macros 3 Dúvidas: suporte@acme-beneficios-suporte.net 5 Responder Encaminhar remetente externo · rh@beneficios-acme.com Cinco sinais que o olho treinado vê 1 Domínio que imita o real beneficios-acme.com ≠ acme.com.br. O nome certo está no lugar errado. 2 Urgência artificial “até hoje”, “suspenso às 18h”. Pressa desliga o pensamento crítico. 3 Anexo inesperado Planilha com macros não é formulário de RH. É execução de código. 4 Saudação genérica “Prezado(a) colaborador(a)” não sabe quem você é. 5 Canal de contato divergente Um domínio diferente do oficial para “tirar dúvidas”. Defesa simples: confirmar por outro canal antes de abrir. Telefone, chat interno, pessoa conhecida.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Ler o e-mail como se fosse real; perguntar quem clicaria. Explicar que o phishing não quebra a rede: convence alguém a abrir a porta. Ligar ao caso RSA, que vem no bloco de estudos de caso.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Emilio</span> · Engenharia social</div>
+            <h2 class="h-md">O exploit é a confiança</h2>
+          </div>
+
+          <div class="slide-body phish-grid">
+            <div class="mail">
+              <div class="mail-bar">
+                <span>Caixa de entrada · 1 não lida</span>
+                <span>hoje, 09:41</span>
+              </div>
+
+              <div class="mail-head">
+
+================================================================================
+SLIDE 16 | File: 03a-passivo-introducao.html | Speaker: 
+Title: DIVISOR 03                                              -->
+        <!-- ============================================================
+H1:  | H2: Coletar sem tocar. | H3: 
+Kicker:  | Lede: Consultar fontes externas sem interagir diretamente com os sistemas do alvo.
+--------------------------------------------------------------------------------
+BODY TEXT:
+03 Daniel · Reconhecimento passivo Coletar sem tocar. Consultar fontes externas sem interagir diretamente com os sistemas do alvo. com Daniel BLOCO 03 / 06
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Transição: agora voltamos para o lado invisível — e ele é maior do que parece.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <span class="ghost-num">03</span>
+          <div class="red-rule"></div>
+          <div class="kicker"><span class="who">Daniel</span> · Reconhecimento passivo</div>
+          <h2 class="statement">Coletar<br /><em>sem tocar.</em></h2>
+          <p class="lede">Consultar fontes externas sem interagir diretamente com os sistemas do alvo.</p>
+
+          <div class="divider-foot">
+            <span class="who">com <b>Daniel</b></span>
+            <span class="cha
+
+================================================================================
+SLIDE 17 | File: 03a-passivo-introducao.html | Speaker: 
+Title: RECONHECIMENTO PASSIVO                                  -->
+        <!-- ============================================================
+H1:  | H2: Mapear a pegada sem consultar o alvo. | H3: Menos exposição direta, Dados podem envelhecer
+Kicker:  | Lede: Uma etapa de inteligência que usa fontes externas para entender pessoas, tecnologias e exposição, sem enviar tráfego diretamente aos sistemas analisados.
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Reconhecimento passivo Mapear a pegada sem consultar o alvo. Uma etapa de inteligência que usa fontes externas para entender pessoas, tecnologias e exposição, sem enviar tráfego diretamente aos sistemas analisados. pesquisador → fontes públicas e índices → perfil do alvo Registros públicos, metadados, buscas e plataformas de terceiros ajudam a reunir o contexto inicial. VANTAGEM Menos exposição direta Sem conexão própria ao alvo, sua coleta não gera tráfego direto nos sistemas dele. LIMITE Dados podem envelhecer Índices e registros podem estar incompletos, desatualizados ou associados ao alvo errado.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Definir o objetivo: mapear a pegada digital e levantar hipóteses sobre tecnologias e possíveis exposições. Passivo em relação ao alvo não significa invisibilidade absoluta: provedores de terceiros podem registrar consultas, e seus próprios indexadores podem ter acessado o alvo. WHOIS e DNS exigem atenção à fonte: consultar diretamente infraestrutura do alvo deixa de ser passivo em relação a ela.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Daniel</span> · Reconhecimento passivo</div>
+            <h2 class="h-md">Mapear a pegada sem consultar o alvo.</h2>
+          </div>
+
+          <div class="slide-body passive-brief">
+            <div class="passive-main">
+              <p class="lede">Uma etapa de inteligência que usa <strong>fontes externas</strong> para entender pessoas, tecnologias e exposição, sem enviar tráfego di
+
+================================================================================
+SLIDE 18 | File: 03a-passivo-introducao.html | Speaker: 
+Title: O QUE É OSINT                                           -->
+        <!-- ============================================================
+H1:  | H2: Informação pública não é informação inofensiva. | H3: 
+Kicker:  | Lede: No reconhecimento passivo, você consulta fontes externas — índices, arquivos e históricos — sem contatar diretamente os sistemas do alvo.
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · OSINT Informação pública não é informação inofensiva. Open Source Intelligence é a coleta e a correlação de dados disponíveis publicamente — com método, propósito e registro. Não é “achar coisas no Google”: é transformar fragmentos em inteligência acionável. No reconhecimento passivo, você consulta fontes externas — índices, arquivos e históricos — sem contatar diretamente os sistemas do alvo. fontes externas dados podem envelhecer sem interação direta REGRA DE OURO 0 pacotes enviados ao alvo durante toda a coleta. Google · Bing · Brave LinkedIn · GitHub · vagas WHOIS · DNS histórico · crt.sh Shodan · Censys · Wayback HIBP · fóruns · imprensa Terceiros podem registrar consultas; valide a data e a fonte.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Definir OSINT com as três palavras: público, método, propósito. Diferenciar “dado” de “inteligência”: o dado isolado não decide nada. Enfatizar a regra de ouro e o contraste com o bloco anterior. OSINT é uma metodologia; dependendo da fonte e do modo de coleta, nem toda consulta é passiva em relação ao alvo. Dados públicos também não dispensam análise legal e ética.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Daniel</span> · OSINT</div>
+            <h2 class="h-lg">Informação pública<br />não é informação <em class="red">inofensiva.</em></h2>
+          </div>
+
+          <div class="slide-body def-grid mid">
+            <div>
+              <p class="lede" style="font-size: 0.7em">
+                <strong>Open Source Intelligence</strong> é a coleta e a correlação de dados disponíveis publicam
+
+================================================================================
+SLIDE 19 | File: 03b-ciclo-osint.html | Speaker: 
+Title: CICLO DE OSINT                                          -->
+        <!-- ============================================================
+H1:  | H2: De uma pergunta à próxima. | H3: 
+Kicker:  | Lede: Dados brutos só viram inteligência quando respondem a uma necessidade.
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Ciclo de OSINT De uma pergunta à próxima. Dados brutos só viram inteligência quando respondem a uma necessidade. dados + contexto inteligência ↶ novas perguntas 01 Planejar Definir a pergunta 02 Coletar Reunir fontes 03 Processar Organizar dados 04 Analisar Cruzar evidências 05 Disseminar Comunicar achados 06 Feedback Ajustar o rumo
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Usar um exemplo simples: descobrir quais serviços públicos aparecem associados a um domínio. Registrar fonte e data, validar a informação e distinguir evidência de hipótese; a coleta por si só não é inteligência. O feedback pode revelar lacunas e levar a uma nova rodada de planejamento.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT</div>
+            <h2 class="h-md">De uma pergunta à próxima.</h2>
+            <p class="lede">Dados brutos só viram inteligência quando respondem a uma necessidade.</p>
+          </div>
+          <div class="slide-body orbit-body">
+            <div class="cycle-orbit">
+              <svg class="orbit-ring" viewBox="0 0 900 360" aria-hidden="true"><ellipse
+
+================================================================================
+SLIDE 20 | File: 03b-ciclo-osint.html | Speaker: 
+Title: CICLO OSINT: PLANEJAR                                   -->
+        <!-- ============================================================
+H1:  | H2: Planejar: faça a pergunta certa. | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Ciclo de OSINT · 01 / 06 Planejar: faça a pergunta certa. CASO FICTÍCIO · PERGUNTA INICIAL Quais serviços web aparecem em fontes externas para example.com ? Objetivo O que precisamos decidir? Escopo Fontes externas; sem acesso direto ao alvo. Critério Qual evidência responderia à pergunta? 01 Planejar → Coletar → Processar → Analisar → Disseminar → Feedback
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Apresentar o caso como fictício: example.com e os endereços de documentação dos próximos slides são apenas ilustrações. Definir pergunta, público, prazo, escopo e limites legais; a escolha das fontes vem depois. O resultado desta etapa é uma necessidade verificável, não uma lista indiscriminada de dados.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 01 / 06</div>
+              <h2 class="h-md">Planejar: faça a pergunta certa.</h2>
+            </div>
+            <div class="slide-body plan-board">
+              <div class="plan-question"><span>CASO FICTÍCIO · PERGUNTA INICIAL</span><p>Quais serviços web aparecem em fontes externas para <em>example.com</em>?</p></div>
+              <div class="pla
+
+================================================================================
+SLIDE 21 | File: 03b-ciclo-osint.html | Speaker: 
+Title: CICLO OSINT: COLETAR                                    -->
+        <!-- ============================================================
+H1:  | H2: Coletar: reúna evidências, não certezas. | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Ciclo de OSINT · 02 / 06 Coletar: reúna evidências, não certezas. Busque em fontes autorizadas e registre origem, data e contexto de cada achado. FONTE 01 Registro de certificados Certificate Transparency (CT): um log público que permite auditar a emissão de certificados. portal.example.com + FONTE 02 Índice externo Uma observação anterior associa o nome a um serviço. 192.0.2.10:443 ⟶ Dados brutos fontes e datas preservadas Caso fictício · dados históricos não confirmam a situação atual. 02 Coletar → Processar → Analisar → Disseminar → Feedback
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+As informações do quadro são simuladas; nenhum domínio ou endereço foi consultado. Certificate Transparency (CT) é um sistema de registros públicos que permite auditar a emissão de certificados digitais. Seus registros podem conter nomes de domínio. A coleta pode reunir nomes nesses registros e observações de um índice; guarde fonte, data da consulta e data da observação. Uma fonte de terceiros pode registrar a consulta; dados históricos não garantem situação atual.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 02 / 06</div>
+              <h2 class="h-md">Coletar: reúna evidências, não certezas.</h2>
+            </div>
+            <div class="slide-body gather-board">
+              <p class="stage-intro">Busque em fontes autorizadas e registre <strong>origem, data e contexto</strong> de cada achado.</p>
+              <div class="gather-flow">
+              
+
+================================================================================
+SLIDE 22 | File: 03b-ciclo-osint.html | Speaker: 
+Title: CICLO OSINT: PROCESSAR                                  -->
+        <!-- ============================================================
+H1:  | H2: Processar: separe sinal de ruído. | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Ciclo de OSINT · 03 / 06 Processar: separe sinal de ruído. Padronize nomes e datas, agrupe duplicatas e marque lacunas ou registros antigos. DADOS BRUTOS portal.example.com portal.example.com certificado + índice histórico REGISTRO ORGANIZADO portal.example.com Certificado + índice externo Origem e datas preservadas · índice histórico Caso fictício · remover duplicatas não é apagar evidências ou versões anteriores. 03 Processar → Analisar → Disseminar → Feedback
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Explicar a diferença entre dado bruto e registro estruturado: normalizar nomes e datas, agrupar duplicatas e conservar as fontes originais. Uma observação antiga não deve ser descartada silenciosamente: identificá-la como histórica ajuda a evitar conclusões falsas. Ainda não afirmamos que há um serviço atual; isso é uma questão para a análise.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 03 / 06</div>
+              <h2 class="h-md">Processar: separe sinal de ruído.</h2>
+            </div>
+            <div class="slide-body process-board">
+              <p class="stage-intro">Padronize nomes e datas, agrupe duplicatas e marque lacunas ou registros antigos.</p>
+              <div class="process-flow">
+                <div class="proces
+
+================================================================================
+SLIDE 23 | File: 03b-ciclo-osint.html | Speaker: 
+Title: CICLO OSINT: ANALISAR                                   -->
+        <!-- ============================================================
+H1:  | H2: Analisar: conecte sem presumir. | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Ciclo de OSINT · 04 / 06 Analisar: conecte sem presumir. Compare fontes, contexto e tempo. Separe evidência de hipótese . REGISTRO PÚBLICO DE CERTIFICADOS (CT) portal.example.com + ÍNDICE EXTERNO · HISTÓRICO 192.0.2.10:443 ↓ HIPÓTESE · CASO FICTÍCIO Pode ter existido um serviço web associado. A situação atual exige verificação autorizada; certificado não prova serviço ativo ou vulnerabilidade. 04 Analisar → Disseminar → Feedback
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+O registro de um certificado não prova que existe um servidor ativo nem que há vulnerabilidade. A observação do índice tem data própria; verifique se a associação ao nome é contextual e não confunda coocorrência com propriedade atual. Apresentar a conclusão como hipótese e registrar quais verificações autorizadas ainda seriam necessárias.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 04 / 06</div>
+              <h2 class="h-md">Analisar: conecte sem presumir.</h2>
+            </div>
+            <div class="slide-body analysis-board">
+              <p class="stage-intro">Compare fontes, contexto e tempo. Separe <strong>evidência</strong> de <strong>hipótese</strong>.</p>
+              <div class="analysis-evidence">
+              
+
+================================================================================
+SLIDE 24 | File: 03b-ciclo-osint.html | Speaker: 
+Title: CICLO OSINT: DISSEMINAR                                 -->
+        <!-- ============================================================
+H1:  | H2: Disseminar: entregue algo acionável. | H3: Possível serviço web associado.
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Ciclo de OSINT · 05 / 06 Disseminar: entregue algo acionável. O relatório deve ajudar alguém a decidir o próximo passo . RELATÓRIO · CASO FICTÍCIO Possível serviço web associado. 01 Achado Nome em registro público de certificados (CT) e observação histórica de índice externo. 02 Limite Fontes e datas documentadas; situação atual ainda não confirmada. 03 Encaminhamento Equipe responsável verifica o inventário dentro do escopo autorizado. 05 Disseminar → Feedback
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+O produto pode ser um relatório, um resumo executivo ou um alerta adequado ao destinatário. Incluir a pergunta original, evidências, fontes, datas, incertezas e uma recomendação viável. Não apresentar como vulnerabilidade confirmada um serviço apenas observado em fontes históricas.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 05 / 06</div>
+              <h2 class="h-md">Disseminar: entregue algo acionável.</h2>
+            </div>
+            <div class="slide-body briefing-board">
+              <p class="stage-intro">O relatório deve ajudar alguém a <strong>decidir o próximo passo</strong>.</p>
+              <div class="briefing-head"><span>RELATÓRIO · CASO FICTÍCIO</span
+
+================================================================================
+SLIDE 25 | File: 03b-ciclo-osint.html | Speaker: 
+Title: CICLO OSINT: FEEDBACK                                   -->
+        <!-- ============================================================
+H1:  | H2: Feedback: a resposta abre outra pergunta. | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Ciclo de OSINT · 06 / 06 Feedback: a resposta abre outra pergunta. O relatório respondeu à necessidade? Identifique lacunas e replaneje. RETORNO DA EQUIPE O inventário não identifica quem administra o nome observado. ↶ O serviço ainda existe? CASO FICTÍCIO NOVA PERGUNTA Qual área é responsável e quais fontes autorizadas podem esclarecer a situação atual? Uma nova rodada pode exigir revisão de escopo e autorização. 06 Feedback ↶ retorna ao planejamento
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+O feedback verifica se o relatório foi útil e se respondeu à necessidade original. Uma lacuna pode gerar nova pergunta, nova coleta ou revisão de prioridades; não implica automaticamente contato com o alvo. Fechar o ciclo retomando o planejamento e os limites de autorização.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ciclo de OSINT · 06 / 06</div>
+              <h2 class="h-md">Feedback: a resposta abre outra pergunta.</h2>
+            </div>
+            <div class="slide-body feedback-board">
+              <p class="stage-intro">O relatório respondeu à necessidade? Identifique lacunas e replaneje.</p>
+              <div class="feedback-flow">
+                <div class="feedback
+
+================================================================================
+SLIDE 26 | File: 03c-tecnicas-ferramentas.html | Speaker: 
+Title: TÉCNICAS PASSIVAS                                       -->
+        <!-- ============================================================
+H1:  | H2: Quatro portas de entrada — nenhuma delas é o alvo | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Técnicas Quatro portas de entrada — nenhuma delas é o alvo Fontes diferentes respondem a perguntas diferentes — e cada uma tem limites. 01 Busca e indexação O que já foi publicado e indexado? 02 DNS e certificados Quais nomes aparecem em registros públicos? 03 Registros e infraestrutura Quais associações e provedores foram observados? 04 Pessoas e vazamentos Que contexto profissional foi exposto? Fontes externas · sem requisição direta ao alvo
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Mostrar um dork ao vivo se houver tempo; senão, explicar os operadores. Certificate Transparency (CT) registra certificados publicamente para permitir auditoria de sua emissão; os nomes presentes podem ser consultados. Reforçar a correlação: cada fonte isolada vale pouco; juntas, desenham o alvo.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Daniel</span> · Técnicas</div>
+            <h2 class="h-md">Quatro portas de entrada — nenhuma delas é o alvo</h2>
+          </div>
+
+          <div class="slide-body source-map">
+            <p class="stage-intro">Fontes diferentes respondem a perguntas diferentes — e cada uma tem limites.</p>
+            <div class="source-columns">
+              <div><span>01</span><b>Busca e<br />ind
+
+================================================================================
+SLIDE 27 | File: 03c-tecnicas-ferramentas.html | Speaker: 
+Title: TÉCNICA: BUSCA E INDEXAÇÃO                              -->
+        <!-- ============================================================
+H1:  | H2: Busca e indexação: refine a pergunta. | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Técnicas passivas · 01 / 04 Busca e indexação: refine a pergunta. Operadores filtram páginas e arquivos que um buscador já indexou. páginas imagens documentos filtro RESULTADO FICTÍCIO Relatório institucional.pdf origem e data precisam de validação site:example.com domínio + filetype:pdf formato Um resultado indexado é uma pista; abrir o arquivo pode contatar o alvo. 01 Busca e indexação → DNS e certificados → Registros e infraestrutura → Pessoas e vazamentos
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+O domínio example.com e o resultado mostrado são fictícios; a simulação não executa buscas. Explicar que site: e filetype: são filtros de resultados indexados, não ferramentas de invasão. Consultar o buscador é diferente de abrir o resultado: acessar um arquivo hospedado pelo alvo pode gerar uma requisição direta.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Técnicas passivas · 01 / 04</div>
+              <h2 class="h-md">Busca e indexação: refine a pergunta.</h2>
+            </div>
+            <div class="slide-body search-concept">
+              <p class="stage-intro">Operadores filtram páginas e arquivos que um buscador já indexou.</p>
+              <div class="search-flow">
+                <div class="search-stack"><
+
+================================================================================
+SLIDE 28 | File: 03c-tecnicas-ferramentas.html | Speaker: 
+Title: TÉCNICA: DNS E CERTIFICADOS                             -->
+        <!-- ============================================================
+H1:  | H2: DNS e certificados: nomes deixam rastros. | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Técnicas passivas · 02 / 04 DNS e certificados: nomes deixam rastros. Certificate Transparency (CT) mantém registros públicos para auditar a emissão de certificados digitais. CERTIFICADO · EXEMPLO FICTÍCIO example.com também inclui portal.example.com ✓ registrado em ⟶ REGISTRO PÚBLICO CT nomes consultáveis DNS passivo consulta resoluções históricas em fontes externas. Um certificado não comprova serviço ativo ou vulnerabilidade. 02 DNS e certificados → Registros e infraestrutura → Pessoas e vazamentos
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Certificate Transparency (CT) é um sistema de registros públicos que permite auditar a emissão de certificados digitais. Os nomes podem aparecer em certificados mesmo que não haja um serviço ativo. Consulte bases de DNS histórico para observações passadas. A simulação é fictícia. Uma consulta DNS direta à infraestrutura do alvo deixa de ser passiva em relação a ela.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Técnicas passivas · 02 / 04</div>
+              <h2 class="h-md">DNS e certificados: nomes deixam rastros.</h2>
+            </div>
+            <div class="slide-body certificate-concept">
+              <p class="stage-intro"><strong>Certificate Transparency (CT)</strong> mantém registros públicos para auditar a emissão de certificados digitais.</p>
+              <div
+
+================================================================================
+SLIDE 29 | File: 03c-tecnicas-ferramentas.html | Speaker: 
+Title: TÉCNICA: REGISTROS E INFRAESTRUTURA                    -->
+        <!-- ============================================================
+H1:  | H2: Registros e infraestrutura: conecte as fontes. | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Técnicas passivas · 03 / 04 Registros e infraestrutura: conecte as fontes. Cada registro acrescenta contexto — não uma prova automática de propriedade. DOMÍNIO · WHOIS example.com Registrador e servidores de nomes; dados podem estar ocultos. → DNS HISTÓRICO 192.0.2.10 Associação observada anteriormente. → ASN · REDE Provedor Sistema autônomo responsável pela rede do endereço. Exemplo fictício · um provedor atende vários clientes; IP antigo não comprova vínculo atual. 03 Registros e infraestrutura → Pessoas e vazamentos
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+WHOIS pode oferecer dados de domínio ou de blocos de rede, mas informações de contato podem ser protegidas ou estar ausentes. ASN significa Autonomous System Number: identifica uma rede sob uma política de roteamento, frequentemente operada por um provedor. O endereço usado é reservado para documentação e a associação é fictícia. Não presumir que um provedor ou endereço histórico seja propriedade atual do domínio.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Técnicas passivas · 03 / 04</div>
+              <h2 class="h-md">Registros e infraestrutura: conecte as fontes.</h2>
+            </div>
+            <div class="slide-body infrastructure-concept">
+              <p class="stage-intro">Cada registro acrescenta contexto — não uma prova automática de propriedade.</p>
+              <div class="infrastructure-path">
+       
+
+================================================================================
+SLIDE 30 | File: 03c-tecnicas-ferramentas.html | Speaker: 
+Title: TÉCNICA: PESSOAS E VAZAMENTOS                            -->
+        <!-- ============================================================
+H1:  | H2: Pessoas e vazamentos: contexto com cuidado. | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Técnicas passivas · 04 / 04 Pessoas e vazamentos: contexto com cuidado. Perfis públicos, vagas e repositórios oferecem contexto , não certezas. PERFIL / VAGA Equipe de infraestrutura administração de nuvem REPOSITÓRIO PÚBLICO Projeto de automação tecnologias e dependências ⟶ HIPÓTESE · CASO FICTÍCIO Possível contexto da equipe Validar antes de concluir quem tem acesso ou responsabilidade. Vazamentos: use canais autorizados para verificar exposição, sem coletar ou testar senhas de terceiros. 04 Pessoas e vazamentos → Ferramentas de coleta
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+O perfil, a vaga e o repositório são fictícios. Informações profissionais públicas precisam de contexto e validação. Vazamentos exigem cautela: usar serviços e verificações autorizadas para contas sob responsabilidade da equipe, sem buscar, divulgar ou testar credenciais de terceiros. Respeitar privacidade, legislação e escopo; uma evidência pública não autoriza qualquer uso.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Técnicas passivas · 04 / 04</div>
+              <h2 class="h-md">Pessoas e vazamentos: contexto com cuidado.</h2>
+            </div>
+            <div class="slide-body people-concept">
+              <p class="stage-intro">Perfis públicos, vagas e repositórios oferecem <strong>contexto</strong>, não certezas.</p>
+              <div class="people-flow">
+               
+
+================================================================================
+SLIDE 31 | File: 03c-tecnicas-ferramentas.html | Speaker: 
+Title: FERRAMENTAS OSINT                                       -->
+        <!-- ============================================================
+H1:  | H2: O kit de coleta — e o que cada fonte responde | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Ferramentas O kit de coleta — e o que cada fonte responde Shodan / Censys serviços indexados Consultam índices de serviços, portas e banners já coletados por terceiros. WHOIS registros de domínio Consulta dados cadastrais e servidores de nomes; informações podem estar protegidas ou ausentes. SecurityTrails / VT DNS e relações Combinam histórico de resoluções e relações observadas; resultados exigem validação. crt.sh certificados Consulta logs de transparência para descobrir nomes associados a certificados. Subfinder / Amass subdomínios Automatizam buscas em múltiplas fontes; configure o modo passivo e confira os módulos. ExifTool / FOCA metadados Analisam arquivos já obtidos para extrair autores, softwares e outros metadados. Consulta passiva depende da configuração e da fonte. os próximos slides detalham cada grupo
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Não virar catálogo: destacar o que cada uma responde. Shodan é passivo em relação ao alvo, mas os dados podem estar desatualizados. WHOIS pode ocultar dados; DNS histórico não prova exposição atual; registros de transparência de certificados (CT) não revelam necessariamente serviços ativos nem cobrem todos os certificados. Subfinder e Amass têm opções e fontes distintas: desative verificações ativas. Ferramentas e o acesso inicial a um arquivo podem contatar o alvo, dependendo da configuração. Automação multiplica resultados — e multiplica erros se não houver validação. Os próximos seis slides apresentam um exemplo para cada grupo de ferramentas. Exemplos fictícios: Shodan e Censys mostram serviços indexados; WHOIS consulta registros; SecurityTrails e VirusTotal revelam associações históricas; crt.sh reúne nomes em certificados; Subfinder e Amass cruzam fontes de subdomínios; ExifTool e FOCA analisam metadados em documentos já obtidos.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Daniel</span> · Ferramentas</div>
+            <h2 class="h-md">O kit de coleta — e o que cada fonte responde</h2>
+          </div>
+
+          <div class="slide-body">
+            <div class="tool-list">
+              <div class="tool-row rise" style="--d: .1s">
+                <span class="name">Shodan / Censys</span><span class="cat">serviços indexados</span>
+                <span clas
+
+================================================================================
+SLIDE 32 | File: 03c1-ferramentas-detalhes.html | Speaker: 
+Title: FERRAMENTAS: SHODAN E CENSYS                            -->
+        <!-- ============================================================
+H1:  | H2: Shodan / Censys | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Ferramentas · serviços indexados Shodan / Censys O que responde Quais serviços e certificados já foram observados por indexadores? Cenário fictício Uma equipe compara um endereço público sob sua responsabilidade com os registros das duas plataformas. Limite Cada índice tem cobertura e datas próprias; os registros não confirmam a situação atual. SIMULAÇÃO DE INTERFACE DADOS FICTÍCIOS Consulta comparativa · índices 192.0.2.10 SHODAN HTTPS · porta 443 CENSYS certificado example.com ATENÇÃO observações anteriores PISTA No exemplo, Shodan mostra um serviço HTTPS e Censys associa um certificado ao endereço.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Shodan e Censys consultam índices de serviços já coletados; a consulta é passiva em relação ao alvo, mas os próprios indexadores podem ter contatado a infraestrutura. O endereço é reservado para documentação e todos os resultados são fictícios. Conferir data e propriedade antes de tirar conclusões.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · serviços indexados</div>
+              <h2 class="h-md">Shodan / Censys</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Quais serviços e certificados já foram observados por indexadores?</p>
+
+
+================================================================================
+SLIDE 33 | File: 03c1-ferramentas-detalhes.html | Speaker: 
+Title: FERRAMENTAS: WHOIS                                     -->
+        <!-- ============================================================
+H1:  | H2: WHOIS | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Ferramentas · registros de domínio WHOIS O que responde Quais informações cadastrais e servidores de nomes estão disponíveis para um domínio? Cenário fictício A equipe consulta o registro público de example.com para entender sua administração. Limite Dados pessoais podem estar protegidos, omitidos ou desatualizados. SIMULAÇÃO DE INTERFACE DADOS FICTÍCIOS WHOIS · registro público example.com REGISTRADOR Registrador Exemplo SERVIDORES ns1.example.com CONTATO dados protegidos PISTA O registro pode informar registrador, datas e servidores de nomes.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+WHOIS oferece informações públicas de registro, mas não necessariamente revela a identidade do responsável. O resultado ilustrado é fictício; retenção, disponibilidade e privacidade variam entre registros.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · registros de domínio</div>
+              <h2 class="h-md">WHOIS</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Quais informações cadastrais e servidores de nomes estão disponíveis para um do
+
+================================================================================
+SLIDE 34 | File: 03c1-ferramentas-detalhes.html | Speaker: 
+Title: FERRAMENTAS: SECURITYTRAILS E VIRUSTOTAL                 -->
+        <!-- ============================================================
+H1:  | H2: SecurityTrails / VirusTotal | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Ferramentas · DNS e relações SecurityTrails / VirusTotal O que responde Que resoluções históricas e relações observadas ajudam a contextualizar um domínio? Cenário fictício A equipe investiga associações anteriores de um domínio próprio em duas fontes. Limite As fontes têm datas e cobertura diferentes; associações antigas não comprovam propriedade ou risco atuais. SIMULAÇÃO DE INTERFACE DADOS FICTÍCIOS DNS histórico · relações example.com SECURITYTRAILS 2023 · 198.51.100.20 VIRUSTOTAL relação · 192.0.2.10 ATENÇÃO validar datas e vínculos PISTA SecurityTrails apresenta histórico DNS; VirusTotal reúne relações e observações adicionais.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+SecurityTrails e VirusTotal têm fontes, datas e coberturas diferentes; relacionar informações não é confirmar uma ameaça. As datas e os endereços são fictícios e servem apenas para ilustrar a necessidade de validar associações históricas.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · DNS e relações</div>
+              <h2 class="h-md">SecurityTrails / VirusTotal</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Que resoluções históricas e relações observadas ajudam a contex
+
+================================================================================
+SLIDE 35 | File: 03c1-ferramentas-detalhes.html | Speaker: 
+Title: FERRAMENTAS: CRT.SH                                    -->
+        <!-- ============================================================
+H1:  | H2: crt.sh | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Ferramentas · Certificate Transparency crt.sh O que responde Quais nomes aparecem em registros públicos que permitem auditar a emissão de certificados digitais? Cenário fictício A equipe pesquisa certificados emitidos para nomes associados ao seu domínio. Limite Um nome no certificado não prova que o serviço está ativo; a cobertura não é absoluta. SIMULAÇÃO DE INTERFACE DADOS FICTÍCIOS crt.sh · registro de certificado %.example.com NOMES example.com SAN teste.example.com FONTE registro público de certificados PISTA Um certificado registrado inclui o nome teste.example.com.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Certificate Transparency (CT) reúne registros públicos que permitem auditar a emissão de certificados digitais; o crt.sh facilita sua consulta. O nome no certificado é fictício e não comprova que o serviço está ativo ou é vulnerável.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · Certificate Transparency</div>
+              <h2 class="h-md">crt.sh</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Quais nomes aparecem em registros públicos que permitem auditar a emissão 
+
+================================================================================
+SLIDE 36 | File: 03c1-ferramentas-detalhes.html | Speaker: 
+Title: FERRAMENTAS: SUBFINDER E AMASS                          -->
+        <!-- ============================================================
+H1:  | H2: Subfinder / Amass | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Ferramentas · descoberta de subdomínios Subfinder / Amass O que responde Que nomes e relações podem ser reunidos a partir de fontes externas? Cenário fictício A equipe cruza candidatos de subdomínios do seu domínio em um inventário inicial. Limite Revise modos e fontes: verificações ativas podem gerar tráfego direto ao alvo. SIMULAÇÃO DE INTERFACE DADOS FICTÍCIOS Subdomínios · inventário combinado fontes passivas configuradas example.com Subfinder: www.example.com Amass: teste.example.com PISTA Subfinder reúne nomes; Amass também organiza relações entre os achados.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+As ferramentas podem reunir fontes distintas. É necessário escolher modos passivos e revisar opções antes de qualquer execução. Os nomes e relações são fictícios; candidatos não comprovam a existência atual de serviços.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · descoberta de subdomínios</div>
+              <h2 class="h-md">Subfinder / Amass</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Que nomes e relações podem ser reunidos a partir de fontes ext
+
+================================================================================
+SLIDE 37 | File: 03c1-ferramentas-detalhes.html | Speaker: 
+Title: FERRAMENTAS: EXIFTOOL E FOCA                            -->
+        <!-- ============================================================
+H1:  | H2: ExifTool / FOCA | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Ferramentas · metadados de documentos ExifTool / FOCA O que responde Quais metadados podem aparecer em arquivos já obtidos? Cenário fictício A equipe revisa PDFs antes de publicá-los ou compartilhá-los. Limite Dados podem estar ausentes ou incorretos; a obtenção dos arquivos pode contatar o alvo. SIMULAÇÃO DE INTERFACE DADOS FICTÍCIOS Metadados · arquivos obtidos relatorio.pdf EXIFTOOL Autor: Equipe Exemplo FOCA Software: Editor de PDF ARQUIVO documento local PISTA ExifTool lê metadados do arquivo; FOCA ajuda a organizar achados de documentos.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Metadados de arquivos já obtidos podem mostrar autores, software e datas, mas também podem ter sido removidos ou alterados. A obtenção dos documentos e os módulos habilitados podem gerar contato direto; revisar as configurações e o escopo.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Ferramentas · metadados de documentos</div>
+              <h2 class="h-md">ExifTool / FOCA</h2>
+            </div>
+            <div class="slide-body tool-detail-grid">
+              <div class="tool-detail-copy">
+                <span class="tool-detail-label">O que responde</span>
+                <p>Quais metadados podem aparecer em arquivos já obtidos?</p>
+       
+
+================================================================================
+SLIDE 38 | File: 03d-fisico-ecossistema.html | Speaker: 
+Title: DUMPSTER DIVING                                         -->
+        <!-- ============================================================
+H1:  | H2: Dumpster diving: quando o descarte vira pista | H3: 
+Kicker:  | Lede: Documentos descartados, manuais, faturas, crachás e até post-its com senha. O lixo de uma organização conta a história que o site institucional não conta. Mídias descartadas também podem guardar dados.
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Outras técnicas Dumpster diving: quando o descarte vira pista ORGANOGRAMA FATURA · FORNECEDOR MANUAL DE REDE POST-IT: senha? CRACHÁ · VISITANTE Documentos descartados, manuais, faturas, crachás e até post-its com senha. O lixo de uma organização conta a história que o site institucional não conta. Mídias descartadas também podem guardar dados. organograma fornecedores nomes e ramais credenciais Limite importante: o que é legal coletar depende do local, do descarte e da autorização. Em um engajamento sério, isso está escrito no escopo — não no improviso. Descarte físico não é necessariamente fonte pública ou OSINT; sua coleta depende do contexto e da autorização.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Contar um exemplo de manual de rede descartado com faixas de IP e senha de console. Exemplos: contratos, senhas anotadas, mídias antigas e notas fiscais que revelam fornecedores. Recomendar destruição segura de documentos e higienização de mídias. Deixar claro o limite legal: autorização, propriedade e descarte importam; não presumir que lixo é público. Conectar com o phishing do Emilio: o canal humano é o mesmo.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Daniel</span> · Outras técnicas</div>
+            <h2 class="h-md">Dumpster diving: quando o descarte vira pista</h2>
+          </div>
+
+          <div class="slide-body bin-grid">
+            <div class="bin-scene">
+              <div class="doc d1">ORGANOGRAMA</div>
+              <div class="doc d2">FATURA · FORNECEDOR</div>
+              <div class="doc d3">MANUAL DE REDE</div>
+      
+
+================================================================================
+SLIDE 39 | File: 03d-fisico-ecossistema.html | Speaker: 
+Title: SHOULDER SURFING                                        -->
+        <!-- ============================================================
+H1:  | H2: Shoulder surfing: informação à vista. | H3: 
+Kicker:  | Lede: Observar uma tela ou um teclado pode expor informações sem malware ou acesso à rede.
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · Reconhecimento físico Shoulder surfing: informação à vista. Observar uma tela ou um teclado pode expor informações sem malware ou acesso à rede. ACESSO •••••••• código de verificação ◉ campo de visão O que pode aparecer Senhas, PINs, códigos 2FA, dados pessoais, e-mails ou documentos de trabalho. Onde acontece Transporte, locais públicos e escritórios; câmeras mal posicionadas também podem ampliar a exposição. Como reduzir o risco Proteja a tela e o teclado, bloqueie dispositivos e evite abrir dados sensíveis em locais expostos.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Shoulder surfing é observação visual, não uma coleta necessariamente pública ou OSINT. Exemplos incluem credenciais, informações financeiras e documentos corporativos em trânsito ou no escritório. Discussão e demonstrações devem respeitar privacidade, autorização e limites do exercício.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Daniel</span> · Reconhecimento físico</div>
+            <h2 class="h-md">Shoulder surfing: informação à vista.</h2>
+          </div>
+          <div class="slide-body shoulder-grid">
+            <div>
+              <p class="lede">Observar uma tela ou um teclado pode expor informações sem malware ou acesso à rede.</p>
+              <div class="shoulder-scene" aria-hidden="true">
+        
+
+================================================================================
+SLIDE 40 | File: 03d-fisico-ecossistema.html | Speaker: 
+Title: ECOSSISTEMA INT                                         -->
+        <!-- ============================================================
+H1:  | H2: OSINT é uma peça. O tabuleiro é maior. | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Daniel · O ecossistema de inteligência OSINT é uma peça. O tabuleiro é maior. HUMINT HUMAN INTELLIGENCE Fontes humanas: entrevistas, informantes, relações e engenharia social. GEOINT GEO-SPATIAL INTELLIGENCE Imagens, mapas e terreno: onde a foto foi tirada e o que existe ao redor. FININT FINANCIAL INTELLIGENCE Fluxos financeiros, empresas de fachada e padrões de pagamento. ELINT ELECTRONIC INTELLIGENCE Sinais eletromagnéticos não ligados diretamente à fala humana. IMINT IMAGERY INTELLIGENCE Análise de imagens técnicas: satélite, drones, sensores e vídeo. TECHINT TECHNICAL INTELLIGENCE Equipamentos, tecnologias e capacidades técnicas do adversário. CYBINT CYBER INTELLIGENCE Ameaças digitais, infraestrutura, malware e atores de ameaça. SOCMINT SOCIAL MEDIA INTELLIGENCE Perfis, interações e tendências em plataformas sociais; pode usar fontes públicas. SIGINT SIGNALS INTELLIGENCE Interceptação de comunicações e análise de sinais. OSINT alimenta o ecossistema. Ela não substitui as outras disciplinas. 9 disciplinas · 1 pergunta: o que dá para saber?
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Não decorar siglas: explicar que cada uma responde a um tipo de fonte. Destacar HUMINT, SIGINT, GEOINT, SOCMINT e CYBINT/DNINT, conforme o roteiro. As categorias e suas fronteiras variam conforme o contexto. SOCMINT pode ser uma vertente da OSINT quando usa fontes públicas; CYBINT pode envolver logs, malware e tráfego de rede, além de fontes abertas. Fechar: a fronteira entre as disciplinas é permeável; o analista cruza fontes.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Daniel</span> · O ecossistema de inteligência</div>
+            <h2 class="h-md">OSINT é uma peça. O tabuleiro é maior.</h2>
+          </div>
+
+          <div class="slide-body">
+            <div class="int-grid">
+              <div class="int-cell rise" style="--dot: var(--red); --d: .08s">
+                <div class="abbr">HUMINT</div><div class="nm">HUMAN INTELLIGENCE</div>
+          
+
+================================================================================
+SLIDE 41 | File: 04-estudos-caso.html | Speaker: 
+Title: DIVISOR 04                                              -->
+        <!-- ============================================================
+H1:  | H2: Quando o reconhecimento vira manchete. | H3: 
+Kicker:  | Lede: Dois casos reais. Nenhum deles começou com um exploit zero-day.
+--------------------------------------------------------------------------------
+BODY TEXT:
+04 João Pedro Gonçalves · Estudos de caso Quando o reconhecimento vira manchete. Dois casos reais. Nenhum deles começou com um exploit zero-day. com João Pedro Gonçalves BLOCO 04 / 06
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Anunciar os dois casos: RSA (2011) e Strava (2018). Pedir atenção ao padrão: o vetor é humano ou é dado público mal pensado.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <span class="ghost-num">04</span>
+          <div class="red-rule"></div>
+          <div class="kicker"><span class="who">João Pedro Gonçalves</span> · Estudos de caso</div>
+          <h2 class="statement">Quando o reconhecimento<br /><em>vira manchete.</em></h2>
+          <p class="lede">Dois casos reais. Nenhum deles começou com um exploit zero-day.</p>
+
+          <div class="divider-foot">
+            <span class="who">com <b>João Pedro Gonçalves</b></span>
+
+
+================================================================================
+SLIDE 42 | File: 04-estudos-caso.html | Speaker: 
+Title: CASO RSA                                                -->
+        <!-- ============================================================
+H1:  | H2: O e-mail que abriu a RSA | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Caso 01 · 2011 · RSA SecurID O e-mail que abriu a RSA MARÇO DE 2011 Spear-phishing para um grupo pequeno Assunto inofensivo: “encaminho este arquivo para revisão”. ABERTURA Planilha com exploit de Flash Um único funcionário abriu o anexo. O código executou. PIVÔ Acesso à rede e movimento lateral O atacante passou do endpoint para os sistemas internos. IMPACTO Comprometimento do SecurID Tokens de autenticação precisaram ser substituídos em escala. Fonte: Zoho Workplace · “RSA spear-phishing attack”. O vetor não foi técnico: foi humano. De: recruiter@web-example.com · Para: employee@rsa.com I forward this file to you for review. Please open and view it. Hi, I forward this file to you for review. Please open and view it. Best regards. 📎 2021_Recruitment_Plan.xlsx Reprodução didática do e-mail reportado. Lição: o reconhecimento não precisa descobrir uma falha. Basta descobrir quem abre anexos.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Contexto: RSA, empresa de segurança; o ataque atingiu justamente quem vendia confiança. Detalhe importante: o e-mail não parecia um ataque; parecia rotina. Ligar ao slide de phishing: os cinco sinais estavam lá.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker">Caso 01 · 2011 · RSA SecurID</div>
+            <h2 class="h-md">O e-mail que abriu a RSA</h2>
+          </div>
+
+          <div class="slide-body rsa-grid">
+            <div>
+              <div class="timeline">
+                <div class="t-item rise" style="--d: .1s">
+                  <div class="when">MARÇO DE 2011</div>
+                  <b>Spear-phishing para um grupo pequeno</b>
+                  <
+
+================================================================================
+SLIDE 43 | File: 04-estudos-caso.html | Speaker: 
+Title: CASO STRAVA                                             -->
+        <!-- ============================================================
+H1:  | H2: O mapa que desenhou bases secretas. | H3: 
+Kicker:  | Lede: O Strava publicou um mapa de calor global com atividades agregadas de usuários. Pesquisadores cruzaram o rastro de corridas com imagens de satélite — e localizaram instalações militares.
+--------------------------------------------------------------------------------
+BODY TEXT:
+Caso 02 · 2018 · Strava O mapa que desenhou bases secretas. O Strava publicou um mapa de calor global com atividades agregadas de usuários. Pesquisadores cruzaram o rastro de corridas com imagens de satélite — e localizaram instalações militares. 01 Ninguém invadiu nada. O dado era público e autorizado. Só não deveria revelar tanto. 02 O padrão era o segredo. Rotas circulares em locais sem academia entregavam a posição. 03 Correlação vence senha. Heatmap + satélite + geografia = localização provável. Fonte: The Guardian, 28 jan. 2018. O mapa foi produzido com dados agregados, não com acessos indevidos. HEATMAP · 2015—2017 FOB 34.5°N 69.2°E rotas agregadas instalação
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Contexto: Strava Heatmap, 2017/2018; dados de atividades agregados. O caso foi descoberto por um estudante que cruzou o mapa com imagens de satélite. Ponto central: o dado era público, mas a agregação não foi pensada como risco. Perguntar: “quais dados a sua empresa publica achando que são inofensivos?”.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="strava-grid">
+            <div>
+              <div class="kicker">Caso 02 · 2018 · Strava</div>
+              <h2 class="h-lg" style="font-size: 1.9em">O mapa que desenhou<br /><em class="red">bases secretas.</em></h2>
+              <p class="lede">
+                O Strava publicou um mapa de calor global com atividades agregadas de usuários. Pesquisadores cruzaram
+                o rastro de corridas com imagens de satélite — e localizaram instal
+
+================================================================================
+SLIDE 44 | File: 04-estudos-caso.html | Speaker: 
+Title: LIÇÃO DOS CASOS                                         -->
+        <!-- ============================================================
+H1:  | H2: O dado mais perigoso é aquele que parece inofensivo. | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+O padrão entre os dois casos O dado mais perigoso é aquele que parece inofensivo. FOTO COM GEOTAG Entrega endereço, rotina e presença física. PLANILHA COMPARTILHADA Entrega nomes, estruturas e caminhos internos. APP DE ATIVIDADE Entrega padrões que ninguém sabia que existiam. Reconhecimento é correlação , não coleta. O valor não está na fonte isolada — está no que ela revela quando cruza com a próxima.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Pausa dramática: deixar a frase no telão por alguns segundos. Repetir a ideia que vai voltar no fechamento: dado isolado ≠ inteligência.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-body lesson-wrap">
+            <div class="kicker">O padrão entre os dois casos</div>
+            <h2 class="lesson-quote">O dado mais perigoso é aquele que parece <em>inofensivo.</em></h2>
+
+            <div class="lesson-items">
+              <div>
+                <b>FOTO COM GEOTAG</b>
+                <span>Entrega endereço, rotina e presença física.</span>
+              </div>
+              <div>
+                <b>PLANILHA COMPARTILHADA</
+
+================================================================================
+SLIDE 45 | File: 05-geosint-osint.html | Speaker: 
+Title: DIVISOR 05                                              -->
+        <!-- ============================================================
+H1:  | H2: Do dado público ao alvo provável. | H3: 
+Kicker:  | Lede: Três demonstrações: duas de GEOSINT e uma de OSINT. Ambiente controlado.
+--------------------------------------------------------------------------------
+BODY TEXT:
+05 João Pedro Almeida · Demonstração Do dado público ao alvo provável. Três demonstrações: duas de GEOSINT e uma de OSINT. Ambiente controlado. com João Pedro Almeida BLOCO 05 / 06
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Reforçar que tudo é feito com dados públicos e exemplos didáticos. Avisar que a demo é uma simulação narrada, não um alvo real.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <span class="ghost-num">05</span>
+          <div class="red-rule"></div>
+          <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração</div>
+          <h2 class="statement">Do dado público<br /><em>ao alvo provável.</em></h2>
+          <p class="lede">Três demonstrações: duas de GEOSINT e uma de OSINT. Ambiente controlado.</p>
+
+          <div class="divider-foot">
+            <span class="who">com <b>João Pedro Almeida</b></span>
+   
+
+================================================================================
+SLIDE 46 | File: 05-geosint-osint.html | Speaker: 
+Title: GEOSINT 1                                               -->
+        <!-- ============================================================
+H1:  | H2: Onde foi tirada esta foto? | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+João Pedro Almeida · Demonstração 01 · GEOSINT Onde foi tirada esta foto? RUTA 40 MENDOZA — ARGENTINA SOMBRA Longa e para a esquerda Sol baixo à direita: fim de tarde. O lado da sombra sugere hemisfério oeste. PLACA “RUTA 40 · Mendoza” Entrega país, região e idioma. O detalhe mais forte da imagem. RELEVO Pré-cordilheira árida Montanhas baixas, solo seco, vegetação rasteira — não é litoral. CONTEXTO Cruzamento com mapas Rota, altitude e horário do sol confirmam a hipótese. HIPÓTESE VALIDADA · EXEMPLO DIDÁTICO Mendoza, Argentina · 32.89°S 68.84°W Confiança: 78% · ferramentas: SunCalc, Google Lens, Mapillary, Overpass. SunCalc Mapillary Overpass confiança, não certeza
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Narrar como analista: primeiro as pistas óbvias, depois as que eliminam hipóteses. Explicar SunCalc: posição e comprimento da sombra dão hora aproximada e orientação. Dizer que a confiança é parte do método: 78% não é “achismo”, é hipótese testável.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração 01 · GEOSINT</div>
+            <h2 class="h-md">Onde foi tirada esta foto?</h2>
+          </div>
+
+          <div class="slide-body geo-grid">
+            <div class="photo">
+              <svg viewBox="0 0 560 430" preserveAspectRatio="xMidYMid slice" aria-label="Ilustração de uma estrada ao pôr do sol com placa Ruta 40">
+                <defs>
+ 
+
+================================================================================
+SLIDE 47 | File: 05-geosint-osint.html | Speaker: 
+Title: GEOSINT 2                                               -->
+        <!-- ============================================================
+H1:  | H2: Três hipóteses. Uma coordenada. | H3: Eliminar, não adivinhar.
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+João Pedro Almeida · Demonstração 02 · GEOSINT Três hipóteses. Uma coordenada. A B C · confirmado imagem de satélite · recorte didático Eliminar, não adivinhar. Cada pista precisa derrubar uma hipótese. O que sobra não é certeza: é o próximo teste. Sombra compatível com 15h local Relevo e linha do horizonte batem Placa confirma a região Acesso e rodovia compatíveis Satélite ainda ambíguo — nova imagem necessária confiança da hipótese C 92% O método é o mesmo para uma foto de rua, um print de story ou uma imagem de satélite.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Explicar a lógica de eliminação: A e B caem por sombra/relevo; C sobrevive. Mostrar que a barra de confiança é uma decisão comunicável, não um número mágico. Se possível, abrir o Google Earth e comparar o recorte.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração 02 · GEOSINT</div>
+            <h2 class="h-md">Três hipóteses. Uma coordenada.</h2>
+          </div>
+
+          <div class="slide-body geo-grid">
+            <div class="geo-map">
+              <svg viewBox="0 0 560 430" aria-label="Mapa estilizado com três pinos candidatos e um confirmado">
+                <rect width="560" height="430" fill="#
+
+================================================================================
+SLIDE 48 | File: 05-geosint-osint.html | Speaker: 
+Title: OSINT DEMO — GRAFO                                      -->
+        <!-- ============================================================
+H1:  | H2: Vinte minutos de coleta. Um grafo. | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+João Pedro Almeida · Demonstração 03 · OSINT Vinte minutos de coleta. Um grafo. @marina.souza marina@acme.com 2 vazamentos acme.com VPN exposta cargo: financeiro O que o grafo mostra O username leva ao e-mail corporativo. O e-mail aparece em dois vazamentos antigos. O domínio revela um VPN de borda exposto. O cargo indica o valor do alvo. O QUE NÃO FAZEMOS Não testamos a senha vazada. Não acessamos a VPN. Não enviamos nada ao alvo. Sem autorização, o grafo para aqui. O próximo passo é um relatório com evidências, não um login.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Narrar o encadeamento nó a nó; cada seta é uma consulta pública. Destacar o limite ético: o valor está no mapa, não no acesso. Se a banca perguntar “e depois?”, responder: relatório, priorização e correção.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">João Pedro Almeida</span> · Demonstração 03 · OSINT</div>
+            <h2 class="h-md">Vinte minutos de coleta. Um grafo.</h2>
+          </div>
+
+          <div class="slide-body graph-grid">
+            <div class="graph-box">
+              <svg viewBox="0 0 620 440" aria-label="Grafo de correlação OSINT">
+                <g class="g-line" style="--d: .5s"><line x1="95" y1="85" x2="305"
+
+================================================================================
+SLIDE 49 | File: 06-opsec-fechamento.html | Speaker: 
+Title: DIVISOR 06                                              -->
+        <!-- ============================================================
+H1:  | H2: O rastro que você deixa sem perceber. | H3: 
+Kicker:  | Lede: Se o reconhecimento coleta, a OpSec reduz o que existe para coletar.
+--------------------------------------------------------------------------------
+BODY TEXT:
+06 Geovana · OpSec O rastro que você deixa sem perceber. Se o reconhecimento coleta, a OpSec reduz o que existe para coletar. com Geovana BLOCO 06 / 06
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Virar a chave: até agora olhamos o alvo; agora olhamos para nós.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <span class="ghost-num">06</span>
+          <div class="red-rule"></div>
+          <div class="kicker"><span class="who">Geovana</span> · OpSec</div>
+          <h2 class="statement">O rastro que você<br /><em>deixa sem perceber.</em></h2>
+          <p class="lede">Se o reconhecimento coleta, a OpSec reduz o que existe para coletar.</p>
+
+          <div class="divider-foot">
+            <span class="who">com <b>Geovana</b></span>
+            <span class="chapter
+
+================================================================================
+SLIDE 50 | File: 06-opsec-fechamento.html | Speaker: 
+Title: OPSEС — CONCEITO                                        -->
+        <!-- ============================================================
+H1:  | H2: OpSec é sobre não virar dado. | H3: 
+Kicker:  | Lede: Operational Security é a disciplina de identificar o que suas ações revelam, avaliar quem pode usar isso e reduzir o sinal — sem perder a capacidade de operar.
+--------------------------------------------------------------------------------
+BODY TEXT:
+VOCÊ IP horário dispositivo e-mail localização hábitos contatos navegador Definição OpSec é sobre não virar dado. Operational Security é a disciplina de identificar o que suas ações revelam, avaliar quem pode usar isso e reduzir o sinal — sem perder a capacidade de operar. Mapear o que já está exposto Faça recon contra você mesmo, com método. mapear Avaliar quem se beneficia Não é paranoia: é priorização por impacto. avaliar Reduzir o sinal Menos dados públicos, menos hipóteses para o outro lado. reduzir
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Definir OpSec sem misticismo: é gestão de exposição, não invisibilidade. Os anéis representam camadas: identidade, dispositivo, rotina, infraestrutura. Ninguém zera o rastro; a meta é reduzir o que é útil para o atacante.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-body opsec-grid">
+            <div class="footprint">
+              <div class="ring r3"></div>
+              <div class="ring r2"></div>
+              <div class="ring r1"></div>
+              <div class="fp-center">VOCÊ</div>
+
+              <span class="fp-label" style="left: 50%; top: 4%">IP</span>
+              <span class="fp-label" style="left: 84%; top: 18%">horário</span>
+              <span class="fp-label hot" style="left: 93%; top:
+
+================================================================================
+SLIDE 51 | File: 06-opsec-fechamento.html | Speaker: 
+Title: OPSEС NO DIA A DIA                                      -->
+        <!-- ============================================================
+H1:  | H2: Seis hábitos que mudam o seu rastro | H3: 
+Kicker:  | Lede: Nenhum desses itens é exótico. O difícil não é saber — é manter. OpSec é higiene, não evento.
+--------------------------------------------------------------------------------
+BODY TEXT:
+Geovana · Implementação no dia a dia Seis hábitos que mudam o seu rastro 2FA em tudo que importa App autenticador ou chave física. SMS é o último recurso. Senhas únicas com gerenciador Reutilização transforma um vazamento em dez. Atualização automática O patch que você adia é o CVE que aparece no scan. Revisar permissões de apps Por que um jogo precisa da sua localização precisa? Separar identidade pessoal e profissional E-mails, redes e dispositivos com fronteiras claras. Limpar metadados antes de publicar EXIF entrega GPS, modelo do aparelho e horário. O elo mais barato de atacar continua sendo o hábito. Nenhum desses itens é exótico. O difícil não é saber — é manter. OpSec é higiene, não evento. hábito > ferramenta revise a cada 90 dias
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Não transformar em palestra de “dicas de segurança”: explicar o porquê de cada item. Perguntar quem usa o mesmo e-mail em trabalho, banco e rede social. Conectar com o grafo: cada hábito corta uma seta.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker"><span class="who">Geovana</span> · Implementação no dia a dia</div>
+            <h2 class="h-md">Seis hábitos que mudam o seu rastro</h2>
+          </div>
+
+          <div class="slide-body check-grid">
+            <div class="check-list">
+              <div class="check-row">
+                <div class="txt"><b>2FA em tudo que importa</b><span>App autenticador ou chave física. SMS é o último recurso.</sp
+
+================================================================================
+SLIDE 52 | File: 06-opsec-fechamento.html | Speaker: 
+Title: TAKEAWAYS                                               -->
+        <!-- ============================================================
+H1:  | H2: Três coisas para levar | H3: Recon é processo, não ferramenta., O firewall não cobre a empresa inteira., Segurança começa antes do ataque.
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Fechamento Três coisas para levar 01 · MÉTODO Recon é processo, não ferramenta. Um scan sem hipótese é barulho. O valor está no que você pergunta e no que faz com a resposta. 02 · SUPERFÍCIE O firewall não cobre a empresa inteira. Pessoas, fornecedores, apps e ambientes esquecidos também são superfície de ataque. 03 · CONTRA-INTELIGÊNCIA Segurança começa antes do ataque. Reduzir o que você publica é reduzir o que o outro lado consegue descobrir. “Recon é a única fase do ataque que a defesa também pode praticar — e deveria.”
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Recapitular em 30 segundos, sem repetir os slides. Fechar com a frase final e passar para as referências/Q&A.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker">Fechamento</div>
+            <h2 class="h-lg">Três coisas para levar</h2>
+          </div>
+
+          <div class="slide-body">
+            <div class="take-grid">
+              <div class="take rise" style="--d: .1s">
+                <div class="k">01 · MÉTODO</div>
+                <h3>Recon é processo, não ferramenta.</h3>
+                <p>Um scan sem hipótese é barulho. O valor está no que você pergu
+
+================================================================================
+SLIDE 53 | File: 07-referencias-perguntas.html | Speaker: 
+Title: REFERÊNCIAS                                             -->
+        <!-- ============================================================
+H1:  | H2: Referências e leituras | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+Bibliografia · acesso em outubro de 2026 Referências e leituras FUNDAMENTOS MITRE ATT&CK — TA0043 Reconnaissance attack.mitre.org/tactics/TA0043/ OWASP — Web Security Testing Guide owasp.org/www-project-web-security-testing-guide/ BAZZELL, Michael. Open Source Intelligence Techniques 9ª ed. · Intelligent Technical Solutions, 2022. CASOS G1 — Smart Sampa e as senhas expostas por 11 meses g1.globo.com/tecnologia/ciberseguranca · 21 out. 2026 The Guardian — Strava e as bases militares theguardian.com/world/2018/jan/28 · 28 jan. 2018 Zoho Workplace — RSA spear-phishing attack zoho.com/workplace/articles/rsa-spear-phishing-attack.html FERRAMENTAS Nmap — Reference Guide nmap.org/book/man.html Wireshark — User’s Guide wireshark.org/docs/ Shodan / Censys — documentação e índices shodan.io · censys.com Os casos foram resumidos para fins didáticos. Nenhum alvo real foi testado durante a apresentação.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Citar apenas as fontes principais; o restante está no README. Reforçar que a demo foi simulada e baseada em dados públicos.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <div class="slide-head">
+            <div class="kicker">Bibliografia · acesso em outubro de 2026</div>
+            <h2 class="h-md">Referências e leituras</h2>
+          </div>
+
+          <div class="slide-body">
+            <div class="ref-grid">
+              <div class="ref-col">
+                <h4>FUNDAMENTOS</h4>
+                <div class="ref-item"><b>MITRE ATT&amp;CK — TA0043 Reconnaissance</b><span>attack.mitre.org/tactics/TA0043/</span></div>
+     
+
+================================================================================
+SLIDE 54 | File: 07-referencias-perguntas.html | Speaker: 
+Title: Q&A                                                     -->
+        <!-- ============================================================
+H1:  | H2: Perguntas ? | H3: 
+Kicker:  | Lede: 
+--------------------------------------------------------------------------------
+BODY TEXT:
+? Fim da apresentação Perguntas ? O microfone é de vocês. A parte mais interessante do recon é o que a gente não pensou em perguntar. Geovana conceito · OpSec Emilio Nmap · Wireshark Daniel OSINT João Pedro G. casos João Pedro A. demo Red Team 1 · Recon & OSINT Obrigado.
+--------------------------------------------------------------------------------
+SPEAKER NOTES:
+Agradecer a banca e a turma. Ter o README à mão com as referências completas. Se a pergunta for técnica demais, oferecer responder depois com detalhe.
+--------------------------------------------------------------------------------
+HTML SNIPPET (first 500 chars):
+<div class="slide-inner">
+          <span class="ghost-num" style="font-size: 19em; right: 10px; bottom: -110px">?</span>
+          <div class="kicker">Fim da apresentação</div>
+          <h2 class="qa-title">Perguntas<em>?</em></h2>
+          <p class="qa-sub">O microfone é de vocês. A parte mais interessante do recon é o que a gente não pensou em perguntar.</p>
+
+          <div class="qa-team">
+            <div class="names">
+              <div class="name-item"><b>Geovana</b><span>conceito · O
+

@@ -6,8 +6,8 @@
           <span class="ghost-num">03</span>
           <div class="red-rule"></div>
           <div class="kicker"><span class="who">Daniel</span> · Reconhecimento passivo</div>
-          <h2 class="statement">Coletar<br /><em>sem tocar.</em></h2>
-          <p class="lede">Consultar fontes externas sem interagir diretamente com os sistemas do alvo.</p>
+          <h2 class="statement">Reconhecimento passivo e OSINT</h2>
+          <p class="lede">Coleta de inteligência em fontes externas sem interação direta com a infraestrutura do alvo.</p>
 
           <div class="divider-foot">
             <span class="who">com <b>Daniel</b></span>
@@ -16,7 +16,8 @@
 
           <aside class="notes">
             <ul>
-              <li>Transição: agora voltamos para o lado invisível — e ele é maior do que parece.</li>
+              <li>Introduzir o Bloco 03 destacando o princípio do reconhecimento passivo: obter inteligência sobre o alvo sem enviar pacotes aos seus servidores.</li>
+              <li>Explicar que todas as consultas são direcionadas a repositórios, bases públicas e índices globais de terceiros.</li>
             </ul>
           </aside>
                   </div>
@@ -29,12 +30,12 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Daniel</span> · Reconhecimento passivo</div>
-            <h2 class="h-md">Mapear a pegada sem consultar o alvo.</h2>
+            <h2 class="h-md">Topologia de coleta passiva</h2>
           </div>
 
           <div class="slide-body passive-brief">
             <div class="passive-main">
-              <p class="lede">Uma etapa de inteligência que usa <strong>fontes externas</strong> para entender pessoas, tecnologias e exposição, sem enviar tráfego diretamente aos sistemas analisados.</p>
+              <p class="lede">Metodologia de inteligência que utiliza <strong>fontes e índices de terceiros</strong> para mapear tecnologias, pessoas e credenciais expostas, sem emissão de tráfego contra os servidores analisados.</p>
               <div class="passive-route">
                 <span>pesquisador</span><b>→</b><span>fontes públicas e índices</span><b>→</b><span>perfil do alvo</span>
               </div>
@@ -47,8 +48,8 @@
           </div>
 
           <aside class="notes"><ul>
-            <li>Definir o objetivo: mapear a pegada digital e levantar hipóteses sobre tecnologias e possíveis exposições.</li>
-            <li>Passivo em relação ao alvo não significa invisibilidade absoluta: provedores de terceiros podem registrar consultas, e seus próprios indexadores podem ter acessado o alvo.</li>
+            <li>Explicar a arquitetura da coleta passiva: o analista consulta índices públicos e motores de busca, mantendo a rede do alvo em repouso.</li>
+            <li>Ressaltar o trade-off operacional: os dados não geram alertas no alvo, mas exigem validação temporal de frescor e integridade.</li>
             <li>WHOIS e DNS exigem atenção à fonte: consultar diretamente infraestrutura do alvo deixa de ser passivo em relação a ela.</li>
           </ul></aside>
           </div>
@@ -61,19 +62,19 @@
           <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker"><span class="who">Daniel</span> · OSINT</div>
-            <h2 class="h-lg">Informação pública<br />não é informação <em class="red">inofensiva.</em></h2>
+            <h2 class="h-lg">Inteligência em fontes abertas (OSINT)<br /><em class="red">método, correlação e validação</em></h2>
           </div>
 
           <div class="slide-body def-grid mid">
             <div>
               <p class="lede" style="font-size: 0.7em">
-                <strong>Open Source Intelligence</strong> é a coleta e a correlação de dados disponíveis publicamente —
-                com método, propósito e registro. Não é “achar coisas no Google”: é transformar fragmentos em
-                inteligência acionável.
+                <strong>Open Source Intelligence (OSINT)</strong> consiste na coleta sistemática e correlação de dados públicos
+                para embasar decisões técnicas e operacionais. Não se limita a buscas avulsas: estrutura fragmentos isolados
+                em uma visão abrangente de ameaças e superfícies expostas.
               </p>
               <p class="lede">
-                No reconhecimento passivo, você consulta <strong>fontes externas</strong> — índices, arquivos e históricos —
-                sem contatar diretamente os sistemas do alvo.
+                No reconhecimento passivo, consultam-se exclusivamente <strong>fontes externas</strong> — registros históricos,
+                certificados e repositórios — preservando a ausência de conexões diretas aos hosts do alvo.
               </p>
               <div class="tag-row">
                 <span class="chip">fontes externas</span>
@@ -83,7 +84,7 @@
             </div>
 
             <div class="panel">
-              <div class="panel-k">REGRA DE OURO</div>
+              <div class="panel-k">MÉTRICA OPERACIONAL</div>
               <div class="zero">0</div>
               <p class="zero-cap">pacotes enviados ao alvo durante toda a coleta.</p>
               <div class="hr" style="margin: 14px 0"></div>
@@ -100,10 +101,9 @@
 
           <aside class="notes">
             <ul>
-              <li>Definir OSINT com as três palavras: público, método, propósito.</li>
-              <li>Diferenciar “dado” de “inteligência”: o dado isolado não decide nada.</li>
-              <li>Enfatizar a regra de ouro e o contraste com o bloco anterior.</li>
-              <li>OSINT é uma metodologia; dependendo da fonte e do modo de coleta, nem toda consulta é passiva em relação ao alvo. Dados públicos também não dispensam análise legal e ética.</li>
+              <li>Definir OSINT com base em seus pilares: dados públicos, método estruturado, propósito investigativo e validação temporal.</li>
+              <li>Diferenciar dado bruto de inteligência correlacionada: um subdomínio avulso ganha relevância quando associado a uma aplicação interna sem MFA.</li>
+              <li>Apresentar as ferramentas e fontes: Shodan, Censys, WHOIS, crt.sh, Wayback Machine e Have I Been Pwned (HIBP).</li>
             </ul>
           </aside>
                   </div>
