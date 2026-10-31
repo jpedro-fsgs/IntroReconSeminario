@@ -96,6 +96,8 @@ O workflow valida o HTML gerado, executa os testes e monta `_site/` com `index.h
 | `←` | Slide anterior |
 | `S` | Modo do orador, com notas e cronômetro |
 | `T` | Alternar entre os temas claro e escuro |
+| `+` / `-` | Aumentar (até 120%) / diminuir fonte |
+| `0` | Restaurar tamanho padrão da fonte |
 | `F` | Tela cheia |
 | `O` / `Esc` | Visão geral dos slides |
 | `B` / `.` | Pausa / tela preta |
@@ -103,7 +105,7 @@ O workflow valida o HTML gerado, executa os testes e monta `_site/` com `index.h
 
 Após o slide **O kit de coleta**, os seis grupos de ferramentas são apresentados em slides horizontais comuns, com notas próprias.
 
-Pressione **T** para alternar entre os modos claro e escuro, inclusive na janela de notas aberta com **S**. O tema é sincronizado com as prévias e as notas e lembrado no navegador quando o armazenamento local está disponível.
+Pressione **T** para alternar entre os modos claro e escuro; use **+**, **-** e **0** para ajustar a fonte. Tema e escala são sincronizados com as prévias e notas do Speaker View aberto com **S**, e lembrados no navegador quando o armazenamento local está disponível. A fonte pode ser ajustada entre 80% e 120%, em incrementos de 5%.
 
 ---
 

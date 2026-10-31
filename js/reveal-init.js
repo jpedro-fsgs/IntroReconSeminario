@@ -29,4 +29,9 @@ Reveal.initialize({
   Reveal.addKeyBinding({ keyCode: 84, key: "T", description: "Alternar tema claro/escuro" }, () => {
     window.PresentationTheme.toggle();
   });
+  Reveal.addKeyBinding({ keyCode: 187, key: "+", description: "Aumentar fonte" }, () => window.PresentationTheme.increaseFont());
+  Reveal.addKeyBinding({ keyCode: 107, key: "Num +", description: "Aumentar fonte" }, () => window.PresentationTheme.increaseFont());
+  Reveal.addKeyBinding({ keyCode: 189, key: "-", description: "Diminuir fonte" }, () => window.PresentationTheme.decreaseFont());
+  Reveal.addKeyBinding({ keyCode: 109, key: "Num -", description: "Diminuir fonte" }, () => window.PresentationTheme.decreaseFont());
+  Reveal.addKeyBinding({ keyCode: 48, key: "0", description: "Restaurar tamanho da fonte" }, () => window.PresentationTheme.resetFont());
 });

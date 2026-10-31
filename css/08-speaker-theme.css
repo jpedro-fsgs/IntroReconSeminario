@@ -1,4 +1,7 @@
 /* Interface da janela de notas; as prévias usam o tema da própria apresentação. */
+body {
+  font-size: calc(18px * var(--presentation-font-scale, 1));
+}
 html[data-theme="dark"] body {
   background: #0d1014;
   color: #f2f0ea;
