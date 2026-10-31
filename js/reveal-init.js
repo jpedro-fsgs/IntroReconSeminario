@@ -25,5 +25,8 @@ Reveal.initialize({
   loop: false,
 
   plugins: [RevealHighlight, RevealNotes, RevealSearch]
+}).then(() => {
+  Reveal.addKeyBinding({ keyCode: 84, key: "T", description: "Alternar tema claro/escuro" }, () => {
+    window.PresentationTheme.toggle();
+  });
 });
-

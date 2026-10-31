@@ -64,6 +64,8 @@ python3 -m unittest discover -s tests -v
 
 O primeiro comando atualiza `index.html` e monta `_site/`. Os demais conferem se o HTML gerado está atualizado, se os slides são horizontais e se os recursos necessários são publicados. Se `_site/` contiver um arquivo estranho à publicação, a geração para sem removê-lo.
 
+Para testar também o tema e o Speaker View em um navegador, com Playwright e Chromium instalados e o servidor local ativo em `localhost:8791`, execute `node tests/theme_browser.cjs`. Use `TEST_URL` para outro endereço.
+
 ### Alternativas
 
 ```bash
@@ -93,12 +95,15 @@ O workflow valida o HTML gerado, executa os testes e monta `_site/` com `index.h
 | `→` / `Espaço` | Próximo slide |
 | `←` | Slide anterior |
 | `S` | Modo do orador, com notas e cronômetro |
+| `T` | Alternar entre os temas claro e escuro |
 | `F` | Tela cheia |
 | `O` / `Esc` | Visão geral dos slides |
 | `B` / `.` | Pausa / tela preta |
 | `Alt + clique` | Zoom no elemento clicado |
 
 Após o slide **O kit de coleta**, os seis grupos de ferramentas são apresentados em slides horizontais comuns, com notas próprias.
+
+Pressione **T** para alternar entre os modos claro e escuro, inclusive na janela de notas aberta com **S**. O tema é sincronizado com as prévias e as notas e lembrado no navegador quando o armazenamento local está disponível.
 
 ---
 
@@ -129,9 +134,12 @@ Após o slide **O kit de coleta**, os seis grupos de ferramentas são apresentad
 │   ├── 03-ativo.css
 │   ├── 04-passivo-casos.css
 │   ├── 05-geosint-fechamento.css
-│   └── 06-reveal-movimento.css
+│   ├── 06-reveal-movimento.css
+│   ├── 07-tema.css                # modo claro da apresentação
+│   └── 08-speaker-theme.css       # tema da janela de notas
 ├── js/
-│   └── reveal-init.js             # configuração e plugins do Reveal
+│   ├── reveal-init.js             # configuração e plugins do Reveal
+│   └── theme.js                   # preferência e sincronização do tema
 ├── scripts/build.py               # montagem e validação sem dependências externas
 ├── tests/test_build.py            # testes da estrutura e publicação
 ├── assets/

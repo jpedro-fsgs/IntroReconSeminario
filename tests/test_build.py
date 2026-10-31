@@ -57,6 +57,12 @@ class PresentationBuildTests(unittest.TestCase):
         self.assertEqual(titles, names)
         self.assertNotIn('role="dialog"', sections[30])
 
+    def test_theme_shortcut_has_no_persistent_button(self):
+        html = build.assemble()
+        self.assertNotIn('class="theme-toggle"', html)
+        self.assertIn('<script src="js/theme.js"></script>', html)
+        self.assertIn('keyCode: 84', (ROOT / "js" / "reveal-init.js").read_text())
+
     def test_static_site_contains_referenced_resources(self):
         html = build.assemble()
         collector = ResourceCollector()
@@ -70,10 +76,11 @@ class PresentationBuildTests(unittest.TestCase):
                 with self.subTest(reference=reference):
                     self.assertTrue((output / reference).is_file())
             imports = re.findall(r'@import\s+url\(["\']([^"\']+)["\']\)', (output / "css" / "main.css").read_text())
-            self.assertEqual(len(imports), 6)
+            self.assertEqual(len(imports), 7)
             for name in imports:
                 with self.subTest(css=name):
                     self.assertTrue((output / "css" / name).is_file())
+            self.assertTrue((output / "css" / "08-speaker-theme.css").is_file())
             self.assertFalse((output / "slides").exists())
             self.assertFalse((output / "src").exists())
 

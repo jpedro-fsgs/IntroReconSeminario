@@ -1,0 +1,24 @@
+/* Interface da janela de notas; as prévias usam o tema da própria apresentação. */
+html[data-theme="dark"] body {
+  background: #0d1014;
+  color: #f2f0ea;
+}
+html[data-theme="dark"] :is(.speaker-controls-time, .speaker-controls-pace) {
+  border-color: #343d48;
+}
+html[data-theme="dark"] :is(.speaker-controls-time, .speaker-controls-pace, .speaker-controls-notes) .label,
+html[data-theme="dark"] .speaker-controls-time .reset-button {
+  color: #aab3bd;
+}
+html[data-theme="dark"] .overlay-element {
+  background: rgba(35, 42, 52, 0.95);
+  color: #f2f0ea;
+}
+html[data-theme="dark"] .overlay-element.interactive:hover { background: #343d48; }
+html[data-theme="dark"] #speaker-layout { color: #f2f0ea; }
+html[data-theme="dark"] :is(#current-slide, #upcoming-slide) iframe { border-color: #343d48; }
+html[data-theme="dark"] .pacing.ahead { color: #8ab4ff; }
+html[data-theme="dark"] .pacing.on-track { color: #8ee0af; }
+html[data-theme="dark"] .pacing.behind { color: #ff938b; }
+
+html[data-theme="light"] body { background: #f5f5f2; color: #222b32; }
