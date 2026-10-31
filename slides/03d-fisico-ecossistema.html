@@ -4,8 +4,8 @@
         <section class="slide">
           <div class="slide-inner">
           <div class="slide-head">
-            <div class="kicker"><span class="who">Daniel</span> · Outras técnicas</div>
-            <h2 class="h-md">Reconhecimento físico: descarte de materiais e mídias</h2>
+            <div class="kicker"><span class="who">Daniel</span> · Reconhecimento físico</div>
+            <h2 class="h-md">Reconhecimento físico: descarte de materiais (Dumpster Diving)</h2>
           </div>
 
           <div class="slide-body bin-grid">
@@ -148,9 +148,859 @@
             <ul>
               <li>Apresentar a taxonomia formal das disciplinas INT, destacando como a OSINT se articula com as demais fontes.</li>
               <li>Destacar os quatro pilares que se conectam aos blocos da apresentação: HUMINT (engenharia social), SOCMINT (redes sociais), GEOINT (geolocalização) e CYBINT (infraestrutura).</li>
-              <li>Passar a palavra para João Pedro Gonçalves para apresentar os grandes estudos de caso históricos (RSA SecurID e Strava).</li>
+              <li>Avançar para o detalhamento individual das nove disciplinas, examinando fontes de coleta, aplicação prática e limites operacionais de cada uma.</li>
             </ul>
           </aside>
                   </div>
         </section>
+
+        <!-- ============================================================ -->
+        <!-- 41 · INT: HUMINT                                             -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Disciplinas de inteligência · 01 / 09</div>
+              <h2 class="h-md">HUMINT · Human Intelligence</h2>
+            </div>
+
+            <div class="slide-body int-detail-grid">
+              <div class="int-detail-copy">
+                <p class="int-lede">
+                  Coleta de informações por contato interpessoal, entrevistas, observação presencial e engenharia social direcionada a colaboradores.
+                </p>
+                <div class="int-spec-list">
+                  <div class="int-spec-item">
+                    <b>Fontes e coleta</b>
+                    <p>Interações com funcionários, prestadores, ex-integrantes e equipes de suporte por telefone (vishing), entrevistas ou abordagem presencial.</p>
+                  </div>
+                  <div class="int-spec-item">
+                    <b>Aplicação em Recon e segurança</b>
+                    <p>Validação de processos internos, políticas de crachá, nomes de aprovadores e rotinas de helpdesk antes de campanhas de pretexting.</p>
+                  </div>
+                  <div class="int-spec-item is-limit">
+                    <b>Limite operacional</b>
+                    <p>A abordagem direta deixa registro na memória do interlocutor; um pretexto malsucedido pode acionar o SOC e encerrar a furtividade.</p>
+                  </div>
+                </div>
+                <div class="tag-row">
+                  <span class="chip">pretexting</span>
+                  <span class="chip">vishing</span>
+                  <span class="chip red">RoE estrito</span>
+                </div>
+              </div>
+
+              <div class="int-visual-card">
+                <div class="int-visual-bar">
+                  <span class="int-visual-tag">01 · FONTE HUMANA</span>
+                  <span class="int-visual-status">FLUXO DE ENGENHARIA SOCIAL</span>
+                </div>
+                <svg class="int-svg" viewBox="0 0 460 250" aria-label="Diagrama de fluxo HUMINT entre operador, colaborador e credencial">
+                  <rect width="460" height="250" fill="#0b1016" />
+                  <g stroke="#1b2430" stroke-width="1">
+                    <path d="M0 50 H460 M0 100 H460 M0 150 H460 M0 200 H460" />
+                    <path d="M90 0 V250 M180 0 V250 M270 0 V250 M360 0 V250" />
+                  </g>
+
+                  <path class="int-flow" d="M 118 98 C 165 62, 195 62, 236 98" />
+                  <path class="int-flow" style="--d: .25s" d="M 236 142 C 195 178, 165 178, 118 142" />
+                  <path class="int-flow is-hot" style="--d: .45s" d="M 284 120 H 348" />
+
+                  <g class="int-node-in" style="--d: .1s">
+                    <rect x="26" y="88" width="92" height="64" rx="3" fill="#131c26" stroke="#47606d" stroke-width="1.3" />
+                    <circle cx="72" cy="108" r="9" fill="none" stroke="#90a0af" stroke-width="1.4" />
+                    <path d="M57 129 C60 120, 84 120, 87 129" fill="none" stroke="#90a0af" stroke-width="1.4" />
+                    <text x="72" y="144" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="#d8e3e9">OPERADOR</text>
+                  </g>
+
+                  <text x="177" y="66" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#f0a63c">1. pretexto TI</text>
+                  <text x="177" y="182" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#8ee0af">2. validação oral</text>
+
+                  <g class="int-node-in" style="--d: .22s">
+                    <circle class="int-pulse" cx="256" cy="120" r="36" fill="none" stroke="#f0a63c" stroke-width="1" />
+                    <rect x="210" y="88" width="92" height="64" rx="3" fill="#17212b" stroke="#f0a63c" stroke-width="1.4" />
+                    <circle cx="256" cy="108" r="9" fill="none" stroke="#f4bb73" stroke-width="1.4" />
+                    <path d="M241 129 C244 120, 268 120, 271 129" fill="none" stroke="#f4bb73" stroke-width="1.4" />
+                    <text x="256" y="144" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="#f4bb73">HELPDESK</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .36s">
+                    <rect x="348" y="88" width="88" height="64" rx="3" fill="#211417" stroke="#e23a2e" stroke-width="1.4" />
+                    <text x="392" y="110" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="#ff938b">ATIVO OBTIDO</text>
+                    <text x="392" y="125" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#d8e3e9">Reset MFA</text>
+                    <text x="392" y="138" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#98a0ab">Procedimento</text>
+                  </g>
+
+                  <rect x="26" y="204" width="410" height="24" rx="2" fill="#101720" stroke="#27313c" />
+                  <text x="36" y="219" font-family="IBM Plex Mono" font-size="8" fill="#98a0ab">VETOR: confiança interpessoal contorna controles técnicos de borda</text>
+                </svg>
+                <div class="int-visual-foot">
+                  <span>CANAL: voz / presencial / texto</span>
+                  <span>ALVO: processos e credenciais</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>Definir HUMINT como a disciplina baseada em fontes humanas, abrangendo entrevistas técnicas, observação presencial e engenharia social.</li>
+                <li>Explicar como atacantes usam pretexting e vishing contra centrais de suporte para descobrir procedimentos internos ou induzir o reset de MFA.</li>
+                <li>Ressaltar que testes de HUMINT apresentam alto risco de detecção caso o colaborador suspeite da abordagem e acione a equipe de segurança.</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 42 · INT: GEOINT                                             -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Disciplinas de inteligência · 02 / 09</div>
+              <h2 class="h-md">GEOINT · Geospatial Intelligence</h2>
+            </div>
+
+            <div class="slide-body int-detail-grid">
+              <div class="int-detail-copy">
+                <p class="int-lede">
+                  Posicionamento e análise espacial de instalações, terrenos e rotas por meio de mapas vetoriais, coordenadas e camadas topográficas.
+                </p>
+                <div class="int-spec-list">
+                  <div class="int-spec-item">
+                    <b>Fontes e coleta</b>
+                    <p>Bases cartográficas (OpenStreetMap, Overpass Turbo), modelos digitais de elevação, fotos de nível de rua e trilhas de GPS públicas.</p>
+                  </div>
+                  <div class="int-spec-item">
+                    <b>Aplicação em Recon e segurança</b>
+                    <p>Mapeamento de perímetros físicos de datacenters, vias de acesso, zonas cegas de câmeras e pontos de entrada de energia e fibra.</p>
+                  </div>
+                  <div class="int-spec-item is-limit">
+                    <b>Limite operacional</b>
+                    <p>Mapas comerciais apresentam defasagem temporal; reformas de portaria ou mudanças viárias exigem validação por imagem recente.</p>
+                  </div>
+                </div>
+                <div class="tag-row">
+                  <span class="chip">Overpass API</span>
+                  <span class="chip">azimute solar</span>
+                  <span class="chip amber">perímetro físico</span>
+                </div>
+              </div>
+
+              <div class="int-visual-card">
+                <div class="int-visual-bar">
+                  <span class="int-visual-tag">02 · CAMADAS ESPACIAIS</span>
+                  <span class="int-visual-status">23°33'01"S · 46°38'02"W</span>
+                </div>
+                <svg class="int-svg" viewBox="0 0 460 250" aria-label="Grade cartográfica GEOINT com curvas de nível e visada">
+                  <rect width="460" height="250" fill="#0b1110" />
+                  <g stroke="#172420" stroke-width="1">
+                    <path d="M0 45 H460 M0 90 H460 M0 135 H460 M0 180 H460 M0 225 H460" />
+                    <path d="M75 0 V250 M150 0 V250 M225 0 V250 M300 0 V250 M375 0 V250" />
+                  </g>
+
+                  <g fill="none" stroke="#243830" stroke-width="1.2">
+                    <path d="M-10 195 C 70 165, 150 205, 240 175 S 380 140, 470 165" />
+                    <path d="M-10 145 C 85 120, 165 155, 255 125 S 390 95, 470 115" />
+                    <path d="M-10 95 C 90 70, 180 100, 270 75 S 395 50, 470 68" />
+                  </g>
+
+                  <path d="M 20 225 L 430 62" stroke="#2f473e" stroke-width="8" fill="none" />
+                  <path class="int-flow" d="M 20 225 L 430 62" stroke="#63c98a" />
+
+                  <polygon class="int-node-in" style="--d: .2s" points="145,172 268,96 298,154" fill="rgba(240, 166, 60, 0.14)" stroke="#f0a63c" stroke-width="1.2" stroke-dasharray="4 3" />
+
+                  <g class="int-node-in" style="--d: .15s">
+                    <rect x="258" y="88" width="104" height="68" rx="2" fill="#131f1b" stroke="#63c98a" stroke-width="1.4" />
+                    <text x="310" y="114" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="#8ee0af">INSTALAÇÃO ALVO</text>
+                    <text x="310" y="128" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#d8e3e9">Subestação + Duto</text>
+                    <text x="310" y="142" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#98a0ab">Cota: 760m</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .3s">
+                    <circle class="int-pulse" cx="145" cy="172" r="18" fill="none" stroke="#e23a2e" stroke-width="1.2" />
+                    <circle cx="145" cy="172" r="4.5" fill="#ff4b3e" />
+                    <text x="96" y="194" font-family="IBM Plex Mono" font-size="8" fill="#ff938b">VISADA · AZ 068°</text>
+                  </g>
+
+                  <text x="26" y="28" font-family="IBM Plex Mono" font-size="8" fill="#8fa398">CAMADAS: relevo + malha viária + cone óptico</text>
+                </svg>
+                <div class="int-visual-foot">
+                  <span>VETORES: OSM / Overpass / DEM</span>
+                  <span>SAÍDA: coordenadas e acessos</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>Apresentar a GEOINT como fusão de dados cartográficos, topografia e coordenadas geográficas para compreender o terreno ao redor de um ativo.</li>
+                <li>Exemplificar o uso do Overpass Turbo e de fotos de rua para localizar caixas de passagem de fibra óptica, geradores e guaritas antes de uma auditoria física.</li>
+                <li>Lembrar que mapas públicos podem estar desatualizados, exigindo cruzamento com imagens recentes para evitar erros operacionais.</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 43 · INT: FININT                                             -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Disciplinas de inteligência · 03 / 09</div>
+              <h2 class="h-md">FININT · Financial Intelligence</h2>
+            </div>
+
+            <div class="slide-body int-detail-grid">
+              <div class="int-detail-copy">
+                <p class="int-lede">
+                  Rastreamento de fluxos monetários, estruturas societárias, registros contábeis e vínculos patrimoniais entre pessoas físicas e jurídicas.
+                </p>
+                <div class="int-spec-list">
+                  <div class="int-spec-item">
+                    <b>Fontes e coleta</b>
+                    <p>Quadros de sócios e administradores (QSA/CNPJ), formulários regulatórios (CVM/SEC), editais de licitação e livros-razão de blockchains públicas.</p>
+                  </div>
+                  <div class="int-spec-item">
+                    <b>Aplicação em Recon e segurança</b>
+                    <p>Descoberta de subsidiárias recém-adquiridas, fornecedores críticos e empresas coligadas que compartilham links de rede com a matriz.</p>
+                  </div>
+                  <div class="int-spec-item is-limit">
+                    <b>Limite operacional</b>
+                    <p>Holdings em jurisdições offshore e fundos fiduciários em múltiplas camadas ocultam o beneficiário final nas consultas abertas.</p>
+                  </div>
+                </div>
+                <div class="tag-row">
+                  <span class="chip">QSA / CNPJ</span>
+                  <span class="chip">cadeia societária</span>
+                  <span class="chip green">rastreio on-chain</span>
+                </div>
+              </div>
+
+              <div class="int-visual-card">
+                <div class="int-visual-bar">
+                  <span class="int-visual-tag">03 · VÍNCULO PATRIMONIAL</span>
+                  <span class="int-visual-status">GRAFO SOCIETÁRIO E TRANSAÇÕES</span>
+                </div>
+                <svg class="int-svg" viewBox="0 0 460 250" aria-label="Grafo FININT entre holding, subsidiárias e contratos">
+                  <rect width="460" height="250" fill="#0b1016" />
+                  <g stroke="#1b2430" stroke-width="1">
+                    <path d="M0 50 H460 M0 100 H460 M0 150 H460 M0 200 H460" />
+                    <path d="M90 0 V250 M180 0 V250 M270 0 V250 M360 0 V250" />
+                  </g>
+
+                  <path class="int-flow" d="M 134 115 L 198 68" />
+                  <path class="int-flow" style="--d: .2s" d="M 134 125 L 198 172" />
+                  <path class="int-flow is-hot" style="--d: .4s" d="M 314 172 L 348 128" />
+                  <path class="int-flow" style="--d: .35s" d="M 314 68 L 348 112" />
+
+                  <g class="int-node-in" style="--d: .08s">
+                    <rect x="24" y="92" width="110" height="56" rx="3" fill="#131c26" stroke="#63c98a" stroke-width="1.4" />
+                    <text x="79" y="116" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="#8ee0af">HOLDING MATRIZ</text>
+                    <text x="79" y="132" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#98a0ab">QSA · Controle 100%</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .18s">
+                    <rect x="198" y="40" width="116" height="54" rx="3" fill="#141d26" stroke="#47606d" stroke-width="1.3" />
+                    <text x="256" y="63" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#d8e3e9">OPERADORA CORE</text>
+                    <text x="256" y="78" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#98a0ab">Perímetro auditado</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .26s">
+                    <rect x="198" y="144" width="116" height="56" rx="3" fill="#1c1917" stroke="#f0a63c" stroke-width="1.4" />
+                    <text x="256" y="167" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#f4bb73"> COLIGADA ADQUIRIDA</text>
+                    <text x="256" y="182" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#d8e3e9">CNPJ Secundário</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .38s">
+                    <rect x="348" y="92" width="90" height="56" rx="3" fill="#211417" stroke="#e23a2e" stroke-width="1.4" />
+                    <text x="393" y="114" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#ff938b">PIVÔ DE REDE</text>
+                    <text x="393" y="129" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#d8e3e9">VPN interligada</text>
+                  </g>
+
+                  <text x="26" y="226" font-family="IBM Plex Mono" font-size="8" fill="#98a0ab">RASTREIO: participações societárias expõem ativos fora do inventário principal</text>
+                </svg>
+                <div class="int-visual-foot">
+                  <span>FONTES: Receita / CVM / SEC / Blockchain</span>
+                  <span>FOCO: vínculos e fusões (M&amp;A)</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>Explicar como a FININT mapeia relações societárias, contratos públicos e fluxos financeiros para compreender a estrutura real de um grupo empresarial.</li>
+                <li>Em Red Team, consultar o quadro societário e aquisições recentes revela empresas menores do mesmo grupo que já possuem VPN ligada à matriz, mas com maturidade de segurança menor.</li>
+                <li>Apontar que estruturas offshore opacas limitam o rastreamento quando não há obrigatoriedade de transparência pública.</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 44 · INT: ELINT                                              -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Disciplinas de inteligência · 04 / 09</div>
+              <h2 class="h-md">ELINT · Electronic Intelligence</h2>
+            </div>
+
+            <div class="slide-body int-detail-grid">
+              <div class="int-detail-copy">
+                <p class="int-lede">
+                  Captura e caracterização técnica de emissões eletromagnéticas não vocais, incluindo radares, balizas, sensores sem fio e telemetria.
+                </p>
+                <div class="int-spec-list">
+                  <div class="int-spec-item">
+                    <b>Fontes e coleta</b>
+                    <p>Receptores de rádio definido por software (SDR), analisadores de espectro e antenas direcionais que medem frequência, modulação e largura de pulso.</p>
+                  </div>
+                  <div class="int-spec-item">
+                    <b>Aplicação em Recon e segurança</b>
+                    <p>Identificação de leitores de controle de acesso RFID (125 kHz e 13,56 MHz), sensores de alarme em 433 MHz e balizas Bluetooth Low Energy (BLE).</p>
+                  </div>
+                  <div class="int-spec-item is-limit">
+                    <b>Limite operacional</b>
+                    <p>A atenuação física do sinal exige proximidade da instalação avaliada e antenas dimensionadas para a faixa de frequência alvo.</p>
+                  </div>
+                </div>
+                <div class="tag-row">
+                  <span class="chip">SDR</span>
+                  <span class="chip">RFID / Sub-GHz</span>
+                  <span class="chip amber">espectro RF</span>
+                </div>
+              </div>
+
+              <div class="int-visual-card">
+                <div class="int-visual-bar">
+                  <span class="int-visual-tag">04 · ESPECTRO DE RADIOFREQUÊNCIA</span>
+                  <span class="int-visual-status">EMISSÕES NÃO VOCAIS · SDR</span>
+                </div>
+                <svg class="int-svg" viewBox="0 0 460 250" aria-label="Analisador de espectro ELINT com picos de frequência">
+                  <rect width="460" height="250" fill="#090e14" />
+                  <g stroke="#18222e" stroke-width="1">
+                    <path d="M30 40 H435 M30 80 H435 M30 120 H435 M30 160 H435 M30 200 H435" />
+                    <path d="M95 25 V205 M175 25 V205 M255 25 V205 M335 25 V205 M415 25 V205" />
+                  </g>
+
+                  <line x1="30" y1="115" x2="435" y2="115" stroke="#e23a2e" stroke-width="1" stroke-dasharray="4 4" />
+                  <text x="342" y="109" font-family="IBM Plex Mono" font-size="7.5" fill="#ff938b">LIMIAR -65 dBm</text>
+
+                  <path class="int-flow" d="M 30 192 L 75 190 L 85 186 L 95 72 L 105 186 L 155 191 L 200 188 L 212 104 L 222 189 L 270 191 L 318 186 L 330 48 L 338 82 L 346 188 L 400 190 L 435 192" stroke="#6fa9f5" stroke-width="1.8" />
+
+                  <g class="int-node-in" style="--d: .15s">
+                    <circle class="int-pulse" cx="95" cy="72" r="11" fill="none" stroke="#f0a63c" stroke-width="1.2" />
+                    <circle cx="95" cy="72" r="3.5" fill="#f0a63c" />
+                    <text x="95" y="54" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#f4bb73">13.56 MHz · NFC/RFID</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .28s">
+                    <circle cx="212" cy="104" r="3.5" fill="#63c98a" />
+                    <text x="212" y="90" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#8ee0af">433.92 MHz · Sensor</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .4s">
+                    <circle class="int-pulse" cx="330" cy="48" r="13" fill="none" stroke="#e23a2e" stroke-width="1.2" />
+                    <circle cx="330" cy="48" r="3.5" fill="#ff4b3e" />
+                    <text x="330" y="34" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#ff938b">2.4 GHz · Beacon BLE</text>
+                  </g>
+
+                  <text x="95" y="222" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#98a0ab">HF</text>
+                  <text x="212" y="222" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#98a0ab">UHF / ISM</text>
+                  <text x="330" y="222" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#98a0ab">SHF</text>
+                </svg>
+                <div class="int-visual-foot">
+                  <span>PARÂMETROS: frequência / modulação / pulso</span>
+                  <span>ESCOPO: sinais sem fala humana</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>Diferenciar a ELINT da interceptação de conversas: aqui o foco recai sobre sinais eletrônicos de máquinas, sensores, radares e leitores de proximidade.</li>
+                <li>Explicar que, em testes físicos e de radiofrequência, um receptor SDR identifica a frequência de operação de crachás RFID e sensores sem fio antes de qualquer tentativa de clonagem.</li>
+                <li>Destacar a limitação física: emissões de baixa potência exigem que o analista esteja próximo ao prédio ou perímetro avaliado.</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 45 · INT: IMINT                                              -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Disciplinas de inteligência · 05 / 09</div>
+              <h2 class="h-md">IMINT · Imagery Intelligence</h2>
+            </div>
+
+            <div class="slide-body int-detail-grid">
+              <div class="int-detail-copy">
+                <p class="int-lede">
+                  Interpretação técnica de fotografias ópticas, imagens de satélite, capturas de drones e sensores infravermelhos ou de radar de abertura sintética (SAR).
+                </p>
+                <div class="int-spec-list">
+                  <div class="int-spec-item">
+                    <b>Fontes e coleta</b>
+                    <p>Constelações orbitais comerciais (Maxar, Planet, Sentinel), aerofotogrametria por VANTs, termografia e câmeras terrestres com teleobjetiva.</p>
+                  </div>
+                  <div class="int-spec-item">
+                    <b>Aplicação em Recon e segurança</b>
+                    <p>Identificação visual de geradores a diesel, chillers de climatização, guaritas, vagas de estacionamento, cercamento e domos de CFTV.</p>
+                  </div>
+                  <div class="int-spec-item is-limit">
+                    <b>Limite operacional</b>
+                    <p>Cobertura de nuvens em sensores ópticos, resolução espacial (metros por pixel) e janela de revisita do satélite restringem a observação em tempo real.</p>
+                  </div>
+                </div>
+                <div class="tag-row">
+                  <span class="chip">óptico / SAR</span>
+                  <span class="chip">inspeção orbital</span>
+                  <span class="chip amber">resolução espacial</span>
+                </div>
+              </div>
+
+              <div class="int-visual-card">
+                <div class="int-visual-bar">
+                  <span class="int-visual-tag">05 · FOTOINTERPRETAÇÃO TÉCNICA</span>
+                  <span class="int-visual-status">NADIR · GSD 0.30m/px</span>
+                </div>
+                <svg class="int-svg" viewBox="0 0 460 250" aria-label="Quadro de captura orbital IMINT com marcação de objetos">
+                  <rect width="460" height="250" fill="#0a0f12" />
+                  <g stroke="#1b262d" stroke-width="1">
+                    <rect x="24" y="20" width="412" height="206" fill="#0d151a" />
+                    <path d="M50 20 V226 M120 20 V226 M190 20 V226 M260 20 V226 M330 20 V226 M400 20 V226" opacity=".45" />
+                    <path d="M24 65 H436 M24 115 H436 M24 165 H436" opacity=".45" />
+                  </g>
+
+                  <rect x="130" y="54" width="185" height="112" fill="#162129" stroke="#3c505e" stroke-width="1.5" />
+                  <rect x="150" y="72" width="46" height="32" fill="#1e2d38" stroke="#4f6778" />
+                  <rect x="212" y="72" width="82" height="74" fill="#1a2730" stroke="#4f6778" />
+
+                  <g class="int-node-in" style="--d: .15s">
+                    <rect x="144" y="66" width="58" height="44" fill="none" stroke="#f0a63c" stroke-width="1.4" stroke-dasharray="4 2" />
+                    <text x="144" y="60" font-family="IBM Plex Mono" font-size="7.5" fill="#f4bb73">[A1] CHILLER HVAC</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .28s">
+                    <rect x="336" y="78" width="54" height="38" fill="#1c1917" stroke="#e23a2e" stroke-width="1.4" />
+                    <text x="363" y="100" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#ff938b">GERADOR</text>
+                    <text x="363" y="71" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#ff938b">[B2] BACKUP</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .4s">
+                    <rect x="64" y="154" width="48" height="28" fill="#131f1b" stroke="#63c98a" stroke-width="1.4" />
+                    <text x="88" y="171" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#8ee0af">GUARITA</text>
+                  </g>
+
+                  <line class="int-scan" x1="24" y1="40" x2="436" y2="40" stroke="rgba(111, 169, 245, 0.45)" stroke-width="1.5" />
+
+                  <g stroke="#d8e3e9" stroke-width="1.2">
+                    <path d="M36 206 H96 M36 202 V210 M96 202 V210" />
+                  </g>
+                  <text x="104" y="209" font-family="IBM Plex Mono" font-size="8" fill="#d8e3e9">25 m</text>
+                  <text x="320" y="209" font-family="IBM Plex Mono" font-size="8" fill="#98a0ab">SENSOR: ÓPTICO / IR</text>
+                </svg>
+                <div class="int-visual-foot">
+                  <span>INSPEÇÃO: telhados, pátios e utilidades</span>
+                  <span>DIFERENÇA: IMINT analisa o pixel; GEOINT posiciona no mapa</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>Esclarecer a distinção clássica: enquanto a GEOINT trabalha camadas espaciais e coordenadas no mapa, a IMINT foca na leitura forense da imagem em si (objetos, sombras e sensores).</li>
+                <li>Mostrar como imagens verticais revelam equipamentos críticos no topo de edifícios, sistemas de climatização, geradores externos e controle de veículos na portaria.</li>
+                <li>Explicar que sensores de radar de abertura sintética (SAR) atravessam nuvens e operam à noite, suprindo limitações da fotografia óptica tradicional.</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 46 · INT: TECHINT                                            -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Disciplinas de inteligência · 06 / 09</div>
+              <h2 class="h-md">TECHINT · Technical Intelligence</h2>
+            </div>
+
+            <div class="slide-body int-detail-grid">
+              <div class="int-detail-copy">
+                <p class="int-lede">
+                  Análise funcional de equipamentos, hardware, firmware e arquiteturas de sistemas utilizados pelo alvo para mapear capacidades e falhas de projeto.
+                </p>
+                <div class="int-spec-list">
+                  <div class="int-spec-item">
+                    <b>Fontes e coleta</b>
+                    <p>Bases de homologação regulatória (Anatel, FCC ID), manuais de serviço, esquemas de placa (PCB), imagens de firmware e especificações de patentes.</p>
+                  </div>
+                  <div class="int-spec-item">
+                    <b>Aplicação em Recon e segurança</b>
+                    <p>Inspeção prévia de modelos de controladores de acesso, câmeras IP, roteadores industriais e fechaduras eletrônicas identificados na organização.</p>
+                  </div>
+                  <div class="int-spec-item is-limit">
+                    <b>Limite operacional</b>
+                    <p>A reprodução de falhas exige obter o binário de firmware da revisão exata em operação ou adquirir equipamento idêntico para testes em bancada.</p>
+                  </div>
+                </div>
+                <div class="tag-row">
+                  <span class="chip">FCC ID / Anatel</span>
+                  <span class="chip">análise de firmware</span>
+                  <span class="chip red">hardware hacking</span>
+                </div>
+              </div>
+
+              <div class="int-visual-card">
+                <div class="int-visual-bar">
+                  <span class="int-visual-tag">06 · DISSECAÇÃO DE EQUIPAMENTO</span>
+                  <span class="int-visual-status">HOMOLOGAÇÃO + FIRMWARE</span>
+                </div>
+                <svg class="int-svg" viewBox="0 0 460 250" aria-label="Diagrama esquemático TECHINT de placa controladora e componentes">
+                  <rect width="460" height="250" fill="#0b1016" />
+                  <g stroke="#1b2430" stroke-width="1">
+                    <path d="M0 50 H460 M0 100 H460 M0 150 H460 M0 200 H460" />
+                    <path d="M90 0 V250 M180 0 V250 M270 0 V250 M360 0 V250" />
+                  </g>
+
+                  <rect x="135" y="54" width="170" height="126" rx="4" fill="#11221c" stroke="#63c98a" stroke-width="1.5" />
+                  <rect x="160" y="76" width="56" height="52" fill="#18222c" stroke="#90a0af" stroke-width="1.2" />
+                  <text x="188" y="100" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#e8edf1">SoC ARM</text>
+                  <text x="188" y="113" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#98a0ab">Rev B2</text>
+
+                  <rect x="236" y="82" width="46" height="32" fill="#1c1917" stroke="#f0a63c" stroke-width="1.2" />
+                  <text x="259" y="101" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#f4bb73">SPI 16M</text>
+
+                  <g fill="#e23a2e">
+                    <circle cx="155" cy="156" r="3" />
+                    <circle cx="167" cy="156" r="3" />
+                    <circle cx="179" cy="156" r="3" />
+                    <circle cx="191" cy="156" r="3" />
+                  </g>
+
+                  <path class="int-flow" d="M 160 98 L 106 66 H 30" />
+                  <path class="int-flow" style="--d: .22s" d="M 282 98 L 332 66 H 430" />
+                  <path class="int-flow is-hot" style="--d: .4s" d="M 173 156 L 122 198 H 30" />
+
+                  <g class="int-node-in" style="--d: .12s">
+                    <text x="30" y="56" font-family="IBM Plex Mono" font-size="8" fill="#8ee0af">FCC ID / ANATEL</text>
+                    <text x="30" y="78" font-family="IBM Plex Mono" font-size="7.5" fill="#98a0ab">Fotos internas públicas</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .28s">
+                    <text x="430" y="56" text-anchor="end" font-family="IBM Plex Mono" font-size="8" fill="#f4bb73">DUMP DE FIRMWARE</text>
+                    <text x="430" y="78" text-anchor="end" font-family="IBM Plex Mono" font-size="7.5" fill="#98a0ab">Chaves / CVEs de fábrica</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .42s">
+                    <text x="30" y="190" font-family="IBM Plex Mono" font-size="8" fill="#ff938b">PINAGEM UART / JTAG</text>
+                    <text x="30" y="212" font-family="IBM Plex Mono" font-size="7.5" fill="#98a0ab">Console serial de depuração</text>
+                  </g>
+                </svg>
+                <div class="int-visual-foot">
+                  <span>REGISTROS: fotos de homologação e datasheets</span>
+                  <span>OBJETIVO: descobrir falhas no equipamento usado pelo alvo</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>Apresentar a TECHINT como o estudo detalhado das tecnologias, peças de hardware e versões de software que compõem a infraestrutura do alvo.</li>
+                <li>Dar o exemplo prático das bases da Anatel e da FCC nos EUA: fabricantes submetem fotos internas das placas e manuais técnicos que ficam disponíveis para consulta pública.</li>
+                <li>Com o modelo exato descoberto no reconhecimento visual, a equipe analisa o firmware em laboratório antes de interagir com o dispositivo em produção.</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 47 · INT: CYBINT                                             -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Disciplinas de inteligência · 07 / 09</div>
+              <h2 class="h-md">CYBINT · Cyber Intelligence</h2>
+            </div>
+
+            <div class="slide-body int-detail-grid">
+              <div class="int-detail-copy">
+                <p class="int-lede">
+                  Rastreamento de atores de ameaça, infraestrutura de comando e controle (C2), artefatos de malware e credenciais expostas no ambiente digital.
+                </p>
+                <div class="int-spec-list">
+                  <div class="int-spec-item">
+                    <b>Fontes e coleta</b>
+                    <p>Telemetria de honeypots, feeds de indicadores de comprometimento (IoCs), sandboxes de malware, DNS passivo e bases de credenciais vazadas.</p>
+                  </div>
+                  <div class="int-spec-item">
+                    <b>Aplicação em Recon e segurança</b>
+                    <p>Mapeamento de TTPs (MITRE ATT&amp;CK) de grupos hostis para a defesa, e auditoria de senhas corporativas ou tokens de sessão capturados por infostealers.</p>
+                  </div>
+                  <div class="int-spec-item is-limit">
+                    <b>Limite operacional</b>
+                    <p>Indicadores atômicos como endereços IP e hashes mudam a cada campanha; a atribuição técnica requer correlacionar TTPs e infraestrutura recorrente.</p>
+                  </div>
+                </div>
+                <div class="tag-row">
+                  <span class="chip">MITRE ATT&amp;CK</span>
+                  <span class="chip">IoCs / TTPs</span>
+                  <span class="chip red">logs de infostealers</span>
+                </div>
+              </div>
+
+              <div class="int-visual-card">
+                <div class="int-visual-bar">
+                  <span class="int-visual-tag">07 · TELEMETRIA DE AMEAÇAS</span>
+                  <span class="int-visual-status">CORRELAÇÃO DE INFRAESTRUTURA E TTPs</span>
+                </div>
+                <svg class="int-svg" viewBox="0 0 460 250" aria-label="Grafo de correlação CYBINT entre ator, C2, artefato e superfície">
+                  <rect width="460" height="250" fill="#0b1016" />
+                  <g stroke="#1b2430" stroke-width="1">
+                    <path d="M0 50 H460 M0 100 H460 M0 150 H460 M0 200 H460" />
+                    <path d="M90 0 V250 M180 0 V250 M270 0 V250 M360 0 V250" />
+                  </g>
+
+                  <path class="int-flow" d="M 136 70 H 184" />
+                  <path class="int-flow" style="--d: .2s" d="M 296 70 H 336" />
+                  <path class="int-flow is-hot" style="--d: .4s" d="M 240 98 V 148" />
+
+                  <g class="int-node-in" style="--d: .08s">
+                    <rect x="24" y="42" width="112" height="56" rx="3" fill="#141d26" stroke="#6fa9f5" stroke-width="1.3" />
+                    <text x="80" y="65" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#6fa9f5">TELEMETRIA / FEED</text>
+                    <text x="80" y="81" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#d8e3e9">Logs · Honeypots</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .2s">
+                    <rect x="184" y="42" width="112" height="56" rx="3" fill="#1c1917" stroke="#f0a63c" stroke-width="1.4" />
+                    <text x="240" y="65" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#f4bb73">INFRAESTRUTURA C2</text>
+                    <text x="240" y="81" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#d8e3e9">Cert TLS / ASN / IP</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .32s">
+                    <rect x="336" y="42" width="100" height="56" rx="3" fill="#141d26" stroke="#47606d" stroke-width="1.3" />
+                    <text x="386" y="65" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#8ee0af">PERFIL DE TTPs</text>
+                    <text x="386" y="81" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#d8e3e9">MITRE ATT&amp;CK</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .44s">
+                    <rect x="140" y="148" width="200" height="60" rx="3" fill="#211417" stroke="#e23a2e" stroke-width="1.4" />
+                    <text x="240" y="171" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="#ff938b">EXPOSIÇÃO CREDENCIAL / ATIVO</text>
+                    <text x="240" y="187" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#d8e3e9">Cookies de sessão e senhas de VPN</text>
+                    <text x="240" y="199" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#98a0ab">Priorização de revogação e bloqueio</text>
+                  </g>
+                </svg>
+                <div class="int-visual-foot">
+                  <span>PIRÂMIDE DA DOR: hashes → IPs → domínios → TTPs</span>
+                  <span>AÇÃO: defesa orientada por ameaças</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>Contextualizar a CYBINT (ou CTI) na intersecção entre reconhecimento externo e defesa corporativa.</li>
+                <li>Explicar como logs de malwares infostealers comercializados em fóruns contêm cookies de sessão e credenciais de acesso remoto de funcionários.</li>
+                <li>Destacar que rastrear procedimentos e infraestrutura de comando e controle (TTPs) oferece proteção mais duradoura do que bloquear IPs isolados.</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 48 · INT: SOCMINT                                            -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Disciplinas de inteligência · 08 / 09</div>
+              <h2 class="h-md">SOCMINT · Social Media Intelligence</h2>
+            </div>
+
+            <div class="slide-body int-detail-grid">
+              <div class="int-detail-copy">
+                <p class="int-lede">
+                  Coleta e análise de perfis, grafos de relacionamento, publicações e interações em plataformas sociais, fóruns e comunidades técnicas.
+                </p>
+                <div class="int-spec-list">
+                  <div class="int-spec-item">
+                    <b>Fontes e coleta</b>
+                    <p>Redes profissionais (LinkedIn), repositórios e fóruns de código (GitHub, Stack Overflow), postagens de foto e vídeo e canais públicos de mensagens.</p>
+                  </div>
+                  <div class="int-spec-item">
+                    <b>Aplicação em Recon e segurança</b>
+                    <p>Reconstrução de organogramas, identificação da stack tecnológica descrita em vagas de TI e leitura de crachás ou telas em fotos de eventos internos.</p>
+                  </div>
+                  <div class="int-spec-item is-limit">
+                    <b>Limite operacional</b>
+                    <p>As principais redes sociais removem metadados EXIF no upload, e perfis inautênticos ou desatualizados exigem confirmação em registros independentes.</p>
+                  </div>
+                </div>
+                <div class="tag-row">
+                  <span class="chip">grafo social</span>
+                  <span class="chip">stack em vagas</span>
+                  <span class="chip green">fontes abertas</span>
+                </div>
+              </div>
+
+              <div class="int-visual-card">
+                <div class="int-visual-bar">
+                  <span class="int-visual-tag">08 · REDES E COMUNIDADES</span>
+                  <span class="int-visual-status">CORRELAÇÃO DE PERFIS PÚBLICOS</span>
+                </div>
+                <svg class="int-svg" viewBox="0 0 460 250" aria-label="Grafo SOCMINT conectando perfil profissional, repositório e foto publicada">
+                  <rect width="460" height="250" fill="#0b1016" />
+                  <g stroke="#1b2430" stroke-width="1">
+                    <path d="M0 50 H460 M0 100 H460 M0 150 H460 M0 200 H460" />
+                    <path d="M90 0 V250 M180 0 V250 M270 0 V250 M360 0 V250" />
+                  </g>
+
+                  <path class="int-flow" d="M 132 120 L 210 62" />
+                  <path class="int-flow" style="--d: .2s" d="M 132 120 L 210 120" />
+                  <path class="int-flow is-hot" style="--d: .38s" d="M 132 120 L 210 178" />
+
+                  <g class="int-node-in" style="--d: .1s">
+                    <circle class="int-pulse" cx="84" cy="120" r="42" fill="none" stroke="#63c98a" stroke-width="1" />
+                    <circle cx="84" cy="120" r="34" fill="#131f1b" stroke="#63c98a" stroke-width="1.4" />
+                    <text x="84" y="116" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="#8ee0af">@eng.devops</text>
+                    <text x="84" y="130" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#d8e3e9">Alvo Inicial</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .2s">
+                    <rect x="210" y="36" width="222" height="46" rx="3" fill="#131c26" stroke="#47606d" stroke-width="1.3" />
+                    <text x="224" y="56" font-family="IBM Plex Mono" font-size="8" fill="#6fa9f5">REDE PROFISSIONAL · VAGA</text>
+                    <text x="224" y="71" font-family="IBM Plex Mono" font-size="7.5" fill="#d8e3e9">Stack: Kubernetes, Okta, PaloAlto</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .3s">
+                    <rect x="210" y="97" width="222" height="46" rx="3" fill="#131c26" stroke="#f0a63c" stroke-width="1.3" />
+                    <text x="224" y="117" font-family="IBM Plex Mono" font-size="8" fill="#f4bb73">REPOSITÓRIO PÚBLICO · COMMIT</text>
+                    <text x="224" y="132" font-family="IBM Plex Mono" font-size="7.5" fill="#d8e3e9">Padronização de e-mail interno</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .4s">
+                    <rect x="210" y="158" width="222" height="46" rx="3" fill="#211417" stroke="#e23a2e" stroke-width="1.4" />
+                    <text x="224" y="178" font-family="IBM Plex Mono" font-size="8" fill="#ff938b">FOTO DE INTEGRAÇÃO · CRACHÁ</text>
+                    <text x="224" y="193" font-family="IBM Plex Mono" font-size="7.5" fill="#d8e3e9">Layout Mifare + código de barras</text>
+                  </g>
+                </svg>
+                <div class="int-visual-foot">
+                  <span>PIVÔ: handle único reutilizado entre plataformas</span>
+                  <span>IMPACTO: mapeamento tecnológico e humano sem tocar na rede</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>Explicar a SOCMINT como subdisciplina focada em plataformas de mídia social e comunidades colaborativas.</li>
+                <li>Destacar como descrições de cargos e anúncios de vagas no LinkedIn entregam versões exatas de firewalls, EDRs e provedores de identidade usados internamente.</li>
+                <li>Mencionar o hábito de novos funcionários publicarem fotos de kits de boas-vindas e crachás, permitindo a clonagem visual do modelo de identificação da empresa.</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 49 · INT: SIGINT                                             -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">Daniel</span> · Disciplinas de inteligência · 09 / 09</div>
+              <h2 class="h-md">SIGINT · Signals Intelligence</h2>
+            </div>
+
+            <div class="slide-body int-detail-grid">
+              <div class="int-detail-copy">
+                <p class="int-lede">
+                  Interceptação, processamento e análise de sinais transmitidos entre pessoas ou máquinas, englobando comunicações (COMINT) e emissões eletrônicas (ELINT).
+                </p>
+                <div class="int-spec-list">
+                  <div class="int-spec-item">
+                    <b>Fontes e coleta</b>
+                    <p>Enlaces de rádio, comunicações via satélite, redes sem fio (802.11 Wi-Fi, Bluetooth, celular) e tráfego em meios físicos ou eletromagnéticos compartilhados.</p>
+                  </div>
+                  <div class="int-spec-item">
+                    <b>Aplicação em Recon e segurança</b>
+                    <p>Captura passiva de quadros de gerenciamento Wi-Fi (beacons e probe requests), mapeamento de BSSIDs e auditoria de rádios corporativos sem criptografia.</p>
+                  </div>
+                  <div class="int-spec-item is-limit">
+                    <b>Limite operacional</b>
+                    <p>A interceptação de comunicações privadas sem autorização legal constitui crime; mesmo com payload cifrado, a análise de tráfego expõe horários, volumes e remetentes.</p>
+                  </div>
+                </div>
+                <div class="tag-row">
+                  <span class="chip">COMINT + ELINT</span>
+                  <span class="chip">802.11 beacons</span>
+                  <span class="chip red">análise de tráfego</span>
+                </div>
+              </div>
+
+              <div class="int-visual-card">
+                <div class="int-visual-bar">
+                  <span class="int-visual-tag">09 · SINAIS E COMUNICAÇÕES</span>
+                  <span class="int-visual-status">CAPTURA E ANÁLISE DE ENLACE</span>
+                </div>
+                <svg class="int-svg" viewBox="0 0 460 250" aria-label="Pipeline SIGINT de captura de onda, demodulação e extração de metadados">
+                  <rect width="460" height="250" fill="#0b1016" />
+                  <g stroke="#1b2430" stroke-width="1">
+                    <path d="M0 50 H460 M0 100 H460 M0 150 H460 M0 200 H460" />
+                    <path d="M90 0 V250 M180 0 V250 M270 0 V250 M360 0 V250" />
+                  </g>
+
+                  <path class="int-flow" d="M 22 120 Q 36 75, 50 120 T 78 120 T 106 120 T 134 120 T 162 120" stroke="#f0a63c" stroke-width="2" />
+
+                  <g class="int-node-in" style="--d: .14s">
+                    <rect x="164" y="84" width="96" height="72" rx="3" fill="#141d26" stroke="#6fa9f5" stroke-width="1.4" />
+                    <text x="212" y="112" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#6fa9f5">DEMODULAÇÃO</text>
+                    <text x="212" y="126" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#d8e3e9">Filtro de Canal</text>
+                    <text x="212" y="140" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#98a0ab">COMINT / ELINT</text>
+                  </g>
+
+                  <path class="int-flow" style="--d: .26s" d="M 260 104 L 304 68" />
+                  <path class="int-flow is-hot" style="--d: .38s" d="M 260 136 L 304 172" />
+
+                  <g class="int-node-in" style="--d: .28s">
+                    <rect x="304" y="38" width="132" height="58" rx="3" fill="#131f1b" stroke="#63c98a" stroke-width="1.3" />
+                    <text x="370" y="60" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#8ee0af">METADADOS DE REDE</text>
+                    <text x="370" y="74" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#d8e3e9">BSSID · SSID · WPA3</text>
+                    <text x="370" y="86" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#98a0ab">Dispositivos próximos</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .42s">
+                    <rect x="304" y="144" width="132" height="58" rx="3" fill="#211417" stroke="#e23a2e" stroke-width="1.4" />
+                    <text x="370" y="166" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="#ff938b">PADRÃO DE TRÁFEGO</text>
+                    <text x="370" y="180" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="#d8e3e9">Horário de pico e volume</text>
+                    <text x="370" y="192" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#98a0ab">Correlação de presença</text>
+                  </g>
+
+                  <text x="26" y="70" font-family="IBM Plex Mono" font-size="8" fill="#f4bb73">PORTADORA RF</text>
+                </svg>
+                <div class="int-visual-foot">
+                  <span>ESCOPO: comunicações (COMINT) + sinais eletrônicos (ELINT)</span>
+                  <span>FECHAMENTO DO BLOCO 03 · 09 / 09</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>Explicar a SIGINT como disciplina abrangente que une a inteligência de comunicações (COMINT) e a inteligência eletrônica (ELINT).</li>
+                <li>Destacar que, mesmo quando o conteúdo da comunicação está criptografado, cabeçalhos de quadros sem fio e padrões de volume revelam quais dispositivos estão presentes e ativos.</li>
+                <li>Passar a palavra para João Pedro Gonçalves para apresentar os grandes estudos de caso históricos no Bloco 04 (RSA SecurID e Strava Global Heatmap).</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
 

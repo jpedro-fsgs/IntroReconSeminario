@@ -57,7 +57,8 @@
 
   .hs-arrow,
   .route,
-  .g-line {
+  .g-line,
+  .int-flow {
     stroke-dashoffset: 0 !important;
   }
 

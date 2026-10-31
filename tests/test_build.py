@@ -37,9 +37,9 @@ class PresentationBuildTests(unittest.TestCase):
         validator = build.SlideValidator()
         validator.feed(html)
         validator.close()
-        self.assertEqual(validator.slides, 54)
+        self.assertEqual(validator.slides, 63)
         self.assertEqual(validator.depth, 0)
-        self.assertEqual([int(number) for number in re.findall(r'<!-- (\d{2}) ·', html)], list(range(1, 55)))
+        self.assertEqual([int(number) for number in re.findall(r'<!-- (\d{2}) ·', html)], list(range(1, 64)))
 
     def test_validator_rejects_nested_slides_and_missing_notes(self):
         with self.assertRaisesRegex(ValueError, "aninhadas"):
