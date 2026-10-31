@@ -2882,7 +2882,7 @@
         <section class="slide">
           <div class="slide-inner">
             <div class="slide-head">
-              <div class="kicker"><span class="who">João Pedro Gonçalves</span> · Caso 01 · 2011 · RSA Security · 01 / 04</div>
+              <div class="kicker"><span class="who">João Pedro Gonçalves</span> · Caso 01 · 2011 · RSA Security · 01 / 05</div>
               <h2 class="h-md">Quem era a RSA Security em 2011</h2>
             </div>
 
@@ -2982,55 +2982,173 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 52 · CASO RSA — OSINT E SPEAR-PHISHING                       -->
+        <!-- 52 · CASO RSA — MAPEAMENTO EM FONTES ABERTAS                 -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">João Pedro Gonçalves</span> · Caso 01 · 2011 · RSA Security · 02 / 05</div>
+              <h2 class="h-md">Levantamento da estrutura administrativa em fontes abertas</h2>
+            </div>
+
+            <div class="slide-body int-detail-grid">
+              <div class="int-detail-copy">
+                <p class="int-lede">
+                  Antes de disparar qualquer código malicioso, os atacantes mapearam a hierarquia da RSA em fontes públicas para identificar quem manipulava arquivos externos por dever de ofício.
+                </p>
+                <div class="int-spec-list">
+                  <div class="int-spec-item">
+                    <b>Coleta em redes profissionais (SOCMINT / OSINT)</b>
+                    <p>Os invasores reuniram perfis do LinkedIn, diretórios corporativos da EMC e comunicados públicos para reconstruir departamentos, cargos e o padrão dos endereços de e-mail institucionais.</p>
+                  </div>
+                  <div class="int-spec-item">
+                    <b>Critério funcional de seleção de alvos</b>
+                    <p>Equipes de criptografia e engenharia foram descartadas pelo alto ceticismo com arquivos externos. A triagem mirou analistas de RH e recrutamento, cuja rotina exige abrir currículos e planilhas de remetentes desconhecidos.</p>
+                  </div>
+                  <div class="int-spec-item is-limit">
+                    <b>Isolamento cirúrgico de quatro funcionários</b>
+                    <p>O levantamento filtrou exatamente quatro colaboradores em duas pequenas equipes administrativas. Esse número reduzido permitiu um ataque silencioso, sem gerar tráfego anômalo nos servidores de e-mail.</p>
+                  </div>
+                </div>
+                <div class="tag-row">
+                  <span class="chip">SOCMINT</span>
+                  <span class="chip amber">LinkedIn / Diretórios</span>
+                  <span class="chip red">4 alvos mapeados</span>
+                </div>
+              </div>
+
+              <div class="int-visual-card">
+                <div class="int-visual-bar">
+                  <span class="int-visual-tag">MAPEAMENTO DE ESTRUTURA ORGANIZACIONAL</span>
+                  <span class="int-visual-status">OSINT / SOCMINT · MARÇO DE 2011</span>
+                </div>
+                <svg class="int-svg" viewBox="0 0 460 250" aria-label="Diagrama de levantamento de fontes abertas e triagem de alvos na RSA">
+                  <rect width="460" height="250" fill="#0b1016" />
+                  <g stroke="#1b2430" stroke-width="1">
+                    <path d="M0 50 H460 M0 100 H460 M0 150 H460 M0 200 H460" />
+                    <path d="M92 0 V250 M184 0 V250 M276 0 V250 M368 0 V250" />
+                  </g>
+
+                  <!-- Fluxos animados entre etapas -->
+                  <path class="int-flow" d="M 136 62 H 168" />
+                  <path class="int-flow" style="--d: .2s" d="M 292 62 H 318" />
+                  <path class="int-flow is-hot" style="--d: .38s" d="M 374 86 V 126" />
+
+                  <!-- Bloco 1: Fontes Abertas -->
+                  <g class="int-node-in" style="--d: .06s">
+                    <rect x="18" y="26" width="118" height="72" rx="3" fill="#131c26" stroke="#6fa9f5" stroke-width="1.4" />
+                    <text x="77" y="46" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8.2" fill="#6fa9f5">FONTES ABERTAS</text>
+                    <text x="77" y="62" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#d8e3e9">Perfis no LinkedIn</text>
+                    <text x="77" y="75" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#98a0ab">Diretórios EMC / RSA</text>
+                    <text x="77" y="87" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#98a0ab">Vagas e comunicados</text>
+                  </g>
+
+                  <!-- Bloco 2: Mapeamento de Organograma -->
+                  <g class="int-node-in" style="--d: .18s">
+                    <rect x="168" y="26" width="124" height="72" rx="3" fill="#181c22" stroke="#f0a63c" stroke-width="1.4" />
+                    <text x="230" y="46" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8.2" fill="#f4bb73">ORGANOGRAMA</text>
+                    <text x="230" y="62" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#d8e3e9">Relação de cargos</text>
+                    <text x="230" y="75" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#98a0ab">Sintaxe de e-mail</text>
+                    <text x="230" y="87" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#f0a63c">nome.sobrenome@</text>
+                  </g>
+
+                  <!-- Bloco 3: Triagem por Perfil de Ceticismo -->
+                  <g class="int-node-in" style="--d: .28s">
+                    <!-- Ramo Descartado: Engenharia -->
+                    <rect x="318" y="20" width="124" height="32" rx="2" fill="#141113" stroke="#505a63" stroke-dasharray="3,3" />
+                    <text x="380" y="34" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#88929c">ENGENHARIA / CRIPTO</text>
+                    <text x="380" y="46" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="6.8" fill="#e23a2e">✕ Descartado (céticos)</text>
+
+                    <!-- Ramo Selecionado: RH -->
+                    <rect x="318" y="56" width="124" height="38" rx="2" fill="#122019" stroke="#63c98a" stroke-width="1.3" />
+                    <text x="380" y="72" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#8ee0af">RH / RECRUTAMENTO</text>
+                    <text x="380" y="86" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="6.8" fill="#63c98a">✓ Abre arquivos externos</text>
+                  </g>
+
+                  <!-- Bloco 4: Os 4 Alvos Isolados -->
+                  <g class="int-node-in" style="--d: .42s">
+                    <circle class="int-pulse" cx="62" cy="162" r="24" fill="none" stroke="#e23a2e" stroke-width="1.2" />
+                    <rect x="18" y="126" width="424" height="74" rx="3" fill="#1f1417" stroke="#e23a2e" stroke-width="1.5" />
+                    <text x="110" y="152" font-family="IBM Plex Mono, monospace" font-size="8.8" font-weight="600" fill="#ff938b">4 FUNCIONÁRIOS ADMINISTRATIVOS ISOLADOS</text>
+                    <text x="110" y="168" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#d8e3e9">Dois pequenos grupos de suporte funcional mapeados com precisão</text>
+                    <text x="110" y="182" font-family="IBM Plex Mono, monospace" font-size="7.2" fill="#98a0ab">Volume cirúrgico de disparos: impediu alertas de anomalia de tráfego</text>
+                    <rect x="354" y="138" width="76" height="50" rx="2" fill="#0d1217" stroke="#32404e" />
+                    <text x="392" y="157" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.2" fill="#f4bb73">VETOR</text>
+                    <text x="392" y="173" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="6.8" fill="#d8e3e9">Abertura de</text>
+                    <text x="392" y="183" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="6.8" fill="#d8e3e9">planilhas</text>
+                  </g>
+
+                  <!-- Faixa inferior -->
+                  <rect x="18" y="210" width="424" height="24" rx="2" fill="#101720" stroke="#27313c" />
+                  <text x="30" y="225" font-family="IBM Plex Mono, monospace" font-size="7.6" fill="#98a0ab">RECONHECIMENTO PASSIVO: 100% externo, sem contato prévio com a infraestrutura da RSA</text>
+                </svg>
+                <div class="int-visual-foot">
+                  <span>FONTE: dados públicos em redes profissionais</span>
+                  <span>CRITÉRIO: rotina de abertura de anexos externos</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>Mostrar como o ataque à RSA começou semanas antes de qualquer envio de e-mail, mapeando o organograma da EMC/RSA em fontes abertas.</li>
+                <li>Explicar a lógica de seleção de alvos em engenharia social: atacar quem tem o hábito profissional de abrir anexos externos não solicitados (RH e recrutamento), descartando equipes técnicas com perfil cético.</li>
+                <li>Destacar a precisão do levantamento: apenas 4 pessoas selecionadas, evitando disparos em massa que acionariam alertas de segurança.</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 53 · CASO RSA — SPEAR-PHISHING E ANEXO                       -->
         <!-- ============================================================ -->
         <section class="slide paper">
           <div class="slide-inner">
             <div class="slide-head">
-              <div class="kicker">Caso 01 · 2011 · RSA Security · 02 / 04</div>
-              <h2 class="h-md">Do mapeamento do RH ao anexo aberto</h2>
+              <div class="kicker"><span class="who">João Pedro Gonçalves</span> · Caso 01 · 2011 · RSA Security · 03 / 05</div>
+              <h2 class="h-md">O envio do spear-phishing e o resgate da pasta de Spam</h2>
             </div>
 
             <div class="slide-body rsa-grid">
               <div>
                 <div class="timeline">
                   <div class="t-item rise" style="--d: .1s">
-                    <div class="when">ETAPA 01 · OSINT E SOCMINT</div>
-                    <b>Levantamento da estrutura administrativa em fontes abertas</b>
-                    <span>Os atacantes coletaram nomes, cargos e e-mails da EMC/RSA em redes profissionais e listas públicas. Em vez de mirar engenheiros de segurança, selecionaram quatro pequenos grupos administrativos e de recrutamento.</span>
+                    <div class="when">ETAPA 01 · A ISCA CONTEXTUALIZADA</div>
+                    <b>Planilha forjada com pretexto funcional</b>
+                    <span>Com os quatro alvos definidos no RH, os atacantes montaram uma mensagem curta com o assunto “2011 Recruitment Plan” e anexaram o arquivo <code>2011_Recruitment_Plan.xls</code> simulando o repasse de um documento para revisão.</span>
                   </div>
                   <div class="t-item rise" style="--d: .22s">
-                    <div class="when">ETAPA 02 · HUMINT E SPEAR-PHISHING (16–17 MAR. 2011)</div>
-                    <b>E-mail forjado para quem abre planilhas externas por rotina</b>
-                    <span>Enviaram mensagens com o assunto “2011 Recruitment Plan” simulando o repasse de uma planilha de contratação e falsificando o endereço de envio para parecer comunicação de trabalho.</span>
+                    <div class="when">ETAPA 02 · DISPARO EM DOIS DIAS (16–17 MAR. 2011)</div>
+                    <b>Lotes reduzidos para contornar alarmes de volume</b>
+                    <span>Enviaram e-mails nos dias 16 e 17 de março com remetente falsificado para os quatro colaboradores mapeados. A baixa quantidade de mensagens evitou alarmes de campanha em massa nos servidores.</span>
                   </div>
                   <div class="t-item rise" style="--d: .34s">
                     <div class="when">ETAPA 03 · BYPASS HUMANO DO FILTRO</div>
-                    <b>Resgate da mensagem na pasta de Spam</b>
-                    <span>O filtro corporativo barrou o e-mail como lixo eletrônico. Ainda assim, um funcionário abriu a pasta de Spam, recuperou a mensagem e clicou duas vezes em <code>2011_Recruitment_Plan.xls</code>.</span>
+                    <b>Resgate voluntário da lixeira eletrônica</b>
+                    <span>O filtro corporativo reteve o e-mail na pasta de Spam. Mesmo assim, um funcionário abriu a lixeira, moveu a mensagem para a caixa principal e clicou duas vezes na planilha do Excel.</span>
                   </div>
                 </div>
 
                 <p class="source" style="margin-top: 14px">
-                  Fonte: Relatórios técnicos do incidente (EMC/RSA e Zoho Workplace). O reconhecimento prévio mapeou quem recebia anexos no RH.
+                  Fonte: Relatórios técnicos do incidente (EMC/RSA e Zoho Workplace).
                 </p>
               </div>
 
               <div>
                 <div class="rsa-osint-funnel rise" style="--d: .14s">
                   <div class="funnel-step">
-                    <span>OSINT / SOCMINT</span>
-                    <b>Diretório e perfis públicos</b>
+                    <span>DISPARO</span>
+                    <b>2 lotes cirúrgicos</b>
                   </div>
                   <i aria-hidden="true">→</i>
                   <div class="funnel-step">
-                    <span>FILTRO DE ALVO</span>
-                    <b>4 grupos de RH / Admin</b>
+                    <span>FILTRO ANTISPAM</span>
+                    <b>Retido na lixeira</b>
                   </div>
                   <i aria-hidden="true">→</i>
                   <div class="funnel-step is-alert">
                     <span>AÇÃO DO ALVO</span>
-                    <b>Retirado do Spam</b>
+                    <b>Resgatado e aberto</b>
                   </div>
                 </div>
 
@@ -3051,20 +3169,20 @@
 
             <aside class="notes">
               <ul>
-                <li>Mostrar a conexão direta com o Bloco 03: o ataque começou com OSINT e SOCMINT para descobrir quem trabalhava em setores que recebem planilhas externas todos os dias.</li>
-                <li>Enfatizar que o filtro técnico de spam funcionou e reteve o e-mail, mas o pretexto de recrutamento convenceu o funcionário a retirar o arquivo da lixeira.</li>
+                <li>Explicar a engenharia social do e-mail: mensagem curta, direta e com remetente forjado simulando contato de recrutamento profissional.</li>
+                <li>Enfatizar a falha humana que neutralizou a proteção técnica: o filtro de spam corporativo funcionou e barrou o e-mail, mas o funcionário recuperou o arquivo e o executou manualmente.</li>
               </ul>
             </aside>
           </div>
         </section>
 
         <!-- ============================================================ -->
-        <!-- 53 · CASO RSA — KILL CHAIN E EXFILTRAÇÃO                     -->
+        <!-- 54 · CASO RSA — KILL CHAIN E EXFILTRAÇÃO                     -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
             <div class="slide-head">
-              <div class="kicker"><span class="who">João Pedro Gonçalves</span> · Caso 01 · 2011 · RSA Security · 03 / 04</div>
+              <div class="kicker"><span class="who">João Pedro Gonçalves</span> · Caso 01 · 2011 · RSA Security · 04 / 05</div>
               <h2 class="h-md">Da planilha Excel à exfiltração das seeds</h2>
             </div>
 
@@ -3173,12 +3291,12 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 54 · CASO RSA — CONSEQUÊNCIAS E SUPPLY CHAIN                 -->
+        <!-- 55 · CASO RSA — CONSEQUÊNCIAS E SUPPLY CHAIN                 -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
             <div class="slide-head">
-              <div class="kicker"><span class="who">João Pedro Gonçalves</span> · Caso 01 · 2011 · RSA Security · 04 / 04</div>
+              <div class="kicker"><span class="who">João Pedro Gonçalves</span> · Caso 01 · 2011 · RSA Security · 05 / 05</div>
               <h2 class="h-md">O impacto em cadeia na Lockheed Martin</h2>
             </div>
 
@@ -3278,7 +3396,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 55 · CASO STRAVA                                             -->
+        <!-- 56 · CASO STRAVA                                             -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -3359,44 +3477,6 @@
               <li>Contextualizar o incidente do Strava Heatmap em 2017/2018: Nathan Ruser identificou desenhos geométricos em áreas remotas do Afeganistão (34.5°N 69.2°E).</li>
               <li>Explicar o conceito de inteligência emergente por agregação: dados inofensivos em nível individual revelam segredos estratégicos quando consolidados.</li>
               <li>A sobreposição com imagens de satélite permitiu identificar guaritas, pistas e postos avançados sem qualquer invasão a servidores.</li>
-            </ul>
-          </aside>
-                  </div>
-        </section>
-
-        <!-- ============================================================ -->
-        <!-- 56 · LIÇÃO DOS CASOS                                         -->
-        <!-- ============================================================ -->
-        <section class="slide center">
-          <div class="slide-inner">
-          <div class="slide-body lesson-wrap">
-            <div class="kicker">O padrão entre os dois casos</div>
-            <h2 class="lesson-quote">A correlação de dados como gerador de <em>inteligência ofensiva</em></h2>
-
-            <div class="lesson-items">
-              <div>
-                <b>FOTO COM GEOTAG</b>
-                <span>Entrega endereço, rotina e presença física.</span>
-              </div>
-              <div>
-                <b>PLANILHA COMPARTILHADA</b>
-                <span>Entrega nomes, estruturas e caminhos internos.</span>
-              </div>
-              <div>
-                <b>APP DE ATIVIDADE</b>
-                <span>Entrega padrões que ninguém sabia que existiam.</span>
-              </div>
-            </div>
-
-            <p class="lede" style="margin-top: 22px; max-width: 36em">
-              O reconhecimento converte fragmentos dispersos em visão estratégica. O valor investigativo reside na correlação precisa entre múltiplas fontes independentes.
-            </p>
-          </div>
-
-          <aside class="notes">
-            <ul>
-              <li>Sintetizar as lições dos dois casos: na RSA, o dado isolado era a lista pública de RH; no Strava, trajetos de exercícios.</li>
-              <li>Fixar a diretriz central: o valor da inteligência de reconhecimento decorre da correlação metódica de fontes independentes.</li>
               <li>Passar a palavra para João Pedro Almeida para a realização das demonstrações práticas de GEOSINT e correlação OSINT no Bloco 05.</li>
             </ul>
           </aside>
