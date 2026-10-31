@@ -89,8 +89,8 @@ html[data-theme="light"] .reveal {
   --red-bright: #ffaaa2;
   filter: invert(1) hue-rotate(180deg);
 }
-html[data-theme="light"] .reveal :is(.paper, .post, .tw-card, .certificate-paper, .mail, .tool-detail-example, .doc),
-html[data-theme="light"] .reveal img:not(:is(.paper, .post, .tw-card, .certificate-paper, .mail, .tool-detail-example, .doc) *) {
+html[data-theme="light"] .reveal :is(.paper, .post, .tw-card, .certificate-paper, .mail, .tool-detail-example, .doc, .rsa-brand-bar),
+html[data-theme="light"] .reveal img:not(:is(.paper, .post, .tw-card, .certificate-paper, .mail, .tool-detail-example, .doc, .rsa-brand-bar) *) {
   --red: #e23a2e;
   --red-bright: #ff4b3e;
   filter: invert(1) hue-rotate(180deg);

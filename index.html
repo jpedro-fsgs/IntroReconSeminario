@@ -2877,76 +2877,408 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 51 · CASO RSA                                                -->
+        <!-- 51 · CASO RSA — CONTEXTO E SECURID                           -->
         <!-- ============================================================ -->
-        <section class="slide paper">
+        <section class="slide">
           <div class="slide-inner">
-          <div class="slide-head">
-            <div class="kicker">Caso 01 · 2011 · RSA SecurID</div>
-            <h2 class="h-md">Caso RSA SecurID (2011)</h2>
-          </div>
-
-          <div class="slide-body rsa-grid">
-            <div>
-              <div class="timeline">
-                <div class="t-item rise" style="--d: .1s">
-                  <div class="when">MARÇO DE 2011</div>
-                  <b>Spear-phishing para um grupo pequeno</b>
-                  <span>Assunto inofensivo: “encaminho este arquivo para revisão”.</span>
-                </div>
-                <div class="t-item rise" style="--d: .2s">
-                  <div class="when">ABERTURA</div>
-                  <b>Planilha com exploit de Flash</b>
-                  <span>Um único funcionário abriu o anexo. O código executou.</span>
-                </div>
-                <div class="t-item rise" style="--d: .3s">
-                  <div class="when">PIVÔ</div>
-                  <b>Acesso à rede e movimento lateral</b>
-                  <span>O atacante passou do endpoint para os sistemas internos.</span>
-                </div>
-                <div class="t-item rise" style="--d: .4s">
-                  <div class="when">IMPACTO</div>
-                  <b>Comprometimento do SecurID</b>
-                  <span>Tokens de autenticação precisaram ser substituídos em escala.</span>
-                </div>
-              </div>
-
-              <p class="source" style="margin-top: 16px">
-                Fonte: Relatórios técnicos do incidente (Zoho Workplace). O reconhecimento prévio mapeou alvos de recrutamento no RH.
-              </p>
+            <div class="slide-head">
+              <div class="kicker"><span class="who">João Pedro Gonçalves</span> · Caso 01 · 2011 · RSA Security · 01 / 04</div>
+              <h2 class="h-md">Quem era a RSA Security em 2011</h2>
             </div>
 
-            <div>
-              <div class="mail-clip">
-                <div class="from">De: recruiter@web-example.com · Para: employee@rsa.com</div>
-                <div class="subject">I forward this file to you for review. Please open and view it.</div>
-                <div class="body">
-                  Hi,<br /><br />
-                  I forward this file to you for review. Please open and view it.<br /><br />
-                  Best regards.
-                </div>
-                <div class="attachment">📎 2011_Recruitment_Plan.xls</div>
-                <div class="source" style="margin-top: 10px">Reprodução didática do e-mail reportado no incidente.</div>
-              </div>
-
-              <div class="side-note" style="margin-top: 16px; font-size: 0.4em; border-color: var(--red)">
-                <b style="color: var(--red)">Análise:</b> o reconhecimento direcionou o spear-phishing para colaboradores que recebem e abrem anexos externos por dever de ofício.
-              </div>
-            </div>
-          </div>
-
-          <aside class="notes">
-            <ul>
-              <li>Apresentar o caso histórico da RSA Security em março de 2011: exfiltração de dados que comprometeu cerca de 40 milhões de tokens SecurID.</li>
-              <li>Destacar a mecânica: e-mail de spear-phishing com o anexo 2011_Recruitment_Plan.xls contendo exploit de Flash embutido em planilha Excel.</li>
-              <li>Ressaltar o reconhecimento prévio: os invasores mapearam colaboradores de RH que rotineiramente abrem currículos de remetentes desconhecidos.</li>
-            </ul>
-          </aside>
+            <div class="slide-body int-detail-grid">
+              <div class="int-detail-copy">
+                <p class="int-lede">
+                  Fundada em 1982 por Ron Rivest, Adi Shamir e Leonard Adleman (criadores do algoritmo criptográfico RSA), a empresa operava como a divisão de segurança da EMC.
+                </p>
+                <div class="int-spec-list">
+                  <div class="int-spec-item">
+                    <b>Autenticação SecurID (2FA)</b>
+                    <p>Fornecia tokens físicos (keyfob SID700) e de software que geravam uma senha descartável de 6 dígitos a cada 60 segundos para liberar o acesso a VPNs e redes restritas.</p>
                   </div>
+                  <div class="int-spec-item">
+                    <b>O segredo de fábrica (Seed Record)</b>
+                    <p>Cada token saía de fábrica com uma semente criptográfica única de 128 bits. O servidor de login da empresa cliente guardava uma cópia dessa mesma semente para calcular o mesmo número no mesmo minuto.</p>
+                  </div>
+                  <div class="int-spec-item is-limit">
+                    <b>Consequência de um vazamento</b>
+                    <p>Cerca de 25 mil organizações usavam 40 milhões de tokens SecurID, incluindo bancos, órgãos do governo dos EUA e fornecedores militares. Quem roubasse a base de sementes da RSA conseguiria prever os códigos de 6 dígitos e entrar nessas redes.</p>
+                  </div>
+                </div>
+                <div class="tag-row">
+                  <span class="chip">Rivest · Shamir · Adleman</span>
+                  <span class="chip amber">Seed 128-bit</span>
+                  <span class="chip red">40M+ tokens ativos</span>
+                </div>
+              </div>
+
+              <div class="int-visual-card">
+                <div class="rsa-brand-bar">
+                  <img class="rsa-logo-img" src="assets/rsa-logo.svg" alt="Logo oficial da RSA Security — The Security Division of EMC" />
+                  <div class="rsa-brand-meta">
+                    <span>BEDFORD, MA · FUNDADA EM 1982</span>
+                    <b>25.000 ORGANIZAÇÕES CLIENTES</b>
+                  </div>
+                </div>
+                <svg class="int-svg" viewBox="0 0 460 220" aria-label="Token físico RSA SecurID SID700 sincronizado com servidor de autenticação">
+                  <rect width="460" height="220" fill="#090d12" />
+                  <g stroke="#18222e" stroke-width="1">
+                    <path d="M0 44 H460 M0 88 H460 M0 132 H460 M0 176 H460" />
+                    <path d="M92 0 V220 M184 0 V220 M276 0 V220 M368 0 V220" />
+                  </g>
+
+                  <!-- Desenho do Token RSA SecurID SID700 -->
+                  <g class="int-node-in" style="--d: .08s">
+                    <rect x="22" y="34" width="204" height="106" rx="18" fill="#18222d" stroke="#5b7285" stroke-width="1.8" />
+                    <circle cx="44" cy="87" r="11" fill="#090d12" stroke="#475a6b" stroke-width="1.5" />
+                    <rect x="64" y="45" width="42" height="15" rx="2" fill="#be1e2d" />
+                    <text x="85" y="56" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="9.5" fill="#fff">RSA</text>
+                    <text x="114" y="56" font-family="IBM Plex Mono, monospace" font-size="8.5" fill="#d8e3e9">SecurID</text>
+
+                    <!-- Visor LCD com código de 6 dígitos e barra de 60s -->
+                    <rect x="64" y="66" width="144" height="44" rx="3" fill="#c7d5c0" stroke="#334238" stroke-width="1.4" />
+                    <text x="136" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="600" font-size="19" letter-spacing="3" fill="#141e18">482 910</text>
+                    <rect x="72" y="101" width="128" height="4" rx="1" fill="rgba(20,30,24,0.18)" />
+                    <rect class="rsa-token-bar" x="72" y="101" width="128" height="4" rx="1" fill="#1d3326" />
+                    <text x="64" y="125" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#90a0af">SID700 · PASSCODE 60s</text>
+                  </g>
+
+                  <!-- Fluxo de sincronia da Seed 128-bit -->
+                  <path class="int-flow" d="M 226 74 H 294" />
+                  <path class="int-flow is-hot" style="--d: .28s" d="M 294 102 H 226" />
+                  <text x="260" y="66" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#f0a63c">código 60s</text>
+                  <text x="260" y="116" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#ff938b">mesma seed</text>
+
+                  <!-- Servidor RSA Authentication Manager -->
+                  <g class="int-node-in" style="--d: .22s">
+                    <rect x="294" y="34" width="144" height="106" rx="4" fill="#131c26" stroke="#63c98a" stroke-width="1.5" />
+                    <text x="366" y="56" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8.5" fill="#8ee0af">AUTH MANAGER</text>
+                    <text x="366" y="72" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#d8e3e9">Cofre de Seeds 128-bit</text>
+                    <rect x="310" y="82" width="112" height="20" rx="2" fill="#0d131a" stroke="#2c3b4a" />
+                    <text x="366" y="95" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#f4bb73">SEED: 9F4A...8C12</text>
+                    <text x="366" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#98a0ab">Valida VPN Corporativa</text>
+                  </g>
+
+                  <!-- Faixa inferior: setores dependentes -->
+                  <rect x="22" y="156" width="416" height="46" rx="3" fill="#141115" stroke="#e23a2e" stroke-width="1.2" />
+                  <text x="34" y="174" font-family="IBM Plex Mono, monospace" font-size="8" fill="#ff938b">ALVOS PROTEGIDOS PELO SECURID EM 2011:</text>
+                  <text x="34" y="191" font-family="IBM Plex Mono, monospace" font-size="8" fill="#d8e3e9">Defesa (Lockheed Martin) · Governo dos EUA · Bancos · Energia</text>
+                </svg>
+                <div class="int-visual-foot">
+                  <span>MECANISMO: AES/Hash(Seed 128-bit + Tempo UTC)</span>
+                  <span>RISCO: roubar a seed anula o 2FA</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>Contextualizar quem era a RSA Security: fundada pelos próprios criadores da criptografia RSA e comprada pela EMC em 2006.</li>
+                <li>Explicar como o token SecurID funcionava: o chaveiro no bolso do funcionário e o servidor da empresa calculavam o mesmo código de 6 dígitos a cada 60 segundos a partir de uma semente secreta de 128 bits.</li>
+                <li>Destacar o risco: como a RSA guardava cópias dessas sementes para suporte e reposição, invadir a RSA colocava em risco o 2FA de 25 mil clientes.</li>
+              </ul>
+            </aside>
+          </div>
         </section>
 
         <!-- ============================================================ -->
-        <!-- 52 · CASO STRAVA                                             -->
+        <!-- 52 · CASO RSA — OSINT E SPEAR-PHISHING                       -->
+        <!-- ============================================================ -->
+        <section class="slide paper">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker">Caso 01 · 2011 · RSA Security · 02 / 04</div>
+              <h2 class="h-md">Do mapeamento do RH ao anexo aberto</h2>
+            </div>
+
+            <div class="slide-body rsa-grid">
+              <div>
+                <div class="timeline">
+                  <div class="t-item rise" style="--d: .1s">
+                    <div class="when">ETAPA 01 · OSINT E SOCMINT</div>
+                    <b>Levantamento da estrutura administrativa em fontes abertas</b>
+                    <span>Os atacantes coletaram nomes, cargos e e-mails da EMC/RSA em redes profissionais e listas públicas. Em vez de mirar engenheiros de segurança, selecionaram quatro pequenos grupos administrativos e de recrutamento.</span>
+                  </div>
+                  <div class="t-item rise" style="--d: .22s">
+                    <div class="when">ETAPA 02 · HUMINT E SPEAR-PHISHING (16–17 MAR. 2011)</div>
+                    <b>E-mail forjado para quem abre planilhas externas por rotina</b>
+                    <span>Enviaram mensagens com o assunto “2011 Recruitment Plan” simulando o repasse de uma planilha de contratação e falsificando o endereço de envio para parecer comunicação de trabalho.</span>
+                  </div>
+                  <div class="t-item rise" style="--d: .34s">
+                    <div class="when">ETAPA 03 · BYPASS HUMANO DO FILTRO</div>
+                    <b>Resgate da mensagem na pasta de Spam</b>
+                    <span>O filtro corporativo barrou o e-mail como lixo eletrônico. Ainda assim, um funcionário abriu a pasta de Spam, recuperou a mensagem e clicou duas vezes em <code>2011_Recruitment_Plan.xls</code>.</span>
+                  </div>
+                </div>
+
+                <p class="source" style="margin-top: 14px">
+                  Fonte: Relatórios técnicos do incidente (EMC/RSA e Zoho Workplace). O reconhecimento prévio mapeou quem recebia anexos no RH.
+                </p>
+              </div>
+
+              <div>
+                <div class="rsa-osint-funnel rise" style="--d: .14s">
+                  <div class="funnel-step">
+                    <span>OSINT / SOCMINT</span>
+                    <b>Diretório e perfis públicos</b>
+                  </div>
+                  <i aria-hidden="true">→</i>
+                  <div class="funnel-step">
+                    <span>FILTRO DE ALVO</span>
+                    <b>4 grupos de RH / Admin</b>
+                  </div>
+                  <i aria-hidden="true">→</i>
+                  <div class="funnel-step is-alert">
+                    <span>AÇÃO DO ALVO</span>
+                    <b>Retirado do Spam</b>
+                  </div>
+                </div>
+
+                <div class="mail-clip" style="margin-top: 12px">
+                  <div class="rsa-spam-badge">PASTA DE SPAM · RECUPERADO PELO USUÁRIO</div>
+                  <div class="from">De: recruiter@web-example.com · Para: hr-group@rsa.com</div>
+                  <div class="subject">2011 Recruitment Plan</div>
+                  <div class="body">
+                    Hi,<br /><br />
+                    I forward this file to you for review. Please open and view it.<br /><br />
+                    Best regards.
+                  </div>
+                  <div class="attachment">📎 2011_Recruitment_Plan.xls</div>
+                  <div class="source" style="margin-top: 8px">Reprodução didática do e-mail reportado no incidente de março de 2011.</div>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>Mostrar a conexão direta com o Bloco 03: o ataque começou com OSINT e SOCMINT para descobrir quem trabalhava em setores que recebem planilhas externas todos os dias.</li>
+                <li>Enfatizar que o filtro técnico de spam funcionou e reteve o e-mail, mas o pretexto de recrutamento convenceu o funcionário a retirar o arquivo da lixeira.</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 53 · CASO RSA — KILL CHAIN E EXFILTRAÇÃO                     -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">João Pedro Gonçalves</span> · Caso 01 · 2011 · RSA Security · 03 / 04</div>
+              <h2 class="h-md">Da planilha Excel à exfiltração das seeds</h2>
+            </div>
+
+            <div class="slide-body int-detail-grid">
+              <div class="int-detail-copy">
+                <p class="int-lede">
+                  Assim que a planilha foi aberta no Excel, a invasão combinou exploração de dia zero, comando e controle furtivo e reconhecimento ativo dentro da rede da RSA.
+                </p>
+                <div class="int-spec-list">
+                  <div class="int-spec-item">
+                    <b>Exploração e C2 (CVE-2011-0609 + CYBINT)</b>
+                    <p>A planilha trazia um objeto Adobe Flash (<code>.swf</code>) que explorava a falha zero-day CVE-2011-0609 e instalava o backdoor Poison Ivy. Para dificultar o bloqueio, o malware conectava-se a domínios de DNS dinâmico que trocavam de IP constantemente.</p>
+                  </div>
+                  <div class="int-spec-item">
+                    <b>Do Recon Passivo ao Recon Ativo Interno</b>
+                    <p>Com acesso à estação do funcionário, o grupo enumerou servidores internos, extraiu credenciais da memória e escalou privilégios até contas de administrador de domínio e servidores de produção.</p>
+                  </div>
+                  <div class="int-spec-item is-limit">
+                    <b>Coleta e exfiltração por FTP</b>
+                    <p>Os invasores localizaram os bancos de dados com os registros de sementes (seed records) dos tokens SecurID, comprimiram os arquivos em pacotes <code>.rar</code> protegidos por senha e transferiram tudo para servidores externos via FTP.</p>
+                  </div>
+                </div>
+                <div class="tag-row">
+                  <span class="chip">CVE-2011-0609</span>
+                  <span class="chip amber">Poison Ivy RAT</span>
+                  <span class="chip red">exfiltração FTP</span>
+                </div>
+              </div>
+
+              <div class="int-visual-card">
+                <div class="int-visual-bar">
+                  <span class="int-visual-tag">CADEIA DE ATAQUE INTERNA</span>
+                  <span class="int-visual-status">MARÇO DE 2011 · REDE CORPORATIVA RSA</span>
+                </div>
+                <svg class="int-svg" viewBox="0 0 460 250" aria-label="Diagrama em 5 etapas da invasão à RSA Security">
+                  <rect width="460" height="250" fill="#0b1016" />
+                  <g stroke="#1b2430" stroke-width="1">
+                    <path d="M0 50 H460 M0 100 H460 M0 150 H460 M0 200 H460" />
+                    <path d="M90 0 V250 M180 0 V250 M270 0 V250 M360 0 V250" />
+                  </g>
+
+                  <!-- Conexões animadas da Kill Chain -->
+                  <path class="int-flow" d="M 150 58 H 184" />
+                  <path class="int-flow" style="--d: .18s" d="M 304 58 H 334" />
+                  <path class="int-flow" style="--d: .34s" d="M 386 86 V 134" />
+                  <path class="int-flow is-hot" style="--d: .5s" d="M 326 164 H 246" />
+
+                  <!-- Etapa 1 -->
+                  <g class="int-node-in" style="--d: .06s">
+                    <rect x="20" y="30" width="130" height="56" rx="3" fill="#131c26" stroke="#f0a63c" stroke-width="1.4" />
+                    <text x="85" y="49" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#f4bb73">1. PLANILHA + FLASH</text>
+                    <text x="85" y="63" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#d8e3e9">CVE-2011-0609 (.swf)</text>
+                    <text x="85" y="76" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#98a0ab">Execução na estação RH</text>
+                  </g>
+
+                  <!-- Etapa 2 -->
+                  <g class="int-node-in" style="--d: .18s">
+                    <rect x="184" y="30" width="120" height="56" rx="3" fill="#141d26" stroke="#6fa9f5" stroke-width="1.4" />
+                    <text x="244" y="49" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#6fa9f5">2. POISON IVY RAT</text>
+                    <text x="244" y="63" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#d8e3e9">C2 via DNS Dinâmico</text>
+                    <text x="244" y="76" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#98a0ab">Controle remoto ativo</text>
+                  </g>
+
+                  <!-- Etapa 3 -->
+                  <g class="int-node-in" style="--d: .3s">
+                    <rect x="334" y="30" width="106" height="56" rx="3" fill="#131f1b" stroke="#63c98a" stroke-width="1.4" />
+                    <text x="387" y="49" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8ee0af">3. RECON INTERNO</text>
+                    <text x="387" y="63" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#d8e3e9">Dump de senhas</text>
+                    <text x="387" y="76" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#98a0ab">Escalação no AD</text>
+                  </g>
+
+                  <!-- Etapa 4 -->
+                  <g class="int-node-in" style="--d: .42s">
+                    <rect x="326" y="134" width="114" height="60" rx="3" fill="#1c1917" stroke="#f0a63c" stroke-width="1.4" />
+                    <text x="383" y="154" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#f4bb73">4. STAGING INTERNO</text>
+                    <text x="383" y="168" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#d8e3e9">Coleta das Seeds</text>
+                    <text x="383" y="181" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#98a0ab">Pacotes .RAR cifrados</text>
+                  </g>
+
+                  <!-- Etapa 5 -->
+                  <g class="int-node-in" style="--d: .52s">
+                    <circle class="int-pulse" cx="133" cy="164" r="34" fill="none" stroke="#e23a2e" stroke-width="1.1" />
+                    <rect x="20" y="134" width="226" height="60" rx="3" fill="#211417" stroke="#e23a2e" stroke-width="1.5" />
+                    <text x="133" y="154" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8.5" fill="#ff938b">5. EXFILTRAÇÃO VIA FTP</text>
+                    <text x="133" y="169" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#d8e3e9">Transferência das sementes de 128 bits</text>
+                    <text x="133" y="182" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#98a0ab">Remoção dos arquivos do servidor de staging</text>
+                  </g>
+
+                  <rect x="20" y="210" width="420" height="24" rx="2" fill="#101720" stroke="#27313c" />
+                  <text x="32" y="225" font-family="IBM Plex Mono, monospace" font-size="7.8" fill="#98a0ab">CONCEITOS ENCADEDOS: OSINT/SOCMINT → HUMINT → Zero-Day → CYBINT (C2) → Recon Ativo</text>
+                </svg>
+                <div class="int-visual-foot">
+                  <span>VETOR INICIAL: planilha de 1 funcionário</span>
+                  <span>ALVO ATINGIDO: banco de seeds SecurID</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>Percorrer as etapas técnicas após a abertura do arquivo: a falha zero-day no Flash instalou o RAT Poison Ivy sem exibir alerta na tela.</li>
+                <li>Apontar a transição metodológica: fora da empresa o reconhecimento foi 100% passivo (OSINT); dentro da rede, passou a ser ativo para localizar onde ficavam guardadas as seeds do SecurID.</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 54 · CASO RSA — CONSEQUÊNCIAS E SUPPLY CHAIN                 -->
+        <!-- ============================================================ -->
+        <section class="slide">
+          <div class="slide-inner">
+            <div class="slide-head">
+              <div class="kicker"><span class="who">João Pedro Gonçalves</span> · Caso 01 · 2011 · RSA Security · 04 / 04</div>
+              <h2 class="h-md">O impacto em cadeia na Lockheed Martin</h2>
+            </div>
+
+            <div class="slide-body int-detail-grid">
+              <div class="int-detail-copy">
+                <p class="int-lede">
+                  O objetivo final dos atacantes era usar as sementes roubadas na RSA para gerar códigos válidos de 2FA e invadir clientes estratégicos.
+                </p>
+                <div class="int-spec-list">
+                  <div class="int-spec-item is-limit">
+                    <b>Ataque à Lockheed Martin (maio de 2011)</b>
+                    <p>Dois meses após o roubo na RSA, invasores usaram tokens SecurID clonados para tentar acessar a rede da Lockheed Martin, fornecedora de caças e sistemas de defesa dos EUA. A empresa desligou o acesso remoto de 90 mil funcionários até trocar todos os tokens.</p>
+                  </div>
+                  <div class="int-spec-item">
+                    <b>Troca global de hardware</b>
+                    <p>A RSA ofereceu a substituição de quase 40 milhões de tokens físicos em clientes corporativos e governamentais ao redor do mundo.</p>
+                  </div>
+                  <div class="int-spec-item">
+                    <b>Custo financeiro direto</b>
+                    <p>A controladora EMC declarou um gasto de US$ 66 milhões apenas no segundo trimestre de 2011 para cobrir a investigação e o envio de novos tokens.</p>
+                  </div>
+                </div>
+                <div class="tag-row">
+                  <span class="chip red">ataque Supply Chain</span>
+                  <span class="chip">Lockheed Martin</span>
+                  <span class="chip amber">US$ 66 milhões</span>
+                </div>
+              </div>
+
+              <div class="int-visual-card">
+                <div class="int-visual-bar">
+                  <span class="int-visual-tag">PROPAGAÇÃO NA CADEIA DE SUPRIMENTOS</span>
+                  <span class="int-visual-status">MARÇO → MAIO DE 2011</span>
+                </div>
+                <svg class="int-svg" viewBox="0 0 460 178" aria-label="Propagação do ataque da RSA Security para a Lockheed Martin">
+                  <rect width="460" height="178" fill="#0b1016" />
+                  <g stroke="#1b2430" stroke-width="1">
+                    <path d="M0 44 H460 M0 88 H460 M0 132 H460" />
+                    <path d="M115 0 V178 M230 0 V178 M345 0 V178" />
+                  </g>
+
+                  <path class="int-flow" d="M 142 88 H 178" />
+                  <path class="int-flow is-hot" style="--d: .28s" d="M 288 88 H 322" />
+
+                  <g class="int-node-in" style="--d: .08s">
+                    <rect x="20" y="52" width="122" height="72" rx="3" fill="#211417" stroke="#be1e2d" stroke-width="1.5" />
+                    <text x="81" y="76" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8.5" fill="#ff938b">RSA SECURITY</text>
+                    <text x="81" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#d8e3e9">Seeds exfiltradas</text>
+                    <text x="81" y="106" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#98a0ab">Março de 2011</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .22s">
+                    <rect x="178" y="52" width="110" height="72" rx="3" fill="#1c1917" stroke="#f0a63c" stroke-width="1.4" />
+                    <text x="233" y="76" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#f4bb73">TOKEN CLONADO</text>
+                    <text x="233" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" font-weight="600" fill="#fff">482 910</text>
+                    <text x="233" y="108" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#98a0ab">Código 2FA previsto</text>
+                  </g>
+
+                  <g class="int-node-in" style="--d: .36s">
+                    <circle class="int-pulse" cx="381" cy="88" r="32" fill="none" stroke="#e23a2e" stroke-width="1.2" />
+                    <rect x="322" y="52" width="118" height="72" rx="3" fill="#141d26" stroke="#e23a2e" stroke-width="1.5" />
+                    <text x="381" y="76" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#ff938b">LOCKHEED MARTIN</text>
+                    <text x="381" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#d8e3e9">Intrusão via VPN</text>
+                    <text x="381" y="106" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#98a0ab">Maio de 2011</text>
+                  </g>
+                </svg>
+
+                <div class="rsa-impact-stats">
+                  <div>
+                    <b>40M+</b>
+                    <span>tokens SecurID substituídos</span>
+                  </div>
+                  <div>
+                    <b>US$ 66 mi</b>
+                    <span>custo da EMC no 2º tri/2011</span>
+                  </div>
+                  <div>
+                    <b>90 mil</b>
+                    <span>contas remotas suspensas na Lockheed</span>
+                  </div>
+                </div>
+                <div class="int-visual-foot">
+                  <span>CAUSA RAIZ: reconhecimento de RH + planilha Excel</span>
+                  <span>EFEITO: comprometimento global de 2FA</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="notes">
+              <ul>
+                <li>Explicar o conceito de ataque à cadeia de suprimentos (Supply Chain): invadir o fornecedor de segurança para abrir a porta nos clientes finais.</li>
+                <li>Destacar o caso da Lockheed Martin em maio de 2011 e os números divulgados pela própria EMC (US$ 66 milhões e 40 milhões de tokens).</li>
+                <li>Fechar o caso RSA mostrando que o algoritmo de 128 bits não foi quebrado por matemática: o atacante contornou a criptografia mapeando pessoas por OSINT e roubando a semente na origem.</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- 55 · CASO STRAVA                                             -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -3033,7 +3365,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 53 · LIÇÃO DOS CASOS                                         -->
+        <!-- 56 · LIÇÃO DOS CASOS                                         -->
         <!-- ============================================================ -->
         <section class="slide center">
           <div class="slide-inner">
@@ -3072,7 +3404,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 54 · DIVISOR 05                                              -->
+        <!-- 57 · DIVISOR 05                                              -->
         <!-- ============================================================ -->
         <section class="slide divider">
           <div class="slide-inner">
@@ -3097,7 +3429,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 55 · GEOSINT 1                                               -->
+        <!-- 58 · GEOSINT 1                                               -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -3223,7 +3555,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 56 · GEOSINT 2                                               -->
+        <!-- 59 · GEOSINT 2                                               -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -3305,7 +3637,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 57 · OSINT DEMO — GRAFO                                      -->
+        <!-- 60 · OSINT DEMO — GRAFO                                      -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -3383,7 +3715,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 58 · DIVISOR 06                                              -->
+        <!-- 61 · DIVISOR 06                                              -->
         <!-- ============================================================ -->
         <section class="slide divider">
           <div class="slide-inner">
@@ -3408,7 +3740,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 59 · OPSEС — CONCEITO                                        -->
+        <!-- 62 · OPSEС — CONCEITO                                        -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -3463,7 +3795,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 60 · OPSEС NO DIA A DIA                                      -->
+        <!-- 63 · OPSEС NO DIA A DIA                                      -->
         <!-- ============================================================ -->
         <section class="slide">
           <div class="slide-inner">
@@ -3523,7 +3855,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 61 · TAKEAWAYS                                               -->
+        <!-- 64 · TAKEAWAYS                                               -->
         <!-- ============================================================ -->
         <section class="slide center">
           <div class="slide-inner">
@@ -3566,7 +3898,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 62 · REFERÊNCIAS                                             -->
+        <!-- 65 · REFERÊNCIAS                                             -->
         <!-- ============================================================ -->
         <section class="slide paper">
           <div class="slide-inner">
@@ -3614,7 +3946,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- 63 · Q&A                                                     -->
+        <!-- 66 · Q&A                                                     -->
         <!-- ============================================================ -->
         <section class="slide qa">
           <div class="slide-inner">
